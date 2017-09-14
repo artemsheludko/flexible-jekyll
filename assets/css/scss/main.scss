@@ -1,0 +1,89 @@
+@import 'normalize';
+@import 'syntax';
+@import 'variables';
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $body-color;
+  background-color: #fbfbfb;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+blockquote {
+  border-left: 5px solid #000;
+  padding-left: 1.1rem;
+  margin-left: 1rem;
+  font-style: italic;
+  color: #ada8a8;
+}
+
+pre {
+  padding: 1rem 2rem;
+  overflow-x: auto;
+
+  code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.wrapper {
+  max-width: 1250px;
+  position: relative;
+}
+
+.post, .article-page {
+  background-color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(38, 57, 89, 0.8);
+  color: $white;
+}
+
+::selection {
+  background: rgba(38, 57, 89, 0.8);
+  color: $white;
+}
+
+.clearfix::before, .clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
+@import 'parts/home-page';
+
+/* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
+@import 'parts/post-page';
+
+/* - - - - - - - - - - Tag Styles - - - - - - - - - - */
+@import 'parts/tag';
+
+/* - - - - - - - - - - Media Styles - - - - - - - - - - */
+@import 'media';
