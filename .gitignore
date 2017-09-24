@@ -1,7 +1,6 @@
 _site
 .sass-cache
 .jekyll-metadata
-package.json
 yarn.lock
 node_modules/
 
