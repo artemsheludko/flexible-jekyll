@@ -181,3 +181,18 @@ footer {
     }
   }
 }
+
+a.older-posts, a.newer-posts {
+  font-size: 18px;
+  display: inline-block;
+  color: $body-color;
+  transition: transform .2s;
+}
+
+a.older-posts:hover {
+  transform: translateX(5px);
+}
+
+a.newer-posts:hover {
+  transform: translateX(-5px);
+}
