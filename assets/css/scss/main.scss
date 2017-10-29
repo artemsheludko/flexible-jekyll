@@ -48,6 +48,50 @@ pre {
   }
 }
 
+table {
+  border: 1px solid #aaa;
+  background-color: #eee;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table td, table.blueTable th {
+  border: 1px solid #aaa;
+  padding: 3px 2px;
+}
+table tbody td {
+  font-size: 13px;
+}
+table tr:nth-child(even) {
+  background: #adbecc;
+}
+table thead {
+  background: #a9c4d1;
+  background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
+  border-bottom: 1px solid #8c8c8c;
+}
+table thead th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border-left: 1px solid #d0e4f5;
+}
+table thead th:first-child {
+  border-left: none;
+}
+
+table tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: #d0e4f5;
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444;
+}
+table tfoot td {
+  font-size: 14px;
+}
+
 .wrapper {
   max-width: 1250px;
   position: relative;
