@@ -20,6 +20,7 @@ The post page would look like this:
 - [Font Awesome](http://fontawesome.io/)
 - [Disqus](https://disqus.com/)
 - [Analytics](https://analytics.google.com/analytics/web/)
+- Support Emoji
 
 ## Installation:
 
