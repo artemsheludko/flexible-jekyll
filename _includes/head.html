@@ -2,7 +2,9 @@
 	<meta charset="utf-8">
 	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
 
-  <meta content="{{ site.title }}" property="og:site_name">
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="{{ site.title }}" property="og:site_name">
   {% if page.title %}
     <meta content="{{ page.title }}" property="og:title">
   {% else %}
@@ -25,10 +27,10 @@
     <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     <meta content="{{ site.url }}/about/" property="article:author">
   {% endif %}
-  {% if page.image %}
-    <meta content="/img/srcset/{{ page.image }}" property="og:image">
+  {% if page.img %}
+    <meta content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.img }}" property="og:image">
   {% else %}
-    <meta content="/img/david-freeman.jpg" property="og:image">
+    <meta content="/img/{{ site.author-img }}" property="og:image">
   {% endif %}
   {% if page.categories %}
     {% for category in page.categories limit:1 %}
@@ -41,9 +43,9 @@
     {% endfor %}
   {% endif %}
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@site_username">
-  <meta name="twitter:creator" content="@creator_username">
+    <meta name="twitter:card" content="{{ post.excerpt }}">
+    <meta name="twitter:site" content="@{{ site-twitter }}">
+    <meta name="twitter:creator" content="@{{ twitter }}">
   {% if page.title %}
     <meta name="twitter:title" content="{{ page.title }}">
   {% else %}
@@ -58,9 +60,9 @@
     <meta name="twitter:description" content="{{ site.description }}">
   {% endif %}
   {% if page.image %}
-    <meta name="twitter:image:src" content="{{ site.url }}/path/to/image/{{ page.image }}">
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.img }}">
   {% else %}
-    <meta name="twitter:image:src" content="{{ site.url }}/path/to/image/logo.png">
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}/img/{{ site.author-img }}">
   {% endif %}
 
 	<meta name="description" content="{{ page.description }}">
