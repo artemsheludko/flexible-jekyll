@@ -43,7 +43,11 @@
     {% endfor %}
   {% endif %}
 
+  {% if post.excerpt %}
     <meta name="twitter:card" content="{{ post.excerpt }}">
+  {% else %}
+    <meta name="twitter:card" content="{{ page.description }}">
+  {% endif %}
     <meta name="twitter:site" content="@{{ site-twitter }}">
     <meta name="twitter:creator" content="@{{ twitter }}">
   {% if page.title %}
