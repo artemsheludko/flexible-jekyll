@@ -7,9 +7,9 @@ url: "https://porphyrin.github.io/" # the base hostname & protocol for your site
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: Olivia Warren # add your name
-author-img: ow_headshot.jpg # add your photo
-about-author: Data Scientist. Python enthusiast. Cellist. Biotech nerd.
+author: Olivia Warren
+author-img: ow_headshot.jpg
+about-author: Data Scientist. Python enthusiast. Biotech nerd.
 github: porphyrin
 linkedin: olivia-warren
 # twitter: # add your Twitter handle
