@@ -10,9 +10,9 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: George Kim # add your name
-author-img: david-freeman.jpg # add your photo
+author-img: SJOON.jpg # add your photo
 about-author: I am making tools for QA, Tester.. # add description
-twitter: @cheuora# add your Twitter handle
+twitter: # add your Twitter handle
 facebook: # add your Facebook handle
 github: cheuora# add your Github handle
 linkedin: # add your Linkedin handle
