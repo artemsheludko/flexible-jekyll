@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 양아치사장?..
+img : th_closezero2_01.jpg
 tags: [정부과제, 테크노파크]
 ---
 
