@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Selenium + Sikuli 
+img : automation.jpg
 keywords: SW Engineering, Selenium, Sikuli
 ---
 
