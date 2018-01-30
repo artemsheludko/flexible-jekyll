@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 진실의 순간을 위해..
-img : th_closezero2_01.jpg
+img : designthinking.jpeg
 tags: [디자인씽킹]
 ---
 
