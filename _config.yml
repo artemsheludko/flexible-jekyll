@@ -22,7 +22,7 @@ email: cheuora@gmail.com
 discus-identifier: cheuora@gmail.com 
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-112917851-1
 
 # Build Settings
 markdown: kramdown
