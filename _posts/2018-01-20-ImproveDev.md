@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: 개발자 테스트 자동화 도입의 효과
-img : img_effect1.jpg
+img : Development.jpg
 tags: [iOS, testing, automation]
 ---
 (이 글은 qiita.com에 있는 @kuniwak님의 글을 가상 대담 형식을 빌어 제 의견을 같이 넣어 구성한 것임을 밝힙니다. )
