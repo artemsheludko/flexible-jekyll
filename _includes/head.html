@@ -30,7 +30,7 @@
   {% if page.img %}
     <meta content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.img }}" property="og:image">
   {% else %}
-    <meta content="/img/{{ site.author-img }}" property="og:image">
+    <meta content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.author-img }}" property="og:image">
   {% endif %}
   {% if page.categories %}
     {% for category in page.categories limit:1 %}
@@ -43,13 +43,9 @@
     {% endfor %}
   {% endif %}
 
-  {% if post.excerpt %}
-    <meta name="twitter:card" content="{{ post.excerpt }}">
-  {% else %}
-    <meta name="twitter:card" content="{{ page.description }}">
-  {% endif %}
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.site-twitter }}">
-    <meta name="twitter:creator" content="@{{ site.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.social-twitter }}">
   {% if page.title %}
     <meta name="twitter:title" content="{{ page.title }}">
   {% else %}
