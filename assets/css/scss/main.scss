@@ -39,12 +39,19 @@ blockquote {
 
 pre {
   padding: 1rem 2rem;
-  overflow-x: auto;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
 
   code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 }
 
