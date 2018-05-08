@@ -100,6 +100,8 @@ root@07f6484a2359:/# apt-get install imagemagick libmagickcore-dev libmagickwand
 ```
 root@07f6484a2359:/# cd /opt/bitnami/redmine/
 root@07f6484a2359:/# bundle install --no-deployment
+root@07f6484a2359:/# bundle exec rake redmine:plugins NAME=redmine_agile RAILS_ENV=production
+
 ```
 
 <br>
