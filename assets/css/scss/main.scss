@@ -29,6 +29,15 @@ img {
   display: inline-block;
 }
 
+img + em {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 blockquote {
   border-left: 5px solid #000;
   padding-left: 1.1rem;
