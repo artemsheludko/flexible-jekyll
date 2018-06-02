@@ -5,7 +5,12 @@ layout: main
   <div class="page-content">
     {% if page.img %}
     <div class="page-cover-image">
-      <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
+      <figure>
+        <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
+        {% if page.fig-caption %}
+          <figcaption>{{page.fig-caption}}</figcaption>
+        {% endif %}
+      </figure>
     </div> <!-- End Page Cover Image -->
     {% else %}
     {% endif %}

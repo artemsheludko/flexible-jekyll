@@ -1226,6 +1226,23 @@ a.newer-posts:hover {
   overflow: hidden;
 }
 
+.page-cover-image figure {
+  position: relative;
+  margin: 0;
+}
+
+.page-cover-image figcaption {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
 .page-cover-image .page-image {
   width: 100%;
   height: 100%;
