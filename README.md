@@ -24,7 +24,7 @@ The post page would look like this:
 
 ## Installation:
 
-Fork the ``master`` branch and follow the ![Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
+Fork the ``master`` branch and follow the [Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
 
 ## License
 
