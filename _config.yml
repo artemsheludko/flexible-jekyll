@@ -17,6 +17,8 @@ social-facebook: # add your Facebook handle
 social-github: artemsheludko # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email: # add your Email address
+social-calendar:  #add your shared calendar link
+
 
 # Disqus
 discus-identifier: mr-brown # add your discus identifier
