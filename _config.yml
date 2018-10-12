@@ -17,10 +17,10 @@ social-linkedin: # add your Linkedin handle
 social-email: totalycurious@gmail.com # add your Email address
 
 # Disqus
-discus-identifier:  # add your discus identifier
+discus-identifier: totallycurious # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-127407766-1 # Google Analytics
 
 # Build Settings
 markdown: kramdown
