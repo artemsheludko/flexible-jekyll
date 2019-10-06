@@ -1,8 +1,7 @@
-title: Hello, world! I'm Sergio Susa
+title: Hola, Soy Sergio Susa, Ingeniero de Sistemas y Computación entre otras cosas.
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Bienvenidos a mi blog personal donde comparto mis experiencias y vivencias
+  y en general todo lo que creo que va a ser de interés general.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -17,6 +16,14 @@ social-facebook: sergiosusa # add your Facebook handle
 social-github: sergiosusa # add your Github handle
 social-linkedin: sergiosusa # add your Linkedin handle
 social-email: sergio@sergiosusa.com # add your Email address
+
+personal-podcast-title: ¿Qué me estás container?
+personal-podcast-url: https://open.spotify.com/show/1FBSbmyYqo9AYbFehaoIWu?si=6fiuPtc7RNOudxJljzCdeA
+personal-podcast-image: que-me-estas-container-banner.jpg
+
+todoestamal-podcast-title: Todo está mal
+todoestamal-podcast-url: https://open.spotify.com/show/7lSX0GlROui9UFK6SsJY3u?si=tIXMllc5RnGNolIG7YnOkA
+todoestamal-podcast-image: todo-esta-mal-banner.jpg
 
 # Disqus
 discus-identifier: sergio-susa # add your discus identifier

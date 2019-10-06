@@ -10,11 +10,24 @@ layout: default
       </div>
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
+
+      <div class="title">Podcasts</div>
+      <div class="author-podcast">
+        <a href="{{site.personal-podcast-url}}" target="_blank">
+          <img src="{{site.baseurl}}/assets/img/{% if site.personal-podcast-image %}{{site.personal-podcast-image}}{% endif %}"  alt="{{site.personal-podcast-title}}">
+        </a>
+      </div>
+      <div class="author-podcast">
+        <a href="{{site.todoestamal-podcast-url}}" target="_blank">
+          <img src="{{site.baseurl}}/assets/img/{% if site.todoestamal-podcast-image %}{{site.todoestamal-podcast-image}}{% endif %}"  alt="{{site.todoestamal-podcast-title}}">
+        </a>
+      </div>
+
     </div>
   </header> <!-- End Header -->
   <footer>
     <section class="contact">
-      <h3 class="contact-title">Contact me</h3>
+      <h3 class="contact-title">Contáctame</h3>
       <ul>
         {% if site.social-twitter %}
           <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
