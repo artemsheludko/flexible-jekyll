@@ -9,20 +9,20 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+author: Sergio Susa
+author-img: sergio-susa.jpg # add your photo
+about-author: Soy un ingeniero de sistemas y computación por vocación, metalero de corazón y video jugador por elección.  # add description
+social-twitter: sergiosusa # add your Twitter handle
+social-facebook: sergiosusa # add your Facebook handle
+social-github: sergiosusa # add your Github handle
+social-linkedin: sergiosusa # add your Linkedin handle
+social-email: sergio@sergiosusa.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: sergio-susa # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-65020023-1 # Google Analytics
 
 # Build Settings
 markdown: kramdown
