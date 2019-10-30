@@ -11,7 +11,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: George Kim # add your name
 author-img: SJOON.jpg # add your photo
-about-author: 삼성 청년 SW아카데미에서 프로젝트 수업을 진행하고 있습니다. 테스트 설계 지원 사이트를 만들었습니다.  http://analyzingcontext.com now # add description
+about-author: 삼성 청년 SW아카데미에서 프로젝트 수업을 진행하고 있습니다. 테스트 설계 지원 사이트를 만들었습니다.  http://analyzingcontext.com # add description
 twitter: cheuora
 facebook: # add your Facebook handle
 github: cheuora # add your Github handle
