@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 코드 리뷰 가이드라인
-img : https://cms.qz.com/wp-content/uploads/2019/09/RTR3A09L-e1571192977574.jpg?quality=75&strip=all&w=1900&h=1046
+img : 
 tags: [SWE, CodeReview] 
 ---
 
@@ -62,7 +62,7 @@ tags: [SWE, CodeReview]
 * **캐시를 이용하는 곳이 있다면, 캐시 유무에 상관없이 정상 작동을 하는가** 
 * 매직 넘버[^1]는 절대 쓰지 않는다. 쓰더라도 이는 어떤 의미인지 반드시 적는다 
 * 처리가 복잡한 경우 사양 설명이 코멘트에 기술되었는지 
-* 하나의 메서드에 if 문을 남발하고 있지 않는가(조기 `return`, `continue가` 불가능한지)
+* 하나의 메서드에 if 문을 남발하고 있지 않는가(조기 `return`, `continue` 가 불가능한지)
 * 변수 이름이 잘못 붙여져 오해를 불러올 여지가 있을까?
 * 데드 코드(dead code)는 없는지
 * 필요없는 처리를 하고 있지는 않은지
@@ -208,6 +208,8 @@ UI 회귀 테스트인 화면 리그레션 테스트는 [storybook](https://stor
 * 특정 파일에 손을 댄 경우 경고를 발생(ORM파일을 수정한 경우 등)
 
 
+
+<hr>
 
 
 
