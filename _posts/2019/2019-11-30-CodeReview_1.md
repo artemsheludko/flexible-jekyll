@@ -213,9 +213,7 @@ UI 회귀 테스트인 화면 리그레션 테스트는 [storybook](https://stor
 
 
 
-[^1]: http://blog.daum.net/question0921/1103
+[^1]: http://blog.daum.net/question0921/1103  참조
 [^2]: 한국에서는 '[읽기좋은 코드가 좋은 코드다](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788979149142&orderClick=LAH&Kc=)' 라는 이름으로 임백준님이 번역함 
-
-
 
 
