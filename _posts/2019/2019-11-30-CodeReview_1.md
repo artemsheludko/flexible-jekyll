@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 코드 리뷰 가이드라인
-img : 
+img : 2019/RTR3A09L-e1571192977574.jpg
 tags: [SWE, CodeReview] 
 ---
 
