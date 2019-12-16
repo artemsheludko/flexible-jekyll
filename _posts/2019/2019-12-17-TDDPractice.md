@@ -177,15 +177,10 @@ with open("User.txt", "r") as f:
 
 
 def Login(ID, PW):
-
     if (len(ID.strip())==0 and len(PW.strip())==0) :
         return FIRST_CASE_RESULT
-        
-        
+     
     return False
-
-
-
 ```
 
 
@@ -248,7 +243,6 @@ with open("User.txt", "r") as f:
 
 
 def Login(ID, PW):
-
     if (len(ID.strip())==0 and len(PW.strip())==0) :
         return FIRST_CASE_RESULT
     
@@ -260,8 +254,6 @@ def Login(ID, PW):
 
         
     return False
-
-
 
 ```
 
