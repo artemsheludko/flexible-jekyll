@@ -51,20 +51,7 @@ JSON으로 저장된 파일의 내용은 아래와 같다. (User.txt)
 
 이를 맵으로 나타내면 아래와 같다. 
 
-```mermaid
-graph TD
-Login((로그인)) --- G(Given)
-Login --- W(When)
-G --> ID존재
-G --> ID미존재
-W --> ID입력
-ID입력 --> IB[Blank]
-ID입력 --> 값존재
-W --> PW입력
-PW입력 --> Blank
-PW입력 --> ID매칭
-PW입력 --> ID비매칭
-```
+![](/assets/img/2019/GivenWhenTree.png)
 
 
 
@@ -180,16 +167,25 @@ main.py는 아래와 같이 적을 수 있다.
 import json
 
 FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
+SECOND_CASE_RESULT = 3 #ID는 없는 ID이며 PW가 입력되지 않음
+THIRD_CASE_RESULT = 4 #ID는 있는 ID이며 PW가 입력되지 않음
+FOURTH_CASE_RESULT = 5 #ID는 있으며 PW는 일치하지 않음
+
 
 with open("User.txt", "r") as f:
     json_data = json.load(f) 
 
 
 def Login(ID, PW):
+
     if (len(ID.strip())==0 and len(PW.strip())==0) :
         return FIRST_CASE_RESULT
-
+        
+        
     return False
+
+
+
 ```
 
 
@@ -243,6 +239,8 @@ import json
 
 FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
 SECOND_CASE_RESULT = 3 #ID는 없는 ID이며 PW가 입력되지 않음
+THIRD_CASE_RESULT = 4 #ID는 있는 ID이며 PW가 입력되지 않음
+FOURTH_CASE_RESULT = 5 #ID는 있으며 PW는 일치하지 않음
 
 
 with open("User.txt", "r") as f:
@@ -250,6 +248,7 @@ with open("User.txt", "r") as f:
 
 
 def Login(ID, PW):
+
     if (len(ID.strip())==0 and len(PW.strip())==0) :
         return FIRST_CASE_RESULT
     
@@ -259,7 +258,11 @@ def Login(ID, PW):
         else:
             return SECOND_CASE_RESULT
 
+        
     return False
+
+
+
 ```
 
 첫번쨰 케이스와 마찬가지로 SECOND_CASE_RESULT는 오류결과를  구분하기 위한 상수이다. 
@@ -310,6 +313,7 @@ import json
 FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
 SECOND_CASE_RESULT = 3 #ID는 없는 ID이며 PW가 입력되지 않음
 THIRD_CASE_RESULT = 4 #ID는 있는 ID이며 PW가 입력되지 않음
+FOURTH_CASE_RESULT = 5 #ID는 있으며 PW는 일치하지 않음
 
 
 with open("User.txt", "r") as f:
@@ -330,8 +334,13 @@ def Login(ID, PW):
     if (len(ID.strip())>0 and len(PW.strip())==0) :
         if (ID in json_data):
             return THIRD_CASE_RESULT
+        
 
+        
     return False
+
+
+
 ```
 
 
@@ -416,7 +425,13 @@ def Login(ID, PW):
         if (ID in json_data):
             if (json_data[ID]['pw'] != PW):
                 return FOURTH_CASE_RESULT
+
+        
+        
     return False
+
+
+
 ```
 
 FOURTH_CASE_RESULT역시 오류결과를  구분하기 위한 상수이다. 
@@ -556,9 +571,9 @@ def test_Case4():
 아주 간단한 로그인 기능을 TDD로 작성을 해 보았다. 개인적으로 TDD의 큰 장점은 
 
 <center>
-  <h5>
-    테스트를 뺴먹지 않고 할 수 있다.
-  </h5>
+  <h3>
+    테스트를 빼먹지 않고 할 수 있다.
+  </h3>
 </center>
 
 라고 생각한다. 
