@@ -92,7 +92,7 @@ Given 및 When-ID, When-PW 의 조합을 구한다. 조합은 [PICTMaster](https
 
 main.py
 
-```python
+```
 def Login(ID, PW):
    return False
 ```
@@ -101,7 +101,7 @@ def Login(ID, PW):
 
  test_sample_1.py
 
-```python
+```
 import main
 
 def test_Case0():
@@ -118,7 +118,7 @@ def test_Case0():
 
 
 
-```python
+```
 import main
 
 def test_Case0():
@@ -163,7 +163,7 @@ pytest로 테스트를 실행하면 전부 Fail이 떨어진다.
 
 main.py는 아래와 같이 적을 수 있다. 
 
-```python
+```
 import json
 
 FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
@@ -194,7 +194,7 @@ def Login(ID, PW):
 
 test_sample_1.py는 아래와 같이 수정했다.
 
-```python
+```
 import main
 
 def test_Case0():
@@ -234,7 +234,7 @@ def test_Case4():
 
 main.py는
 
-```python
+```
 import json
 
 FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
@@ -269,7 +269,7 @@ def Login(ID, PW):
 
 test_sample_1.py는
 
-```python
+```
 import main
 
 def test_Case0():
@@ -307,7 +307,7 @@ Passed가 2개로 올라갔다.
 
 main.py는
 
-```python
+```
 import json
 
 FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
@@ -351,7 +351,7 @@ def Login(ID, PW):
 
 test_sample_1.py
 
-```python
+```
 import main
 
 def test_Case0():
@@ -393,7 +393,7 @@ Passed가 3개로 올라갔다.
 
 main.py
 
-```python
+```
 import json
 
 FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
@@ -440,7 +440,7 @@ FOURTH_CASE_RESULT역시 오류결과를  구분하기 위한 상수이다.
 
 test_sample_1.py
 
-```python
+```
 import main
 
 def test_Case0():
@@ -476,7 +476,7 @@ Passed가 4개로 올라갔다.
 
 main.py
 
-```python
+```
 import json
 
 FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
@@ -527,7 +527,7 @@ def Login(ID, PW):
 
 test_sample_1.py
 
-```python
+```
 import main
 
 def test_Case0():
