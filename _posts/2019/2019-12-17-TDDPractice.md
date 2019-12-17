@@ -558,6 +558,62 @@ def test_Case4():
 
 
 
+## 4. 리팩토링
+
+결과 코드를 보면 알겠지만 두번째와 세번째, 네번째와 다섯번째 if문은 같이 합쳐야 한다. 이렇게 코드를 정리하는 작업이 리팩토링이며 리팩토링을 하더라도 모든 테스트 케이스는 수행해도 Passed 상태여야 한다. 
+
+
+
+main.py
+
+```
+import json
+
+FIRST_CASE_RESULT = 2 #ID와 패스워드가 입력되지 않음 
+SECOND_CASE_RESULT = 3 #ID는 없는 ID이며 PW가 입력되지 않음
+THIRD_CASE_RESULT = 4 #ID는 있는 ID이며 PW가 입력되지 않음
+FOURTH_CASE_RESULT = 5 #ID는 있으며 PW는 일치하지 않음
+
+
+with open("User.txt", "r") as f:
+    json_data = json.load(f) 
+
+
+def Login(ID, PW):
+
+    if (len(ID.strip())==0 and len(PW.strip())==0) :
+        return FIRST_CASE_RESULT
+    
+    if (len(ID.strip())>0 and len(PW.strip())==0) :
+        if (ID in json_data):
+            return THIRD_CASE_RESULT
+        else:
+            return SECOND_CASE_RESULT
+
+        
+    if (len(ID.strip())>0 and len(PW.strip())>0) :
+        if (ID in json_data):
+            if (json_data[ID]['pw'] != PW):
+                return FOURTH_CASE_RESULT
+            else:
+                return True
+        
+        
+    return False
+```
+
+
+
+테스트를 돌려 100% 패스를 확인한다. 
+
+
+
+![](/assets/img/2019/Pass.png)
+
+
+
+
+
 ## 마치며
 
 아주 간단한 로그인 기능을 TDD로 작성을 해 보았다. 개인적으로 TDD의 큰 장점은 
@@ -568,21 +624,15 @@ def test_Case4():
   </h3>
 </center>
 
-라고 생각한다. 
+이다.
 
 TDD가 제대로 효과를 보려면 테스트 케이스의 품질이 관건이며, 이를 간단한 조합 도구를 활용하여 작성을 해 보았다. 참고로 PICTMaster는 조합의 개수가 많아지면 줄여주는 로직도 있으니 이를 활용하면 테스트 케이스를 어느정도 리즈너블하게 가져갈 수 있지 않을 까 생각한다. 
 
 
 
-
 <br><br>
+
 <hr>
-
-
-
-
-
-
 
 
 [^1]: 2,3번 케이스는 ID가 Blank이면 PW비교가 불가능하며, 5,6번 역시 존재하지 않는 ID의 PW비교도 불가능할 것이다. 7,8,9번 케이스는 ID가 존재하는게 ID입력이 Blank라는 말이 안되는 상황이다. 
