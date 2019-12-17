@@ -33,6 +33,6 @@ plugins:
 
 paginate: 4
 paginate_path: "/page/:num"
-remote_theme : aweekj/Kiko-plus
+remote_theme : mmistakes/minimal-mistakes
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
