@@ -7,7 +7,7 @@ url: "https://www.illustratedatom.com/" # the base hostname & protocol for your 
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Kastner # add your name
+author: Illustrated Atom # add your name
 author-img: illustrated-atom.png # add your photo
 about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
 social-twitter: # add your Twitter handle
