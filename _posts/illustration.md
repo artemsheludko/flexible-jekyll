@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Illustration
-date:
+date: 2017-09-12 00:00:00 +0300
 description: Renderings, illustrations, drawings, as well as figures. # Add post description (optional)
 img: i-rest.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
