@@ -1389,6 +1389,11 @@ a.newer-posts:hover {
   opacity: .8;
 }
 
+.video-responsive iframe {
+  height: 315px;
+  width: 560px;
+}
+
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -1484,6 +1489,22 @@ a.newer-posts:hover {
   .page-cover-image figure {
     height: 410px;
   }
+  
+  .video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+  }
+  .video-responsive iframe, .video-responsive object, .video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
 }
 
 /* Extra Small Devices, Phones */
