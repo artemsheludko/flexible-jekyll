@@ -86,7 +86,7 @@ hr {
 pre {
   font-family: monospace, monospace;
   /* 1 */
-  font-size: 1em;
+  font-size: 0.7em;
   /* 2 */
 }
 
