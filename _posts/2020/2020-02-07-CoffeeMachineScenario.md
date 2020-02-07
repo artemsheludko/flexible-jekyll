@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [컨텍스트 분석]커피 머신 버튼 사용자 시나리오 생성... 
+title: (컨텍스트 분석)커피 머신 버튼 사용자 시나리오 생성... 
 img : 
 tags: [Analyzingcontext.com, 시나리오]
 ---
