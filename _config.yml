@@ -9,18 +9,18 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Bruno Brasil # add your name
 author-img: bruno-brasil.jpg # add your photo
-about-author: Especialista em desenvolvemento Expert Advidor para Forex. # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
+about-author: Desenvolvedor de Expert Advidor para Forex. # add description
+social-twitter: brunobrasilweb # add your Twitter handle
+social-facebook: brunobrasilweb # add your Facebook handle
 social-github: brunobrasilweb # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-linkedin: bruno-brasil-89b67430 # add your Linkedin handle
+social-email: brunobrasilweb@gmail.com # add your Email address
 
 # Disqus
 discus-identifier: brunobrasilweb # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-119520059-1 # Google Analytics
 
 # Build Settings
 markdown: kramdown
