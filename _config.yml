@@ -1,6 +1,6 @@
 title: Bruno Brasil - Expert Advisor Developer 
 description: > # this means to ignore newlines until "baseurl:"
-  Desenvolvedor de Software e Expert Advidor especialista em EA para o mercado Forex.
+  Desenvolvedor de Software e Expert Advidor especialista em Robôs de Investimentos para o mercado Forex.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
