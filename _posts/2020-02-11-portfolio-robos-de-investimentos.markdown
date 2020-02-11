@@ -3,7 +3,8 @@ layout: post
 title: "O que são Portfólio de Robôs de Investimentos"
 date: 2020-02-11 09:39:00 +0300
 description: Saiba o que é portfólio de robôs de investimentos e começe a entrar nesse muito lucrativo.  
-img:  # Add image post (optional)
+img: portfolio-robos-de-investimentos.png
+tags: [Robôs de Investimentos, Portfólio de Robôs, Diversificação de Investimentos]
 ---
 
 Diversificar seus investimentos é uma ótima estratégia para conseguir mais rápido o seu objetivo ou ter um patrimônio maior. Quando você investi em Ações normalmente comprar algumas Ações para diversificar sua carteira de ações e não deixando somente em uma única Ação e conseguir melhores resultados na sua carteira. 
