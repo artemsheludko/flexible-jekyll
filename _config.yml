@@ -3,7 +3,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Desenvolvedor de Software e Expert Advidor especialista em Robôs de Investimentos para o mercado Forex.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://brunobrasil.dev" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: https://twitter.com/brunobrasilweb #if your site has a twitter account, enter it here
 
 # Author Settings
