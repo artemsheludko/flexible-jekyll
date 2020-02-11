@@ -14,5 +14,7 @@ Normalmente os robôs de investimentos podem ter mais retorno do que qualquer in
 
 Eu particulamente prefiro investir em robôs, pois consigo automatizar estratégias que consegui ter lucros consistentes. Atualmente tenho alguns robôs operando mais de 5 setups lucrando todos os dias.
 
-Então portfolio de robôs de investimentos seria você ter diversos robôs ou diversos Setups para conseguir ter lucros consistentes ao longo. É muito difícil encontrar robô lucrando ao longo prazo no mercado é mais provavel que ele passe por um tempo no prejuizo, assim você com um portfólio de robôs poderá cobrir essas perdas e sempre ficar lucrando constantemente. 
+Então portfolio de robôs de investimentos seria você ter diversos robôs ou diversos Setups para conseguir ter lucros consistentes ao longo. É muito difícil encontrar robô lucrando ao longo prazo no mercado é mais provavel que ele passe por um tempo no prejuizo, assim você com um portfólio de robôs poderá cobrir essas perdas e sempre ficar lucrando constantemente.
+
+Para montar seu portfólio de robôs é interesante que tenha pelo menos um robô em difentes tipos de mercado em renda variável por exemplo um para Forex, Ações, Opções etc.
 
