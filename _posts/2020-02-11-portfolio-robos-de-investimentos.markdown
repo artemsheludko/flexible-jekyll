@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "O que são Portfólio de Robôs de Investimentos"
-date: 2020-02-11 09:39:00 +0300
+date: 2020-02-11 14:00:00 +0300
 description: Saiba o que é portfólio de robôs de investimentos e começe a entrar nesse muito lucrativo.  
 img: portfolio-robos-de-investimentos.png
 tags: [Robôs de Investimentos, Portfólio de Robôs, Diversificação de Investimentos]
@@ -11,13 +11,12 @@ Diversificar seus investimentos é uma ótima estratégia para conseguir mais r�
 
 Em robôs de investimentos não é diferente, essa diversificação também são feitas com robôs investindo em vários ativos nos mais variados  Setups diferentes. 
 
->"Setup é uma configuração do robô para operar ativos com estratégias e gerenciamento diferentes, alguns robôs possuem diversos Setups lucrativos".
+>"Setup é uma configuração do robô para operar ativos com uma determinada estratégia ou gerenciamento, alguns robôs possuem diversos Setups".
 
-Normalmente os robôs de investimentos podem ter mais retorno do que qualquer investimento de renda variável, estamos falando os mais lucrativos do mercado.
+Normalmente os robôs de investimentos podem ser mais rentáveis do que qualquer outro investimento de renda variável, estamos falando dos mais lucrativos do mercado.
 
-Eu particulamente prefiro investir em robôs, pois consigo automatizar estratégias que consegui ter lucros consistentes. Operar alguns robôs com vários setups e lucrar todos os dias.
+Eu particulamente prefiro investir em robôs, pois consigo automatizar estratégias lucrativas consistentemente.
 
-Portfólio de robôs de investimentos é você ter diversos robôs ou diversos Setups para conseguir ter lucros consistentes ao longo prazo. É muito difícil encontrar robô lucrativo ao longo prazo no mercado, é mais provavel que ele passe por um tempo no prejuizo os famosos downdraw (rebaixamentos), assim um portfólio de robôs poderá cobrir essas perdas e os lucros do seu patrimônio constantemente.
+Portfólio de robôs de investimentos é você ter diversos robôs ou diversos Setups para conseguir ter lucros consistentes ao longo prazo. É muito difícil encontrar robô lucrativo ao longo prazo no mercado, é mais provável que ele passe por um tempo no prejuizo o famoso downdraw (rebaixamento), assim com um portfólio de robôs poderá cobrir essas perdas e lucrar constantemente.
 
-Para montar seu portfólio de robôs é interesante que tenha pelo menos um robô para difentes tipos de mercado em renda variável, por exemplo, um para Forex, Ações, Opções etc.
-
+Para montar seu portfólio de robôs é interesante que tenha pelo menos um robô para difentes tipos de mercado em renda variável, por exemplo, Forex, Ações, Opções etc. Se fizer uma breve pesquisa vai encontrar muitos robôs bons, mas cuídado ao analisar cada um deles. Em breve farei um post falando como analisar um robô de investimento.
