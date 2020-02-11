@@ -7,9 +7,11 @@ img: portfolio-robos-de-investimentos.png
 tags: [Robôs de Investimentos, Portfólio de Robôs, Diversificação de Investimentos]
 ---
 
-Diversificar seus investimentos é uma ótima estratégia para conseguir mais rápido o seu objetivo ou ter um patrimônio maior. Quando você investi em Ações normalmente comprar algumas Ações para diversificar sua carteira de ações e não deixando somente em uma única Ação e conseguir melhores resultados na sua carteira. 
+Diversificar seus investimentos é uma ótima estratégia para conseguir mais rápido seu objetivo ou obetr um patrimônio maior. Quando investimos em Ações normalmente compramos algumas Ações para diversificar a carteira e não deixar somente uma única Ação, com isso  conseguimos melhores rentabilidades na carteira. 
 
-Essa diversificação também são feitas com robôs de investimentos, você pode investir em vários Robôs ou somente em um robô mais com  vários Setups diferentes. "Setups são configurações do robô alguns deles podem possuir diversos Setups lucrativos".
+Em robôs de investimentos não é diferente, essa diversificação também são feitas com robôs investindo em vários ativos nos mais variados  Setups diferentes. 
+
+>"Setup é uma configuração do robô para operar ativos com estratégias e gerenciamento diferentes, alguns robôs possuem diversos Setups lucrativos".
 
 Normalmente os robôs de investimentos podem ter mais retorno do que qualquer investimento de renda variável, estamos falando os mais lucrativos do mercado.
 
