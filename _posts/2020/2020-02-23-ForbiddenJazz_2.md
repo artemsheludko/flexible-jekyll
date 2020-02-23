@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Duo의 아름다움...
-img : 2020/Kansas-City-Event-Image
+img : 2020/Kansas-City-Event-Image.jpg
 tags: [Jazz, ForbiddenJazz, Robert Altman, Kanzas City]
 ---
 
