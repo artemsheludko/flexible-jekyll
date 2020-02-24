@@ -69,7 +69,7 @@ tags: [Movie, Jojo Rabbit, Das Untergang]
 
 영화를 보고나니 **다운 폴** 이랑 너무 비교가 되어 몇자 적어 보았다.
 
-<img src="/assets/img/sign.png" style="zoom:50%;" />
+<img src="/assets/img/sign.png" style="zoom:30%;" />
 
 
 
