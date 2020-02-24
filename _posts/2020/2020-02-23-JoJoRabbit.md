@@ -71,7 +71,7 @@ tags: [Movie, Jojo Rabbit, Das Untergang]
 
 
 
-![](/asset/img/sing.png)
+![](/assets/img/sing.png)
 
 
 
