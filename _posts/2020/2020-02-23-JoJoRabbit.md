@@ -29,7 +29,7 @@ tags: [Movie, Jojo Rabbit, Das Untergang]
 
 
 
-<img src="/asset/img/2020/Fegelein.jpg" style="zoom:50%;" />
+<img src="/assets/img/2020/Fegelein.jpg" style="zoom:50%;" />
 
 
 
