@@ -1,4 +1,11 @@
-# Jenkins, Gitlab, SonarQube 연동 실습
+---
+layout: post
+title: Jenkins, Gitlab, SonarQube 연동 실습
+img : 
+tags: [CICD,Jenkins,GitLab,SonarQube]
+---
+
+
 
 이 글은 Jenkins - Gitlab - SonarQube연동 실습을 위한 자료 정리차원에서 적은 것임을 밝힙니다. 
 
