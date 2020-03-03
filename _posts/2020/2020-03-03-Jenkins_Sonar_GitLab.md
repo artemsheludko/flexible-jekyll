@@ -77,9 +77,9 @@ Gitlab 플러그인 설치
 
 * Gitlab 과의 통신을 위한 플러그인
 
-![그림1](/assets/img/2020/그림1.png)
+![JSG1](/assets/img/2020/JSG1.png)
 
-![그림2](/assets/img/2020/그림2.png)
+![JSG2](/assets/img/2020/JSG2.png)
 
 
 
@@ -87,7 +87,7 @@ Gitlab 플러그인 설치
 
 프로젝트를 pipeline 타입으로 생성한다(공식 가이드에서는 pipeline을 권장함)
 
-![그림3](/assets/img/2020/그림3.png)
+![JSG3](/assets/img/2020/JSG3.png)
 
 
 
@@ -102,7 +102,7 @@ Gitlab으로 로그인하여 먼저 User의 Access token을 확인한다. 이후
 * User 아이콘 ⇨ Settings ⇨ Access token에서 만들어줌
 * 만들어진 token은 메모장 등에 기록한다.
 
-![그림4](/assets/img/2020/그림4.png)
+![JSG4](/assets/img/2020/JSG4.png)
 
 
 
@@ -114,7 +114,7 @@ Gitlab으로 로그인하여 먼저 User의 Access token을 확인한다. 이후
 
 Sonarqube 로그인 ⇨ 사용자 아이콘 클릭 ⇨ security 에서 로그인 토큰 생성(여기에서는 admin이라는 이름을 통해 token을 생성하였음)
 
-![그림5](/assets/img/2020/그림5.png)
+![JSG5](/assets/img/2020/JSG5.png)
 
 
 
@@ -124,7 +124,7 @@ Sonarqube 로그인 ⇨ 사용자 아이콘 클릭 ⇨ security 에서 로그인
 
 프로젝트 생성을 하면 아래와 같이 화면이 바뀐다. 화면이 바뀌면 일단 끝.
 
-![그림6](/assets/img/2020/그림6.png)
+![JSG6](/assets/img/2020/JSG6.png)
 
 
 
@@ -132,11 +132,11 @@ Sonarqube 로그인 ⇨ 사용자 아이콘 클릭 ⇨ security 에서 로그인
 
 Jenkins관리 ⇨ 시스템설정 ⇨ gitlab connections 
 
-![그림7](/assets/img/2020/그림7.png)
+![JSG7](/assets/img/2020/JSG7.png)
 
 Credential ⇨ Add 에서 아까 복사해 둔 User Token값을 추가한다.
 
-![그림8](/assets/img/2020/그림8.png)
+![JSG8](/assets/img/2020/JSG8.png)
 
 
 
@@ -144,13 +144,13 @@ Credential ⇨ Add 에서 아까 복사해 둔 User Token값을 추가한다.
 
 Jenkins관리 ⇨ 시스템설정 ⇨ SonarQube Servers
 
-![그림9](/assets/img/2020/그림9.png)
+![JSG9](/assets/img/2020/JSG9.png)
 
 마찬가지로 Add 클릭하고 아까 복사한 admin에 대한 token값 입력
 
 이 때 Kind 부분은 Secret text로 설정한다.
 
-![그림10](/assets/img/2020/그림10.png)
+![JSG10](/assets/img/2020/JSG10.png)
 
 **※ Tip : Add 를 했는데 추가를 위한 드롭다운이 뜨지 않는 다면 저장 후에 다시 들어가 본다.**
 
@@ -170,7 +170,7 @@ Build when a change is pushed to GitLab: GitLab webhook URL: http://192.168.50.1
 
 Secret Token 섹션에서 Generate 버튼을 클릭하면 접근하기 위한 Token이 생성됨. 이 값을 메모장에 기록.
 
-![그림11](/assets/img/2020/그림11.png)
+![JSG11](/assets/img/2020/JSG11.png)
 
 
 
@@ -178,7 +178,7 @@ Secret Token 섹션에서 Generate 버튼을 클릭하면 접근하기 위한 To
 
 먼저 프로젝트Setting ⇨ integration 선택
 
-![그림12](/assets/img/2020/그림12.png)
+![JSG12](/assets/img/2020/JSG12.png)
 
 
 
@@ -186,13 +186,13 @@ integration에서 WebHook을 추가설정을 한다. URL란에는 Jenkins의 프
 
 
 
-![그림13](/assets/img/2020/그림13.png)
+![JSG13](/assets/img/2020/JSG13.png)
 
 
 
 이 때 주의할 점은 Jenkins의 프로젝트 URL은 Jenkins 프로젝트 화면의 URL이 아니라 Jenkins 프로젝트 설정에서 Build Trigger에서 표시되는 URL을 복사하여 붙여넣어야 한다. 
 
-![그림14](/assets/img/2020/그림14.png)
+![JSG14](/assets/img/2020/JSG14.png)
 
 
 
@@ -200,17 +200,17 @@ Add WebHook 결과
 
 
 
-![그림15](/assets/img/2020/그림15.png)
+![JSG15](/assets/img/2020/JSG15.png)
 
 Webhook 테스트 하기 전에 만일 Jenins와 gitlab이 같은 도메인에 설치되어 있으면 Jenkins에서 아래 옵션 체크를 풀자. 
 
 Configure ⇨ Global Security 에서 아래 옵션을 언체크한다. 
 
-![그림16](/assets/img/2020/그림16.png)
+![JSG16](/assets/img/2020/JSG16.png)
 
 이제 WebHook테스트를 해 본다 gitlab 에서 아래와 같이 나오면 성공이다.
 
-![그림17](/assets/img/2020/그림17.png)
+![JSG17](/assets/img/2020/JSG17.png)
 
 
 
@@ -218,7 +218,7 @@ Configure ⇨ Global Security 에서 아래 옵션을 언체크한다.
 
 Allow anonymous access 체크…
 
-![그림18](/assets/img/2020/그림18.png)
+![JSG18](/assets/img/2020/JSG18.png)
 
 
 
@@ -228,7 +228,7 @@ Allow anonymous access 체크…
 
 sonar-project.properties 파일은 gitlab 프로젝트 리포지토리 루트 레벨에 존재해야 한다.
 
-![그림19](/assets/img/2020/그림19.png)
+![JSG19](/assets/img/2020/JSG19.png)
 
 
 
@@ -254,7 +254,7 @@ Jenkins 홈에서 Global Tool Configuration ⇨ SonarQube Scanner 화면에서 A
 
 화면에서와 같이 install automatically 옵션을 체크하고 Add installer 드롭다운을 클릭하여 install from Maver Central을 선택하면 아래와 같은 드롭다운이 뜬다. 최신 버전을 선택하고 나온다. 이름은 SonarQube Scanner로 주었다. 
 
-![그림20](/assets/img/2020/그림20.png)
+![JSG20](/assets/img/2020/JSG20.png)
 
 이제 Jenkins 프로젝트 설정으로 돌아가서 파이프라인 스크립트를 입력한다.
 
@@ -264,7 +264,7 @@ Jenkins 홈에서 Global Tool Configuration ⇨ SonarQube Scanner 화면에서 A
 
 스크립트는 Sonarqube 공식 사이트를 참조하였다. (https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/)
 
-![그림21](/assets/img/2020/그림21.png)
+![JSG21](/assets/img/2020/JSG21.png)
 
 스크립트는 아래와 같다.
 
@@ -292,7 +292,7 @@ http://username:token@gitlab.server.com/userid/project.git
 
 스크립트 테스트를 위해 Build Now를 해 본다..
 
-<img src="/assets/img/2020/그림22.png" alt="그림22" style="zoom:67%;" />
+<img src="/assets/img/2020/JSG22.png" alt="JSG22" style="zoom:67%;" />
 
 
 
@@ -300,23 +300,23 @@ http://username:token@gitlab.server.com/userid/project.git
 
 ### Gitlab에 push이벤트 발생 시킴
 
-![그림23](/assets/img/2020/그림23.png)
+![JSG23](/assets/img/2020/JSG23.png)
 
 
 
 ### Gitlab에 반영 확인
 
-<img src="/assets/img/2020/그림24.png" alt="그림24"  />
+<img src="/assets/img/2020/JSG24.png" alt="JSG24"  />
 
 
 
 ### Push Trigger 작동 확인 (#10 빌드 참조)
 
-![그림25](/assets/img/2020/그림25.png)
+![JSG25](/assets/img/2020/JSG25.png)
 
 ### SonarQube 서버에서 분석 결과 확인
 
-![그림26](/assets/img/2020/그림26.png)
+![JSG26](/assets/img/2020/JSG26.png)
 
 
 
