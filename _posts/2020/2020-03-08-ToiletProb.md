@@ -71,7 +71,7 @@ Out of Waiting 상태로 갔다가 다시 waiting 으로 돌아오는 것을 나
 
 이제 Given의 각 Status별로 정리를 한다. 
 
-1. User가 Out of waiting 범위에 있을 때
+* User가 Out of waiting 범위에 있을 때
 
 <img src="/assets/img/2020/20200308/OutOfWaiting.png" alt="스크린샷 2020-03-08 오후 12.31.50" style="zoom:50%;" />
 
@@ -79,19 +79,19 @@ Out of waiting에서 가능한 동작은 To ready 밖에 없으며 여기에서 
 
 
 
-2. User가 waiting 범위에 있을 때
+* User가 waiting 범위에 있을 때
 
 <img src="/assets/img/2020/20200308/Result_2.png" alt="Result_2" style="zoom:50%;" />
 
-3. User가 ready범위에 있을 때
+* User가 ready범위에 있을 때
 
 <img src="/assets/img/2020/20200308/Ready.png" alt="스크린샷 2020-03-08 오전 9.38.13" style="zoom:50%;" />
 
-4. User가 nearby범위에 있을 때
+* User가 nearby범위에 있을 때
 
 <img src="/assets/img/2020/20200308/nearby.png" alt="스크린샷 2020-03-08 오전 9.39.57" style="zoom:50%;" />
 
-5. User가 Sit상태 일 때
+* User가 Sit상태 일 때
 
 <img src="/assets/img/2020/20200308/Sit.png" alt="스크린샷 2020-03-08 오전 9.42.36" style="zoom:50%;" />
 
