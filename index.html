@@ -10,7 +10,7 @@ layout: main
   <div class="post-content">
     <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
     <p>{{ post.content }}</p>
-    <span class="post-date">{{post.date | date: '%b %d, %Y'}}</span>
+    <span class="post-date">{{post.date | date: '%B %d, %Y'}}</span>
   </div>
 </article>
 {% endfor %}
