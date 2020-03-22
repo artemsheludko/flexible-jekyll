@@ -22,5 +22,5 @@ Send us your creation, along with how you want to be credited.
 
 - Email us at: 1000littlefires@gmail.com
 - Submit through our Google Form: <https://tinyurl.com/AThousandLittleFires>
-- Tag one of us on [Twitter](#), [Facebook](#), or [Instagram](#)
+- Tag us on [Twitter](https://twitter.com/1000LittleFires), [Facebook](#), or [Instagram](https://www.instagram.com/1000littlefires/)
 - Fork our repo, create a post, and send us a pull request on Github <https://github.com/littlefires>.
