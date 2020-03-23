@@ -10,7 +10,7 @@ layout: main
   <div class="post-content">
     <h2 class="post-title">{{post.title}}</h2>
     <p>{{ post.content }}</p>
-    <span class="post-date">{{post.date | date: '%B %d, %Y'}}</span>
+    <a class="link-minimal" href ="{{post.url}}"><time class="post-date" datetime={{ post.date }}>{{post.date | date: '%B %d, %Y'}}</time></a> <span class="post-license">{% if post.license %} &middot; {{ post.license }}{%endif%}</span>
   </div>
 </article>
 {% endfor %}

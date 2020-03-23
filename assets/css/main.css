@@ -1196,9 +1196,13 @@ footer .copyright {
   width: 100%;
 }
 
-.post .post-content .post-date,
+.post .post-content .post-date, .post-license,
 .post .post-content .post-words {
   font-size: 12px;
+}
+
+.link-minimal {
+  text-decoration: none;
 }
 
 .post .post-content .post-title {
