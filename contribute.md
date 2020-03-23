@@ -23,3 +23,16 @@ Send us your creation, along with how you want to be credited.
 - Email us at: 1000littlefires@gmail.com
 - Submit through our Google Form: <https://tinyurl.com/AThousandLittleFires>
 - Fork our repo, create a post, and send us a pull request on Github <https://github.com/littlefires>.
+
+### Us
+Like you, we're just trying to shine a little light in these dark times. We are, alphabetically: 
+
+- Alex Gil
+- Jason Heppler
+- Zoe LeBlanc
+- Amanda Licastro
+- Matthew Milner
+- Roopika Risam
+- Amanda Visconti
+- Scott B. Weingart
+- Avery Wiscomb
