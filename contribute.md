@@ -28,7 +28,7 @@ Send us your creation, along with how you want to be credited.
 Submissions should not be hateful, harassing, malicious, or discriminatory. If someone would be upset seeing your submission, don't send it. Don't send us artwork or any other content that you did not create yourself or for whatever reason cannot legally be distributed.
 
 ### Us
-Like you, we're just trying to shine a little light in these dark times. We are, alphabetically: 
+Like you, we're just trying to shine a little light in these dark times. We are, alphabetically:
 
 - Alex Gil
 - Jason Heppler
