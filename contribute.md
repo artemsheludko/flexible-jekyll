@@ -18,7 +18,7 @@ If you’ve been knitting, making music, baking bread, writing poetry, building 
 - *Anything else we can put on a webpage*. Be creative.
 
 ### How to Contribute
-Send us your creation, along with how you want to be credited.
+Send us your creation, along with how you want to be credited. Optionally, you can also let us know how you want the file to be licensed (copyright, creative commons, etc.).
 
 - Email us at: 1000littlefires@gmail.com
 - Submit through our Google Form: <https://tinyurl.com/AThousandLittleFires>
