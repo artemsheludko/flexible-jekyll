@@ -22,7 +22,7 @@ Send us your creation, along with how you want to be credited.
 
 - Email us at: 1000littlefires@gmail.com
 - Submit through our Google Form: <https://tinyurl.com/AThousandLittleFires>
-- Fork our repo, create a post, and send us a pull request on Github <https://github.com/littlefires/littlefires.github.io>.
+- Fork our repo, create a post, and send us a pull request on GitHub: <https://github.com/littlefires/littlefires.github.io>.
 
 ### Us
 Like you, we're just trying to shine a little light in these dark times. We are, alphabetically: 
