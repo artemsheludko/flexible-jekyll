@@ -20,6 +20,8 @@ Build a production version of the site in `_site`.
 
 Delete the `_site` folder. 
 
+*The `build` and `clean` tasks aren't used for deployment; deployment happens through GitHub Pages.*
+
 ## Who are we? 
 
-Scott Weingart, Roopika Risam, Zoe LeBlanc, Amanda Licastro, Jason Heppler, Alex Gil, Amanda Visconti, Avery Wiscomb, Matthew Milner
+Alex Gil, Jason Heppler, Zoe LeBlanc, Amanda Licastro, Matthew Milner, Roopika Risam, Amanda Visconti, Scott B. Weingart, Avery Wiscomb
