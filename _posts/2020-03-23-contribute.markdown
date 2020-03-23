@@ -12,7 +12,8 @@ Many of us are turning to creative outlets to keep the stresses of a global pand
 
 If you’ve been knitting, making music, baking bread, writing poetry, building an elaborate aquarium, or otherwise creating anything that has brought you joy, send it over. Anonymous contributions welcome. Amateur contributions welcome. Unfinished contributions welcome. You are welcome.
 
-To contribute, see the details [here](https://littlefires.github.io/contribute/)
+To contribute, click [here](https://littlefires.github.io/contribute/)
 
 image credit: casc (pixabay.com)
+
 credit: a thousand little fires
