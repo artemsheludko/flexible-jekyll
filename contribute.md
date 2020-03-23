@@ -24,6 +24,9 @@ Send us your creation, along with how you want to be credited.
 - Submit through our Google Form: <https://tinyurl.com/AThousandLittleFires>
 - Fork our repo, create a post, and send us a pull request on GitHub: <https://github.com/littlefires/littlefires.github.io>.
 
+### Code of Conduct
+Submissions should not be hateful, harassing, malicious, or discriminatory. If someone would be upset seeing your submission, don't send it. Don't send us artwork or any other content that you did not create yourself or for whatever reason cannot legally be distributed.
+
 ### Us
 Like you, we're just trying to shine a little light in these dark times. We are, alphabetically: 
 
