@@ -775,12 +775,31 @@ html {
 }
 
 body {
-  font-family: "garamond", serif;
+  /* default to system fonts */
+  font-family: -apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif;
   color: #515151;
   background-color: #fbfbfb;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background:transparent;
+  font-size: 100%;
+  text-decoration-thickness: 0.1em;
+  text-decoration-width: 0.1em;
+}
+
+a:hover {
+  text-decoration-color: #a0a0a0;
+}
+
+a, a:visited {
+  color: #263959;
 }
 
 h1 {
