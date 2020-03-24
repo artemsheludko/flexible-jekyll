@@ -1,6 +1,6 @@
 don't despair, create!
 
-[a thousand little fires](littlefires.github.io) is a space to see and share what we create while reconciling with self-isolation.
+[a thousand little fires](https://littlefires.github.io) is a space to see and share what we create while reconciling with self-isolation.
 
 one new creation every day.
 
