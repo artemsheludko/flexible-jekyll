@@ -7,6 +7,7 @@ license: CC-BY 4.0
 ---
 
 ![fire]({{site.baseurl}}/assets/img/campfire.jpg)
+*image credit: casc (pixabay.com)*
 
 Don’t despair, create! (Or despair, and create!)
 
@@ -15,8 +16,6 @@ Many of us are turning to creative outlets to keep the stresses of a global pand
 If you’ve been knitting, making music, baking bread, writing poetry, building an elaborate aquarium, or otherwise creating anything that has brought you joy, send it over. Anonymous contributions welcome. Amateur contributions welcome. Unfinished contributions welcome. You are welcome.
 
 To contribute, click [here](https://littlefires.github.io/contribute/)
-
-image credit: casc (pixabay.com)
 
 credit: a thousand little fires
 
