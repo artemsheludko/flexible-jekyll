@@ -2,6 +2,8 @@
 layout: post
 title: create something
 date: 2020-03-23 13:23:20 +0300
+tags: [meta]
+license: CC-BY 4.0
 ---
 
 ![fire]({{site.baseurl}}/assets/img/campfire.jpg)
@@ -17,3 +19,5 @@ To contribute, click [here](https://littlefires.github.io/contribute/)
 image credit: casc (pixabay.com)
 
 credit: a thousand little fires
+
+{% if page.license %}license: {{ page.license }} {% endif %}
