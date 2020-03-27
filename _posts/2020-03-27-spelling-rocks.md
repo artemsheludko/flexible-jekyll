@@ -13,6 +13,8 @@ license:
   style="height: 486px; width: 100%; border: 0;">
 </iframe>
 
+(Note: if the embedded spelling game is not working in your browser, go directly to the [app on Glitch](https://glitch.com/embed/#!/embed/spelling-rocks?previewSize=100&previewFirst=true&sidebarCollapsed=true).
+
 credit: Andy Jackson
 
 {% if page.license %}license: {{ page.license }} {% endif %}
