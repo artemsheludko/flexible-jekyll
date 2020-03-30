@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mourning Braids
+title: "Mourning Braids"
 date: 2020-03-30
 tags: [mourning, fabric arts, grief]
 license: CC
