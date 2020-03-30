@@ -1,6 +1,10 @@
 ---
 layout: post
+<<<<<<< HEAD
 title: "Mourning Braids"
+=======
+title: "Ultimate Cloak of Invisibility"
+>>>>>>> cfb5ebbb07a713e4a0b97efd7524ce85bc493b36
 date: 2020-03-29
 tags: [mourning, fabric arts, grief]
 license: CC
