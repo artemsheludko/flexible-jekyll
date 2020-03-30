@@ -2,7 +2,7 @@
 layout: post
 title: "Ultimate Cloak of Invisibility"
 date: 2020-03-29
-tags: [fabric, sewing, wfh]
+tags: [fabric arts, sewing, wfh]
 license: CC
 ---
 

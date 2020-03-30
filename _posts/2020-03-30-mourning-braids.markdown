@@ -6,7 +6,7 @@ tags: [mourning, fabric arts, grief]
 license: CC
 ---
 
-![Two examples of mourning braids. These are made of wool roving and are roughly six feet long.]({{site.baseurl}}/assets/img/2020-03-30-mourning-braids copy.jpg)
+![Two examples of mourning braids. These are made of wool roving and are roughly six feet long.]({{site.baseurl}}/assets/img/2020-03-30-mourning-braids.jpg)
 
 
 I study the way we count dead people. I also make art in order to help people experience mass casualty events differently. Usually this is about the past. For the last several years I’ve been interested in mourning braids, a tradition that has some roots in Victorian England, but also more contemporary examples like the stunning work of Nene Humphrey.
@@ -23,4 +23,4 @@ The braids can be a way of mourning people, or simply lost opportunities, events
 
 credit: [Jacqueline Wernimont](http://jwernimont.com/mourning-braids/)
 
-{% if page.license %}license: {{ page.license }} {% endif %
+{% if page.license %}license: {{ page.license }} {% endif %}
