@@ -4,6 +4,23 @@ layout: default
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 
+<script>
+  function filterByTag(tag) {
+    const articles = [...document.getElementsByTagName('article')];
+    articles.forEach((article) =>
+    {
+      const articleTags = JSON.parse(article.dataset.tags);
+      if (articleTags.some(articleTag => articleTag === tag))
+      {
+        article.style.display = "flex";
+      }
+      else
+      {
+        article.style.display = "none";
+      }
+    });
+  }
+</script>
 <aside class="sidebar">
   <header>
     <div class="about">
@@ -19,7 +36,7 @@ layout: default
     <ul class="tags">
       <!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
       {% for this_word in tag_words %}
-      <li><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a></li>
+      <li onclick="filterByTag('{{ this_word }}')"><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a></li>
       {% endfor %}
     </ul>
     <h3>Types de contenu</h3>
