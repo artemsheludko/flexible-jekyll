@@ -937,7 +937,6 @@ table tfoot td {
 }
 
 .about {
-  margin: 0 0 40px;
   text-align: center;
 }
 
@@ -1035,8 +1034,8 @@ table tfoot td {
   content: "";
   display: block;
   height: 2px;
-  width: -webkit-calc(50% - 48px);
-  width: calc(50% - 48px);
+  width: -webkit-calc(50% - 62px);
+  width: calc(50% - 62px);
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1050,8 +1049,8 @@ table tfoot td {
   content: "";
   display: block;
   height: 2px;
-  width: -webkit-calc(50% - 48px);
-  width: calc(50% - 48px);
+  width: -webkit-calc(50% - 62px);
+  width: calc(50% - 62px);
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1150,8 +1149,7 @@ footer .copyright {
   width: 70%;
 }
 
-.post .post-content .post-date,
-.post .post-content .post-words {
+.post .post-content .post-date {
   font-size: 12px;
 }
 
@@ -1336,6 +1334,28 @@ a.newer-posts:hover {
   list-style: none;
 }
 
+.sidebar-content {
+  margin: 0;
+  padding: 10px;
+}
+
+.sidebar-content h3 {
+  margin: 0;
+}
+
+.sidebar-content ul {
+  padding: 0;
+}
+
+.sidebar-content li {
+  list-style-type: none;
+  margin: 5px;
+}
+
+.sidebar-content .tags li {
+  display: list-item;
+}
+
 .tags li a {
   text-decoration: none;
   color: #263959;
@@ -1411,6 +1431,12 @@ a.newer-posts:hover {
     background-color: #ffffff;
     -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
             box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
+  }
+  .sidebar-content{
+    text-align: center;
+  }
+  .sidebar-content .tags li {
+    display: inline-block;
   }
   .sidebar footer {
     margin-bottom: 10px;
