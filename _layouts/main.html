@@ -5,19 +5,56 @@ layout: default
 {% assign tag_words = site_tags | split:',' | sort %}
 
 <script>
-  function filterByTag(tag) {
-    const articles = [...document.getElementsByTagName('article')];
-    articles.forEach((article) =>
-    {
-      const articleTags = JSON.parse(article.dataset.tags);
-      if (articleTags.some(articleTag => articleTag === tag))
+  function filterArticles(tag) {
+
+    // Retrieve tag + filters.
+    tag = tag || window.location.hash.substring(1);
+    var filters = [
+      document.getElementById("article"),
+      document.getElementById("video")
+    ];
+
+    // Retrieve articles list and iterate.
+    const articles = [...document.getElementsByTagName('article')]
+    articles.forEach((article) => {
+
+      // Get article content (article/video) and its tags.
+      const articleContent = article.dataset.articleContent;
+      const articleTags = JSON.parse(article.dataset.tags ? article.dataset.tags : '[]');
+
+      var displayArticle = false;
+      // TODO: Refactor code.
+      if (tag === '')
       {
-        article.style.display = "flex";
+        // Iterate over filters and display article when conditions are fullfilled.
+        filters.forEach((filter) => {
+          if (articleContent === filter.id && filter.checked)
+          {
+            article.style.display = "flex";
+            displayArticle = true;
+          }
+        })
+        if (!displayArticle)
+        {
+            article.style.display = "none";
+        }
       }
       else
       {
-        article.style.display = "none";
+        // Iterate over filters and display article when conditions are fullfilled.
+        filters.forEach((filter) => {
+          if (articleContent === filter.id && filter.checked && articleTags.some(articleTag => articleTag === tag))
+          {
+            article.style.display = "flex";
+            displayArticle = true;
+          }
+        })
+        if (!displayArticle)
+        {
+            article.style.display = "none";
+        }
       }
+
     });
   }
 </script>
@@ -36,17 +73,17 @@ layout: default
     <ul class="tags">
       <!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
       {% for this_word in tag_words %}
-      <li onclick="filterByTag('{{ this_word }}')"><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a></li>
+      <li onclick="filterArticles('{{ this_word }}')"><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a></li>
       {% endfor %}
     </ul>
     <h3>Types de contenu</h3>
     <ul class="content-type-filters">
       <li>
-        <input type="checkbox" id="article" checked>
+        <input type="checkbox" id="article" name="article" onclick="filterArticles()" checked>
         <label for="article"> Articles</label><br>
       </li>
       <li>
-        <input type="checkbox" id="video" checked>
+        <input type="checkbox" id="video" name="video" onclick="filterArticles()" checked>
         <label for="video"> Vid&#233os</label><br>
       </li>
     </ul>
@@ -56,29 +93,29 @@ layout: default
       <h3 class="contact-title">Contactez-nous</h3>
       <ul>
         {% if site.social-twitter %}
-          <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         {% else %}
-          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-facebook %}
-          <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         {% else %}
-          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-github %}
-          <li class="github"><a href="http://github.com/{{site.social-github}}" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li class="github"><a href="http://github.com/{{site.social-github}}" target="_blank"><i class="fa fa-github"></i></a></li>
         {% else %}
-          <li class="github"><a href="http://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li class="github"><a href="http://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-linkedin %}
-          <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
         {% else %}
-          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-email %}
-          <li class="email"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
+        <li class="email"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
         {% else %}
-          <li class="email"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        <li class="email"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         {% endif %}
       </ul>
     </section> <!-- End Section Contact -->
