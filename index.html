@@ -4,7 +4,7 @@ layout: main
 {% for post in paginator.posts %}
 <article data-article-content='{{post.articleContent}}' {% if post.tags.size != 0 %} data-tags='["{{post.tags | join: '", "'}}"]' {% endif %} class="post">
   {% if post.img %}
-  <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
+    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
   {% else %}
   {% endif %}
   <div class="post-content">
