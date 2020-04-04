@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Made With Love"
+date: 2020-04-04
+tags: [sewing, masks, DIY]
+license: CC-BY
+---
+
+![A gallery of DIY cloth face masks]({{site.baseurl}}/assets/img/2020-04-04-masks.jpg)
+
+A gallery of DIY masks to motivate and inspire ... one made by a person who had NEVER used a sewing machine before.
+
+Link to pattern and instructions: [https://jeanleecole.wordpress.com/2020/04/03/made-with-love/](https://jeanleecole.wordpress.com/2020/04/03/made-with-love/)
+
+credit: Jean Lee Cole
+
+{% if page.license %}license: {{ page.license }} {% endif %}
