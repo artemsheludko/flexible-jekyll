@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Behave+Selenium 워크숍 정리
-img : 2020/20200416/cucumber.jpg
+img : 2020/20200425/selenium.png
 tags: [BDD,behave,python,Selenium]
 ---
 
