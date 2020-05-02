@@ -29,6 +29,4 @@ Retrouver la couverture complète du London Latin Jazz Festival depuis sa premi�
   * [Yelfris Valdés&nbsp;: «&nbsp;Le nouveau jazz britannique est la nouvelle pop&nbsp;» / London Latin Jazz Festival, de classique en surprise](https://www.lemonde.fr/le-jazz-et-la-salsa/article/2018/11/12/yelfris-valdes-le-nouveau-jazz-britannique-est-la-nouvelle-pop_5382281_5324427.html)
   * [Le London Latin Jazz Festival, reflet de la diversité londonienne](https://www.lemonde.fr/le-jazz-et-la-salsa/article/2019/11/13/le-london-latin-jazz-festival-reflet-de-la-diversite-londonienne_6018961_5324427.html?fbclid=IwAR0F7IiYKNQyUcvDWczQRhJo_cUDZiB-YsUN8LoZtAEG-Mr9UtO2iIz2byc)
 
-{% youtube U97kBu3G0ZQ %}
-
 **Yannick Le Maintec**
