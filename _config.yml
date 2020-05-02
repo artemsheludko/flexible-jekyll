@@ -36,3 +36,5 @@ paginate_path: "/page/:num"
 lang: fr
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+theme: jekyll-theme-cayman
