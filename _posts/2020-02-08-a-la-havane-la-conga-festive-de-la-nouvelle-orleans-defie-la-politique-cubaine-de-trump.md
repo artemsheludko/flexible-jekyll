@@ -29,9 +29,6 @@ L&#8217;article revient ensuite aux fondamentaux de Jazz Plaza, le jazz-afro-cub
 
 Comment refermer cette édition de Jazz Plaza sans évoquer la nouvelle performance de **Omara Portuondo** dans le spectacle qu&#8217;elle a donné à l&#8217;occasion ses 90 ans ?
 
-{% youtube a00nkeOB5xs %}
-
-
 &#8220;Second Line à La Havane&#8221; n&#8217;aurait été ce qu&#8217;il est sans ceux qui ont contribué à l&#8217;illustrer. Un grand merci pour leur contribution à **Olivier Erin** ([Fiestacubana.net](http://www.fiestacubana.net/)), **Philippe Monsan** (El Comité), **Raul da Gama** et **Danilo Navas** ([LatinJazzNet](https://latinjazznet.com/)).
 
 **Yannick Le Maintec**
