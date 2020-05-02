@@ -4,7 +4,7 @@ date: 2018-03-18T12:51:21+02:00
 author: Yannick Le Maintec
 layout: post
 img: jdo-visuel-2018.jpg
-permalink: mundo-latino-le-blog-des-musiques-latines-sur-lemondefr
+permalink: /mundo-latino-le-blog-des-musiques-latines-sur-lemondefr
 tags:
   - blog
   - Mundo Latino
