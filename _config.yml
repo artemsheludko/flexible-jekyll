@@ -37,4 +37,4 @@ lang: fr
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
 
-theme: flexible-jekylm
+theme: flexible-jekyll
