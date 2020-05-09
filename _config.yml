@@ -2,7 +2,7 @@ title: Yannick Le Maintec, blogueur
 description: > # this means to ignore newlines until "baseurl:"
   Yannick Le Maintec, auteur du Jazz et la Salsa, blog du journal le Monde consacré aux musiques latines et caribéennes.
 permalink: ':title/'
-baseurl: "/news" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
