@@ -11,13 +11,12 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Ethan Peterson # add your name
 author-img: david-freeman.jpg # add your photo
-about-author: A Computer Engineering student working in both the aerospace and
-automotive industries with a focus on embedded systems # add description
+about-author: A Computer Engineering student working in both the aerospace and automotive industries with a focus on embedded systems # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: ethanmpeterson # add your Github handle
 social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-email: ethan@petetech.net # add your Email address
 
 # Disqus
 discus-identifier: mr-brown # add your discus identifier
