@@ -1,0 +1,24 @@
+I"<<h1 id="purpose">Purpose</h1>
+
+<p>The purpose of the Astable Multivibrator project (the “AM”) was to learn
+essential circuitry skills for the ACES program, as well as translate those
+skills into a fun media, by creating a lighting system for a Halloween
+“jack-o-lantern” pumpkin. There are three key circuitry skills that were
+acquired by completing the AM project.</p>
+
+<p>The first skill was to move from a prototype circuit on a breadboard to a final
+product soldered to a Printed Circuit Board (a “PCB”). A PCB is a thin board
+made of fibreglass, composite epoxy or a different laminate material and
+contains electrically conductive pathways. Components can be installed and
+connected to the pathways of a PCB to create a circuit. The PCB is a ubiquitous
+component of computers and other electronics, hence the necessity of mastering
+this skill.</p>
+
+<p><img src="../assets/img/AS/as-breadboard.jpg" alt="" title="Breadboard Prototype" /></p>
+
+<p>The second skill was to learn proper techniques for soldering
+components to a PCB. Proper soldering techniques are essential to ensuring the
+proper functioning of the components. The third skill was to interpret the
+circuit diagram provided for the project and successfully translate it to a
+prototype circuit on the breadboard, and ultimately to a final product on a PCB.</p>
+:ET

@@ -1,10 +1,10 @@
-title: Hello, world! I'm Ethan Peterson
+title: Ethan Peterson
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/portfolio" # the subpath of your site, e.g. /blog
 url: "https://ethanmpeterson.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
@@ -15,9 +15,6 @@ about-author: A Computer Engineering student working in both the aerospace and a
 social-github: ethanmpeterson # add your Github handle
 social-linkedin: ethan-peterson-22909a178 # add your Linkedin handle
 social-email: ethan@petetech.net # add your Email address
-
-# Disqus
-discus-identifier: mr-brown # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics

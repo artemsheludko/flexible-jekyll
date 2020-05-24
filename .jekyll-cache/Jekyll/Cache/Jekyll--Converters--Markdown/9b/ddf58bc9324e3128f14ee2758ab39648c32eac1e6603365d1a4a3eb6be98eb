@@ -1,0 +1,39 @@
+I"L<h1 id="purpose">Purpose</h1>
+
+<p>The purpose of the Astable Multivibrator project (the “AM”) was to learn
+essential circuitry skills for the ACES program, as well as translate those
+skills into a fun media, by creating a lighting system for a Halloween
+“jack-o-lantern” pumpkin. There are three key circuitry skills that were
+acquired by completing the AM project.</p>
+
+<p>The first skill was to move from a prototype circuit on a breadboard to a final
+product soldered to a Printed Circuit Board (a “PCB”). A PCB is a thin board
+made of fibreglass, composite epoxy or a different laminate material and
+contains electrically conductive pathways. Components can be installed and
+connected to the pathways of a PCB to create a circuit. The PCB is a ubiquitous
+component of computers and other electronics, hence the necessity of mastering
+this skill.</p>
+
+<p><img src="../assets/img/AS/as-breadboard.jpg" alt="" title="Breadboard Prototype" /></p>
+<center>AS Project Breadboard Prototype</center>
+
+<p>The second skill was to learn proper techniques for soldering
+components to a PCB. Proper soldering techniques are essential to ensuring the
+proper functioning of the components. The third skill was to interpret the
+circuit diagram provided for the project and successfully translate it to a
+prototype circuit on the breadboard, and ultimately to a final product on a PCB.</p>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://darcy.rsgc.on.ca/ACES/TEL3M/images/AstableMultivibrator.png">Circuit Schematic</a></p>
+
+<h1 id="procedure">Procedure</h1>
+
+<p>An AM is a circuit with two transistors that work in unison with two capacitors
+to oscillate Light Emitting Diodes (“LEDs”). The procedure for creating the AM
+in this project was comprised of 3 steps: prototyping, soldering and pumpkin
+fitting. The first step to creating the AM was prototyping. This consisted of
+interpreting the circuit diagram and realizing the circuit on a breadboard. The
+circuit on the breadboard was realized by analyzing the diagram very carefully
+and understanding how the components of the circuit are linked together.</p>
+:ET
