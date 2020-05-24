@@ -12,8 +12,6 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Ethan Peterson # add your name
 author-img: ethan.jpg # add your photo
 about-author: A Computer Engineering student working in both the aerospace and automotive industries with a focus on embedded systems # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
 social-github: ethanmpeterson # add your Github handle
 social-linkedin: ethan-peterson-22909a178 # add your Linkedin handle
 social-email: ethan@petetech.net # add your Email address
