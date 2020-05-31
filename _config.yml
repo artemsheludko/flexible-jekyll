@@ -7,6 +7,7 @@ permalink: ':title/'
 baseurl: "/dangepalash2.github.io/" # the subpath of your site, e.g. /blog
 url: "https://dangepalash2.github.io//" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
+remote_theme: dangepalash2/dangepalash2.github.io
 
 # Author Settings
 author: David Freeman # add your name
