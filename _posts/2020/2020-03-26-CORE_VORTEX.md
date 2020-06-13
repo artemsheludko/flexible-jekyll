@@ -15,7 +15,7 @@ IT를 하다보니 이상하게 키보드를 수집하는 수집벽이 조금 �
 
 
 
-![](https://img.gigglehd.com/gg/files/attach/images/13773/515/686/aa8de7f4ed5aa684e84c3c880d508f60.jpg)
+![](https://mblogthumb-phinf.pstatic.net/MjAxOTA3MThfODgg/MDAxNTYzNDUzOTk3NDEx.h8myKGUNP73_VUYYEW2vgmPOsgeM2c05n5LfPWafaI0g.gkzrJZvYQTAzX3pSCWZPm59oXKV8NrkTUDlvytMD0Nwg.JPEG.rhkrehduq/20190717_211415.jpg?type=w800)
 
 
 
