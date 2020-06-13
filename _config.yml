@@ -9,12 +9,12 @@ subtitle:
 description:SW개발 및 품질관리 컨설팅을 하다가 지금은 삼성청년SW아카데미에서 2학기를 맡고 있습니다.
 author: SungJoon(George) Kim
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: kr
 date_format: '%Y-%m-%d'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-url: "https://armitage.github.io"
+url: "https://cheuora.github.io"
 baseurl:
 permalink: pretty
 
