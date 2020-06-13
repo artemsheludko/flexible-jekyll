@@ -1,28 +1,6 @@
 ---
-layout: main
+layout: layout
 ---
-<article class="article-page">
-  <div class="page-content">
-    {% if page.img %}
-    <div class="page-cover-image">
-      <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
-    </div> <!-- End Page Cover Image -->
-    {% else %}
-    {% endif %}
-    <div class="wrap-content">
-      <header class="header-page">
-        <h1 class="page-title">{{page.title}}</h1>
-        <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-      </header>
-      {{page.content | markdownify}}
-      <div class="page-footer">
-        <div class="page-tag">
-          {% for tag in page.tags %}
-            <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
-          {% endfor %}
-        </div>
-      </div>
-      {% include disqus.html %}
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
-</article> <!-- End Article Page -->
+
+{% assign __ = site.data.languages[site.language] %}
+{% include post.html %}
