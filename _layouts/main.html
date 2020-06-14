@@ -26,13 +26,25 @@ layout: default
       text-align: center;
       text-decoration: none;
       font-size: 1.1em;
-      margin-left: 10%;
-      margin-top: 5%;
       border-radius: 5%;
     }
     .resume-download-btn:hover{
       background: rgb(197, 158, 51);
       color: #ffffff;
+      text-align: center;
+    }
+    .skill-header{
+      margin-bottom: 0%; 
+      padding-bottom: 0%; 
+      text-align: center;
+    }
+    .skill-section{
+      margin-bottom: 15%; 
+      margin-top: 0%; 
+      padding-top: 0%;
+    }
+    .centre-div{
+      text-align: center;
     }
   </style>
   <header >
@@ -46,8 +58,8 @@ layout: default
   </header> <!-- End Header -->
 
   <!-- Start Section -->
-  <section style="margin-bottom: 15%; margin-top: 0%; padding-top: 0%;"> 
-      <h4 style="margin-bottom: 0%; padding-bottom: 0%; text-align: center;">Top Skills</h4>
+  <section class="skill-section"> 
+      <h4 class="skill-header">Top Skills</h4>
       <span class="skill-pill">Java</span> <span class="skill-pill">Go</span> 
       <span class="skill-pill">AWS</span> <span class="skill-pill">GCP</span>
       <span class="skill-pill">TypeScript</span> 
@@ -57,7 +69,9 @@ layout: default
       <span class="skill-pill">Postgres</span> <span class="skill-pill">Node.js</span> 
       <span class="skill-pill">Kubernetes</span> <span class="skill-pill">Microservices</span> 
         
-      <a class="skill-pill resume-download-btn" href="{{site.baseurl}}/assets/img/dawud-ismail.jpg">View Full Resume</a> 
+     <div class="centre-div">
+      <a class="skill-pill resume-download-btn" href="{{site.baseurl}}/assets/docs/DawudIbrahimIsmail- Resume.pdf">View Full Resume</a> 
+     </div>
   </section> <!-- End Section -->
 
   <footer>
