@@ -2,6 +2,9 @@
 layout: main
 ---
 <article class="article-page">
+  <a href="javascript:history.back()" style="color: brown;">
+    <i class="fa fa-long-arrow-left fa-lg " aria-hidden="true">  Back</i>
+  </a>
   <div class="page-content">
     {% if page.img %}
     <div class="page-cover-image">
@@ -24,7 +27,6 @@ layout: main
         <div class="page-share">
           <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
           <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           {% for tag in page.tags %}
