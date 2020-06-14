@@ -3,7 +3,39 @@ layout: default
 ---
 
 <aside class="sidebar">
-  <header>
+  <style>
+    .skill-pill{
+      display: inline-block;
+      margin: 5px;
+      margin-bottom: 0%; 
+      padding-bottom: 0%;
+      padding: 2px 3px;
+      color: #374054;
+      background: #e4e4ea;
+      list-style: none;
+      cursor: default;
+      font-size: 0.9em;
+      visibility: visible;
+      animation-name: fadeIn;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+    .resume-download-btn{
+      background: #58ACB0;
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.1em;
+      margin-left: 10%;
+      margin-top: 5%;
+      border-radius: 5%;
+    }
+    .resume-download-btn:hover{
+      background: rgb(197, 158, 51);
+      color: #ffffff;
+    }
+  </style>
+  <header >
     <div class="about">
       <div class="cover-author-image">
         <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
@@ -12,6 +44,22 @@ layout: default
       <p>{{site.about-author}}</p>
     </div>
   </header> <!-- End Header -->
+
+  <!-- Start Section -->
+  <section style="margin-bottom: 15%; margin-top: 0%; padding-top: 0%;"> 
+      <h4 style="margin-bottom: 0%; padding-bottom: 0%; text-align: center;">Top Skills</h4>
+      <span class="skill-pill">Java</span> <span class="skill-pill">Go</span> 
+      <span class="skill-pill">AWS</span> <span class="skill-pill">GCP</span>
+      <span class="skill-pill">TypeScript</span> 
+      <span class="skill-pill">gRPC</span>
+      <span class="skill-pill">Angular</span> 
+      <span class="skill-pill">CI/CD</span>
+      <span class="skill-pill">Postgres</span> <span class="skill-pill">Node.js</span> 
+      <span class="skill-pill">Kubernetes</span> <span class="skill-pill">Microservices</span> 
+        
+      <a class="skill-pill resume-download-btn" href="{{site.baseurl}}/assets/img/dawud-ismail.jpg">View Full Resume</a> 
+  </section> <!-- End Section -->
+
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
@@ -19,7 +67,7 @@ layout: default
         {% if site.social-twitter %}
           <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         {% else %}
-          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/idawudi" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-facebook %}
           <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -36,12 +84,17 @@ layout: default
         {% else %}
           <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         {% endif %}
+        {% if site.social-medium %}
+          <li class="medium"><a href="https://medium.com/@{{site.social-medium}}"><i class="fa fa-medium"></i></a></li>
+        {% else %}
+          <li class="medium"><a href="https://medium.com/@ismaildawud96"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
+        {% endif %}
         {% if site.social-email %}
           <li class="email"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
         {% else %}
           <li class="email"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         {% endif %}
-      </ul>
+         </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
       <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>

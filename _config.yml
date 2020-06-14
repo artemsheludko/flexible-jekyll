@@ -1,25 +1,26 @@
-title: Hello, world! I'm David Freeman
+title: I'm Dawud Ibrahim Ismail
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 permalink: ':title/'
-baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: #if your site has a twitter account, enter it here
+site-twitter: idawudi #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+author: Dawud Ibrahim Ismail # add your name
+author-img: dawud-ismail.jpg # add your photo
+about-author: I'm a technical writer and Software Engineer focusing on Backend & DevOps development. # add description
+social-twitter: idawudi # add your Twitter handle
+social-facebook: idawudinho # add your Facebook handle
+social-github: idawud # add your Github handle
+social-linkedin: dawud-ibrahim-ismail-96378713a/ # add your Linkedin handle
+social-medium: ismaildawud96 # add your medium handle
+social-email: ismaildawud96@gmail.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: idawud # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
