@@ -20,10 +20,10 @@ social-medium: ismaildawud96 # add your medium handle
 social-email: ismaildawud96@gmail.com # add your Email address
 
 # Disqus
-discus-identifier: idawud # add your discus identifier
+discus-identifier: dawudibrahimismail # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-169380947-1 # Google Analytics
 
 # Build Settings
 markdown: kramdown
