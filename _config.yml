@@ -1,8 +1,7 @@
 title: I'm Dawud Ibrahim Ismail
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+      I am a highly driven Software Engineer with a track development in the domains of education, e-Commerce, FinTech and AgriTech.
+      Self-taught person and problem solver searching for personal and technical excellence.
 permalink: ':title/'
 baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -11,7 +10,7 @@ site-twitter: idawudi #if your site has a twitter account, enter it here
 # Author Settings
 author: Dawud Ibrahim Ismail # add your name
 author-img: dawud-ismail.jpg # add your photo
-about-author: I'm a Software Engineer focusing on Backend & DevOps development. # add description
+about-author: I'm a Software Engineer with a special focus on the latest Backend & DevOps technologies and practices. # add description
 social-twitter: idawudi # add your Twitter handle
 social-facebook: idawudinho # add your Facebook handle
 social-github: idawud # add your Github handle

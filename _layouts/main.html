@@ -4,47 +4,19 @@ layout: default
 
 <aside class="sidebar">
   <style>
-    .skill-pill{
-      display: inline-block;
-      margin: 5px;
-      margin-bottom: 0%; 
-      padding-bottom: 0%;
-      padding: 2px 3px;
-      color: #374054;
-      background: #e4e4ea;
-      list-style: none;
-      cursor: default;
-      font-size: 0.9em;
-      visibility: visible;
-      animation-name: fadeIn;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    }
-    .resume-download-btn{
-      background: #58ACB0;
-      color: #ffffff;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1.1em;
-      border-radius: 5%;
-    }
-    .resume-download-btn:hover{
-      background: rgb(197, 158, 51);
-      color: #ffffff;
-      text-align: center;
-    }
-    .skill-header{
-      margin-bottom: 0%; 
-      padding-bottom: 0%; 
-      text-align: center;
-    }
-    .skill-section{
-      margin-bottom: 15%; 
-      margin-top: 0%; 
-      padding-top: 0%;
-    }
     .centre-div{
       text-align: center;
+    }
+    .link {
+      color: #374054;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    .link:hover {
+    color: rgb(197, 158, 51);
+    }
+    .ul-no-bullet {
+      list-style: none;
     }
   </style>
   <header >
@@ -57,22 +29,18 @@ layout: default
     </div>
   </header> <!-- End Header -->
 
-  <!-- Start Section -->
-  <section class="skill-section"> 
-      <h4 class="skill-header">Top Skills</h4>
-      <span class="skill-pill">Java</span> <span class="skill-pill">Go</span> 
-      <span class="skill-pill">AWS</span> <span class="skill-pill">GCP</span>
-      <span class="skill-pill">TypeScript</span> 
-      <span class="skill-pill">gRPC</span>
-      <span class="skill-pill">Angular</span> 
-      <span class="skill-pill">CI/CD</span>
-      <span class="skill-pill">Postgres</span> <span class="skill-pill">Node.js</span> 
-      <span class="skill-pill">Kubernetes</span> <span class="skill-pill">Microservices</span> 
-        
-     <div class="centre-div">
-      <a class="skill-pill resume-download-btn" href="{{site.baseurl}}/assets/docs/DawudIbrahimIsmail- Resume.pdf">View Full Resume</a> 
-     </div>
-  </section> <!-- End Section -->
+  <!-- NavList Start -->
+  <div class="nav">
+    <ul class="ul-no-bullet">
+      <li>
+        <a class="link" href="{{site.baseurl}}/about"><i class="fa fa-link" aria-hidden="true"></i> About Me</a>
+      </li>
+      <li>
+        <a class="link" href="{{site.baseurl}}/"><i class="fa fa-link" aria-hidden="true"></i> Blog</a>
+      </li>
+    </ul>
+  </div>
+  <!-- NavList End -->
 
   <footer>
     <section class="contact">
