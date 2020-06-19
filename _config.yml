@@ -84,7 +84,7 @@ keywords: "IT,Software,Developmet,Engieering"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: false
 
 # Specify the date when the site was setup
 #since: 2015
