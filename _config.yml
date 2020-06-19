@@ -225,7 +225,7 @@ font:
 social_icons:
   enable: true
   # Icon Mappings.
-  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
+  KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: https://github.com/cheuora
   Twitter: https://twitter.com/cheuora
 
