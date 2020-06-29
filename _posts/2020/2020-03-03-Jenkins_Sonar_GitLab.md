@@ -52,7 +52,9 @@ gitlab은 CE(Community Edition)을 사용하였다.  docker 이미지를 통해 
 docker pull gitlab/gitlab-ce
 ```
 
+gitlab이미지의 구동은 아래 URL참조
 
+https://docs.gitlab.com/omnibus/docker/README.html
 
 ### SonarQube Server 설치
 
@@ -61,6 +63,10 @@ docker pull gitlab/gitlab-ce
 ```
 docker pull sonarqube
 ```
+
+Sonarqube 이미지 구동은 아래 URL참조
+
+https://docs.sonarqube.org/latest/setup/get-started-2-minutes/#header-2
 
 
 
