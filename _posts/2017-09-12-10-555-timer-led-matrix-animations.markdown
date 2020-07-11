@@ -119,8 +119,7 @@ process immensely.
 <center><b>Soldered Prototype</b></center>
 
 # Code
-
-```
+{% highlight c %}
 /*
 Author: Ethan Peterson
 Date: November 26, 2016
@@ -252,7 +251,7 @@ void nextFrame() { // runs every time the output pin of the 555 timer goes high
     frame++;
   }
 }
-```
+{% endhighlight %}
 
 # Conclusion
 

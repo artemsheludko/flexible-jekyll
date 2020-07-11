@@ -1,12 +1,22 @@
-I"�.<h1 id="purpose">Purpose</h1>
-<p>The purpose of the 555 timer-based LED matrix animations project (referred to in
+---
+layout: post
+title: 555 Timer Based LED Matrix Animations
+date: 2016-11-12 00:00:00 +0300
+description: Incorporating Interrupts and external timers into an LED matrix project
+img: 555-Animations/555-timer-thumb.jpg # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [Interrupts, Atmel AVR, Shift Register Multiplexing] # add tag
+---
+
+# Purpose
+The purpose of the 555 timer-based LED matrix animations project (referred to in
 this report as the “TBMA project”) was to demonstrate how a 555 timer could
 still be used in the context of microcontrollers, as well as improve programming
-skills and understanding of the 595 shift register.</p>
+skills and understanding of the 595 shift register.
 
-<p>3 key engineering skills were improved upon in the TBMA project:</p>
+3 key engineering skills were improved upon in the TBMA project:
 
-<p>Programming skills were improved as a result of having to program a smaller
+Programming skills were improved as a result of having to program a smaller
 microcontroller with less SRAM and program space to work with, as well as having
 to program two daisy chained shift registers to display the desired images on
 the LED matrix. Soldering skills were highly improved upon during this project
@@ -14,15 +24,15 @@ due to the fact that all of the columns on the half + size breadboard PCB were
 utilized in the circuit, thereby requiring an extensive amount of soldering and
 leaving little room for error in the soldering process. Circuit skills were also
 refined during this project as the project required extensive wiring and
-troubleshooting of the circuit and less attention to the code.</p>
+troubleshooting of the circuit and less attention to the code.
 
-<h1 id="reference">Reference</h1>
+# Reference
 
-<p>http://lucidtronix.com/tutorials/40
-http://www.protostack.com/blog/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/</p>
+http://lucidtronix.com/tutorials/40
+http://www.protostack.com/blog/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/
 
-<h1 id="procedure">Procedure</h1>
-<p>The TBMA project circuit was made up of 2 595 shift registers, an ATtiny85
+# Procedure
+The TBMA project circuit was made up of 2 595 shift registers, an ATtiny85
 microcontroller, a 555 timer and a 8x8 LED matrix. The 555 timer establishes an
 astable square wave pulse that is adjustable by a 10k potentiometer. The output
 pin of the 555 timer, which emits the pulse, is hooked up to the external
@@ -37,8 +47,8 @@ register controlling the columns of the LED matrix. The daisy-chaining of the
 two shift registers gives the ATtiny85 access to 16 new output pins, which
 control the 64 total LEDs on the LED matrix through a process in the code called
 scanning. The scanning takes place within a function in the code called
-<code class="highlighter-rouge">displayBitMap()</code>. A bitmap consists of an array that holds 8 bytes. The
-<code class="highlighter-rouge">displayBitMap()</code> function shifts the binary values from the first byte of the
+`displayBitMap()`. A bitmap consists of an array that holds 8 bytes. The
+`displayBitMap()` function shifts the binary values from the first byte of the
 array into the column shift register and as it is the first byte of the array,
 it is shown on the first row of the LED Matrix. The function then turns off the
 first row and shifts out the byte to the column shift register to be shown on
@@ -48,46 +58,22 @@ rapidly that it appears as though all of the individual illuminated rows on the
 LED matrix are illuminated simultaneously. This is due to an optical illusion
 called persistence of vision. Persistence of vision is an optical illusion
 whereby multiple discrete images blend into one. In this case, the individual
-illuminated rows on the LED matrix are perceived as one image.</p>
+illuminated rows on the LED matrix are perceived as one image.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Parts List</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">2 595 Shift Registers</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">ATtiny85 Microcontroller</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">555 Timer IC</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">8x8 LED Matrix</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">8 x 330Ω Resistors</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">1k Ω Resistor</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">Adafruit Half Breadboard PCB</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">Blue Acrylic Chassis</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">9V Power Supply</td>
-    </tr>
-  </tbody>
-</table>
 
-<p>The first step in the construction of the TBMA project was the creation of the
+|           Parts List           |
+|:------------------------------:|
+| 2 595 Shift Registers          |
+| ATtiny85 Microcontroller       |
+| 555 Timer IC                   |
+| 8x8 LED Matrix                 |
+| 8 x 330Ω Resistors             |
+| 1k Ω Resistor                  |
+| Adafruit Half Breadboard PCB   |
+| Blue Acrylic Chassis           |
+| 9V Power Supply                |
+
+The first step in the construction of the TBMA project was the creation of the
 circuit. The circuit was initiated by establishing an astable pulse from a 555
 timer. The 555 timer was then hooked to a potentiometer so the speed of the
 pulse could be adjusted. Additionally, an ATtiny85 was added to the circuit
@@ -101,21 +87,21 @@ what column or row it represented. The purpose of each pin on the matrix was
 noted on a diagram that was used for reference when wiring the matrix through
 different iterations of the circuit. The final step in the construction of the
 circuit was the connection of the LED matrix to the shift registers and the
-mapping diagram was used for reference during this step.</p>
+mapping diagram was used for reference during this step.
 
-<p>The second step in the construction of the TBMA project was creating the code to
+The second step in the construction of the TBMA project was creating the code to
 drive it. The code needed to facilitate communication between the ATtiny85 and
 the shift registers, as well as read the pulse from the 555 timer. The approach
 to communication with the shift registers was to use a custom function called
-<code class="highlighter-rouge">writeRegs()</code>. The <code class="highlighter-rouge">writeRegs()</code> function took the data to shift out from an
+`writeRegs()`. The `writeRegs()` function took the data to shift out from an
 array of Booleans that contained the requested state of all the shift register
 pins available. In other words, the state of a pin on the shift register can be
 changed in the Boolean array and the change can be written later by calling
-<code class="highlighter-rouge">writeRegs()</code>. This arrangement allowed a large amount of flexibility that was
+`writeRegs()`. This arrangement allowed a large amount of flexibility that was
 initially thought to be impossible with the use of daisy-chained shift
-registers.</p>
+registers.
 
-<p>The final and most difficult step of constructing the TBMA project was
+The final and most difficult step of constructing the TBMA project was
 soldering. Since the circuit contained 4 ICs and an LED Matrix, a substantial
 amount of wiring had to fit onto a half+ size Adafruit breadboard PCB.
 Specifically, upon completion of the soldering process for the circuit, all of
@@ -123,18 +109,19 @@ the available columns on the board had been completely utilized. The limited
 space made for a challenging soldering process where any errors would require
 restarting the entire process. However, it should be noted that the breadboard
 prototype was available for reference when soldering, which helped with the
-process immensely.</p>
+process immensely.
 
-<h1 id="media">Media</h1>
+# Media
 
-<p><a href="https://drive.google.com/file/d/1GH6Gq93gX_H4JwH92iHk1siyGRIAMYL1/view?usp=sharing">Demo Video</a></p>
+[Demo Video](https://drive.google.com/file/d/1GH6Gq93gX_H4JwH92iHk1siyGRIAMYL1/view?usp=sharing)
 
-<p><img src="../assets/img/555-Animations/soldered-top1.jpg" alt="Soldered Prototype" /></p>
+![Soldered Prototype](../assets/img/555-Animations/soldered-top1.jpg)
 <center><b>Soldered Prototype</b></center>
 
-<h1 id="code">Code</h1>
+# Code
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*
+```
+/*
 Author: Ethan Peterson
 Date: November 26, 2016
 TEI3M
@@ -205,7 +192,7 @@ void setup() {
 }
 
 void clearRegs() { // clears the registers array but does not write the changes
-  for (int i = shiftRegPinNum - 1; i &gt;= 0; i--) {
+  for (int i = shiftRegPinNum - 1; i >= 0; i--) {
     registers[i] = LOW;
   }
 }
@@ -213,7 +200,7 @@ void writeRegs() {
   // writes data in the registers array to the output pins of
   // the shift registers
   digitalWrite(latch, LOW);
-  for (int i = shiftRegPinNum - 1; i &gt;= 0; i--) {
+  for (int i = shiftRegPinNum - 1; i >= 0; i--) {
     digitalWrite(clk, LOW);
     uint8_t val = registers[i];
     digitalWrite(data, val);
@@ -232,13 +219,13 @@ void displayBitMap(uint8_t charMap[8]) {
   // by shifting the right byte onto the correct row with one row lit up at a
   // time this is taking place so fast that it looks as though all rows are
   // being illuminated at the same time
-  for (uint8_t row = 0; row &lt; 8; row++) {
+  for (uint8_t row = 0; row < 8; row++) {
     // ensure column data is shown on the correct row by illuminating the
     // current one and making the previous one low
     setRegPin(8 + (row - 1), 0);
     setRegPin(8 + row, 1);
-    for (uint8_t col = 0; col &lt; 8; col++) {
-      if (charMap[row] &amp; (1 &lt;&lt; col)) {
+    for (uint8_t col = 0; col < 8; col++) {
+      if (charMap[row] & (1 << col)) {
         // invert the bit because col pins must be low to be shown
         // due to the way the matrix is configured
         setRegPin(col, 0);
@@ -265,6 +252,13 @@ void nextFrame() { // runs every time the output pin of the 555 timer goes high
     frame++;
   }
 }
-</code></pre></div></div>
+```
 
-:ET
+# Conclusion
+
+Overall, the TBMA project was an ambitious undertaking in the areas of circuit
+building, programming and soldering. The project was arduous but highly
+rewarding upon its completion. The TBMA project allowed the development of
+essential skills relating to the wiring and programming of shift registers to
+control LED matrices, making the project a great introduction to potentially
+more complex projects involving LED matrices.
