@@ -64,7 +64,7 @@ the prototype, soldered PCB and pumpkin assembly are given in the media section.
 [Demo Video](https://drive.google.com/file/d/1vGYC4p2sz3g-kji-CwA83PyXFrXmxwLw/view?usp=sharing)
 
 ![Soldered PCB](../assets/img/AS/pcb.jpg)
-<center><b>Soldered AS Project PCB</b></center>
+<center><b>Soldered Project PCB</b></center>
 
 # Conclusion
 
