@@ -1,0 +1,75 @@
+I"x<h1 id="purpose">Purpose</h1>
+
+<p>The purpose of the BiColor LED Matrix Project (referred to in this report as the
+“BCLM”) is to improve the abilities of grade 11 ACES students in utilizing
+registers and bitwise operators through mid-level C programming. The BCLM
+project also serves as an opportunity for grade 11 students to be introduced to
+lower level programming, which will be further expanded upon in grade 12.</p>
+
+<p>The first skill obtained in the BCLM project is the use of various bitwise
+operators such as left shift, right shift, bitwise AND, bitwise OR and bitwise
+NOT. The use of these operators gives lower level access to the registers of the
+microcontroller and therefore makes for more efficient programs.</p>
+
+<p>The second skill acquired in the BCLM project is register manipulation on a
+microcontroller, which was used to form images on the LED Matrix and will be a
+very important skill for students who pursue the grade 12 ACES course.</p>
+
+<p>Lastly, the essential skill of soldering is improved upon in the BCLM project as
+the BiColor LED Matrix used for the project is hand soldered.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Parts List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">ATtiny84 Microcontroller</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LED Matrix Soldering Jig</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">16 x BiColor LEDs</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Sparkfun AVR Pocket Programmer</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ISP Header PCB</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3D Printed LED Matrix Cover</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf">ATtiny84 Datasheet</a>
+<a href="http://darcy.rsgc.on.ca/ACES/TEI3M/1617/Challenges.html#BiColorLEDMatrix">Project Instructions</a>
+<a href="https://www.arduino.cc/en/tutorial/BlinkWithoutDelay">Blink Without Delay</a></p>
+
+<h1 id="procedure">Procedure</h1>
+
+<p>The BCLM project consists of a 4x4 BiColor LED Matrix and an ATtiny84
+microcontroller. 8 digital pins are required to control the LED Matrix. The
+ATtiny84 has two ports: PORTA and PORTB. The LED Matrix is hooked up to PORTA in
+the circuit as PORTA holds a full 8 pins on ATtiny84 while PORTB does not. By
+hooking up the LED Matrix to PORTA, the whole matrix can be controlled from one
+register. The fact that the LED Matrix can be controlled from one register is
+very useful when programming since students have to use register manipulation
+instead of Arduino functions like digitalWrite(). The construction of the BCLM
+project is broken up into the following 3 steps; soldering and circuit
+construction, animation planning and programming of the aforementioned
+animations.</p>
+
+<p>The first step of the BCLM project’s construction was to solder the LED Matrix. The soldering
+process proved to be difficult as the legs of each LED had to be properly insulated with heat
+shrink to prevent contact between different LED leads that would cause a short circuit. In
+instances where heat shrink was omitted by the undersigned in error, the risk of a short circuit
+from leads of two different LEDs accidentally connecting was somewhat alleviated by using
+pliers to create the largest distance between leads as possible.</p>
+:ET

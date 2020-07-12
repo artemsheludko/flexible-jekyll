@@ -1,0 +1,72 @@
+I"P	<h1 id="purpose">Purpose</h1>
+
+<p>The purpose of the BiColor LED Matrix Project (referred to in this report as the
+“BCLM”) is to improve the abilities of grade 11 ACES students in utilizing
+registers and bitwise operators through mid-level C programming. The BCLM
+project also serves as an opportunity for grade 11 students to be introduced to
+lower level programming, which will be further expanded upon in grade 12.</p>
+
+<p>The first skill obtained in the BCLM project is the use of various bitwise
+operators such as left shift, right shift, bitwise AND, bitwise OR and bitwise
+NOT. The use of these operators gives lower level access to the registers of the
+microcontroller and therefore makes for more efficient programs.</p>
+
+<p>The second skill acquired in the BCLM project is register manipulation on a
+microcontroller, which was used to form images on the LED Matrix and will be a
+very important skill for students who pursue the grade 12 ACES course.</p>
+
+<p>Lastly, the essential skill of soldering is improved upon in the BCLM project as
+the BiColor LED Matrix used for the project is hand soldered.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Parts List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">ATtiny84 Microcontroller</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LED Matrix Soldering Jig</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">16 x BiColor LEDs</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Sparkfun AVR Pocket Programmer</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ISP Header PCB</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Adafruit Chronodot Real Time Clock Module (RTC)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Adafruit I2C 7-Segment Backpack</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Servo Motor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Acrylic Chassis &amp; Lock</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Push Button</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Arduino Uno</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MCP23017 I/O Expander</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">RGB LED (Common Cathode)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="reference">Reference</h1>
+
+:ET
