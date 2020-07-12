@@ -1,0 +1,60 @@
+I"�	<h1 id="purpose">Purpose</h1>
+
+<p>The purpose of the Wireless Communication project (referred to in this report as
+the “WC Project”) is to learn the essential skill of wireless communication
+between Arduino boards, as well as reinforce time management and collaborative
+skills.</p>
+
+<p>The first skill acquired through the completion of the WC Project is the
+essential skill of wireless communication between Arduino boards, which had not
+been explored to date in the course. These basic wireless communication skills
+have a wide range of applications for various more sophisticated projects.</p>
+
+<p>The second skill reinforced through the completion of the WC Project is time
+management and collaboration. The WC Project requires a partner to use his
+Arduino and wireless module as the transmitter or receiver for communication.
+Working on a project of this type with a partner adds a new layer of complexity
+in terms of time management and collaboration skills needed in order to
+successfully complete the project.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Parts List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">2 x 595 Shift Registers</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LED Matrix Shield by E. Peterson</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x NRF24L01 Wireless Modules</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LED Bargraph</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://mail.rsgc.on.ca/~ologush/WirelessLesson.html">Wireless Lesson</a></p>
+
+<h1 id="procedure">Procedure</h1>
+
+<p>The WC Project is made up of two unique circuits. The first circuit is the
+transmitter, which consists of an Arduino connected to a wireless module. The
+second circuit acts as the receiver, consisting of an Arduino, wireless module
+and an LED Matrix Shield. However, the LED Matrix Shield designed by the
+undersigned was not initially the display device. The initial display device was
+an LED bar graph, which displayed the characters sent by the transmitter in
+their binary form. Students were encouraged to improve the base circuit that
+used a bar graph. The undersigned and his partner selected the LED Matrix Shield
+to display the letters sent over wireless, as opposed to their binary
+representation. With both circuits completed, Arduino code is used to set one
+circuit as the transmitter and the other as the receiver, transmitting the data
+by entering it into the serial monitor.</p>
+:ET
