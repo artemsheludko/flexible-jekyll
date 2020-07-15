@@ -1479,3 +1479,34 @@ a.newer-posts:hover {
     font-size: 21px;
   }
 }
+
+.navigation{
+  margin-left: 3%;
+}
+
+.button{
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  background-color: white; 
+  color: #515151; 
+  border: 2px solid #515151;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover
+{
+  color: white;
+  background-color: #515151;
+}
+
+.active{
+  color: white;
+  background-color: #515151;
+}
