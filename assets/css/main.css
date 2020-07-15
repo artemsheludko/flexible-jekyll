@@ -1485,7 +1485,6 @@ a.newer-posts:hover {
 }
 
 .button{
-  border-radius: 5px;
   font-family: 'Lato', sans-serif;
   background-color: white; 
   color: #515151; 
@@ -1494,10 +1493,11 @@ a.newer-posts:hover {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 0px;
+  margin: 1px;
   font-size: 14px;
   transition-duration: 0.4s;
   cursor: pointer;
+  width: 100%;
 }
 
 .button:hover
