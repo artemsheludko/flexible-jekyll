@@ -1,0 +1,314 @@
+I"�Z<h1 id="purpose">Purpose</h1>
+
+<p>The purpose of the Graphic Equalizer Project (referred to in this report as the
+“GE Project”) was to improve essential CAD (Computer Assisted Design) skills
+required for creating a high quality final product and to introduce working with
+audio on the Arduino. One of the mandates for the Medium ISP was for students to
+integrate CAD into their projects. The GE Project integrates a custom chassis
+and PCB, each designed using CAD software.</p>
+
+<p>The GE Project allowed for the improvement of three key skills for all projects.</p>
+
+<p>The first skill that was improved is the use of a software called ViaCAD, which
+was used to create a custom acrylic case for the project and PCB. An
+understanding of CAD software for design is indispensable for future engineers
+in the ACES program who need to bring a product to market.</p>
+
+<p>The second skill improved upon was the use of EAGLE for the design of custom
+circuit boards, which like ViaCAD, is essential for a polished final product.
+Other projects that have integrated custom PCBs include the Wireless
+Communication Project and the Fingerprint Enabled Doorlock project.</p>
+
+<p>The third and final skill obtained as a result of the GE Project was the ability
+to process audio using the Arduino. Processing audio input was not a skill
+needed for previous projects and it presented an entirely new challenge for the
+GE Project.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Parts List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">8 x LED I2C Bargraph Displays</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MSGEQ7 IC</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ATmega328P TQFP (Surface Mount)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Sparkfun AVR Pocket Programmer</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">16 Mhz Crystal Oscillator</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Programming ICSP Header</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Adafruit Microphone Breakout</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5 Pin Female Header</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">40 Pin Female Header</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x 100k Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10k Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Surface Mount 330 Ω Resistor (1206 Package)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Surface Mount LED (1206 Package)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3 x 100 nF Capacitor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3 x 33 pF Capacitor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10 nF Capacitor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DC Power Barrel Jack</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8 x M3 Screws</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x M3 Standoffs</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Custom Acrylic Chassis</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Custom PCB</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf">MSGEQ7 Datasheet</a></p>
+
+<p><a href="https://learn.sparkfun.com/tutorials/using-eagle-schematic">Sparkfun Eagle CAD Tutorial</a></p>
+
+<p><a href="https://lukeorford.files.wordpress.com/2012/05/20120515-163357.jpg">MSGEQ7 Example Schematic</a></p>
+
+<h1 id="procedure">Procedure</h1>
+<p>The GE Project consists of mainly an MSGEQ7 Spectrum analyzer chip, eight
+Adafruit I2C BiColor Bargraphs and a surface mount ATmega328P microcontroller.
+The microphone is connected to the input pin of the MSGEQ7, which breaks up the
+audio into unique frequency bands (bass, mids, highs etc.) and sends their
+values to the ATmega328P. The ATmega328P reads in these values using its ADC
+(analog to digital converter) so they can be shown on the bar graph displays.
+The GE Project consists of 3 steps; prototyping, programming and CAD designing.</p>
+
+<p>The first step in building the GE Project was to prototype the circuit. The
+MSGEQ7 was set up with all the special capacitors it required to operate and was
+subsequently hooked up to one of the analog input pins on the Arduino. A 3.5mm
+audio jack served as input for the MSGEQ7. The I2C pins of the Arduino were
+connected to three BiColor LED bar graphs provided by Adafruit. Each bar graph
+had its address adjustment pins soldered in a manner so that each had unique I2C
+addresses, thus permitting unique data to be displayed on each one. Although the
+MSGEQ7 produces data from seven different frequency bands, only three bar graphs
+were used due to limited breadboard space. Once the undersigned obtained a
+microphone breakout board, he replaced the 3.5mm audio jack with the microphone
+to visually represent sound in any room.</p>
+
+<p><img src="../assets/img/GE/proto.png" alt="Breadboard Prototype" /></p>
+<center><b>Breadboard Prototype Circuit</b></center>
+
+<p>The second step was to write the code required to operate the prototype circuit.
+The first step in writing the code was to read the values for each of the seven
+bands from the MSGEQ7. This was accomplished using a <code class="highlighter-rouge">for()</code> loop that iterated
+seven times, collecting data from the output pin of the MSGEQ7 and placing the
+value into an array. Every time the loop iterated, the strobe pin was brought
+<code class="highlighter-rouge">HIGH</code> and then <code class="highlighter-rouge">LOW</code> ensuring data from a new frequency band was being collected
+for each iteration of the loop. Once the spectrum data was collected in an
+array, the next step was to display that data on the bar graph displays. To
+accomplish this, the required Adafruit library was imported and an array of
+seven bar graph objects was created, each initialized with a unique I2C address.</p>
+
+<p>The second step was to write the code required to operate the prototype circuit.
+The first step in writing the code was to read the values for each of the seven
+bands from the MSGEQ7. This was accomplished using a <code class="highlighter-rouge">for()</code> loop that iterated
+seven times, collecting data from the output pin of the MSGEQ7 and placing the
+value into an array. Every time the loop iterated, the strobe pin was brought
+<code class="highlighter-rouge">HIGH</code> and then <code class="highlighter-rouge">LOW</code> ensuring data from a new frequency band was being collected
+for each iteration of the loop. Once the spectrum data was collected in an
+array, the next step was to display that data on the bar graph displays. To
+accomplish this, the required Adafruit library was imported and an array of
+seven bar graph objects was created, each initialized with a unique I2C address.</p>
+
+<p>Two new functions were designed to visualize the audio data, one named
+<code class="highlighter-rouge">showBars()</code> and the other named <code class="highlighter-rouge">resetBars()</code>. The <code class="highlighter-rouge">showBars()</code> function takes a bar
+graph object and number of bars to display as parameters. The function enabled
+the requested number of LEDs on the requested bar graph and modified the color
+of the LED depending on how high the resulting bar reached. For instance, if an
+LED was in the mid section of the bar graph, it would turn on with a yellow
+color and when the LED was in the upper section of the bar graph, it would be a
+red color when enabled. The <code class="highlighter-rouge">showBars()</code> function is displayed in the photo above.
+The <code class="highlighter-rouge">resetBars()</code> simply uses a <code class="highlighter-rouge">for()</code> loop to turn off all the LEDs, so that when
+the <code class="highlighter-rouge">showBars()</code> function is called no unwanted LEDs are left on. Once the
+<code class="highlighter-rouge">resetBars()</code> and <code class="highlighter-rouge">showBars()</code> functions were complete, it was time to implement the
+audio data visualization. First, a new variable called <code class="highlighter-rouge">barNum</code> was created within
+the <code class="highlighter-rouge">for()</code> loop that collected the audio data. The variable was set to the value
+current band in the audio spectrum over which the <code class="highlighter-rouge">for()</code> loop was iterating. The
+only issue was that the value ranged from a value 0-1023 while it needed to be a
+value of 0-23 to work with the <code class="highlighter-rouge">showBars()</code> function and bar graph. The <code class="highlighter-rouge">map()</code>
+function was used to map the 0-1023 spectrum value to a suitable range for the
+bar graph. Once the <code class="highlighter-rouge">barNum</code> variable was initialized with a value in the proper
+range, the <code class="highlighter-rouge">showBars()</code> function was called with barNum as the argument for the
+number of bars and the current bar graph object being iterated over in the array
+by the <code class="highlighter-rouge">for()</code> loop. Eventually, the code was revised to link the array storing
+the bar graph objects and the array storing spectrum data more closely using a
+<code class="highlighter-rouge">struct</code>.</p>
+
+<p><img src="../assets/img/GE/thumb.png" alt="Breadboard Prototype" /></p>
+<center><b>Assembled GE</b></center>
+
+<p>The final step in building the GE Project was designing the custom PCB, custom
+chassis and assembling the final product. The acrylic chassis for the GE Project
+was designed using a CAD software called ViaCAD. The chassis consists of two
+clear acrylic plates. The front plate has two screw holes used to connect it to
+the back plate using standoffs and an engraving of the ACES logo in the bottom
+left corner. The back plate is made up of screw holes for the custom PCB and
+mounting holes for the mounting of the final product on a wall. Once the final
+design of the acrylic chassis was complete, the dimensions of the board that
+would fit the chassis were imported into EAGLE. The circuit that was laid out on
+the custom PCB differed from the breadboard prototype in a few key ways. The
+first difference was that no Arduino was involved with the PCB. Instead, a
+surface mount ATmega328P was used, along with a 16Mhz crystal where a 2x3 male
+pin header is used for programming.</p>
+
+<p>The second difference is that the PCB makes use of eight I2C bar graphs instead
+of three. The third key difference is that a surface mount resistor and LED are
+connected to the ATmega328 for testing purposes. However, the final PCB was not
+perfect upon testing and assembly. The key issue with the board was that there
+was not enough clearance between the pin headers for the bar graphs and the pin
+header for the microphone, causing the two components to be pushed closely
+together by force. The second issue with the board was that there were too many
+pin headers for the bar graphs. There were enough pin headers for eight bar
+graphs whereas pin headers for only seven bar graphs were required. The issue
+was circumvented by adding an additional bar graph display in the last space in
+the pin header that shared the same address as the first bar graph, thus
+allowing the eighth bar graph to mirror the data of the first. The soldering of
+the custom PCB was relatively straightforward since most of the board requires
+through hole components. However, the process was made difficult when it came to
+soldering the surface mount components to the PCB. At this point, fellow ACES
+student Puneet Bagga was able to provide instruction to the undersigned on using
+a stencil for the ATmega328P TQFP chip, properly applying the solder paste and
+soldering the chip using the hot air rework station. The surface mount resistor
+and LED presented an even larger challenge to solder as no stencil was available
+for these components and they had to be soldered by hand using the hot air
+rework station.</p>
+
+<h1 id="media">Media</h1>
+
+<p><a href="https://drive.google.com/file/d/1bMf1KHUk65WTuxsOWBBvZFKx0k7WM0Zr/view?usp=sharing">GE Demo</a></p>
+
+<p><img src="../assets/img/GE/schematic.png" alt="PCB Schematic" /></p>
+<center><b>EAGLE Schematic</b></center>
+
+<p><img src="../assets/img/GE/front.png" alt="PCB Front" /></p>
+<center><b>PCB Front</b></center>
+
+<h1 id="code">Code</h1>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// Import Adafruit Libraries</span>
+<span class="cp">#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_LEDBackpack.h&gt;
+#include &lt;gfxfont.h&gt;
+</span>
+<span class="k">struct</span> <span class="n">dataPair</span> <span class="p">{</span> <span class="c1">// pairs set of spectrum data with a bargraph object</span>
+  <span class="kt">int</span> <span class="n">spectrum</span><span class="p">;</span>
+  <span class="n">Adafruit_24bargraph</span> <span class="n">bargraph</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="n">audioIn</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span> <span class="c1">// analog input pin hooked up to the MSGEQ7</span>
+<span class="kt">int</span> <span class="n">strobe</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>   <span class="c1">// pin connected to strobe pin on the MSGEQ7</span>
+<span class="kt">int</span> <span class="n">reset</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>    <span class="c1">// reset pin of the MSGEQ7</span>
+<span class="kt">int</span> <span class="n">filter</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>  <span class="c1">// minium audio level to filter out noise</span>
+
+<span class="c1">// array storing spectrum value and related bar graph object</span>
+<span class="n">dataPair</span> <span class="n">dataPairs</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+
+<span class="kt">void</span> <span class="nf">resetBars</span><span class="p">(</span><span class="n">Adafruit_24bargraph</span> <span class="n">bar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">24</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">bar</span><span class="p">.</span><span class="n">setBar</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">LED_OFF</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span> <span class="c1">// clears bargraph display without writing changes</span>
+
+<span class="c1">// shows specifed # of bars on the bargraph</span>
+<span class="kt">void</span> <span class="nf">showBars</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">barNum</span><span class="p">,</span> <span class="n">Adafruit_24bargraph</span> <span class="n">bar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">resetBars</span><span class="p">(</span><span class="n">bar</span><span class="p">);</span> <span class="c1">// reset bars first so only the intended ones are showing</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">barNum</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">bar</span><span class="p">.</span><span class="n">setBar</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">LED_GREEN</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">16</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">bar</span><span class="p">.</span><span class="n">setBar</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">LED_YELLOW</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">bar</span><span class="p">.</span><span class="n">setBar</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">LED_RED</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">bar</span><span class="p">.</span><span class="n">writeDisplay</span><span class="p">();</span> <span class="c1">// write changes once all the bars are set</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// set SDA and SCL pins as output</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">A4</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">A5</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="c1">// initialize each bargraph object in the array with unique I2C address using</span>
+  <span class="c1">// a for loop</span>
+
+  <span class="kt">uint8_t</span> <span class="n">address</span> <span class="o">=</span> <span class="mh">0x70</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">dataPairs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">bargraph</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">address</span><span class="p">);</span>
+    <span class="n">address</span> <span class="o">+=</span> <span class="mh">0x01</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// set strobe and reset pins to output and ensure AREF is set to default since</span>
+  <span class="c1">// we will be using the ADC</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">strobe</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">reset</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+  <span class="n">analogReference</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>
+
+  <span class="c1">// reset the MSGEQ7</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">reset</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">reset</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// collect and display audio data from the MSGEQ7</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// pulse strobe pin</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobe</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="n">strobe</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span> <span class="c1">// let output settle</span>
+    <span class="c1">// read from the MSGEQ7 and constrain the reading according to the filter</span>
+    <span class="n">dataPairs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">spectrum</span> <span class="o">=</span> <span class="n">constrain</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">audioIn</span><span class="p">),</span> <span class="n">filter</span><span class="p">,</span> <span class="mi">1023</span><span class="p">);</span>
+    <span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// allow analog reading to settle</span>
+    <span class="c1">// get number of bars to show and display them</span>
+    <span class="kt">int</span> <span class="n">barNum</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">dataPairs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">spectrum</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">24</span><span class="p">);</span>
+    <span class="n">showBars</span><span class="p">(</span><span class="n">barNum</span><span class="p">,</span> <span class="n">dataPairs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">bargraph</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Overall, the GE Project allowed for improvement in CAD design skills and
+introduced the new concept of integrating audio into Arduino projects. This
+project was also unique in integrating a complete custom chassis and PCB, thus
+allowing for a higher quality finished product.</p>
+:ET
