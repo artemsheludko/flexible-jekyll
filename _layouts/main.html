@@ -21,6 +21,13 @@ layout: default
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
       <ul>
+        {% if site.theme_mode == "dual" %}
+           <span id="mode-toggle-wrapper">
+        {% include mode-toggle.html %}
+          </span>
+          <span class="icon-border"></span>
+        {% endif %}
+
         {% if site.social-twitter %}
           <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         {% else %}
