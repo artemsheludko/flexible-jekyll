@@ -12,11 +12,11 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Aniket Sangohi # add your name
 author-img: david-freeman.jpg # add your photo
 about-author: Machine Learning Developer # add description
-social-twitter: # add your Twitter handle
+social-twitter: El__Do_RaDo # add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-github: El-Do-RaDo # add your Github handle
+social-linkedin: aniket-sangohi-883252128/  # add your Linkedin handle
+social-email: manjaniket@gmail.com # add your Email address
 
 # Disqus
 discus-identifier: mr-brown # add your discus identifier
