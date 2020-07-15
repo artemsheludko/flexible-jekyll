@@ -11,6 +11,11 @@ layout: default
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
     </div>
+    <div class="navigation">
+      <a id="blog" class="button {% if page.title == 'Blogs' %}active{% endif %}" href="{{site.baseurl}}/blogs/">Blogs</a>
+      <a class="button {% if page.title == 'Projects' %}active{% endif %}" href="{{site.baseurl}}/projects/">Projects</a>
+      <a class="button {% if page.title == 'Developers' %}active{% endif %}" href="{{site.baseurl}}/developers/">Developers</a>
+    </div>
   </header> <!-- End Header -->
   <footer>
     <section class="contact">

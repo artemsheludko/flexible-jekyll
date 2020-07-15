@@ -948,7 +948,7 @@ table tfoot td {
   -webkit-border-radius: 100%;
           border-radius: 100%;
   overflow: hidden;
-  background-color: #333030;
+  background-color: white;
 }
 
 .about img {
@@ -1478,4 +1478,35 @@ a.newer-posts:hover {
   .post .post-content .post-title a {
     font-size: 21px;
   }
+}
+
+.navigation{
+  margin-left: 3%;
+}
+
+.button{
+  font-family: 'Lato', sans-serif;
+  background-color: white; 
+  color: #515151; 
+  border: 2px solid #515151;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1px;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover
+{
+  color: white;
+  background-color: #515151;
+}
+
+.active{
+  color: white;
+  background-color: #515151;
 }
