@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Yannick Le Maintec # add your name
 author-img: ylm.jpg # add your photo
 author-og-img: ylemaintec-tempolatino.jpg
-about-author: "Auteur du blog <a href='https://www.lemonde.fr/le-jazz-et-la-salsa/' target='_blank'>&#8220;Le&nbsp;jazz&nbsp;et&nbsp;la&nbsp;salsa&#8221;</a> <br/>sur Le&nbsp;Monde.fr" # add description
+about-author: "Auteur du blog <a href='https://www.lemonde.fr/le-jazz-et-la-salsa/' target='_blank'>&#8220;Le&nbsp;jazz&nbsp;et&nbsp;la&nbsp;salsa&#8221;</a> <br/>(Le&nbsp;Monde)" # add description
 social-twitter: salsajazzblog # add your Twitter handle
 social-facebook: salsajazzblog # add your Facebook handle
 # social-github: # add your Github handle

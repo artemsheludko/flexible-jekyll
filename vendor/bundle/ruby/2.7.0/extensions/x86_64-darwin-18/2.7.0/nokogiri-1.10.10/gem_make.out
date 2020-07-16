@@ -1,0 +1,207 @@
+current directory: /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/ext/nokogiri
+/usr/local/opt/ruby/bin/ruby -I /usr/local/Cellar/ruby/2.7.1_2/lib/ruby/2.7.0 -r ./siteconf20200716-50546-3djp0b.rb extconf.rb
+checking if the C compiler accepts  -I /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2... yes
+checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.4.0
+checking for iconv.h... yes
+checking for gzdopen() in -lz... yes
+checking for iconv using --with-opt-* flags... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.10
+with the following patches applied:
+	- 0001-Revert-Do-not-URI-escape-in-server-side-includes.patch
+	- 0002-Remove-script-macro-support.patch
+	- 0003-Update-entities-to-remove-handling-of-ssi.patch
+	- 0004-libxml2.la-is-in-top_builddir.patch
+	- 0005-Fix-infinite-loop-in-xmlStringLenDecodeEntities.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.10.tar.gz into tmp/x86_64-apple-darwin18.7.0/ports/libxml2/2.9.10... OK
+Running git apply with /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch... OK
+Running git apply with /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/patches/libxml2/0002-Remove-script-macro-support.patch... OK
+Running git apply with /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/patches/libxml2/0003-Update-entities-to-remove-handling-of-ssi.patch... OK
+Running git apply with /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/patches/libxml2/0004-libxml2.la-is-in-top_builddir.patch... OK
+Running git apply with /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/patches/libxml2/0005-Fix-infinite-loop-in-xmlStringLenDecodeEntities.patch... OK
+Running 'configure' for libxml2 2.9.10... OK
+Running 'compile' for libxml2 2.9.10... OK
+Running 'install' for libxml2 2.9.10... OK
+Activating libxml2 2.9.10 (from /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/ports/x86_64-apple-darwin18.7.0/libxml2/2.9.10)...
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxslt-1.1.34.
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+************************************************************************
+Extracting libxslt-1.1.34.tar.gz into tmp/x86_64-apple-darwin18.7.0/ports/libxslt/1.1.34... OK
+Running 'configure' for libxslt 1.1.34... OK
+Running 'compile' for libxslt 1.1.34... OK
+Running 'install' for libxslt 1.1.34... OK
+Activating libxslt 1.1.34 (from /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/ports/x86_64-apple-darwin18.7.0/libxslt/1.1.34)...
+checking for -llzma... yes
+checking for xmlParseDoc() in libxml/parser.h... yes
+checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
+checking for exsltFuncRegister() in libexslt/exslt.h... yes
+checking for xmlHasFeature()... yes
+checking for xmlFirstElementChild()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetValidStructuredErrors()... yes
+checking for xmlSchemaSetValidStructuredErrors()... yes
+checking for xmlSchemaSetParserStructuredErrors()... yes
+creating Makefile
+
+current directory: /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/ext/nokogiri
+make "DESTDIR=" clean
+
+current directory: /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/ext/nokogiri
+make "DESTDIR="
+compiling html_document.c
+compiling html_element_description.c
+compiling html_entity_lookup.c
+compiling html_sax_parser_context.c
+compiling html_sax_push_parser.c
+compiling nokogiri.c
+compiling xml_attr.c
+compiling xml_attribute_decl.c
+compiling xml_cdata.c
+xml_cdata.c:29:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    content_str_len = RSTRING_LEN(content);
+                    ~ ^~~~~~~~~~~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:1007:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:1003:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+xml_cdata.c:29:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    content_str_len = RSTRING_LEN(content);
+                    ~ ^~~~~~~~~~~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:1008:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+2 warnings generated.
+compiling xml_comment.c
+compiling xml_document.c
+xml_document.c:49:25: warning: incompatible pointer types passing 'int (xmlNodePtr, xmlNodePtr, xmlDocPtr)' (aka 'int (struct _xmlNode *, struct _xmlNode *, struct _xmlDoc *)') to parameter of type 'st_foreach_callback_func *' (aka 'int (*)(unsigned long, unsigned long, unsigned long)') [-Wincompatible-pointer-types]
+  st_foreach(node_hash, dealloc_node_i, (st_data_t)doc);
+                        ^~~~~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/st.h:141:57: note: passing argument to parameter here
+int rb_st_foreach(st_table *, st_foreach_callback_func *, st_data_t);
+                                                        ^
+1 warning generated.
+compiling xml_document_fragment.c
+compiling xml_dtd.c
+compiling xml_element_content.c
+compiling xml_element_decl.c
+compiling xml_encoding_handler.c
+compiling xml_entity_decl.c
+compiling xml_entity_reference.c
+compiling xml_io.c
+xml_io.c:20:22: warning: incompatible pointer types passing 'VALUE (VALUE *)' (aka 'unsigned long (unsigned long *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-pointer-types]
+  string = rb_rescue(read_check, (VALUE)args, read_failed, 0);
+                     ^~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:1987:24: note: passing argument to parameter here
+VALUE rb_rescue(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE);
+                       ^
+xml_io.c:20:47: warning: incompatible pointer types passing 'VALUE (void)' (aka 'unsigned long (void)') to parameter of type 'VALUE (*)(VALUE, VALUE)' (aka 'unsigned long (*)(unsigned long, unsigned long)') [-Wincompatible-pointer-types]
+  string = rb_rescue(read_check, (VALUE)args, read_failed, 0);
+                                              ^~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:1987:46: note: passing argument to parameter here
+VALUE rb_rescue(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE);
+                                             ^
+xml_io.c:47:20: warning: incompatible pointer types passing 'VALUE (VALUE *)' (aka 'unsigned long (unsigned long *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-pointer-types]
+  size = rb_rescue(write_check, (VALUE)args, write_failed, 0);
+                   ^~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:1987:24: note: passing argument to parameter here
+VALUE rb_rescue(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE);
+                       ^
+xml_io.c:47:46: warning: incompatible pointer types passing 'VALUE (void)' (aka 'unsigned long (void)') to parameter of type 'VALUE (*)(VALUE, VALUE)' (aka 'unsigned long (*)(unsigned long, unsigned long)') [-Wincompatible-pointer-types]
+  size = rb_rescue(write_check, (VALUE)args, write_failed, 0);
+                                             ^~~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:1987:46: note: passing argument to parameter here
+VALUE rb_rescue(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE);
+                                             ^
+4 warnings generated.
+compiling xml_libxml2_hacks.c
+compiling xml_namespace.c
+compiling xml_node.c
+xml_node.c:304:15: warning: passing 'const xmlChar *' (aka 'const unsigned char *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      xmlFree(reparentee->ns->prefix);
+              ^~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+compiling xml_node_set.c
+xml_node_set.c:479:3: warning: incompatible pointer types passing 'VALUE (VALUE, VALUE)' (aka 'unsigned long (unsigned long, unsigned long)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-pointer-types]
+  rb_define_method(klass, "to_a", to_array, 0);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:2799:117: note: expanded from macro 'rb_define_method'
+#define rb_define_method(klass, mid, func, arity) rb_define_method_choose_prototypem3((arity),(func))((klass),(mid),(func),(arity));
+                                                                                                                    ^~~~~~
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/ruby.h:2775:1: note: passing argument to parameter 'func' here
+RB_METHOD_DEFINITION_DECL(rb_define_method, (2,3), (VALUE klass, const char *name), (klass, name))
+^
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/intern.h:1073:42: note: expanded from macro 'RB_METHOD_DEFINITION_DECL'
+RB_METHOD_DEFINITION_DECL_CXX_BEGIN(def) \
+                                         ^
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/intern.h:1069:5: note: expanded from macro '\
+RB_METHOD_DEFINITION_DECL_1'
+    RB_METHOD_DEFINITION_DECL_C(def,nonnull,defname,decl,vars,funcargs) \
+    ^
+/usr/local/Cellar/ruby/2.7.1_2/include/ruby-2.7.0/ruby/intern.h:1042:118: note: expanded from macro 'RB_METHOD_DEFINITION_DECL_C'
+    __attribute__((__unused__,__weakref__(#def),__nonnull__ nonnull))static void defname(RB_UNWRAP_MACRO decl,VALUE(*func)funcargs,int arity);
+                                                                                                                     ^
+1 warning generated.
+compiling xml_processing_instruction.c
+compiling xml_reader.c
+compiling xml_relax_ng.c
+compiling xml_sax_parser.c
+compiling xml_sax_parser_context.c
+compiling xml_sax_push_parser.c
+compiling xml_schema.c
+compiling xml_syntax_error.c
+compiling xml_text.c
+compiling xml_xpath_context.c
+compiling xslt_stylesheet.c
+xslt_stylesheet.c:112:13: warning: unused function 'swallow_superfluous_xml_errors' [-Wunused-function]
+static void swallow_superfluous_xml_errors(void * userdata, xmlErrorPtr error, ...)
+            ^
+1 warning generated.
+linking shared-object nokogiri/nokogiri.bundle
+Cleaning files only used during build.
+rm -rf /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/ext/nokogiri/tmp/x86_64-apple-darwin18.7.0/ports
+rm -rf /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/ports
+
+current directory: /Users/lemonde/Code/lemaintec.github.io/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.10/ext/nokogiri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20200716-50546-193pwll/nokogiri
