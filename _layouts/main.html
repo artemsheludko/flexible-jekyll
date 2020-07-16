@@ -57,6 +57,53 @@ layout: default
     <div class="copyright">
       <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
     </div>
+    <div>
+      <label class="switch">
+        <input id="theme_toggle" type="checkbox" onchange="toggle(this)">
+        <span class="slider round"></span>
+      </label>
+      <p style="position: relative; left: 10px; display: inline-block; bottom: 2px; font-size: 16px;">Toggle Dark mode</p>
+    </div>
+    <script>
+      if (localStorage.theme){
+        console.log(localStorage.theme)
+        if (localStorage.theme == 'dark'){
+          document.documentElement.style.setProperty('--main-bg-color', '#17223b');
+          document.documentElement.style.setProperty('--main-card-color', '#263859');
+          document.documentElement.style.setProperty('--main-text-color', '#eeeeee');
+          document.documentElement.style.setProperty('--main-text2-color', '#eeeeee');
+          document.getElementById("theme_toggle").checked = true
+        }
+        if (localStorage.theme == 'light'){
+          document.documentElement.style.setProperty('--main-bg-color', '#fbfbfb');
+          document.documentElement.style.setProperty('--main-card-color', 'white');
+          document.documentElement.style.setProperty('--main-text-color', '#515151');
+          document.documentElement.style.setProperty('--main-text2-color', '#263959');
+          document.getElementById("theme_toggle").checked = false
+        }
+      }else{
+        document.documentElement.style.setProperty('--main-bg-color', '#fbfbfb');
+        document.documentElement.style.setProperty('--main-card-color', 'white');
+        document.documentElement.style.setProperty('--main-text-color', '#515151');
+        document.documentElement.style.setProperty('--main-text2-color', '#263959');
+      }
+        function toggle(elem){
+          console.log("toggle", elem.checked)
+          if (elem.checked){
+            document.documentElement.style.setProperty('--main-bg-color', '#17223b');
+            document.documentElement.style.setProperty('--main-card-color', '#263859');
+            document.documentElement.style.setProperty('--main-text-color', '#eeeeee');
+            document.documentElement.style.setProperty('--main-text2-color', '#eeeeee');
+            localStorage.setItem("theme", "dark");
+          }else{
+            document.documentElement.style.setProperty('--main-bg-color', '#fbfbfb');
+            document.documentElement.style.setProperty('--main-card-color', 'white');
+            document.documentElement.style.setProperty('--main-text-color', '#515151');
+            document.documentElement.style.setProperty('--main-text2-color', '#263959');
+            localStorage.setItem("theme", "light");
+          }
+        }
+    </script>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
 <div class="content-box clearfix">
