@@ -9,7 +9,9 @@ layout: default
         <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
       </div>
       <div class="author-name">{{site.author}}</div>
+      {% if site.about-author %}
       <p>{{site.about-author}}</p>
+      {% endif %}
     </div>
     <div class="navigation">
       <a id="blog" class="button {% if page.title == 'Blogs' %}active{% endif %}" href="{{site.baseurl}}/blogs/">Blogs</a>
@@ -35,7 +37,6 @@ layout: default
         {% if site.social-facebook %}
           <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         {% else %}
-          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-github %}
           <li class="github"><a href="http://github.com/{{site.social-github}}" target="_blank"><i class="fa fa-github"></i></a></li>
