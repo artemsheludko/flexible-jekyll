@@ -21,3 +21,10 @@ A l'étroit dans ses habits, **Mundo Latino** a changé de nom en mars 2018 pour
 Pour un accès plus facile, **Mundo Latino** est de retour à son adresse historique :
 
 >> [mundolatino.blog.lemonde.fr](http://mundolatino.blog.lemonde.fr/)
+
+Bonne lecture,
+
+**Yannick Le Maintec**
+
+---
+(c) image : Joachim Des Ormeaux, par Cilla Mali

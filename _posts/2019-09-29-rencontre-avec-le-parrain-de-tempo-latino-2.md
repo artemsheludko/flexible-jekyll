@@ -31,3 +31,7 @@ Du fond du cœur, Yannick parle des groupes : Kassav’, qui enfin reçoit la co
 «&nbsp;Je pars de Tempo le lundi, et l’année suivante quand je reviens le jeudi, je dis _hier_ en parlant du dimanche de l’année d’avant.&nbsp;»
 
 **Article publié dimanche 28 juillet 2019 dans le n°89 de Tempo Info**.
+
+---
+
+(c) image : Olivier Urbanet

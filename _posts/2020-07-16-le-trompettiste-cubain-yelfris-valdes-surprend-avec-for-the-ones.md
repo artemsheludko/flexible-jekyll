@@ -30,3 +30,6 @@ Le résultat est un entretien en deux parties, publiées à un an d'intervalle.
 Bonne lecture,
 
 **Yannick Le Maintec**
+
+---
+(c) image : Le trompettiste cubain Yelfris Valdés, par Angel Romo.

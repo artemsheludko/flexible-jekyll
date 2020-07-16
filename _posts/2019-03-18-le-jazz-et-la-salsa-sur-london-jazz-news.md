@@ -22,3 +22,10 @@ description: '"Le jazz et la salsa" a fait l’objet de plusieurs traductions en
 – <a href="http://www.londonjazznews.com/2019/04/preview-fidel-fourneyrons-que-vola.html" target="_blank" rel="noopener">Fidel Fourneyron’s ¿Que Vola ?</a> (interview pour le concert au Earth Hackney, avril 2019) ;<br>
 – <a href="http://www.londonjazznews.com/2019/03/interview-jacques-schwarz-bart-new.html" target="_blank" rel="noopener">Jacques Schwarz-Bart</a> (interview, sortie d’album, mars 2019).</p>
 <p>Tous mes remerciements à Sebastian Scotney pour son intérêt, son temps et son talent.</p>
+
+Bonne lecture,
+
+**Yannick Le Maintec**
+
+---
+(c) image : Affiche anglaise du spectacle "Carmen La Cubana"

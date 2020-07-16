@@ -20,3 +20,11 @@ Quand j’ai fait part à mes amis originaires de la Nouvelle-Orléans de mon en
 Tant pis pour l’auguste festival dont je vous livrerai un jour un compte rendu fin et intelligent, et _laissons le bon temps rouler !_
 
 Découvrez le reportage [&#8220;French Quarter Festival : à la découverte de la Nouvelle-Orléans&#8221;](https://www.lemonde.fr/le-jazz-et-la-salsa/article/2019/06/15/french-quarter-festival-a-la-decouverte-de-la-nouvelle-orleans_5476766_5324427.html) ainsi qu&#8217;une s[élection d&#8217;album du moment de la Nouvelle-Orléans](https://www.lemonde.fr/le-jazz-et-la-salsa/article/2019/06/29/selection-speciale-nouvelle-orleans-trombone-shorty-john-boutte-cha-wa-galactic-hot-8-preservation-hall_5483211_5324427.html).
+
+Bonne lecture,
+
+**Yannick Le Maintec**
+
+---
+
+(c) Image : affiche du French Quarter Festival 2019
