@@ -21,4 +21,9 @@ Et bien, le concert du trompettiste Yohan Giaume intitulé &#8220;Whisper of a S
 
 A lire : [Gottschalk, de la Louisiane à Cuba](https://www.lemonde.fr/le-jazz-et-la-salsa/article/2019/10/01/gottschalk-de-la-louisiane-a-cuba_6013731_5324427.html)
 
+Bonne lecture,
+
 **Yannick Le Maintec**
+
+---
+(c) image : Pochette de l'album de Yohan Giaume : "Whisper of a Shadow"

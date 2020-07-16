@@ -23,3 +23,10 @@ Le pianiste cubain **Alfredo Rodríguez** et son compatriote le percussionniste 
 J&#8217;avais eu la chance d&#8217;assister au premier concert donné par le **Pedrito Martínez Group** en 2013 au Duc des Lombards. Pour l&#8217;occasion, le percussionniste avait accordé une interview à Mundo Latino : [«&nbsp;Je ne suis qu’un héritier&nbsp;»](http://mundolatino.blog.lemonde.fr/2013/11/13/pedrito-martinez-je-ne-suis-quun-heritier-2/).
 
 Nous retrouvions Pedrito l&#8217;année suivante au festival Jazz à Vienne où il partageait l&#8217;affiche avec Setenta et La Orquesta Aragón. Il avait été si brillant que le critique Christian Delage l&#8217;a qualifié de &#8220;[révélation de Jazz à Juan](https://www.huffingtonpost.fr/christian-delage/revelations-jazz-a-juan-_b_5612339.html)&#8221; dans le Huffington Post. [Compte-rendu](http://mundolatino.blog.lemonde.fr/2014/07/22/setenta-martinez-aragon-chaude-nuit-cubaine-a-jazz-a-juan/).
+
+Bonne lecture,
+
+**Yannick Le Maintec**
+
+---
+(c) image : Alfredo Rodriguez and Pedrito Martinez, par Anna Webber / Mack Avenue
