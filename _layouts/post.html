@@ -1,6 +1,8 @@
 ---
 layout: main
 ---
+{% assign date_english = page.date | date: '%d %B %Y' %}
+{% include date-french.html %}
 <article class="article-page">
   <div class="page-content">
     {% if page.img %}
@@ -17,7 +19,7 @@ layout: main
     <div class="wrap-content">
       <header class="header-page">
         <h1 class="page-title">{{page.title}}</h1>
-        <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <div class="page-date"><span>{{ date_french}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       <b> {{page.description}} </b>
       {{content | markdownify}}
