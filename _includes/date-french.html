@@ -1,0 +1,103 @@
+{% assign date_items = date_english | split: " " %}
+{% assign date_french = "" %}
+
+{% for i in date_items %}
+  {% assign word = i | remove: "," | remove: "-" %}
+  {% assign ponctuation = i | remove: word %}
+  {% case word %}
+
+    {% comment %} Convert days {% endcomment %}
+    {% when "Monday" %}
+      {% assign date_french = date_french | append: "lundi" %}
+    {% when "Tuesday" %}
+      {% assign date_french = date_french | append: "mardi" %}
+    {% when "Wednesday" %}
+      {% assign date_french = date_french | append: "Mercredi" %}
+    {% when "Thursday" %}
+      {% assign date_french = date_french | append: "jeudi" %}
+    {% when "Friday" %}
+      {% assign date_french = date_french | append: "vendredi" %}
+    {% when "Saturday" %}
+      {% assign date_french = date_french | append: "samedi" %}
+    {% when "Sunday" %}
+      {% assign date_french = date_french | append: "dimanche" %}
+
+    {% comment %} Convert days in short notation {% endcomment %}
+    {% when "Mon" %}
+      {% assign date_french = date_french | append: "lun" %}
+    {% when "Tue" %}
+      {% assign date_french = date_french | append: "mar" %}
+    {% when "Wed" %}
+      {% assign date_french = date_french | append: "mer" %}
+    {% when "Thu" %}
+      {% assign date_french = date_french | append: "jeu" %}
+    {% when "Fri" %}
+      {% assign date_french = date_french | append: "ven" %}
+    {% when "Sat" %}
+      {% assign date_french = date_french | append: "sam" %}
+    {% when "Sun" %}
+      {% assign date_french = date_french | append: "dim" %}
+
+    {% comment %} Convert months {% endcomment %}
+    {% when "January" %}
+      {% assign date_french = date_french | append: "janvier" %}
+    {% when "February" %}
+      {% assign date_french = date_french | append: "fevrier" %}
+    {% when "March" %}
+      {% assign date_french = date_french | append: "mars" %}
+    {% when "April" %}
+      {% assign date_french = date_french | append: "avril" %}
+    {% when "May" %}
+      {% assign date_french = date_french | append: "mai" %}
+    {% when "June" %}
+      {% assign date_french = date_french | append: "juin" %}
+    {% when "July" %}
+      {% assign date_french = date_french | append: "juillet" %}
+    {% when "August" %}
+      {% assign date_french = date_french | append: "août" %}
+    {% when "September" %}
+      {% assign date_french = date_french | append: "septembre" %}
+    {% when "October" %}
+      {% assign date_french = date_french | append: "octobre" %}
+    {% when "November" %}
+      {% assign date_french = date_french | append: "novembre" %}
+    {% when "December" %}
+      {% assign date_french = date_french | append: "décembre" %}
+
+    {% comment %} Convert months in short notation {% endcomment %}
+    {% when "Jan" %}
+      {% assign date_french = date_french | append: "janv" %}
+    {% when "Feb" %}
+      {% assign date_french = date_french | append: "fevr" %}
+    {% when "Mar" %}
+      {% assign date_french = date_french | append: "mars" %}
+    {% when "Apr" %}
+      {% assign date_french = date_french | append: "avr" %}
+    {% when "May" %}
+      {% assign date_french = date_french | append: "mai" %}
+    {% when "Jun" %}
+      {% assign date_french = date_french | append: "juin" %}
+    {% when "Jul" %}
+      {% assign date_french = date_french | append: "juil" %}
+    {% when "Aug" %}
+      {% assign date_french = date_french | append: "août" %}
+    {% when "Sept" %}
+      {% assign date_french = date_french | append: "sept" %}
+    {% when "Oct" %}
+      {% assign date_french = date_french | append: "oct" %}
+    {% when "Nov" %}
+      {% assign date_french = date_french | append: "nov" %}
+    {% when "Dec" %}
+      {% assign date_french = date_french | append: "déc" %}
+
+    {% else %}
+      {% assign date_french = date_french | append: word %}
+
+  {% endcase %}
+  {% assign date_french = date_french | append: ponctuation | append: " " %}
+{% endfor %}
+
+{% assign date_french = date_french | strip %}
+{% assign first_char = date_french | truncate: 1, "" %}
+{% assign first_char_upcase = first_char | upcase %}
+{% assign date_french = date_french | replace_first: first_char, first_char_upcase %}
