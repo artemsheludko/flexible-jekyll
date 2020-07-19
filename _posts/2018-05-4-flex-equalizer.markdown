@@ -208,6 +208,8 @@ of the LED Matrix.
 
 # Media
 
+[FE Demo Video](https://drive.google.com/file/d/1ARccuasTUF83R-8v9RG103pNincUt8yA/view?usp=sharing)
+
 ![Schematic](../assets/img/FE/schematic.png)
 <center><b>FE Schematic</b></center>
 
