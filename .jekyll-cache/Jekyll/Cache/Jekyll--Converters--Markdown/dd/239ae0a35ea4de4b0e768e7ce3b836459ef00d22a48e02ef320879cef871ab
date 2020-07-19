@@ -1,16 +1,6 @@
----
-layout: post
-title: Assembly Binary Game
-date: 2018-04-20 13:32:20 +0300
-description: Designing Binary Numbers Learning Tool
-img: ABG/thumb.jpg # Add image post (optional)
-fig-caption: Final Iteration of ABG Project
-tags: [Binary to Decimal Conversion, Assembly Language, Custom PCB, Learning]
----
+I"cA<h1 id="purpose">Purpose</h1>
 
-# Purpose
-
-The purpose of the Assembly Binary Game Project (referred to in this report as
+<p>The purpose of the Assembly Binary Game Project (referred to in this report as
 the “ABG Project”) is to provide a hardware substitute for the now defunct
 online Cisco Binary Game. The binary challenge was a competition amongst junior
 ACES where a tournament is held to see who can achieve the highest score in a
@@ -18,51 +8,82 @@ fixed amount of time. The ABG Project aims to allow students to hold this
 competition using physical hardware consoles instead of websites like the Cisco
 Binary Game, which ultimately ended up being placed behind a paywall. The custom
 PCB allows for many ABG consoles to be created for a potential class set for
-future ACES students to continue the binary challenge tradition.
+future ACES students to continue the binary challenge tradition.</p>
 
-| Parts List                       |
-| :------------------------------: |
-| 10k Ω Resistor                   |
-| 5 x 3904 BJTs                    |
-| 16 Mhz Crystal Oscillator        |
-| ATMega328P                       |
-| 2 x 22 pF Capacitors             |
-| 8 x Switches                     |
-| 5 x 7-Segment Displays           |
-| 595 Shift Register               |
-| 2 x 4511 7-Segment Driver        |
-| 2 x 100 nF Capacitors            |
-| DC Jack                          |
-| LM7805 Voltage Regulator         |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Parts List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">10k Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5 x 3904 BJTs</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">16 Mhz Crystal Oscillator</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ATMega328P</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x 22 pF Capacitors</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8 x Switches</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5 x 7-Segment Displays</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">595 Shift Register</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x 4511 7-Segment Driver</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x 100 nF Capacitors</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DC Jack</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LM7805 Voltage Regulator</td>
+    </tr>
+  </tbody>
+</table>
 
-The ABG Project allowed the undersigned to improve both assembly language skills
+<p>The ABG Project allowed the undersigned to improve both assembly language skills
 and PCB design skills. As the entire project’s code is written in assembly, the
 ABG Project serves as a good introduction to writing complex and fully featured
 programs in assembly language. The PCB was also found to be one of the most
 complex through hole boards that the undersigned has designed to date, due in
 part to the large number of components as well as unique and unfamiliar
-components that were used by the undersigned on the PCB, such as transistors.
+components that were used by the undersigned on the PCB, such as transistors.</p>
 
-# Reference
+<h1 id="reference">Reference</h1>
 
-[Random Number Generator Example 1](https://www.avrfreaks.net/forum/very-fastsmall-random-number-generator?page=all)
+<p><a href="https://www.avrfreaks.net/forum/very-fastsmall-random-number-generator?page=all">Random Number Generator Example 1</a></p>
 
-[Random Number Generator Example 2](https://www.avrfreaks.net/forum/random-number-generation-0)
+<p><a href="https://www.avrfreaks.net/forum/random-number-generation-0">Random Number Generator Example 2</a></p>
 
-[Random Number Generator Example 3](https://www.avrfreaks.net/forum/i-need-pseudo-random-number-generator-attiny-13)
+<p><a href="https://www.avrfreaks.net/forum/i-need-pseudo-random-number-generator-attiny-13">Random Number Generator Example 3</a></p>
 
-# Procedure
+<h1 id="procedure">Procedure</h1>
 
-The ABG Project consists of 8 switches for binary number input, seven segment
+<p>The ABG Project consists of 8 switches for binary number input, seven segment
 displays for score and the 8-bit number to create in binary using the input
 switches. The displays are driven by two 4511 7-Segment display driver ICs and a
 595 shift register, since many of the ATmega328P’s digital pins are already tied
-to other components such as the input switches.
+to other components such as the input switches.</p>
 
-The construction of the ABG Project is comprised of 3 steps; prototyping, PCB
-design and programming.
+<p>The construction of the ABG Project is comprised of 3 steps; prototyping, PCB
+design and programming.</p>
 
-The first and most straightforward step of the ABG Project is the breadboard
+<p>The first and most straightforward step of the ABG Project is the breadboard
 prototype. First, 3 common-cathode 7 segment displays were connected to the
 outputs of a single 4511 chip. The cathodes of each display are each wired to
 one NPN3904 transistor. The base pins of each transistor are connected to PORTB
@@ -83,12 +104,12 @@ lower nibble of the byte shifted out directly to the 4511. The two transistors
 for selection of a score display are still operated directly by the Arduino
 connected to PORTC. The final addition to the prototype circuit is an 8-bit DIP
 switch, which was connected to PORTD of the Arduino sequentially so that the
-byte inputted by the user could be read with a simple call to the in command.
+byte inputted by the user could be read with a simple call to the in command.</p>
 
-![Breadboard Prototype](../assets/img/ABG/proto1.jpg)
+<p><img src="../assets/img/ABG/proto1.jpg" alt="Breadboard Prototype" /></p>
 <center><b>Breadboard Prototype</b></center>
 
-The second step in the construction of the ABG Project is PCB design. The key
+<p>The second step in the construction of the ABG Project is PCB design. The key
 differences between the prototype circuit and the final EAGLE schematic is the
 addition of a 5V voltage regulator so the board can receive power from a 9V
 battery. The Arduino is also replaced with an off board ATmega328P and the
@@ -105,9 +126,9 @@ each display. Since the PCB had exposed traces, all the resistors were removed
 and replaced with extra wire connecting the two traces, which lead to the
 displays running at their normal brightness. A third iteration of the board was
 immediately ordered to settle the issue completely, however, it did not arrive
-in time for the creation of this report.
+in time for the creation of this report.</p>
 
-The final and most difficult step of the ABG Project is writing the code for the
+<p>The final and most difficult step of the ABG Project is writing the code for the
 binary game in AVR assembly. The assembly code is structured in a similar way to
 an Arduino program with a setup label which initializes all the I/O pins and
 interrupts, and a loop label where the bulk of the game code runs. The code
@@ -128,28 +149,27 @@ two interrupts. A timer interrupt from TIMER0 is used to schedule new ADC
 readings and another ADC ISR runs when that reading is completed. The ISR is
 called ADC_Complete, which runs when there is a new reading. The new reading is
 copied into a general purpose register defined as newValue, which is fed as a
-seed to the random number generator.
+seed to the random number generator.</p>
 
-![Working PCB Prototype](../assets/img/ABG/pcb1.jpg)
+<p><img src="../assets/img/ABG/pcb1.jpg" alt="Working PCB Prototype" /></p>
 <center><b>PCB Prototype</b></center>
 
-# Media
+<h1 id="media">Media</h1>
 
-[ABG Demo Video](https://drive.google.com/file/d/1nT0jULcNa1SFy3rGPox2wxYwwvKTErsg/view?usp=sharing)
+<p><a href="https://drive.google.com/file/d/1nT0jULcNa1SFy3rGPox2wxYwwvKTErsg/view?usp=sharing">ABG Demo Video</a></p>
 
-Unfortunately, the demo video only includes the first iteration
-PCB prototype. The blue prototype had not yet arrived when the video was shot.
+<p>Unfortunately, the demo video only includes the first iteration
+PCB prototype. The blue prototype had not yet arrived when the video was shot.</p>
 
-![Schematic](../assets/img/ABG/schematic.png)
+<p><img src="../assets/img/ABG/schematic.png" alt="Schematic" /></p>
 <center><b>ABG Schematic</b></center>
 
-![PCB Layout](../assets/img/ABG/layout.png)
+<p><img src="../assets/img/ABG/layout.png" alt="PCB Layout" /></p>
 <center><b>PCB Layout</b></center>
 
-# Code
+<h1 id="code">Code</h1>
 
-{% highlight assembly %}
-.cseg
+<figure class="highlight"><pre><code class="language-assembly" data-lang="assembly">.cseg
 #include "prescalers.h"
 .org 0x0000
   rjmp reset
@@ -199,24 +219,24 @@ timers:
   sts TCCR2A, r16 ; store
   ldi r16, 124 ; set output compare number to get 63hz freq
   sts OCR2A, r16 ; store to output compare reg
-  ldi r16, 1 << OCIE2A ; set timer interrupt enable bit
+  ldi r16, 1 &lt;&lt; OCIE2A ; set timer interrupt enable bit
   sts TIMSK2, r16 ; enable the interrupt
   ret
 
 ADCInit:
   ser r16 ; set all bits in r16
-  ldi r16, (1 << REFS0) | (1 << ADLAR)
+  ldi r16, (1 &lt;&lt; REFS0) | (1 &lt;&lt; ADLAR)
   sts ADMUX, r16
   ; Enable, start dummy conversion, enable timer as trigger, prescaler
-  ldi r16, (1 << ADEN) | (1 << ADSC) | (1 << ADIE) | (1 << ADPS2) | (1 << ADPS1)
-| (1 << ADPS0)
+  ldi r16, (1 &lt;&lt; ADEN) | (1 &lt;&lt; ADSC) | (1 &lt;&lt; ADIE) | (1 &lt;&lt; ADPS2) | (1 &lt;&lt; ADPS1)
+| (1 &lt;&lt; ADPS0)
   sts ADCSRA, r16
-  ldi r16, 1 << ADTS2
+  ldi r16, 1 &lt;&lt; ADTS2
   sts ADCSRB, r16
 
 dummy:
   lds r16, ADCSRA
-  andi r16, 1 << ADIF
+  andi r16, 1 &lt;&lt; ADIF
   breq dummy
   ret
 
@@ -229,13 +249,13 @@ T0Init: ; initialize T0 interrupt to schedule ADC conversions
   out TCCR0A, r16 ; normal mode OC0A/B disconnected
   ldi r16, T0ps8 ;
   out TCCR0B, r16
-  ldi r16, 1 << TOIE0 ; Timer interrupt enable
+  ldi r16, 1 &lt;&lt; TOIE0 ; Timer interrupt enable
   sts TIMSK0, r16 ; output to mask register to
   ret
 
 TIM0_OVF:
   lds r19, ADCSRA ; start an ADC conversion
-  sbr r19, 1 << ADSC ; set the required bit
+  sbr r19, 1 &lt;&lt; ADSC ; set the required bit
   sts ADCSRA, r19
   reti
 
@@ -516,13 +536,13 @@ initNumDisplay:
   sbi DDRC, PC2
   sbi DDRC, PC3
 
-  ret
-{% endhighlight %}
+  ret</code></pre></figure>
 
-# Conclusion
+<h1 id="conclusion">Conclusion</h1>
 
-Overall, the ABG Project serves as a fun conclusion to three inspiring years in
+<p>Overall, the ABG Project serves as a fun conclusion to three inspiring years in
 the ACES program. The project is the culmination of many invaluable skills
 taught in this course, particularly programming and CAD design. It is also the
 undersigned’s hope that this project will leave a legacy for future ACES
-students who wish to take on the binary challenge.
+students who wish to take on the binary challenge.</p>
+:ET

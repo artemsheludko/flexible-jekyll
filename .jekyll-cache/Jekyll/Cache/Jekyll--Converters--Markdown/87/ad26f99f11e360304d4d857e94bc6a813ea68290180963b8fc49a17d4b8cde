@@ -1,0 +1,152 @@
+I"�<h1 id="purpose">Purpose</h1>
+
+<p>The purpose of the Assembly Binary Game Project (referred to in this report as
+the “ABG Project”) is to provide a hardware substitute for the now defunct
+online Cisco Binary Game. The binary challenge was a competition amongst junior
+ACES where a tournament is held to see who can achieve the highest score in a
+fixed amount of time. The ABG Project aims to allow students to hold this
+competition using physical hardware consoles instead of websites like the Cisco
+Binary Game, which ultimately ended up being placed behind a paywall. The custom
+PCB allows for many ABG consoles to be created for a potential class set for
+future ACES students to continue the binary challenge tradition.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Parts List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">10k Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5 x 3904 BJTs</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">16 Mhz Crystal Oscillator</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ATMega328P</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x 22 pF Capacitors</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8 x Switches</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5 x 7-Segment Displays</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">595 Shift Register</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x 4511 7-Segment Driver</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x 100 nF Capacitors</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DC Jack</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LM7805 Voltage Regulator</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The ABG Project allowed the undersigned to improve both assembly language skills
+and PCB design skills. As the entire project’s code is written in assembly, the
+ABG Project serves as a good introduction to writing complex and fully featured
+programs in assembly language. The PCB was also found to be one of the most
+complex through hole boards that the undersigned has designed to date, due in
+part to the large number of components as well as unique and unfamiliar
+components that were used by the undersigned on the PCB, such as transistors.</p>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="https://www.avrfreaks.net/forum/very-fastsmall-random-number-generator?page=all">Random Number Generator Example 1</a></p>
+
+<p><a href="https://www.avrfreaks.net/forum/random-number-generation-0">Random Number Generator Example 2</a></p>
+
+<p><a href="https://www.avrfreaks.net/forum/i-need-pseudo-random-number-generator-attiny-13">Random Number Generator Example 3</a></p>
+
+<h1 id="procedure">Procedure</h1>
+
+<p>The ABG Project consists of 8 switches for binary number input, seven segment
+displays for score and the 8-bit number to create in binary using the input
+switches. The displays are driven by two 4511 7-Segment display driver ICs and a
+595 shift register, since many of the ATmega328P’s digital pins are already tied
+to other components such as the input switches.</p>
+
+<p>The construction of the ABG Project is comprised of 3 steps; prototyping, PCB
+design and programming.</p>
+
+<p>The first and most straightforward step of the ABG Project is the breadboard
+prototype. First, 3 common-cathode 7 segment displays were connected to the
+outputs of a single 4511 chip. The cathodes of each display are each wired to
+one NPN3904 transistor. The base pins of each transistor are connected to PORTB
+of the Arduino so that a particular display can be selected in code by blocking
+the path to ground for the other two by leaving their transistor base pins low.
+The use of transistors allows all 3 displays to be controlled by a single 4511
+using POV by switching through the displays showing one digit at a time so
+quickly that it appears as one number. The input pins of the 4511 are
+sequentially connected to PORTC. This configuration makes displaying a digit as
+simple as outputting a value to PORTC. An additional two 7-Segment displays are
+used to display the player’s score. These two displays are connected to the
+outputs of another 4511 chip and their cathodes are connected to transistors in
+the same configuration as the other 3 displays. The only difference in the setup
+of the score displays is that the inputs of the 4511 are not directly connected
+to the Arduino, due to a shortage of I/O pins. Instead, the inputs of the 4511
+are connected to the first 4 outputs of a 595 shift register, which feeds the
+lower nibble of the byte shifted out directly to the 4511. The two transistors
+for selection of a score display are still operated directly by the Arduino
+connected to PORTC. The final addition to the prototype circuit is an 8-bit DIP
+switch, which was connected to PORTD of the Arduino sequentially so that the
+byte inputted by the user could be read with a simple call to the in command.</p>
+
+<p>The second step in the construction of the ABG Project is PCB design. The key
+differences between the prototype circuit and the final EAGLE schematic is the
+addition of a 5V voltage regulator so the board can receive power from a 9V
+battery. The Arduino is also replaced with an off board ATmega328P and the
+accompanying circuitry, such as an ISP header. Notwithstanding the few
+modifications to the original prototype circuit, the PCB did not fully function
+when it arrived. The code was seemingly running properly on the board but the
+displays appeared very dim. This issue was initially attributed to the small
+trace width of 8 mil being unable to carry enough current to support the
+7-Segment displays. As a result, an identical board with larger traces was
+ordered but the same issue was encountered. Upon further inspection, it was
+discovered that the dimness resulted from the 1k Ω resistors connected to the
+base pins of each transistor and the 470 Ω resistors connected to the cathode of
+each display. Since the PCB had exposed traces, all the resistors were removed
+and replaced with extra wire connecting the two traces, which lead to the
+displays running at their normal brightness. A third iteration of the board was
+immediately ordered to settle the issue completely, however, it did not arrive
+in time for the creation of this report.</p>
+
+<p>The final and most difficult step of the ABG Project is writing the code for the
+binary game in AVR assembly. The assembly code is structured in a similar way to
+an Arduino program with a setup label which initializes all the I/O pins and
+interrupts, and a loop label where the bulk of the game code runs. The code
+utilizes two timer interrupts and an ADC interrupt. An interrupt on TIMER2 is
+configured to run at a frequency of 63 Hz constantly polling for the correct
+switch combination matching the number being displayed. This interrupt service
+routine (ISR) also assists in the POV for the displays by running the double
+dabble algorithm on the new random value, breaking it into its individual digits
+to be presented via POV in the loop label. The comparison between switch input
+and the number on display is done using the in command to load the value of the
+PIND register into general purpose register and compare to the number shown on
+the displays using the cp command. The breq command is used to branch to a new
+label called isEqual if the comparison returned true, which increments the score
+value and loads a new random number to be shown. The random numbers come from
+random number generator code found on the website “AVR Freaks”, which has been
+modified to use a random seed from an ADC reading. The use of the ADC requires
+two interrupts. A timer interrupt from TIMER0 is used to schedule new ADC
+readings and another ADC ISR runs when that reading is completed. The ISR is
+called ADC_Complete, which runs when there is a new reading. The new reading is
+copied into a general purpose register defined as newValue, which is fed as a
+seed to the random number generator.</p>
+
+<h1 id="media">Media</h1>
+:ET
