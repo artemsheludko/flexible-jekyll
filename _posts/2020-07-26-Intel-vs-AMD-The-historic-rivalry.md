@@ -5,14 +5,14 @@ published: false
 
 ### The birth (1968-1969)
 
-These are the only two companies competing in the PC CPU master race. But let’s zoom back to 50 years ago. **John Carter** was the president of the Fairchild Semiconductor company back in the 20th century. Somewhere in the 1960s, He used all company profits to fund unprofitable ventures – talk about bad investments. And then was asked to resign.  
+These are the only two companies competing in the PC CPU master race. But let’s zoom back to 50 years ago. **John Carter** was the president of the **Fairchild Semiconductor company** back in the 20th century. Somewhere in the 1960s, He used all company profits to fund unprofitable ventures – talk about bad investments. And then was asked to resign.   
 Many people under him switched to competitors – to National Semiconductor, Molectro, etc. Bob Noyce was considered the natural successor to Carter, but the board decided not to promote him to the position.  
-Angry with the unfair system he left Fairchild to form Intel with Gordon Moore and some more colleagues. Just a year later, Jerry Sanders also left Fairchild to form AMD in 1969.   
+Angry with the unfair system **Noyce** left Fairchild to form **Intel** with Gordon Moore and some more colleagues in **1968**. Just a year later, Jerry Sanders also left Fairchild to form **AMD**.   
 And hence the PC master race began -- filled with heroic successes, foolhardy errors, and a close shave with rack and ruin.  
 
-Initially, both startups we new and started building chips to market and profited decently. But one day Intel got the upper hand when their “X86” chip-architecture was selected by IBM in coordination with MS-DOS. If you’ve heard about “X86”, you’d like to know “X” here is from maths book. It’s a variable.  
+Initially, both startups we new and started building chips to market and profited decently. But one day Intel got the upper hand when their “X86” chip-architecture was selected by IBM in coordination with MS-DOS. If you’ve heard about **“X86”**, you’d like to know “X” here is from maths book. It’s a variable.  
 *8086 was the first-ever X86 processor.*  
-Intel’s architecture for scale along is a recipe for Monopoly. Hence IBM required Intel to find another supplier of the chip manufacturer. Enter AMD, with license and spec for Intel’s “286” chip, began producing for IBM. Intel further developed a “386” series but denied AMD permissions to the license and spec for the same.  
+Using only Intel’s architecture globally is a recipe for Monopoly. Hence IBM required Intel to find another supplier of the chip manufacturer. Enter AMD, with license and spec for Intel’s “286” chip, began producing for IBM. Intel further developed a “386” series but denied AMD permissions to the license and spec for the same.  
 What to do, they were now left with one option – to reverse engineer the chipset. Before AMD could build their own version of 386, the “Am386DX”, Intel had already come up with “486”. But the “Am386DX” was better than Intel’s “386” and was close to “486” in performance. Still, though, analysts started calling AMD “Dead”, largely because of the time needed to reverse-engineer the chips.  
 
 Not to be mistaken though. AMD’s alternative offering to “486” was 20% more performant than Intel’s. Enough to help AMD double the revenue within 4 years to $2Billions by 1994.
@@ -23,9 +23,9 @@ How the tables turn, For the first time really, AMD went first to market with ne
 
 Two years later, AMD dropped another innovation bomb. The first-ever dual-core processor – **AMD Athlon 64 X2**. But again, didn’t market enough. And one year later Intel came up with Core 2 Duo, which outperformed the Athlon.  
 
-### Intel's market capturing tactics
+### Intel's market capturing tactics and AMD's fall
 
-> The thing to note here is its not just AMD's lousy grip on advertisements pulling the market down for them. Intel was paying Computer OEMs for the exclusivity – to Not use AMD products. Almost mass killing the market for AMD.
+> The thing to note here is its not just AMD's lousy grip on advertisements pulling the market down for them. Intel was paying Computer OEMs for the exclusivity – to Not use AMD products. Hence, there was sudden decline of AMD powered systems from Dell, HP, Lenovo and others.
 
 Intel’s offerings were on par with AMD’s along with their market capturing tactics doing even better. Naturally, AMD had to do something about it. For some reason, marketing is never their first thought so they came up with an idea to bring GPU to business now and brought Array Technology Inc.(ATI) for $5.4 billion in 2006. That may or may not sound big to you, but even they quickly realized this was an over-evaluated purchase. The GPU company wasn’t worth that much at that time.  
 
