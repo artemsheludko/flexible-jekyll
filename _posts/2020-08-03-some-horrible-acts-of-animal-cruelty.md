@@ -42,7 +42,8 @@ But what could be better than being able to remove the poison and eat the enemy?
 This one is more common. You might have either been there or one of your friends have their photos on Instagram clicked up-close with a tiger. Lol, it’s easy cause they’ve been doing lines.  
 ![tiger drawing cocaine](https://i.kym-cdn.com/photos/images/original/000/600/960/de5.jpg)  
 As cool as it may look, wild animals can never be compatible with their basic welfare needs blurred by a facility in search of profit. This is in addition to the pitiful prisons that the zoos are. Psychedelics are not for animals.(they’re for humans :) )
-  
+![Tiger selfie](https://thumbs-prod.si-cdn.com/wdWMrEMclvHb4-rIA9nSk8Fxt1c=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/bc/bc/bcbc3599-e3c8-43b4-b740-b252e9990c0a/blurred2.jpg)
+
   
   
 ### Lockdown forever
