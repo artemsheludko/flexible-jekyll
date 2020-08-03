@@ -1,7 +1,13 @@
 ---
-published: false
+layout: post
+title: Some horrible acts of animal cruelty
+date: 2020-08-03 20:00:00 +0530
+description: Full of pride, we’ve gained superiority over almost every being on this planet. Today we shed lights on some of the horrifying ones.
+img: imprisoned_tiger_cub.jpg
+fig-caption: Imprisoned tiger cub
+tags: [Animals, humans, cruelty, death, mean, superiority]
 ---
-## Some horrible acts of animal cruelty.
+## Some horrible acts of animal cruelty
 
 I hope you’re doing amazing! This article, however, is about those who aren’t.  
 Well, that was quick. But no, it’s not about depression. Depending on how you see it, this one has bits that usually people find tasty.  
