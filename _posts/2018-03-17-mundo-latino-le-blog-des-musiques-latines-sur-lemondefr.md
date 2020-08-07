@@ -3,7 +3,7 @@ title: "&#171; Mundo Latino &#187;, le blog des musiques latines sur le Monde.fr
 date: 2018-03-18T12:51:21+02:00
 author: Yannick Le Maintec
 layout: post
-img: jdo-visuel-2018.jpg
+img: malecon-noche.jpg
 permalink: /mundo-latino-le-blog-des-musiques-latines-sur-lemondefr
 tags:
   - blog
@@ -18,13 +18,10 @@ description: Créé en 2009, "Mundo Latino" est un blog invité du Monde.fr cons
 
 A l'étroit dans ses habits, **Mundo Latino** a changé de nom en mars 2018 pour devenir **Le jazz et la salsa**. En juillet 2018, *[Le jazz et la salsa](https://www.lemonde.fr/le-jazz-et-la-salsa/)* a intégré les blogs de la rédaction du Monde.
 
-Pour un accès plus facile, **Mundo Latino** est de retour à son adresse historique :
+Retrouvez **Mundo Latino** à l'adresse suivante :
 
 >> [mundolatino.blog.lemonde.fr](http://mundolatino.blog.lemonde.fr/)
 
 Bonne lecture,
 
 **Yannick Le Maintec**
-
----
-(c) image : Joachim Des Ormeaux, par Cilla Mali
