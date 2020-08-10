@@ -19,7 +19,7 @@ tags:
 The magnificent and noble creatures that have enchanted young and adult kids across the globe through the ages. They are a symbol of purity, goodness, and freedom. It’s also believed that they don’t exist <sub><sup>(neither does freedom)</sup></sub>. Today we settle with the truth – they are often associated with rainbows and that means they are a symbol of homosexuality.  
 ![Sexy Unicorn Man]({{site.baseurl}}/assets/img/unicorn_man.jpg)  
 
-Alright, that’s enough trash talk. You’ve seen the cover image and you know it’s about the startups that make it big, the ones that fly high and touch the rainbows. In the unordinary event you are unaware of the term, however, “Unicorn” was coined by Aileen Lee in a TechCrunch [article]( https://techcrunch.com/2013/11/02/welcome-to-the-unicorn-club/) in 2013 to capture the group of tech startups that carried valuations over 1Billion and were founded after 2003. At the time of her writing, 39 Unicorns met that criteria. As of August 2020, there are [400](https://www.cbinsights.com/research-unicorn-companies).  
+Alright, that’s enough trash talk. You’ve seen the cover image and you know it’s about the startups that make it big, the ones that fly high and touch the rainbows. In the unordinary event you are unaware of the term, however, “Unicorn” was coined by Aileen Lee in a TechCrunch [article](https://techcrunch.com/2013/11/02/welcome-to-the-unicorn-club/) in 2013 to capture the group of tech startups that carried valuations over 1Billion and were founded after 2003. At the time of her writing, 39 Unicorns met that criteria. As of August 2020, there are [400](https://www.cbinsights.com/research-unicorn-companies).  
   
 Running a startup is grueling work, forget hitting the Billion-dollar valuation. 90% of startups fail. It’s not about innovation along, not just about execution either (though, it’s one of the main points), there’s a lot of luck factor too, apparently the least dependable but ye.  
   
@@ -46,6 +46,6 @@ I know you’re thinking about WeWork right now, and rightly so, its valuations 
   
 # The End
 
-There’s a lot more to this space and a lot of interesting business stories. Two issues back I covered the history of Intel and AMDs rivalry, and now you may be interested in knowing the WeWork and Softbank’s fallacy too. If it’s a Yes, hit the comment button below so I put it in the queue.  
+There’s a lot more to this space and a lot of interesting business stories. Two issues back I covered the history of [Intel and AMDs rivalry]({{site.baseurl}}/Intel-vs-AMD-The-historic-rivalry/), and now you may be interested in knowing the WeWork and Softbank’s fallacy too. If it’s a Yes, hit the comment button below so I put it in the queue.  
 That’s it for today. If you like it do let me know.    
 ![Lost Unicorn](https://pbs.twimg.com/media/CdwGPGhWAAA4Aw8.jpg)
