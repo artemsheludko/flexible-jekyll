@@ -1199,6 +1199,18 @@ a.newer-posts:hover {
   padding: 20px;
 }
 
+.main-content-block {
+  max-width: 500px;
+  margin: auto;
+  width: 50%;
+}
+
+div.main-content-block img {
+  display: block;
+  margin: 15px auto;
+  max-width: 400px;
+}
+
 .header-page {
   text-align: center;
   margin: 10px 0;
