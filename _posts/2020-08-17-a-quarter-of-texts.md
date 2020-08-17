@@ -1,7 +1,19 @@
 ---
 published: false
+layout: post
+date: '2020-08-17 15:00:00 +0530'
+description: >-
+  Today marks completion of my first quarter running Knowledge Day, lots
+  learned, lots to learn.
+img: quarter3.jpg
+fig-caption: A quarter of texts
+tags:
+  - Blog
+  - Story
+  - Quarter
+  - Statistics
 ---
-Start of another long week makes me feek weak.  
+Start of another long week makes me feel weak.  
   
 But today is special! Today marks the first quarter since I launched the newsletter. I must say it’s been a great journey so far. My [10th issue](link) covers how it started and today I’d like to talk more. Because it’s been 3 months since the launch and the there’s story you don’t see, but I do :p  
 
@@ -25,7 +37,7 @@ We’ve got a 100% increase in the number of Subscribers. Well, any number above
   
 This doesn’t matter but 62% of the subscribers are males and 37% females. (What, you have a question? rethink)  
   
-Thanks to my inconsistency, I even have stats for the days this newsletter has been sent on. Turns out Wednesday and Thursday are the only two weekdays when I have not sent this newsletter. This is funny cause Thursday being one of the intended trigger days for KD right from the beginning itself. And Wednesday is a popular midweek newsletter day. My bad, the schedule is a mystery. Though, Which of the days did you find yourself free to read this? (Reply)  
+Thanks to my inconsistency, I even have stats for the days this newsletter has been sent on. Turns out Wednesday and Thursday are the only two weekdays when I have not sent this newsletter. This is funny cause Thursday being one of the intended trigger days for KD right from the beginning itself. And Wednesday is a popular midweek newsletter day. My bad, the schedule is a mystery. Though, Which of the days did you find yourself free to read this? ([Reply](mailto:KnowledgeDay@protonmail.com?subject=Days%20I'm%20free%20to%20read&body=Hey%20Yash%2C%20I%20like%20to%20read%20your%20newsletter%20on...))  
   
 Well, that’s it for stats. We’ve had some transitions too.  
 
@@ -43,10 +55,13 @@ Meanwhile, I figured, if I can set up a blog independently, then why not. WordPr
 Jekyll is a framework for building static sites, built with Ruby. That means there is no database, no login accounts, no personalization for premium users. There is none. However, I did add comment section, via Disqus, you see that guy in a lot of blogs.  
   
 The win with a static site is it’s super fast. And non-hackable, because there’s no database, there’s no user data, there's nothing to steal.  
-
-Even though that Jekyll/blog is the latest thing I’ve been working on. I still prioritize email newsletter, because it’s so lean, and personalized. Also, due to the limitations of emails, no one can run scripts on your device, leaving out the possibility of malware or anything suspicious (Do know that opening attachments and links from spooky senders can do that, reading contents can cause no harm. You’re safe with me). 
- 
- One thing to mention here, Anubhav, a fellow reader has joined hands with me to work on a project that sits behind the blog. It will not change anything for the blog readers but will make things easier. Exciting times ahead! (for me) :D
+  
+Even though the [Jekyll/blog](https://ohyash.github.io/KnowledgeDay/) is the latest thing I’ve been working on. I still prioritize email newsletter, because it’s so weightless, and personalized. Also, for your benefit due to the limitations of emails, no one can run scripts on your device, leaving out the possibility of malware or anything suspicious (Do know that opening attachments and links from spooky senders can do that, reading contents can cause no harm. You’re safe with me).   
+   
+One thing to mention here, Anubhav, a fellow reader has joined hands with me to work on a project that sits behind the blog. It will not change anything for the blog readers but will make things easier. Exciting times ahead! (for me) :D   
+  
 -----
-That was it for today, I may not have shared much of internet knowledge today, but you know. Occasionally, it’s okay to talk and not just share internet guides… Which means I’m also suggesting response - options are below, I talk back too 😊. Also, the online view(medium/personal blog) contains the comment section!
+  
+That was it for today, I may not have shared much of internet knowledge today, but you know. Occasionally, it’s okay to talk and not just share internet guides… Which means I’m also suggesting response - options are below, I talk back too 😊. Also, the online view(medium/personal blog) contains the comment section!  
 
+Do you like this newsletter? Do you follow any blog or newsletter that you like? I'd love to read what you read, please do share. ✌️
