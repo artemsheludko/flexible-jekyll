@@ -1,5 +1,17 @@
 ---
-published: false
+layout: post
+title: Most Popular Diets
+date: '2020-08-26 20:00:00 +0530'
+description: >-
+  Different people, different needs, different diets. There are more than two and we look at some of the most famous ones.
+img: diet_poster.jpg
+fig-caption: Food!
+tags:
+  - Food
+  - Diet
+  - Fitness
+  - Health
+published: true
 ---
 Your body, Your Diet
 ------
