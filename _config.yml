@@ -1,22 +1,22 @@
-title: Hello, world! I'm David Freeman
+title: Ben Corcoran | Data Analyst
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 permalink: ':title/'
-baseurl: "/benjamincorcoran.github.io" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Ben Corcoran # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: About text # add description
+author-img: https://s.gravatar.com/avatar/49266cade85fd1b32e3896a9c56fa78c?s=80# add your photo
+about-author: Data Analyst? 
 social-twitter: benjcorc # add your Twitter handle
-social-facebook: # add your Facebook handle
+social-medium: benjamin.corcoran # add your Facebook handle
 social-github: benjamincorcoran # add your Github handle
 social-linkedin: ben-corcoran-a0a229100 # add your Linkedin handle
-social-email: # add your Email address
+social-email: mail@benjamincorcoran.com # add your Email address
 
 # Disqus
 discus-identifier: # add your discus identifier

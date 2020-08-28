@@ -1,0 +1,281 @@
+I"'�<h1 id="scraping-wikipedia-for-orders-of-magnitude">Scraping Wikipedia for Orders of Magnitude</h1>
+
+<p><a href="https://pint.readthedocs.io/en/0.9/">Pint</a> is an awesome python package that allows for the easy conversion between units. As it stands it covers nearly all scientific SI units and most imperial ones. This means I can easily convert between fathoms and meters. Pint also makes it really easy to extend a unit, or include a completely new custom one. </p>
+
+<p>When it comes to standard units you'd use in calculation there is rarely a simple real-world understanding of the actual value of this unit. Number sense is incredibly import for effective science communication. It can be the difference between someone engaging with the work and giving up entirely. </p>
+
+<p>This rainy afternoon project scrapes <a href="https://en.wikipedia.org/wiki/Category:Orders_of_magnitude">Wikipedia's order of magnitude sections</a> to pull out potentially useful real-world comparisons and generates a Pint config to make these values accessible as units. </p>
+
+<h2 id="scraping-wikipedia">Scraping Wikipedia</h2>
+
+<p>The first thing we need to do is find some useful data. After about two hours of googling, I managed to find Wikipedia’s order of magnitude categories. These are a series of tables for various concepts listing examples of values of that concept, such as length, at different orders of magnitude.</p>
+
+<p>Looking at the order of magnitude section nearly all of the pages have a table with a “Value” and “Item” column. The Value column contains a numerical value in various units. The Item column is a description of what the “Value” column represents. The ‘data’, ‘numbers’, ‘radiation’, ‘temperature’ and ‘time’ pages deviate from this structure of the other tables. So unlike Wikipedia to be inconsistent! We might have to return to these at a later date.</p>
+
+<p>For the others, we just need to find a way of pulling that data out of those tables. Thankfully smarter people than me have already solved that problem. After they solved it they then went put stabilisers on the solution. You’ve really got to try to fail at python nowadays.</p>
+
+<p>Robobrowser makes web scraping offensively easy. Let’s open up an instance of Robobrowser and point it to the page detailing the various different order of magnitude sections.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span> 
+<span class="kn">import</span> <span class="nn">robobrowser</span>
+
+<span class="n">BASEURL</span> <span class="o">=</span> <span class="s">'https://en.wikipedia.org/wiki/Category:Orders_of_magnitude'</span>
+
+<span class="n">rb</span> <span class="o">=</span> <span class="n">robobrowser</span><span class="p">.</span><span class="n">RoboBrowser</span><span class="p">(</span><span class="n">history</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">rb</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="n">BASEURL</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>From this point, we can select all the links on the page using the inbuilt select function. The select function behaves pretty much the same way as a jQuery $() function.  In the #mw-pagessection we find all the links. We can then filter those just to the actual ‘Order of magnitude’ pages with a small bit of RegEx. Let’s shove all that in a dictionary for later use.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pages</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rb</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'#mw-pages li a'</span><span class="p">)</span> <span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="s">r'^Orders'</span><span class="p">,</span><span class="n">x</span><span class="p">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/ben/.miniconda/lib/python3.7/site-packages/robobrowser/browser.py:40: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 40 of the file /home/ben/.miniconda/lib/python3.7/site-packages/robobrowser/browser.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
+
+  features=self.browser.parser,
+</code></pre></div></div>
+
+<p>Now is just the process of iterating over that dictionary, telling robobrowser to follow the link and parsing any tables that we find on that page. The below code shows exactly how that process works. The lions share of what’s been written is to deal with eccentricities of each page. Hopefully, the comments should provide some clarity as to what is happening in each step.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Initialise lastTableColumns variable. This will be used to capture the structure of 
+# the table in the case that the header row is missing. 
+</span><span class="n">lastTableColumns</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="c1"># Create empty dictionary to store processed items
+</span><span class="n">OrdersOfMagnitude</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Begining wikipedia scape...</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">pageId</span><span class="p">,</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">pages</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+    
+    <span class="c1"># The order of magnitude pages for Pressure and Money have have renamed the 'Value' column. 
+</span>    <span class="c1"># This dictionary allows for these values to be looked up.
+</span>    
+    <span class="n">wikiValueColumns</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">pressure</span><span class="o">=</span><span class="s">'Pressure'</span><span class="p">,</span><span class="n">currency</span><span class="o">=</span><span class="s">'Money'</span><span class="p">)</span>
+    
+    <span class="c1"># Get value column header
+</span>    
+    <span class="k">if</span> <span class="n">pageId</span> <span class="ow">in</span> <span class="n">wikiValueColumns</span><span class="p">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">valueColumn</span> <span class="o">=</span> <span class="n">wikiValueColumns</span><span class="p">[</span><span class="n">pageId</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">valueColumn</span> <span class="o">=</span> <span class="s">'Value'</span>
+        
+    <span class="c1"># Follow the link to the order of magnitude table    
+</span>    <span class="n">rb</span><span class="p">.</span><span class="n">follow_link</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+    
+    <span class="c1"># Select all tables on the page with the .wikitable class
+</span>    <span class="n">rawTables</span> <span class="o">=</span> <span class="n">rb</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'.wikitable'</span><span class="p">)</span>
+    
+    <span class="c1"># Create a list to store parsed page tables
+</span>    <span class="n">pageTables</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">rawTable</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">rawTables</span><span class="p">):</span>
+        
+        <span class="c1"># Parse the html table using pandas
+</span>        <span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rawTable</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="c1"># Search the parsed columns for names similar to 'Value'
+</span>        <span class="c1"># and 'Item'. Some of the tables have additional text 
+</span>        <span class="c1"># in the header. Using the filter/like combo we can avoid
+</span>        <span class="c1"># manually defining each column name. 
+</span>        
+        <span class="n">valColList</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="n">valueColumn</span><span class="p">).</span><span class="n">columns</span>
+        <span class="n">itmColList</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s">'Item'</span><span class="p">).</span><span class="n">columns</span>
+
+        <span class="c1"># Check that the table has a Value and Item column
+</span>        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">valColList</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">itmColList</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">valCol</span> <span class="o">=</span> <span class="n">valColList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">itmCol</span> <span class="o">=</span> <span class="n">itmColList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="c1"># Some pages only show the header on the first table, 
+</span>        <span class="c1"># in that case use the previously parsed table's header
+</span>        
+        <span class="k">elif</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">lastTableColumns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">lastTableColumns</span><span class="p">)</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">table</span><span class="p">.</span><span class="n">columns</span><span class="p">):</span>
+            <span class="n">table</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">lastTableColumns</span>
+            <span class="n">valCol</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="n">valueColumn</span><span class="p">).</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">itmCol</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s">'Item'</span><span class="p">).</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="c1"># If neither of the above conditions are met then we 
+</span>        <span class="c1"># cannot parse this table as it doesn't meet our defined
+</span>        <span class="c1"># structure.
+</span>        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">continue</span>
+            
+        <span class="c1"># Set lastTableColumns for part of this table 
+</span>        
+        <span class="n">lastTableColumns</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="n">copy</span><span class="p">().</span><span class="n">columns</span>
+        
+        <span class="c1"># Some tables have the unit in the Value header rather 
+</span>        <span class="c1"># than within the column. In that instance we want to 
+</span>        <span class="c1"># pull that information out. Using some RegEx we search
+</span>        <span class="c1"># for any Value column head with brackets. 
+</span>        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r'\((.*)\)'</span><span class="p">,</span><span class="n">valCol</span><span class="p">))</span> <span class="o">&gt;</span><span class="mi">0</span> <span class="p">:</span>
+            <span class="n">tableUnit</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r'[^A-Za-z0-9\/]'</span><span class="p">,</span><span class="s">''</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r'\((.*)\)'</span><span class="p">,</span><span class="n">valCol</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tableUnit</span> <span class="o">=</span> <span class="s">''</span>
+            
+        <span class="c1"># Throw away all columns except for the Value and Item
+</span>        <span class="c1"># and throw away all rows with a null Value.
+</span>        
+        <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[[</span><span class="n">valCol</span><span class="p">,</span><span class="n">itmCol</span><span class="p">]]</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="p">[</span><span class="n">valCol</span><span class="p">].</span><span class="n">notnull</span><span class="p">()]</span>
+        
+        <span class="c1"># Split the Value column into a numeric value and a unit
+</span>        <span class="n">table</span><span class="p">[[</span><span class="s">'Value (Numeric)'</span><span class="p">,</span><span class="s">'Unit'</span><span class="p">]]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">valCol</span><span class="p">].</span><span class="nb">str</span><span class="p">.</span><span class="n">extract</span><span class="p">(</span><span class="s">r'([^\s]+)\s*([^\s]*)$'</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="c1"># Standardise the scientific notation, replacing '×10' with 'e'
+</span>        <span class="n">table</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">to_replace</span><span class="o">=</span><span class="s">r'×10'</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">'e'</span><span class="p">)</span>
+        
+        <span class="c1"># Filter out any complex values such as '50 to 100' or '20-25'. 
+</span>        <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="s">r'.*(?:\d*\.)?\d+[^\de.]+(?:\d*\.)?\d+'</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)]</span>
+        
+        <span class="c1"># Remove any additional text or symbols that are still present in the string
+</span>        <span class="n">table</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">to_replace</span><span class="o">=</span><span class="s">r'[^.–\-/e−\d]'</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+        
+        <span class="c1"># Convert wikipedia stylistic choice of '−' into the common '-' character.
+</span>        <span class="n">table</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">to_replace</span><span class="o">=</span><span class="s">r'−'</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">'-'</span><span class="p">)</span>
+        
+        <span class="c1"># Convert any digits displayed as superscript in the unit to inline powers
+</span>        <span class="n">table</span><span class="p">[</span><span class="s">'Unit'</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">to_replace</span><span class="o">=</span><span class="s">r'((?:-)?\d)'</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">r'^\1'</span><span class="p">)</span>
+        
+        <span class="c1"># Finally pass the string to to_numeric in order to parse this into a floating 
+</span>        <span class="c1"># point. Then filter any values that failed to get through the conversion as well 
+</span>        <span class="c1"># as any values who resolve to 0. 
+</span>        <span class="n">table</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">],</span><span class="n">errors</span><span class="o">=</span><span class="s">'coerce'</span><span class="p">)</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">].</span><span class="n">notnull</span><span class="p">()]</span>
+        
+        <span class="c1"># Extract any wiki references from the Item column for potential future use    
+</span>        <span class="n">table</span><span class="p">[[</span><span class="s">'Reference'</span><span class="p">]]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">itmCol</span><span class="p">].</span><span class="nb">str</span><span class="p">.</span><span class="n">extract</span><span class="p">(</span><span class="s">r'((?:\[.+\])+)$'</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        
+        <span class="c1"># Create a detail column containing the Item text without any references
+</span>        <span class="n">table</span><span class="p">[</span><span class="s">'Detail'</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">itmCol</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">to_replace</span><span class="o">=</span><span class="s">r'(?:\[.*\])+'</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+        
+        <span class="c1"># Remove any null detail columns
+</span>        <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="p">[</span><span class="s">'Detail'</span><span class="p">].</span><span class="n">notnull</span><span class="p">()]</span>
+        
+        <span class="c1"># In the case that the unit is defined in the header, add this unit to the unit 
+</span>        <span class="c1"># column
+</span>        <span class="n">table</span><span class="p">[[</span><span class="s">'Unit'</span><span class="p">]]</span><span class="o">=</span><span class="n">table</span><span class="p">[</span><span class="s">'Unit'</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="s">''</span><span class="p">,</span><span class="n">tableUnit</span><span class="p">)</span>
+        
+        <span class="n">pageTables</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+    
+    <span class="c1"># Concatenate all the tables on the page and add this to our dictionary of Orders of Magnitude
+</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pageTables</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        
+        <span class="n">OrdersOfMagnitude</span><span class="p">[</span><span class="n">pageId</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">(</span><span class="n">pageTables</span><span class="p">)</span>
+        
+        <span class="c1"># Print summary of the results. 
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">'{}: {} approximations found.'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">pageId</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">OrdersOfMagnitude</span><span class="p">[</span><span class="n">pageId</span><span class="p">])))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Begining wikipedia scape...
+
+Orders of magnitude (acceleration): 52 approximations found.
+Orders of magnitude (angular momentum): 8 approximations found.
+Orders of magnitude (area): 64 approximations found.
+Orders of magnitude (bit rate): 45 approximations found.
+Orders of magnitude (charge): 21 approximations found.
+Orders of magnitude (currency): 43 approximations found.
+Orders of magnitude (current): 37 approximations found.
+Orders of magnitude (energy): 170 approximations found.
+Orders of magnitude (entropy): 1 approximations found.
+Orders of magnitude (force): 33 approximations found.
+Orders of magnitude (frequency): 54 approximations found.
+Orders of magnitude (illuminance): 14 approximations found.
+Orders of magnitude (length): 118 approximations found.
+Orders of magnitude (luminance): 26 approximations found.
+Orders of magnitude (magnetic field): 32 approximations found.
+Orders of magnitude (mass): 156 approximations found.
+Orders of magnitude (molar concentration): 25 approximations found.
+Orders of magnitude (power): 80 approximations found.
+Orders of magnitude (probability): 45 approximations found.
+Orders of magnitude (specific heat capacity): 36 approximations found.
+Orders of magnitude (speed): 96 approximations found.
+Orders of magnitude (voltage): 27 approximations found.
+</code></pre></div></div>
+
+<h2 id="generate-format-names-using-textblob">Generate format names using TextBlob</h2>
+
+<p>Now that we've scraped our data we need to figure out what these values mean. The Info column we picked up from the various tables gives us a decent description. the Info column is not something that would work well as an identifier thought. Some of these information strings go on for two or three sentences. </p>
+
+<p>We need to come up with a way to convert these long strings into useable variable names. We could generate a unique code for each one in the vain of 'acceleration1', 'acceleration2', 'acceleration3' etc. That doesn't give us something immediately understandable though. What would be great is if we could pull out the relevant information from the Item column in the tables we just parsed. Using TextBlob we can. </p>
+
+<p>Textblob (&amp; nltk) is a package that makes natural language processing an absolute breeze. In order to get the information we want we want all we need to do is convert our strings to a TextBlob object. Once we've done that we can pull out all of the noun_phrases in the text and convert those into identifiers. AS we're mostly dealing with tangible 'things' referring to them by their noun phrase makes sense. Everything else in the Item text is just waffle. </p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">textblob</span> <span class="kn">import</span> <span class="n">TextBlob</span>
+
+<span class="c1"># Download natural language processing libraries in order to use TextBlob
+</span><span class="n">nltk</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="s">'brown'</span><span class="p">)</span>
+<span class="n">nltk</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="s">'punkt'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">getNouns</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>  
+    
+    <span class="c1"># Remove any information contained in brackets and any symbols other than alpha numeric ones
+</span>    <span class="c1"># Then create the textblob object and extract the noun phrases.
+</span>    <span class="n">np</span> <span class="o">=</span> <span class="n">TextBlob</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r'[^a-zA-Z0-9\s]'</span><span class="p">,</span><span class="s">''</span><span class="p">,</span><span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r'\(.*\)'</span><span class="p">,</span><span class="s">''</span><span class="p">,</span><span class="n">string</span><span class="p">))).</span><span class="n">noun_phrases</span>
+    
+    <span class="c1"># If any noun phrases are found then join all these phrases into one large string. 
+</span>    <span class="c1"># Split this string by anything that isn't alpha numeric, filter out anything else
+</span>    <span class="c1"># that isn't alpha numeric. Capitalize each value and stick all these processed 
+</span>    <span class="c1"># strings together. The result should be all the noun phrases in camelCase as one 
+</span>    <span class="c1"># string. 
+</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span><span class="p">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'([^a-zA-Z0-9])'</span><span class="p">,</span><span class="s">' '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">np</span><span class="p">))</span> <span class="k">if</span> <span class="n">x</span><span class="p">.</span><span class="n">isalnum</span><span class="p">()])</span>
+
+<span class="c1"># Loop over our scraped orders of magnitude and create our noun phrase camelCase string
+</span><span class="k">for</span> <span class="n">area</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">OrdersOfMagnitude</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+    
+    <span class="c1"># Apply the getNouns function
+</span>    <span class="n">data</span><span class="p">[</span><span class="s">'id'</span><span class="p">]</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s">'Detail'</span><span class="p">].</span><span class="nb">apply</span><span class="p">(</span><span class="n">getNouns</span><span class="p">)</span>
+    <span class="c1"># Throw away any values that were we couldn't create an id
+</span>    <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s">'id'</span><span class="p">].</span><span class="n">notnull</span><span class="p">()]</span>
+    
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[nltk_data] Downloading package brown to /home/ben/nltk_data...
+[nltk_data]   Package brown is already up-to-date!
+[nltk_data] Downloading package punkt to /home/ben/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+</code></pre></div></div>
+
+<h2 id="pint-and-generating-configurations">Pint and generating configurations</h2>
+
+<p>We've got our data, we got our labels. Now we just need to throw this into Pint and we're done. In order to do that we need to set up a custom unit registry. </p>
+
+<p>As with everything in python nowadays its ridiculously easy. Following their detailed <a href="https://pint.readthedocs.io/en/latest/defining.html)">guidance</a> we can see that the format is just <code>id = value*unit</code>. Most of the values we parsed were in units already defined in Pint's base unit registry.  This means that all our custom units can be converted to and from any other unit that pint offers. They will also behave with pints <a href="https://pint.readthedocs.io/en/latest/wrapping.html#checking-dimensionality">dimensionality checks</a>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Iterate through the rows of our various magnitudes writing out to a text file
+# string configurations for pint
+</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'pintConfig.txt'</span><span class="p">,</span><span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">out</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">area</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">OrdersOfMagnitude</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="nb">id</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="n">pintConfig</span> <span class="o">=</span> <span class="s">'{} = {}*1{} # {}</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">'id'</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="s">'Value (Numeric)'</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="s">'Unit'</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="s">'Detail'</span><span class="p">])</span>
+            <span class="n">out</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">pintConfig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now that we’ve built our unit registry we can do all sorts of bizarre conversions. Want to see how many space shuttles worth of acceleration an adult saltwater crocodile’s bite would provide if it was applied to the mass of the largest Argentiosaurs? Easy, just look below.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pint</span> <span class="kn">import</span> <span class="n">UnitRegistry</span>
+
+<span class="n">ureg</span> <span class="o">=</span> <span class="n">UnitRegistry</span><span class="p">()</span>
+<span class="n">ureg</span><span class="p">.</span><span class="n">load_definitions</span><span class="p">(</span><span class="s">'pintConfig.txt'</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="n">ureg</span><span class="p">.</span><span class="n">Large67mAdultSaltwaterCrocodile</span>
+<span class="n">acc</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="n">ureg</span><span class="p">.</span><span class="n">LargestArgentinosaurus</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">acc</span><span class="p">.</span><span class="n">to</span><span class="p">(</span><span class="s">'Shuttle'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.01629664619744922 Shuttle
+</code></pre></div></div>
+
+<p>Bizareness aside, now we can easily switch any of our calculations, data analysis, tables or arrays into more comprehensible numbers. As Pint easily interfaces with both pandas and numpy it can make the publication of data much more user-friendly. Saving time and effort when it comes to producing any sort of public-facing data analysis. Plus, you know, 0.016 shuttles, that’s a lot of bite.</p>
+:ET
