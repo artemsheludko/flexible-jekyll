@@ -13,11 +13,11 @@ Curiosamente hay muchas personas que creen que esto sigue estando igual que en a
 
 Para entender este fenómeno lo primero es ver la situación actual, por ello, nos vamos a centrar en una simple pregunta: ¿qué empresa conocida a nivel mundial no usa tecnología? Podemos buscar durante horas en Internet y posiblemente no encontremos ninguna, pues esa es la clave.
 
-Actualmente no hay empresa que no tenga una necesidad de mejorar la forma en que se hace su negocio usando como herramienta principal la tecnología. Esta transformación fue tan rápida y abrupta que algunas empresas han desaparecido o han quedado relegadas por no saber reaccionar a tiempo. Uno de los ejemplos más sonoros fue Kodak. La reina de la fotografía por décadas decidió apostar por la impresión de fotos de toda la vida y no evolucionar a los medios digitales. Y los resultados son evidentes, cada vez se ven menos tiendas de este tipo. 
+Actualmente no hay empresa que no tenga la necesidad de mejorar la forma en que se hace su negocio usando como herramienta principal la tecnología. Esta transformación fue tan rápida y abrupta que algunas empresas han desaparecido o han quedado relegadas por no saber reaccionar a tiempo. Uno de los ejemplos más sonoros fue Kodak. La reina de la fotografía por décadas decidió apostar por la impresión de fotos de toda la vida y no evolucionar a los medios digitales. Y los resultados son evidentes, cada vez se ven menos tiendas de este tipo. 
 
 Las inversiones a nivel mundial son gigantes en búsqueda de esa ventaja competitiva, pero se necesita algo más que un buen capital financiero; se necesita un inmenso capital humano.
 
-Pero, ¿porqué cuento todo esto? Porque hoy en día no hay suficientes informáticos para tanto trabajo, ha pasado menos de una generación para crear la necesidad y ahora se busca llenar sin éxito la demanda. Las empresas luchan por atraer a aquellos que antes no eran invitados a la fiesta y ahora son el centro de ella. 
+Pero, ¿por qué cuento todo esto? Porque hoy en día no hay suficientes informáticos para tanto trabajo, ha pasado menos de una generación para crear la necesidad y ahora se busca llenar sin éxito la demanda. Las empresas luchan por atraer a aquellos que antes no eran invitados a la fiesta y ahora son el centro de ella. 
 
 Después de esta larga introducción llego al tema que quería tratar ¿Cómo las empresas intentan ganarse el favor de los escasos informáticos? Obviaré la primera y siempre efectiva respuesta: el dinero y, pasaré a hablar sobre lo que se conoce como -utilizando un anglicismo- “Perk” o "beneficio" en castellano. Hay de todo y para todos, citaré algunos que me he encontrado durante estos años:  barbero, gimnasio, osteópata, ping-pong, futbolín, máquinas recreativas, instrumentos musicales, formación, cerveza, alimentación ilimitada, trabajo remoto, etc. A estas alturas estaréis pensando que esto es el paraíso, pero no es del todo cierto; las empresas son máquinas de hacer dinero y no van hacer nada que no les reporte beneficio directo o indirecto, por eso me gustaría hablar de lo que es un verdadero “Perk” y qué no lo es. 
 
@@ -28,7 +28,7 @@ Para identificar un “Perk” verdadero, hay que plantearse las siguientes preg
 - ¿Simplifica o mejora algo en mi vida?
 - ¿Me ahorra dinero y/o tiempo?
 
-Seguramente habrían muchas más pero, para mí, si la respuesta de por lo menos una de ellas no se afirmativa, significa que no es un beneficio real, si no, una forma de hacerte trabajar más tiempo y exprimirte al máximo. 
+Seguramente habrían muchas más pero, para mí, si la respuesta de por lo menos una de ellas no es afirmativa, significa que no es un beneficio real, si no, una forma de hacerte trabajar más tiempo y exprimirte al máximo. 
 
 Obviamente esto puede ser subjetivo y varía según los intereses personales, por ejemplo, si hay alguien que mantener su barba es un pilar fundamental en su vida y ocupa un porcentaje muy alto de su tiempo libre en ello, es claro que tener un barbero disponible en horas laborales es realmente beneficioso, pero ¿cumple a cabalidad todas las preguntas antes mencionadas? Hay una de ellas que peligra, la primera, si en algún caso tiene que “retribuir” con trabajo extra este beneficio, creo que tenemos un claro ejemplo de un falso-positivo. 
 
