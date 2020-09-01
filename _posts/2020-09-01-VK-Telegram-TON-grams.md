@@ -13,7 +13,7 @@ tags:
   - Cryptocurrency
   - Blockchain
   - Social Network
-published: false
+published: true
 ---
 This issue was planned to be posted today, i.e. 1 Sept. And there’s a reason which I just discovered last week.  
 Today is the **Knowledge Day**, in Russia!  
