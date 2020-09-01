@@ -1,7 +1,21 @@
 ---
+layout: post
+date: '2020-09-01 15:00:00 +0530'
+title: The best of Russia. VK, Telegram and TON?
+description: >-
+  These are the only two companies competing in the PC CPU master race. But
+  let’s zoom back to 50 years ago.
+img: telegram_unsplash.jpg
+fig-caption: Telegram
+tags:
+  - Telegram
+  - Russia
+  - Cryptocurrency
+  - Blockchain
+  - Social Network
 published: false
 ---
-This issue was planned to be sent today, i.e. 1 Sept. And there’s a reason which I just discovered last week.
+This issue was planned to be posted today, i.e. 1 Sept. And there’s a reason which I just discovered last week.  
 Today is the **Knowledge Day**, in Russia!  
 
 Do I have Russian followers? I think not. Can we change it, you can! Help me by sharing this.  
