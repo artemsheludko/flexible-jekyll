@@ -35,7 +35,7 @@ docker이미지를 이용하여 설치하였다.
 공식 이미지는 deprecate되어 아래 이미지를 pull
 
 ```
-docker pull jenkins/Jenkins
+docker pull jenkins/jenkins
 ```
 
 이미지의 설치는 아래 md파일 참조
