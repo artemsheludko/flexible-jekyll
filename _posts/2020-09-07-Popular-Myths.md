@@ -1,7 +1,7 @@
 ---
-published: true
 layout: post
 date: '2020-09-07 18:00:00 +0530'
+title: It's a Myth
 description: >-
   Sometimes it can be hard to separate fact from fiction. We have spent our
   lives believing and enduring myths and misconceptions. Today, we break some.
@@ -13,6 +13,7 @@ tags:
   - Mythbusters
   - Knowledge
   - Humor
+published: true
 ---
 ## It's a Myth
 
