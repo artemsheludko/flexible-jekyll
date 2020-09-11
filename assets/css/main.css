@@ -768,6 +768,10 @@ template {
           box-sizing: border-box;
 }
 
+.OrangeColor {
+  color: #E15718
+}
+
 html {
   line-height: 1.5;
 }
@@ -1197,6 +1201,25 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 .wrap-content {
   padding: 20px;
+  line-height: 24pt;
+  max-width: 610px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap-content a {
+  text-decoration: none;
+  color: #E15718;
+}
+
+.wrap-content img {
+  max-width: 590px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .header-page {

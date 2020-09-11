@@ -1,5 +1,6 @@
 ---
 layout: post
+issue: 16
 title: Historic rivalry behind Intel and AMD
 date: 2020-07-26 15:00:00 +0530
 description: These are the only two companies competing in the PC CPU master race. But let’s zoom back to 50 years ago.

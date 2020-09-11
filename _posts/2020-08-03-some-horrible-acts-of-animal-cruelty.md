@@ -1,5 +1,6 @@
 ---
 layout: post
+issue: 17
 title: Some horrible acts of animal cruelty
 date: '2020-08-03 20:00:00 +0530'
 description: >-

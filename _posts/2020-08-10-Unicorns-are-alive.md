@@ -1,6 +1,7 @@
 ---
 published: true
 layout: post
+issue: 18
 date: '2020-08-10 18:00:00 +0530'
 description: >-
   The magnificent word refers to goodness, freedom and sky high success. What

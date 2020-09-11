@@ -1,6 +1,7 @@
 title: Knowledge•Day
 description: > # this means to ignore newlines until "baseurl:"
-  The only blog-cum-newsletter about everything! No pointers, pure content. Charge your curiosity, It's free Knowledge!.
+  The only blog-cum-newsletter about everything! No pointers, pure content. <br/>
+  Charge your curiosity, It's free Knowledge!.
 permalink: ':title/'
 baseurl: "/KnowledgeDay" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -14,7 +15,7 @@ social-twitter: OhY4sh # add your Twitter handle
 social-facebook: OhY4sh # add your Facebook handle
 social-github: OhYash # add your Github handle
 social-linkedin: OhYash # add your Linkedin handle
-social-email: yashyadav.710@outlook.com # add your Email address
+social-email: KnowledgeDay@protonmail.com # add your Email address
 
 # Disqus
 discus-identifier: knowledgeday # add your discus identifier
