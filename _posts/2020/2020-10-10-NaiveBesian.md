@@ -40,9 +40,9 @@ Likelyhood of No =  3/5 × 1/5 × 4/5 ×  3/5 × 5/14 = 0.0206
 
 이를 %으로 나타내어 보면 
 
-Yes의 확률 = <img src="https://latex.codecogs.com/gif.latex?\frac{0.0053}{0.0053&plus;0.0206}" title="\frac{0.0053}{0.0053+0.0206}" /> = 20.5%
+Yes의 확률 = <img src="https://latex.codecogs.com/gif.latex?\frac{0.0053}{0.0053&plus;0.0206}"  /> = 20.5%
 
-No의 확률 = <img src="https://latex.codecogs.com/gif.latex?\frac{0.0206}{0.0053&plus;0.0206}" title="\frac{0.0206}{0.0053+0.0206}" /> = 79.5%
+No의 확률 = <img src="https://latex.codecogs.com/gif.latex?\frac{0.0206}{0.0053&plus;0.0206}"  /> = 79.5%
 
 그러므로 위의 경우는 play=No 가 나올 가능성이 더 많다고 예측할 수 있다. [^1]
 
@@ -58,7 +58,7 @@ No의 확률 = <img src="https://latex.codecogs.com/gif.latex?\frac{0.0206}{0.00
 
 이 경우는 보정값이 3인 경우였지만 상황에 따라 보정값이 3이 아닌 경우도 있다. 보정값을 μ라고 하면 아래와 같이 될 것이다. 
 
-<img src="https://latex.codecogs.com/gif.latex?\frac{2&plus;\mu&space;/3}{5&plus;&space;\mu},&space;\frac{0&plus;\mu&space;/3}{5&plus;&space;\mu},&space;\frac{3&plus;\mu&space;/3}{5&plus;&space;\mu}" title="\frac{2+\mu /3}{5+ \mu}, \frac{0+\mu /3}{5+ \mu}, \frac{3+\mu /3}{5+ \mu}" />
+<img src="https://latex.codecogs.com/gif.latex?\frac{2&plus;\mu&space;/3}{5&plus;&space;\mu},&space;\frac{0&plus;\mu&space;/3}{5&plus;&space;\mu},&space;\frac{3&plus;\mu&space;/3}{5&plus;&space;\mu}"  />
 
 이후 구하는 방법은 앞과 동일하다. 이를 나이브 베이지안(Naïve Bayesian) + 라플라스 추정기 방법이라고 한다. 
 
