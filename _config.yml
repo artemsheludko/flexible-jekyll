@@ -26,6 +26,7 @@ analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
+remote_theme: 
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
