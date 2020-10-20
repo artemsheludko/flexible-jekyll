@@ -1,33 +1,29 @@
 ---
 layout: post
-title: "[패스트캠퍼스 수강 후기] 프론트엔드 인강 100% 환급 챌린지 2회차 미션"
-date: 2020-10-20 14:00:00 +0300
+title: "[패스트캠퍼스 수강 후기] 프론트엔드 인강 100% 환급 챌린지 1회차 미션"
+date: 2020-10-19 13:50:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: FCFE/pos1-3.jpg
 tags: [패스트캠퍼스, FastCampus, Front-End, 인강, JavaScript]
 ---
 
-강의
-: 자바스크립트 먼저 공부하고 싶어서 자바스크립트 부분 부터 시작!
-
-25 - 01 자바스크립트란 무엇인가
-25 - 02 Various JavaScript Runtime
-
+**강의**
+자바스크립트 먼저 공부하고 싶어서 자바스크립트 부분 부터 시작!
+- 25 - 01 자바스크립트란 무엇인가
+- 25 - 02 Various JavaScript Runtime
 
 # 01 자바스크립트란 무엇인가
-
-## JavaScript
-
-### 스크립트 언어
+### JavaScript
+#### 스크립트 언어
 어플리케이션에서 코드를 해석하고 실행할 수 있는 엔진이 존재해 스크립트로 해당 어플리케이션을 제어하기 위한 용도로 사용되는 프로그래밍 언어
 
-### 인터프리터 언어
-자바스크립트 엔진은 소스 코드를 한 줄씩 읽으며 바로 실행함 → 인터프리터 언어 
+#### 인터프리터 언어
+자바스크립트 엔진은 소스 코드를 한 줄씩 읽으며 바로 실행함 → 인터프리터 언어
 대표적인 예 ⇒ 웹 브라우저
 
-HTML 웹 페이지 구조화 컨텐츠 표현
-CSS 예쁘게 꾸며줌
-JavaScript 동적으로 컨텐츠를 바꾸고 이동하는 등 여러가지 일을 함
+**HTML** 웹 페이지 구조화 컨텐츠 표현
+**CSS** 예쁘게 꾸며줌
+**JavaScript** 동적으로 컨텐츠를 바꾸고 이동하는 등 여러가지 일을 함
 
 웹 브라우저에서 자바스크립트의 역할이 중요해 짐
 자바스크립트 엔진을 이용해 서버사이드 앱을 만들 수 있는 node.js 등장
@@ -36,19 +32,19 @@ JavaScript 동적으로 컨텐츠를 바꾸고 이동하는 등 여러가지 일
 
 ![25-1 자바스트립트란 무엇인가]({{site.baseurl}}/assets/img/FCFE/post1-1.png)
 
+ 
 # 02 Various JavaScript Runtime
-
 자바스크립트가 실행되는 런타임 환경
-: 각종 웹 브라우저, Node.js, Electron ...
-: 버전에 따라 각기 다른 JS 런타임 환경을 가지고 있음
-
+- 각종 웹 브라우저, Node.js, Electron ...
+- 버전에 따라 각기 다른 JS 런타임 환경을 가지고 있음
 
 여러 환경에 따라 JS 문법이 다름 -> [여기서 확인 가능](https://www.ecma-international.org/)
-: 정보 통신에 대한 표준을 규정함!
+- 정보 통신에 대한 표준을 규정함!
 
 ### ECMA-262
-: ECMAScript (에크마 스크립트)
-: ES 5 부터 표준으로 취급되기 시작, 2015 ES 6 부터 새로운 문법이 정돈되어 추가.
+**ECMAScript (에크마 스크립트)**
+ES 5 부터 표준으로 취급되기 시작, 2015 ES 6 부터 새로운 문법이 정돈되어 추가.
+
 필수 문법인 ES 5 위주로 배우되, 이후 추가된 부분 다룰 예정
 
 ![25-2 Various JavaScript Runtime]({{site.baseurl}}/assets/img/FCFE/post2-1.png)
