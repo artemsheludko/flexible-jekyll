@@ -1,6 +1,6 @@
 title: I'm Mijeong Lee a.k.a MAJUNGE
 description: > # this means to ignore newlines until "baseurl:"
-  MAJUNGE's study log and maybe portfoilio also...?
+  MAJUNGE's study log to be a DEVELOPER
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://majung2.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -9,7 +9,7 @@ url: "https://majung2.github.io/" # the base hostname & protocol for your site, 
 author: Mijeong # add your name
 author-img: profile.jpg # add your photo
 about-author: I am (preparing for) a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-instagram: majung2222
+social-twitter: null
 social-facebook: suelmj 
 social-github: majung2 
 social-linkedin: mijeong-lee-11b518193/ 
