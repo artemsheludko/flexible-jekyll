@@ -1,0 +1,107 @@
+---
+layout: post
+title: "[패스트캠퍼스 수강 후기] 프론트엔드 인강 100% 환급 챌린지 2회차 미션"
+date: 2020-10-20 14:00:00 +0300
+description: # Add post description (optional)
+img: FCFE/post2-4.jpg
+tags: [패스트캠퍼스, FastCampus, Front-End, 인강, JavaScript]
+---
+
+강의
+- 25 - 03 실습을 위한 준비
+- 25 - 04 Expression Statement
+
+# 03 실습을 위한 준비
+
+### 설치
+- Chrome Browser : 웹 브라우저
+- Node.js : 서버환경 [설치](https://nodejs.org/ko/)
+- Visual Studio Code : 소스코드 편집기
+
+**Node.js 설치 확인**
+```
+node -v
+```
+입력시 설치된 버전정보가 나오면 설치 완료!
+
+### 크롬에서 자바스크립트 콘솔 열기
+보기 > 개발자정보 > 자바스크립트 콘솔
+세로점세개 > 도구더보기 > 개발자도구 (ctrl + shift + i)
+
+### JS 코드 작성하기
+VS code 에디터에서 JS 파일 하나 생성 후 코드 작성하기
+```
+console.log('hello JavaScript');
+```
+작성 후 `command line`에서 명령어로 해당 파일 실행 시 결과가 터미널에 나타남
+```
+node clip3.js
+```
+![command line에서 JS 파일 실행하기]({{site.baseurl}}/assets/img/FCFE/post2-2.png)
+
+![25-3 실습을 위한 준비]({{site.baseurl}}/assets/img/FCFE/post2-1.png)
+
+
+# 04 Expression Statement
+
+## Expression
+- 값을 만들어내는 간단한 코드를 **표현식**이라고 합니다.
+```
+true
+```
+라는 표현식은 `true`라는 값을 만들어 낸다. => 표현식
+
+```
+1000 + 900 + 90 + 4
+```
+는 `1994`라는 값을 만들어 내기 때문에 표현식이라고 한다.
+```
+"Hello" + "JavaScript"
+```
+문자열끼리 더하는 것도 표현식
+
+- 표현식은 값을 만들어내기 때문에 함수의 인자로 사용할 수 있습니다.
+
+```
+alert(1000+900+90+4);
+```
+`1994`라는 경고창이 뜸
+
+## Statement
+- 하나 혹은 여러 개의 표현식이 모여 **문장**을 이룹니다.
+- 모든 표현식은 문장이 될 수 있습니다.
+- (보통)문장의 끝에는 세미 콜론(;)을 붙입니다.
+
+```
+true;
+```
+이렇게 statement로 사용가능
+
+```
+1000 + 900 + 90 + 4;
+```
+얘도 문장
+```
+var name = "Mark";
+```
+얘도 문장
+
+- 한 줄에 문장이 하나인 경우 세미 콜론을 붙이지 않아도 문제가 없으나 관례적으로 붙입니다.
+
+- 한 줄에 문장이 여럿인 경우, 세미 콜론으로 문장을 구분해야 합니다.
+- 마지막 문장은 세미 콜론을 붙이지 않아도 문제가 없습니다.
+- 여러 문장을 사용할 경우, 마지막 문장의 결과가 반환된다.
+
+- 조건문과 반복문도 문장입니다.
+- 마지막 } 뒤에 세미콜론을 붙이지 않습니다.
+
+- 문장들이 모여 프로그램이 됩니다.
+
+
+![25 - 4 Expression Statement]({{site.baseurl}}/assets/img/FCFE/post2-3.png)
+
+#### 2회차 인증샷
+![2회차 인증샷]({{site.baseurl}}/assets/img/FCFE/post2-4.jpg)
+
+
+올인원 패키지 : 프론트엔드 개발👉https://bit.ly/3m0t8GM
