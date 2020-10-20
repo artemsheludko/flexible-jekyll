@@ -9,10 +9,10 @@ url: "https://majung2.github.io/" # the base hostname & protocol for your site, 
 author: Mijeong # add your name
 author-img: profile.jpg # add your photo
 about-author: I am (preparing for) a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-instagram: https://www.instagram.com/majung2222/
-social-facebook: https://www.facebook.com/suelmj 
+social-instagram: majung2222
+social-facebook: suelmj 
 social-github: majung2 
-social-linkedin: https://www.linkedin.com/in/mijeong-lee-11b518193/ 
+social-linkedin: mijeong-lee-11b518193/ 
 social-email: suelmj1417@gmail.com 
 
 # Disqus
