@@ -16,7 +16,7 @@ social-linkedin: mijeong-lee-11b518193/
 social-email: suelmj1417@gmail.com 
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: null # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
