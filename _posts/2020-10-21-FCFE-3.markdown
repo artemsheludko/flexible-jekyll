@@ -1,0 +1,88 @@
+---
+layout: post
+title: "[패스트캠퍼스 수강 후기] 프론트엔드 인강 100% 환급 챌린지 3회차 미션"
+date: 2020-10-21 16:52:23 +0300
+description: # Add post description (optional)
+img: FCFE/post2-4.jpg
+tags: [패스트캠퍼스, FastCampus, Front-End, 인강, JavaScript]
+---
+
+강의
+- 25 - 05 Keywords & Reserved Words
+- 25 - 04 Expression Statement
+
+# 05 Keywords & Reserved Words
+
+## Keywords
+- 자바스크립트에서 특정한 목적을 위해 사용하는 단어
+- 이런 키워드는 예약어로 지정되어 있습니다.
+
+```
+var name = 'Mark'; // var는 변수를 선언하는 키워드
+```
+
+## Reserved Words
+프로그램을 작성할 때, 변수명, 함수명 등 이름으로 사용할 수 없는 단어 (이미 예약되어 있음)
+
+```
+var return = '변수명'; // return은 예약어 이므로 변수명으로 사용불가
+function for() {} // for 도 반복문 예약어 이므로 함수명으로 사용불가
+```
+
+### Reserved keywords
+이미 특정한 목적을 위해 사용하기 때문에 사용할 수 없는 예약어
+`break`, `if`, `in` 등...
+-> 런타임 환경에 따라 다를 수 있음
+
+### Future reserved keywords
+앞으로 특정한 목적을 위해 사용할 가능성이 있어서 사용할 수 없는 예약어
+`abstract`, `boolean` 등...
+-> 런타임 환경에 따라 다를 수 있음
+
+![25-5 Keywords & Reserved Words]({{site.baseurl}}/assets/img/FCFE/post3-1.png)
+
+
+# 06 식별자 Identifier
+> 코드 내의 변수, 함수, 혹은 속성을 식별하는 문자열
+
+```
+var name = 'Mark';
+function hello() []
+var person = {name: 'Mark', age: 37};
+```
+- Mark라는 값은 name이라는 식별자로 부르게 됨 (변수의 이름)
+- 함수의 이름도 식별자
+- person 객체 내의 name, age도 식별자
+
+> 식별자는 대소문자를 구분합니다!
+```
+var myName = 'Mark';
+var myname = 'Mark';
+```
+둘은 다른 변수
+
+- 유니코드 문자(한글)도 사용가능, `$`, `_`, `숫자(0-9)`를 사용할 수 있지만 **숫자로 시작 할 수는 없습니다.**
+- **예약어**는 사용할 수 **없고**, **공백문자**도 사용할 수 **없습니다.**
+```
+var name1;
+var $name;
+var _name;
+var 이름; // 가능하지만 보통 영문 사용
+```
+모두 사용가능
+
+자바스크립트 변수명으로 사용가능 한 지 확인하는 [사이트](https://mothereff.in/js-variables)
+
+
+- 프로그램에서 사용하는 변수나 함수의 이름을 짓는 것은 어려움!
+- 의미없는 이름은 사용하지 않고, 역할에 맞는 적절한 이름을 짓도록 노력해야 합니다.
+
+![25 - 6 06 식별자 Identifier]({{site.baseurl}}/assets/img/FCFE/post3-2.png)
+
+*****
+
+#### 3회차 인증샷
+![3회차 인증샷]({{site.baseurl}}/assets/img/FCFE/post3-3.jpg)
+
+
+올인원 패키지 : 프론트엔드 개발👉https://bit.ly/3m0t8GM
