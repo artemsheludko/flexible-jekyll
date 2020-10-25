@@ -1,25 +1,22 @@
-title: Hello, world! I'm Khushit Shah
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://khushit-shah.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: #if your site has a twitter account, enter it here
+title: Khushit Shah
+description: My personal space on the vast ocean # this means to ignore newlines until "baseurl:"
+permalink: ":title/"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: khushitshah77 #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Khushit Shah # add your name
 author-img: khushit-shah.jpg # add your photo
-about-author: I am a 2nd year Computer Science Grad and Freelancer. # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
+about-author: I am 2nd year Computer Science Grad and Freelancer. # add description
+social-twitter: khushitshah77 # add your Twitter handle
+social-facebook: khushit.shah.73 # add your Facebook handle
 social-github: khushit-shah # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-linkedin: khushit-shah # add your Linkedin handle
+social-email: khushitshah77@gmail.com# add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: khushitshah # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics

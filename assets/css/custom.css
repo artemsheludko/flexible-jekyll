@@ -1,0 +1,20 @@
+.btn {
+  padding: 10px;
+  margin: 4px;
+  border: 1px solid black;
+  border-radius: 10%;
+  transition: all 0.4s linear;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.project-github {
+  background-color: gainsboro;
+}
+
+.project-demo {
+  background-color: rgb(28, 248, 28);
+}

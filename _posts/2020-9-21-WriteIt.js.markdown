@@ -1,0 +1,18 @@
+---
+layout: post
+title: WriteIt.js | Text writing library
+date: 2020-9-21
+description: Light weight javascript library for text-writing effect with infinite capabilites! # Add post description (optional)
+img: writeit.js.big.png # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [javascript, writeitjs]
+project: true
+---
+
+WriteIt.js is light-weight javascript library for text-writing effect. It can animate adding, deleting, auto-completing text. It can repeat animations, start animation is chain. It supports nested HTML, and it is SEO friendly. And Yes it supports Emojis😮!
+
+You can also customise the cursor, it supports any valid html as cursor, even an Image.
+
+<button class="btn project-github" url="https://khushit-shah.github.io/WriteIt.js/#docs">documentation</button>
+<button class="btn project-github" url="https://github.com/khushit-shah/WriteIt.js/">Repo</button>
+<button class="btn project-demo" url="https://khushit-shah.github.io/WriteIt.js/terminal-app/index.html">Demo</button>
