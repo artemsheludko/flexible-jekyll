@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 데이터 예측 기법 (2) - Naïve Bayes for document classification : 페어와이징의 가중치. 
+title: 데이터 예측 기법 (2) - Naïve Bayes for document classification  
 tags: [DataMining, Pairwise] 
 ---
 
