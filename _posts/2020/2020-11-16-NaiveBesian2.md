@@ -34,19 +34,20 @@ tags: [DataMining, Pairwise]
 
 첫 번째 경우를 계산해 보면
 
-![](https://latex.codecogs.com/gif.latex?P(\left&space;\{yellow\:&space;yellow\:&space;yellow&space;\right&space;\}|H)=3!&space;\times&space;\frac{0.75^3}{3!}&space;\times&space;\frac{0.25^0}{0!}=\frac{27}{64})
+![](https://latex.codecogs.com/gif.latex?P%28%5Cleft%20%5C%7Byellow%5C%3A%20yellow%5C%3A%20yellow%20%5Cright%20%5C%7D%7CH%29%3D3%21%20%5Ctimes%20%5Cfrac%7B0.75%5E3%7D%7B3%21%7D%20%5Ctimes%20%5Cfrac%7B0.25%5E0%7D%7B0%21%7D%3D%5Cfrac%7B27%7D%7B64%7D)
 
 나머지도 각각 계산하면 아래와 같다. 
 
-![](https://latex.codecogs.com/gif.latex?P(\left&space;\{blue\:&space;blue\:&space;blue&space;\right&space;\}|H)=\frac{1}{64})
+![](https://latex.codecogs.com/gif.latex?P%28%5Cleft%20%5C%7Bblue%5C%3A%20blue%5C%3A%20blue%20%5Cright%20%5C%7D%7CH%29%3D%5Cfrac%7B1%7D%7B64%7D)
 
-![](https://latex.codecogs.com/gif.latex?P(\left&space;\{yellow\:&space;yellow\:&space;blue&space;\right&space;\}|H)=\frac{27}{64})
+![](https://latex.codecogs.com/gif.latex?P%28%5Cleft%20%5C%7Byellow%5C%3A%20yellow%5C%3A%20blue%20%5Cright%20%5C%7D%7CH%29%3D%5Cfrac%7B27%7D%7B64%7D)
 
-![](https://latex.codecogs.com/gif.latex?P(\left&space;\{yellow\:&space;blue\:&space;blue&space;\right&space;\}|H)=\frac{9}{64})
+![](https://latex.codecogs.com/gif.latex?P%28%5Cleft%20%5C%7Byellow%5C%3A%20blue%5C%3A%20blue%20%5Cright%20%5C%7D%7CH%29%3D%5Cfrac%7B9%7D%7B64%7D)
 
 각각은 하기 데이터가 나올 확률을 의미하며 네 개의 경우 중 그나마 확률이 높은 것은 {yellow, yellow, yellow}와 {yellow, yellow, blue}가 42%로 높다. 
 
 
 
-개인적인 의견이지만, 이는 페어와이징의 가중치와 관계가 있다. 페어와이징의 각 아이템이 동일한 확률로 나온다면, 이 아이템들은 다 동일한 확률을 가지겠지만, 아이템별로 나올 확률이 다르다면(즉 가중치가 다르다면) 조합의 결과가 갖는 확률도 각기 다른데 그것을 구하는 방법이 위 방법이라는 생각이 든다. 
+개인적인 의견이지만, 이는 페어와이징의 가중치의 의미를 가지고 있다. 단 이 경우는 동일한 군집에 들어있는 각 아이템의 나올 확률을 구한다음 이 아이템들의 조합을 가지고 하나의 결과(여기서는 백<sub>bag</sub> 이 된다)를 만드는 경우이다. 
 
+ 
