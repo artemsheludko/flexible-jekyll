@@ -25,7 +25,7 @@ tags: [DataMining, Pairwise]
 
 여기서 ![](https://latex.codecogs.com/gif.latex?N=n_1&space;&plus;&space;n_2&space;...&space;&plus;&space;n_k)이다. 
 
-단어집에 yellow, blue 두 개 단어만 있고 도큐먼트 클래스 H는 ![](https://latex.codecogs.com/gif.latex?P%28yellow%7CH%29%3D75%25), ![](https://latex.codecogs.com/gif.latex?P%28blue%7CH%29%3D75%25) 라고 하면, 다시 말해 클래스H에서 단어를 임의로 하나를 선택할 때 yellow가나올 확률이 75%, blue가 나올 확률이 25%이면, 이 단어집을 사용하여 각 도큐먼트가 만들어질 확률을 알아보자. 백(bag)에서 만들어질 도큐먼트는 페어와이징 조합으로 4개가 만들어질 것이다. (https://sqamate.com/tools/pairwise 활용)
+단어집에 yellow, blue 두 개 단어만 있고 도큐먼트 클래스 H는 ![](https://latex.codecogs.com/gif.latex?P%28yellow%7CH%29%3D75%25), ![](https://latex.codecogs.com/gif.latex?P%28blue%7CH%29%3D25%25) 라고 하면, 다시 말해 클래스H에서 단어를 임의로 하나를 선택할 때 yellow가나올 확률이 75%, blue가 나올 확률이 25%이면, 이 단어집을 사용하여 각 도큐먼트가 만들어질 확률을 알아보자. 백(bag)에서 만들어질 도큐먼트는 페어와이징 조합으로 4개가 만들어질 것이다. (https://sqamate.com/tools/pairwise 활용)
 
 * yellow, yellow, yellow
 * blue, blue, yellow
