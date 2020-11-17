@@ -21,7 +21,7 @@ tags: [DataMining, Pairwise]
 
 주어진 클래스 H의 도큐먼트 E의  확률은 
 
-![](https://latex.codecogs.com/gif.latex?P(E|H)=N!&space;\times&space;\prod_{i=1}^{k}&space;\frac{P_{i}^{n_i}}{n_i&space;!})
+![](https://latex.codecogs.com/gif.latex?P%28E%7CH%29%20%3D%20N%21%20%5Ctimes%20%5Cprod_%7Bi%3D1%7D%5E%7Bk%7D%5Cfrac%7BP%5E%7Bn_i%7D_i%7D%7Bn%21%7D)
 
 여기서 ![](https://latex.codecogs.com/gif.latex?N%20%3D%20n_1&plus;n_2...&plus;n_k)이다. 
 
