@@ -15,15 +15,15 @@ tags: [DataMining, Pairwise]
 
 
 
-![](https://latex.codecogs.com/gif.latex?n_1,n_2....n_k)를 단어 i가 도큐먼트에 나타나는 횟수라 하고
+![](https://latex.codecogs.com/gif.latex?n_1%2Cn_2....n_k)를 단어 i가 도큐먼트에 나타나는 횟수라 하고
 
-![](https://latex.codecogs.com/gif.latex?P_1,&space;P_2...&space;P_k)를 카테고리 H에 있는 모든 도큐먼트의 샘플링시 i가 얻어지는 확률 이라고 하자
+![](https://latex.codecogs.com/gif.latex?P_1%2C%20P_2...P_k)를 카테고리 H에 있는 모든 도큐먼트의 샘플링시 i가 얻어지는 확률 이라고 하자
 
 주어진 클래스 H의 도큐먼트 E의  확률은 
 
 ![](https://latex.codecogs.com/gif.latex?P(E|H)=N!&space;\times&space;\prod_{i=1}^{k}&space;\frac{P_{i}^{n_i}}{n_i&space;!})
 
-여기서 ![](https://latex.codecogs.com/gif.latex?N=n_1&space;&plus;&space;n_2&space;...&space;&plus;&space;n_k)이다. 
+여기서 ![](https://latex.codecogs.com/gif.latex?N%20%3D%20n_1&plus;n_2...&plus;n_k)이다. 
 
 단어집에 yellow, blue 두 개 단어만 있고 도큐먼트 클래스 H를
 
