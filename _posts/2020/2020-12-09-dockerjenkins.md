@@ -6,7 +6,7 @@ tags: [jenkins, docker]
 
 
 
-jenkins docker image에 gcc make를 반영하여 설치 방법
+jenkins docker image에 build-essential를 반영하여 설치 방법
 
 1. Dockerfile을 작성하여 저장. (파일명 : Dockerfile)
 
@@ -14,10 +14,8 @@ jenkins docker image에 gcc make를 반영하여 설치 방법
 FROM jenkins/jenkins:lts
 USER root
 # ...
-#ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
-RUN apt-get -y install gcc make
-RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get -y install build-essential
 ```
 
 2. Dockerfile이 존재하는 위치에서 docker build 수행
