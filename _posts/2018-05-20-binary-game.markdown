@@ -146,7 +146,7 @@ PCB prototype. The blue prototype had not yet arrived when the video was shot.
 ![PCB Layout](../assets/img/ABG/layout.png)
 <center><b>PCB Layout</b></center>
 
-The full EAGLE project files can be found on the unsersigned's [GitHub](https://github.com/ethanmpeterson/long-isp/tree/design-files).
+The full EAGLE project files and source code can be found on the unsersigned's [GitHub](https://github.com/ethanmpeterson/long-isp/tree/design-files).
 
 # Code
 
