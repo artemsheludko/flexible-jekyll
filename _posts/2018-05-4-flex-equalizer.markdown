@@ -216,22 +216,9 @@ of the LED Matrix.
 ![PCB Layout](../assets/img/FE/layout.png)
 <center><b>FE PCB Layout</b></center>
 
-# Conclusion
-
-Overall, the FE Project qualifies as one of the most sophisticated and
-challenging projects the undersigned has completed in the ACES Program. As a
-result of the FE Project, an absolutely stronger knowledge of surface mount
-soldering and assembly programming was developed. With respect to soldering, the
-undersigned acquired skills in the use of a hot air rework station as well as a
-reflow oven. With respect to assembly programming, the undersigned acquired
-skills specifically relating to the use of interrupts and hardware peripherals
-on microcontrollers, such as the analog to digital converter. More importantly,
-however, it should be noted that this project has created in the undersigned an
-unparalleled sense of pride and achievement with regard to one of the final
-projects as an ACES student.
 
 # Code
-
+The source code can also be found on the undersigned's GitHub [repository](https://github.com/ethanmpeterson/flex-page-asm).
 {% highlight assembly %}
 #include "prescalers.h"
 #define F_CPU 8000000UL ; Define CPU frequency
