@@ -10,6 +10,44 @@ tags: [STM32, ARM, Embedded Systems, Custom Printed Circuit Boards]
 
 # Introduction
 
+The Arduino is easily the most popular embedded development platform available
+to hobbyists today. The Arduino libraries provide easy to use abstractions such
+as `digitalWrite()`, `analogRead()` and more. Moreover, the build and flashing
+process onto the Arduino is completely abstracted away by the IDE making Arduino
+easy to get started with. However, there comes a point where Arduino's various
+obfuscations and abstractions of what is happening in the hardware starts to
+slow the developer more than it speeds them up. While working on the [Queen's
+Formula Racing Team](https://www.qfsae.ca/) this past year, myself and other
+team members ran into this issue repeatedly. Specifically, we were limited by
+inconsistencies in the implementations of the Arduino libraries between various
+devices such as the Uno or the Teensy. Another troublesome issue was Arduino
+libraries that were dependent on hardware specific features and accessed them in
+a bare metal fashion instead of working through the existing Arduino hardware
+abstractions to make it platform agnostic (ex. a screen library that uses SPI to
+drive the display but makes low level calls to the MCU specific SPI interface
+instead of using the Arduino SPI library). Some of the issues the team ran into
+were Arduino Serial library implementations that did not allow the programmer to
+set baud rate explicitly (Teensy), screen driver libraries that did not respect
+the chip select line of SPI and interferes with SPI bus ICs used for CAN bus
+communications. After long debugging sessions diagnosing these issues, we came
+to the conclusion that some of our projects on the team had enough moving parts
+to warrant an upgrade to a custom MCU solution without necessarily employing
+Arduinos or compatible devices such as Teensy.
+
+By not tying the team directly to Arduino, we can select MCUs that are more
+directly suited to automotive applications and our specific use cases. The main
+requirements for a new MCU platform were built in CAN bus peripherals and
+multiple USART peripherals to support print statements and inter-MCU
+communications over USART. The MCU platform selected was STM32 from ST
+Microelectronics. STM32 is 32 bit ARM based line of MCUs with various models of
+different sizes, performance and peripherals. For 
+
+# Designing the Board
+
+# Testing the Board
+
+# Conclusion
+
 POST HERE
 
 - Explain need to move to STM32

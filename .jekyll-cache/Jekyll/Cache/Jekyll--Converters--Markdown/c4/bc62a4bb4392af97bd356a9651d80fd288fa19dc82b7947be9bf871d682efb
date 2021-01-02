@@ -1,0 +1,55 @@
+I"¦<h1 id="introduction">Introduction</h1>
+
+<p>POST HERE</p>
+
+<ul>
+  <li>Explain need to move to STM32
+    <ul>
+      <li>Additional Peripherals, multiple UARTS, multiple CANS</li>
+      <li>Use QFSAE problems as examples</li>
+      <li>Higher clock speed</li>
+      <li>Greater pinout and GPIO</li>
+      <li>Opportunity to learn more about using a bare metal C environment</li>
+      <li>Why Develop a custom board as opposed to using the pre packaged boards from STM?
+        <ul>
+          <li>Want to understand the hardware</li>
+          <li>Sometimes need to customize the hardware into a certain form factor when doing design team work or for some other embedded solution.</li>
+          <li>As a hobbyist, enjoyed making custom boards with a traditional atmega used on arduino, want to know how to do the same in 32 bit world.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Go Step by step through the design
+    <ul>
+      <li>Powering the device (decoupling capacitors, point to power up diagram in MCU datasheet)</li>
+      <li>Also note safe voltage levels and voltage regulator</li>
+      <li>Clocking the device (discuss the use of 25 Mhz input clock and STM32 as a means of verifying what input is needed to get desired speed)</li>
+      <li>Discuss RTC 32.768 oscillator that was not needed as it was not used</li>
+      <li>Setting up a way to debug and flash the device (ST-Link pins refer to datasheet and show the st-link mini programmers and where to buy them)</li>
+      <li>Device IO (show the simple LED circuit and pin breakouts onto a header)</li>
+      <li>Mechanism to Reset the device (circuit breaker and reset capacitor)</li>
+      <li>Give link to GitHub with design files</li>
+    </ul>
+  </li>
+  <li>Board Bring up process
+    <ul>
+      <li>STM32Cube Code generation tool is the most straightforward way to test the board</li>
+      <li>Clocks can be configured through the GUI.</li>
+      <li>Pins can also be configured through the GUI.</li>
+      <li>Generate the project for your IDE of choice (I us a makefile)</li>
+      <li>A simple blink sketch code can be found here (https://github.com/ethanmpeterson/bare-metal/blob/fcb0e9821a37f282cb7bff8d932c9a4092374c67/projects/PDP_TEST/Src/main.c)</li>
+      <li>Show board video working</li>
+    </ul>
+  </li>
+  <li>Conclusion
+    <ul>
+      <li>Discuss learnings and next steps in building a better arduino.</li>
+      <li>Now know where to find the requisite information to break out an STM from the datasheet.</li>
+      <li>Broke out one of the larger MCUs but the smaller product lines follow the same pattern.</li>
+      <li>Two main shortcomings of this first iteration is the need to use a separate ST-Link debugger and no ability to use print statements.</li>
+      <li>Part 2 will address this need in the form of a custom debugger board that has both ST-Link and USART functionality similar to that of the nucleo development boards
+  sold by STM32.</li>
+    </ul>
+  </li>
+</ul>
+:ET
