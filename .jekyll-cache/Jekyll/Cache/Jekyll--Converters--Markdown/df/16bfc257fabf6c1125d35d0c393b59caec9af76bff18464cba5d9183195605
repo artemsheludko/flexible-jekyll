@@ -1,0 +1,147 @@
+I"�!<h1 id="introduction">Introduction</h1>
+
+<p>The Arduino is easily the most popular embedded development platform available
+to hobbyists today. The Arduino libraries provide easy to use abstractions such
+as <code class="language-plaintext highlighter-rouge">digitalWrite()</code>, <code class="language-plaintext highlighter-rouge">analogRead()</code> and more. Moreover, the build and flashing
+process onto the Arduino is completely abstracted away by the IDE making Arduino
+easy to get started with. However, there comes a point where Arduino’s various
+obfuscations and abstractions of what is happening in the hardware starts to
+slow the developer more than it speeds them up. While working on the <a href="https://www.qfsae.ca/">Queen’s
+Formula Racing Team</a> this past year, myself and other
+team members ran into this issue repeatedly. Specifically, we were limited by
+inconsistencies in the implementations of the Arduino libraries between various
+devices such as the Uno or the Teensy. Another troublesome issue was Arduino
+libraries that were dependent on hardware specific features and accessed them in
+a bare metal fashion instead of working through the existing Arduino hardware
+abstractions to make it platform agnostic (ex. a screen library that uses SPI to
+drive the display but makes low level calls to the MCU specific SPI interface
+instead of using the Arduino SPI library). Some of the issues the team ran into
+were Arduino Serial library implementations that did not allow the programmer to
+set baud rate explicitly (Teensy), screen driver libraries that did not respect
+the chip select line of SPI and interferes with SPI bus ICs used for CAN bus
+communications. After long debugging sessions diagnosing these issues, we came
+to the conclusion that some of our projects on the team had enough moving parts
+to warrant an upgrade to a custom MCU solution without necessarily employing
+Arduinos or compatible devices such as Teensy.</p>
+
+<p>By not tying the team directly to Arduino, we can select MCUs that are more
+directly suited to automotive applications and our specific use cases. The main
+requirements for a new MCU platform were built in CAN bus peripherals and
+multiple USART peripherals to support print statements and inter-MCU
+communications over USART. The MCU platform selected was STM32 from ST
+Microelectronics. STM32 is 32 bit ARM based line of MCUs with various models of
+different sizes, performance and peripherals. In order to test the viability of
+STM32, I opted for an MCU that had all the peripherals we needed and selected
+the
+<a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f769bi.html">STM32F769BIT6</a>.
+This chip comes in an LQFP-208 package and boasts multiple USARTS, A DSI
+hardware peripheral and most importantly three CAN buses. Historically, the team
+had made use of the <a href="https://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/">CAN Bus
+Shield</a> from Seeed Studio.
+The circuit on the shield needed to be copied onto the team’s custom PCBs adding
+complexity to each design. The CAN peripherals on the STM32 MCU remove the need
+for this circuit while also opening the opportunity to run multiple CAN buses
+for higher data throughput without copying the bulky SPI circuit several times
+over. Moreover, the CAN peripherals on the STM32 support interrupts on message
+receive allowing the team to abandon the clunky polling based approach used on
+Arduino. With an MCU selected and tested, I set out to layout the MCU on a
+custom PCB. It was essential to be able to use STM32 on custom PCBs since most
+team projects involved boards with highly constrained form factors where placing
+a standard development board sold by ST on the car would be infeasible.</p>
+
+<h1 id="designing-the-board">Designing the Board</h1>
+
+<p>The first iteration of this STM32 development platform is affectionately named
+the Peterson Development Platform (hereby referred to as the PDP). This simple
+test PCB has the objective of properly powering up the MCU and running basic
+programs on it such as blinking an LED. The schematic design of the PDP can be broken into the following three steps.</p>
+
+<ol>
+  <li>Powering the MCU</li>
+  <li>Clocking the MCU</li>
+  <li>Debug and Programming Access to the MCU</li>
+</ol>
+
+<h2 id="powering-the-mcu">Powering the MCU</h2>
+
+<p>Information on powering the MCU can be found in the
+<a href="https://www.st.com/resource/en/datasheet/stm32f769bi.pdf">datasheet</a>. The power up circuit is shown in Figure 25 of the datasheet, which is given below.</p>
+
+<p><img src="../assets/img/PDP/power-scheme.png" alt="power-circuit" /></p>
+
+<p>In summary, the MCU has many VDD power input pins which expect a 3.3 V input.
+The 3.3 V power is provided through an LDO which regulates down from 5 V or
+through a direct 3.3 V from a debugger connected to a computer. However, as
+shown in the figure above, the 3.3 V power cannot be directly connected to the
+MCU and needs various bypass capacitors. Each VDD pin has a 100 nF bypass
+capacitor connected between 3.3 V and ground. These capacitors are short
+circuits at AC and open at DC. Thus, the noise on the DC power signal is
+filtered and as a result the MCU receives a cleaner DC power input. Also shown
+on the diagram are larger bypass capacitors in the uF range which are employed
+to compensate for any sudden drops in voltage from the power supply. The LDO circuit and assortment of filter capacitors can be viewed in the <a href="">Schematic</a> section.</p>
+
+<h2 id="clocking-the-mcu">Clocking the MCU</h2>
+
+<h2 id="debug-access-to-the-mcu">Debug Access to the MCU</h2>
+
+<h2 id="schematic">Schematic</h2>
+
+<h2 id="layout">Layout</h2>
+
+<h1 id="testing-the-board">Testing the Board</h1>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>POST HERE</p>
+
+<ul>
+  <li>Explain need to move to STM32
+    <ul>
+      <li>Additional Peripherals, multiple UARTS, multiple CANS</li>
+      <li>Use QFSAE problems as examples</li>
+      <li>Higher clock speed</li>
+      <li>Greater pinout and GPIO</li>
+      <li>Opportunity to learn more about using a bare metal C environment</li>
+      <li>Why Develop a custom board as opposed to using the pre packaged boards from STM?
+        <ul>
+          <li>Want to understand the hardware</li>
+          <li>Sometimes need to customize the hardware into a certain form factor when doing design team work or for some other embedded solution.</li>
+          <li>As a hobbyist, enjoyed making custom boards with a traditional atmega used on arduino, want to know how to do the same in 32 bit world.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Go Step by step through the design
+    <ul>
+      <li>Powering the device (decoupling capacitors, point to power up diagram in MCU datasheet)</li>
+      <li>Also note safe voltage levels and voltage regulator</li>
+      <li>Clocking the device (discuss the use of 25 Mhz input clock and STM32 as a means of verifying what input is needed to get desired speed)</li>
+      <li>Discuss RTC 32.768 oscillator that was not needed as it was not used</li>
+      <li>Setting up a way to debug and flash the device (ST-Link pins refer to datasheet and show the st-link mini programmers and where to buy them)</li>
+      <li>Device IO (show the simple LED circuit and pin breakouts onto a header)</li>
+      <li>Mechanism to Reset the device (circuit breaker and reset capacitor)</li>
+      <li>Give link to GitHub with design files</li>
+    </ul>
+  </li>
+  <li>Board Bring up process
+    <ul>
+      <li>STM32Cube Code generation tool is the most straightforward way to test the board</li>
+      <li>Clocks can be configured through the GUI.</li>
+      <li>Pins can also be configured through the GUI.</li>
+      <li>Generate the project for your IDE of choice (I us a makefile)</li>
+      <li>A simple blink sketch code can be found here (https://github.com/ethanmpeterson/bare-metal/blob/fcb0e9821a37f282cb7bff8d932c9a4092374c67/projects/PDP_TEST/Src/main.c)</li>
+      <li>Show board video working</li>
+    </ul>
+  </li>
+  <li>Conclusion
+    <ul>
+      <li>Discuss learnings and next steps in building a better arduino.</li>
+      <li>Now know where to find the requisite information to break out an STM from the datasheet.</li>
+      <li>Broke out one of the larger MCUs but the smaller product lines follow the same pattern.</li>
+      <li>Two main shortcomings of this first iteration is the need to use a separate ST-Link debugger and no ability to use print statements.</li>
+      <li>Part 2 will address this need in the form of a custom debugger board that has both ST-Link and USART functionality similar to that of the nucleo development boards
+  sold by STM32.</li>
+    </ul>
+  </li>
+</ul>
+:ET

@@ -1,4 +1,42 @@
-I"¦<h1 id="introduction">Introduction</h1>
+I"²<h1 id="introduction">Introduction</h1>
+
+<p>The Arduino is easily the most popular embedded development platform available
+to hobbyists today. The Arduino libraries provide easy to use abstractions such
+as <code class="language-plaintext highlighter-rouge">digitalWrite()</code>, <code class="language-plaintext highlighter-rouge">analogRead()</code> and more. Moreover, the build and flashing
+process onto the Arduino is completely abstracted away by the IDE making Arduino
+easy to get started with. However, there comes a point where Arduinoâ€™s various
+obfuscations and abstractions of what is happening in the hardware starts to
+slow the developer more than it speeds them up. While working on the <a href="https://www.qfsae.ca/">Queenâ€™s
+Formula Racing Team</a> this past year, myself and other
+team members ran into this issue repeatedly. Specifically, we were limited by
+inconsistencies in the implementations of the Arduino libraries between various
+devices such as the Uno or the Teensy. Another troublesome issue was Arduino
+libraries that were dependent on hardware specific features and accessed them in
+a bare metal fashion instead of working through the existing Arduino hardware
+abstractions to make it platform agnostic (ex. a screen library that uses SPI to
+drive the display but makes low level calls to the MCU specific SPI interface
+instead of using the Arduino SPI library). Some of the issues the team ran into
+were Arduino Serial library implementations that did not allow the programmer to
+set baud rate explicitly (Teensy), screen driver libraries that did not respect
+the chip select line of SPI and interferes with SPI bus ICs used for CAN bus
+communications. After long debugging sessions diagnosing these issues, we came
+to the conclusion that some of our projects on the team had enough moving parts
+to warrant an upgrade to a custom MCU solution without necessarily employing
+Arduinos or compatible devices such as Teensy.</p>
+
+<p>By not tying the team directly to Arduino, we can select MCUs that are more
+directly suited to automotive applications and our specific use cases. The main
+requirements for a new MCU platform were built in CAN bus peripherals and
+multiple USART peripherals to support print statements and inter-MCU
+communications over USART. The MCU platform selected was STM32 from ST
+Microelectronics. STM32 is 32 bit ARM based line of MCUs with various models of
+different sizes, performance and peripherals. In order to test the viability of STM32, I opted for an MCU that had all the peripherals we needed and selected the STM32F769BIT6. This chip comes in an LQFP-208 package and boasts multiple USARTS, A DSI hardware peripheral and most importantly three CAN buses.</p>
+
+<h1 id="designing-the-board">Designing the Board</h1>
+
+<h1 id="testing-the-board">Testing the Board</h1>
+
+<h1 id="conclusion">Conclusion</h1>
 
 <p>POST HERE</p>
 
