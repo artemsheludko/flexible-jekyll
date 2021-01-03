@@ -1,70 +1,102 @@
----
-layout: post
-title: Flex PCB Equalizer
-date: 2018-04-4 13:32:20 +0300
-description: Designing my first flexible PCB
-img: FE/proto3.jpg # Add image post (optional)
-fig-caption: The equalizer in action
-tags: [Flexible PCB, Audio Visualization, Custom PCB, Audio Processing, OP Amps]
----
-
-# Purpose 
-The purpose of the Flex Equalizer Project (referred to in this report as the “FE
+I"<U<h1 id="purpose">Purpose</h1>
+<p>The purpose of the Flex Equalizer Project (referred to in this report as the “FE
 Project”) is to provide a unique project embedded right into the undersigned’s
 engineering report, thus developing the critical skills of surface-mount
 soldering and design on flexible PCBs. The undersigned’s particular flex PCB
 design is a flexible equalizer building on top of the original GE Project. The
-PCB is shown below:
+PCB is shown below:</p>
 
-
-![Flex PCB](../assets/img/FE/proto1.jpg)
+<p><img src="../assets/img/FE/proto1.jpg" alt="Flex PCB" /></p>
 <center><b>Flex PCB Front</b></center>
 
-| Parts List                       |
-| :------------------------------: |
-| 100k Ω Resistor                  |
-| 200k Ω Resistor                  |
-| 1.5k Ω Resistor                  |
-| 3 x 10k Ω Resistors              |
-| 6 x 220 Ω Resistors              |
-| MSGEQ7 IC                        |
-| ADMP401 MEMS SMD Microphone      |
-| OPA344 Amplifier                 |
-| 330 Ω Resistor                   |
-| 470 Ω Resistor                   |
-| 3 x 100 nF Capacitors            |
-| 33 pF Capacitor                  |
-| 10 nF Capacitor                  |
-| 100 pF Capacitor                 |
-| 4.7 uF Capacitor                 |
-| 2 x 595 SMD Shift Registers      |
-| ATMega328PB TQFP                 |
-| 42 x 1206 SMD LEDs               |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Parts List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">100k Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">200k Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1.5k Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3 x 10k Ω Resistors</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6 x 220 Ω Resistors</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">MSGEQ7 IC</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ADMP401 MEMS SMD Microphone</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">OPA344 Amplifier</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">330 Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">470 Ω Resistor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3 x 100 nF Capacitors</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">33 pF Capacitor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10 nF Capacitor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">100 pF Capacitor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4.7 uF Capacitor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2 x 595 SMD Shift Registers</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ATMega328PB TQFP</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">42 x 1206 SMD LEDs</td>
+    </tr>
+  </tbody>
+</table>
 
-The first skill of PCB design was highly improved upon in the FE Project due to
+<p>The first skill of PCB design was highly improved upon in the FE Project due to
 the high complexity of this circuit unifying an LED matrix and equalizer
 circuitry. The addition of unfamiliar surface mount components that had not been
-tested in the prototype only made this more challenging.
+tested in the prototype only made this more challenging.</p>
 
-The second skill acquired in the creation of this project was surface mount
+<p>The second skill acquired in the creation of this project was surface mount
 soldering. The undersigned had little to no surface mount experience heading
 into this project, thus making the soldering process difficult but important and
-rewarding.
+rewarding.</p>
 
-The third and most important skill improved upon in this project was assembly
+<p>The third and most important skill improved upon in this project was assembly
 programming. A second iteration of the equalizer code was written in AVR
 assembly, which presented a unique challenge and opportunity to gain a stronger
-understanding of low-level usage of the ADC (analog to digital converter).
+understanding of low-level usage of the ADC (analog to digital converter).</p>
 
-# Reference
+<h1 id="reference">Reference</h1>
 
-[Creating Parts in Eagle](https://learn.adafruit.com/ktowns-ultimate-creating-parts-in-eagle-tutorial/creating-a-package-outline)
+<p><a href="https://learn.adafruit.com/ktowns-ultimate-creating-parts-in-eagle-tutorial/creating-a-package-outline">Creating Parts in Eagle</a></p>
 
-[Sparkfun SMD Microphone Breakout](https://www.sparkfun.com/products/9868)
+<p><a href="https://www.sparkfun.com/products/9868">Sparkfun SMD Microphone Breakout</a></p>
 
-# Procedure
+<h1 id="procedure">Procedure</h1>
 
-The FE Project improves upon the original GE Project developed in the TEI3M
+<p>The FE Project improves upon the original GE Project developed in the TEI3M
 course. The FE used in the project is also a graphic equalizer, however, it is
 mounted on a flexible PCB using fully surface mount components so it can be
 laminated into a page in the undersigned’s engineering report. The second key
@@ -72,12 +104,12 @@ difference between the FE and its through-hole predecessor is the usage of a 7x6
 LED Matrix to display audio levels as opposed I2C based bar graphs. The use of a
 multi-plexed LED Matrix with standard shift registers also eliminates the need
 for libraries in order to write code for the FE, thus allowing the code to be
-re-written as mid-level AVR C or AVR Assembly.
+re-written as mid-level AVR C or AVR Assembly.</p>
 
-The development of the FE Project is comprised of four important steps,
-consisting of prototyping, PCB design, soldering and programming.
+<p>The development of the FE Project is comprised of four important steps,
+consisting of prototyping, PCB design, soldering and programming.</p>
 
-The first of three difficult steps to complete the FE Project was prototyping.
+<p>The first of three difficult steps to complete the FE Project was prototyping.
 Although the undersigned completed an equalizer project on two occasions and
 completed similar circuits on several occasions, there were new obstacles to
 overcome in completing a properly functioning surface mount version. The first
@@ -101,14 +133,12 @@ microphone with amplification was used to emulate the surface components that
 had not yet arrived. As the circuit for the Sparkfun breakout board was posted
 online, it could later be integrated into the undersigned’s flex PCB.
 Programming the prototype was a straightforward process thanks to the use of
-Arduino C and previous experience programming these types of devices.
+Arduino C and previous experience programming these types of devices.</p>
 
-
-![Flex PCB](../assets/img/FE/breadboard.png)
+<p><img src="../assets/img/FE/breadboard.png" alt="Flex PCB" /></p>
 <center><b>Breadboard Prototype</b></center>
 
-
-The second step was to design the FE in EAGLE, starting with a circuit diagram.
+<p>The second step was to design the FE in EAGLE, starting with a circuit diagram.
 First, a 7 x 6 LED matrix was created using 1206 SMD LEDs. The matrix was then
 connected to two SMD 595 shift registers in a multi-plexed configuration. The
 two shift registers were daisy-chained together, thus allowing them to occupy
@@ -119,14 +149,12 @@ unique problem in getting the microphone output into the MSGEQ7. The SMD
 requirement for the flex page prevented the use of a through-hole microphone
 breakout board employed in previous equalizers. As a result, extra circuitry
 needed to be added to amplify and support the ADMP401 SMD microphone. The extra
-circuitry is pictured below.
+circuitry is pictured below.</p>
 
-
-![OP Amp](../assets/img/FE/opamp.png)
+<p><img src="../assets/img/FE/opamp.png" alt="OP Amp" /></p>
 <center><b>Microphone Operational Amplifier Circuit</b></center>
 
-
-The third step was completion of all soldering work upon delivery of the flex
+<p>The third step was completion of all soldering work upon delivery of the flex
 PCB. The PCB has a dense and very small form factor, with many components placed
 closely together. Placing the solder paste on each pad individually proved to
 require too much precision to do completely by hand. As a result, the task was
@@ -146,13 +174,12 @@ microcontroller. A few pads were bridged on the microcontroller, thus causing a
 short circuit which was corrected by using solder wick to un- bridge the pads.
 However, it should be noted that the exposure of the PCB to some heat during
 this repair process caused some warping in the area where the microcontroller is
-located, but no traces were destroyed.
+located, but no traces were destroyed.</p>
 
-
-![Flex PCB Bare Board](../assets/img/FE/proto2.jpg)
+<p><img src="../assets/img/FE/proto2.jpg" alt="Flex PCB Bare Board" /></p>
 <center><b>Flex PCB Bare Board</b></center>
 
-The final and most difficult step of the project was programming and debugging
+<p>The final and most difficult step of the project was programming and debugging
 the FE. The FE worked well initially using Arduino C code. As the undersigned
 had written equalizer code on multiple occasions, it was decided to take the
 code to lower level assembly. The assembly was nearly complete when the ability
@@ -167,15 +194,15 @@ This fix only exposed many more underlying problems with ISP flex ports on the
 board. The port and flex cable had very weak electronic connections, making it
 difficult to program the on board microcontroller. However, the first FE board
 to be soldered was beyond repair and no longer functioning. Although the second
-PCB was programmable, the connections were too weak to exit `debugWire` mode since
-the ICE was unable to read the device signature properly and disable the `DW`
+PCB was programmable, the connections were too weak to exit <code class="language-plaintext highlighter-rouge">debugWire</code> mode since
+the ICE was unable to read the device signature properly and disable the <code class="language-plaintext highlighter-rouge">DW</code>
 fuse. The microcontroller being locked in this mode proved to be difficult as it
 reduced the chip’s clock speed and removed the option of using ISP mode to
 program the chip with high level code from the Arduino IDE. Fortunately, the
 assembly code worked, but the reduced clock speed remained an issue. POV
 (persistence of vision) was restored to the matrix by reducing the prescaler to
-8 from 1024 on `Timer0`, which schedules ADC readings. The prescaler change made
-everything appear to run faster but the issue was fully fixed when the `F_CPU`
+8 from 1024 on <code class="language-plaintext highlighter-rouge">Timer0</code>, which schedules ADC readings. The prescaler change made
+everything appear to run faster but the issue was fully fixed when the <code class="language-plaintext highlighter-rouge">F_CPU</code>
 value was redefined at the top of the code forcing a clock speed of 8 Mhz. With
 one board up and running, it was time to repair the third board so two working
 boards could be submitted to the course instructor. This board also suffered
@@ -191,36 +218,47 @@ code for the project was difficult to develop but much easier to debug once
 hardware issues with the PCB had been fixed. The assembly code consisted of two
 interrupts, a timer interrupt to schedule new ADC readings and an interrupt when
 the ADC completed a reading. Each time the ADC completed a reading, the code in
-the `ADC_Complete` label would run. The code in the label would copy the reading
+the <code class="language-plaintext highlighter-rouge">ADC_Complete</code> label would run. The code in the label would copy the reading
 to a general purpose register and map the reading to a value from 0 – 5. Once
-the reading is collected, another label called `showBand` is run using the `rcall`
-instruction. `showBand` takes the reading and displays it in the appropriate
+the reading is collected, another label called <code class="language-plaintext highlighter-rouge">showBand</code> is run using the <code class="language-plaintext highlighter-rouge">rcall</code>
+instruction. <code class="language-plaintext highlighter-rouge">showBand</code> takes the reading and displays it in the appropriate
 column of the LED Matrix based on the frequency which was read from the MSGEQ7.
-The label knows what column to enable based off of the `currentCol` register,
+The label knows what column to enable based off of the <code class="language-plaintext highlighter-rouge">currentCol</code> register,
 which shifts a single bit left each time a new reading is collected from the
 MSGEQ7 so that the next column over is enabled. The mapped reading value is then
 used to turn on the appropriate number of LEDs within the corresponding column
-of the LED Matrix.
+of the LED Matrix.</p>
 
-
-![Flex Equalizer Running](../assets/img/FE/running.png)
+<p><img src="../assets/img/FE/running.png" alt="Flex Equalizer Running" /></p>
 <center><b>Flex Equalizer Up and Running</b></center>
 
-# Media
+<h1 id="media">Media</h1>
 
-[FE Demo Video](https://drive.google.com/file/d/1ARccuasTUF83R-8v9RG103pNincUt8yA/view?usp=sharing)
+<p><a href="https://drive.google.com/file/d/1ARccuasTUF83R-8v9RG103pNincUt8yA/view?usp=sharing">FE Demo Video</a></p>
 
-![Schematic](../assets/img/FE/schematic.png)
+<p><img src="../assets/img/FE/schematic.png" alt="Schematic" /></p>
 <center><b>FE Schematic</b></center>
 
-![PCB Layout](../assets/img/FE/layout.png)
+<p><img src="../assets/img/FE/layout.png" alt="PCB Layout" /></p>
 <center><b>FE PCB Layout</b></center>
 
+<h1 id="conclusion">Conclusion</h1>
 
-# Code
-The source code can also be found on the undersigned's GitHub [repository](https://github.com/ethanmpeterson/flex-page-asm).
-{% highlight assembly %}
-#include "prescalers.h"
+<p>Overall, the FE Project qualifies as one of the most sophisticated and
+challenging projects the undersigned has completed in the ACES Program. As a
+result of the FE Project, an absolutely stronger knowledge of surface mount
+soldering and assembly programming was developed. With respect to soldering, the
+undersigned acquired skills in the use of a hot air rework station as well as a
+reflow oven. With respect to assembly programming, the undersigned acquired
+skills specifically relating to the use of interrupts and hardware peripherals
+on microcontrollers, such as the analog to digital converter. More importantly,
+however, it should be noted that this project has created in the undersigned an
+unparalleled sense of pride and achievement with regard to one of the final
+projects as an ACES student.</p>
+
+<h1 id="code">Code</h1>
+
+<figure class="highlight"><pre><code class="language-assembly" data-lang="assembly">#include "prescalers.h"
 #define F_CPU 8000000UL ; Define CPU frequency
 .cseg
   .org 0x0000
@@ -400,43 +438,43 @@ showBand:
   rjmp end
 
   rows_5:
-    sbr rows, 1 << 5
-    sbr rows, 1 << 4
-    sbr rows, 1 << 3
-    sbr rows, 1 << 2
-    sbr rows, 1 << 1
-    sbr rows, 1 << 0
+    sbr rows, 1 &lt;&lt; 5
+    sbr rows, 1 &lt;&lt; 4
+    sbr rows, 1 &lt;&lt; 3
+    sbr rows, 1 &lt;&lt; 2
+    sbr rows, 1 &lt;&lt; 1
+    sbr rows, 1 &lt;&lt; 0
     rjmp end
 
 
   rows_4:
-    sbr rows, 1 << 4
-    sbr rows, 1 << 3
-    sbr rows, 1 << 2
-    sbr rows, 1 << 1
-    sbr rows, 1 << 0
+    sbr rows, 1 &lt;&lt; 4
+    sbr rows, 1 &lt;&lt; 3
+    sbr rows, 1 &lt;&lt; 2
+    sbr rows, 1 &lt;&lt; 1
+    sbr rows, 1 &lt;&lt; 0
     rjmp end
 
   rows_3:
-    sbr rows, 1 << 3
-    sbr rows, 1 << 2
-    sbr rows, 1 << 1
-    sbr rows, 1 << 0
+    sbr rows, 1 &lt;&lt; 3
+    sbr rows, 1 &lt;&lt; 2
+    sbr rows, 1 &lt;&lt; 1
+    sbr rows, 1 &lt;&lt; 0
     rjmp end
 
   rows_2:
-    sbr rows, 1 << 2
-    sbr rows, 1 << 1
-    sbr rows, 1 << 0
+    sbr rows, 1 &lt;&lt; 2
+    sbr rows, 1 &lt;&lt; 1
+    sbr rows, 1 &lt;&lt; 0
     rjmp end
 
   rows_1:
-    sbr rows, 1 << 1
-    sbr rows, 1 << 0
+    sbr rows, 1 &lt;&lt; 1
+    sbr rows, 1 &lt;&lt; 0
     rjmp end
 
   rows_0:
-    sbr rows, 1 << 0
+    sbr rows, 1 &lt;&lt; 0
     rjmp end
 
   end:
@@ -446,17 +484,17 @@ showBand:
 
 ADCInit:
   ser r16 ; set all bits in r16
-  ldi r16, (1 << REFS0) | (1 << ADLAR)
+  ldi r16, (1 &lt;&lt; REFS0) | (1 &lt;&lt; ADLAR)
   sts ADMUX, r16
   ; Enable, start dummy conversion, enable timer as trigger, prescaler
-  ldi r16, (1 << ADEN) | (1 << ADSC) | (1 << ADATE) | (1 << ADIE) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0)
+  ldi r16, (1 &lt;&lt; ADEN) | (1 &lt;&lt; ADSC) | (1 &lt;&lt; ADATE) | (1 &lt;&lt; ADIE) | (1 &lt;&lt; ADPS2) | (1 &lt;&lt; ADPS1) | (1 &lt;&lt; ADPS0)
   sts ADCSRA, r16
-  ldi r16, 1 << ADTS2
+  ldi r16, 1 &lt;&lt; ADTS2
   sts ADCSRB, r16
 
 dummy:
   lds r16, ADCSRA
-  andi r16, 1 << ADIF
+  andi r16, 1 &lt;&lt; ADIF
   breq dummy
   ret
 
@@ -465,7 +503,7 @@ T0Init: ; initialize T0 interrupt to schedule ADC conversions
   out TCCR0A, r16 ; normal mode OC0A/B disconnected
   ldi r16, T0ps8 ;
   out TCCR0B, r16
-  ldi r16, 1 << TOIE0 ; Timer interrupt enable
+  ldi r16, 1 &lt;&lt; TOIE0 ; Timer interrupt enable
   sts TIMSK0, r16 ; output to mask register to
   ret
 
@@ -473,7 +511,7 @@ TIM0_OVF:
   cbi PORTB, strobe ; make strobe low to grab a frequency band
   rcall delay ; let MSG output settle
   lds r16, ADCSRA ; start an ADC conversion
-  sbr r16, 1 << ADSC ; set the required bit
+  sbr r16, 1 &lt;&lt; ADSC ; set the required bit
   sts ADCSRA, r16
   reti
 
@@ -508,12 +546,11 @@ delay: ; 22 uS delay for reading from the MSGEQ7
   L1: dec r21
   brne L1
   nop
-  ret
-{% endhighlight %}
+  ret</code></pre></figure>
 
-# Conclusion
+<h1 id="conclusion-1">Conclusion</h1>
 
-Overall, the FE Project qualifies as one of the most sophisticated and
+<p>Overall, the FE Project qualifies as one of the most sophisticated and
 challenging projects the undersigned has completed in the ACES Program. As a
 result of the FE Project, an absolutely stronger knowledge of surface mount
 soldering and assembly programming was developed. With respect to soldering, the
@@ -523,5 +560,6 @@ skills specifically relating to the use of interrupts and hardware peripherals
 on microcontrollers, such as the analog to digital converter. More importantly,
 however, it should be noted that this project has created in the undersigned an
 unparalleled sense of pride and achievement with regard to one of the final
-projects as an ACES student.
+projects as an ACES student.</p>
 
+:ET
