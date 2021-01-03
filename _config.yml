@@ -1,7 +1,7 @@
 title: Ethan Peterson
 description: Ethan Peterson's Portfolio Blog
 permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://portfolio.petetech.net" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
