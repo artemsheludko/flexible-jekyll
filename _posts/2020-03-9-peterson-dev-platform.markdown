@@ -177,7 +177,7 @@ available on
 [GitHub](https://github.com/ethanmpeterson/bare-metal/blob/fcb0e9821a37f282cb7bff8d932c9a4092374c67/projects/PDP_TEST/Src/main.c).
 A demo of the soldered PDP running the blink program is given below.
 
-<iframe src="https://drive.google.com/file/d/1HVmU22fU_wJXrRkxBC023Rist4aJkBw9/preview" width="640px" height="400px"></iframe>
+<iframe src="https://drive.google.com/file/d/1HVmU22fU_wJXrRkxBC023Rist4aJkBw9/preview" width="640" height="480"></iframe>
 
 # Design Files
 
