@@ -65,7 +65,8 @@ a standard development board sold by ST on the car would be infeasible.
 The first iteration of this STM32 development platform is affectionately named
 the Peterson Development Platform (hereby referred to as the PDP). This simple
 test PCB has the objective of properly powering up the MCU and running basic
-programs on it such as blinking an LED. The schematic design of the PDP can be broken into the following three steps.
+programs on it such as blinking an LED. The schematic design of the PDP can be
+broken into the following three steps.
 
 1. Powering the MCU
 2. Clocking the MCU
@@ -74,7 +75,8 @@ programs on it such as blinking an LED. The schematic design of the PDP can be b
 ## Powering the MCU
 
 Information on powering the MCU can be found in the
-[datasheet](https://www.st.com/resource/en/datasheet/stm32f769bi.pdf). The power up circuit is shown in Figure 25 of the datasheet, which is given below.
+[datasheet](https://www.st.com/resource/en/datasheet/stm32f769bi.pdf). The power
+up circuit is shown in Figure 25 of the datasheet, which is given below.
 
 ![power-circuit](../assets/img/PDP/power-scheme.png)
 
