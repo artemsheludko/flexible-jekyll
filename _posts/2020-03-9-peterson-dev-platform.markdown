@@ -14,8 +14,8 @@ tags: [STM32, ARM, Embedded Systems, Custom Printed Circuit Boards]
 The Arduino is easily the most popular embedded development platform available
 to hobbyists today. The Arduino libraries provide easy to use abstractions such
 as `digitalWrite()`, `analogRead()` and more. Moreover, the build and flashing
-process onto the Arduino is completely abstracted away by the IDE making Arduino
-easy to get started with. However, there comes a point where Arduino's various
+process onto the Arduino is completely abstracted away by the IDE, making Arduino
+an easy starting point. However, there comes a point where Arduino's various
 obfuscations and abstractions of what is happening in the hardware starts to
 slow the developer more than it speeds them up. While working on the [Queen's
 Formula Racing Team](https://www.qfsae.ca/) this past year, myself and other
@@ -31,7 +31,7 @@ were Arduino Serial library implementations that did not allow the programmer to
 set baud rate explicitly (Teensy), screen driver libraries that did not respect
 the chip select line of SPI and interferes with SPI bus ICs used for CAN bus
 communications. After long debugging sessions diagnosing these issues, we came
-to the conclusion that some of our projects on the team had enough moving parts
+to the conclusion that some of our team projects had enough moving parts
 to warrant an upgrade to a custom MCU solution without necessarily employing
 Arduinos or compatible devices such as Teensy.
 
@@ -46,15 +46,15 @@ STM32, I opted for an MCU that had all the peripherals we needed and selected
 the
 [STM32F769BIT6](https://www.st.com/en/microcontrollers-microprocessors/stm32f769bi.html).
 This chip comes in an LQFP-208 package and boasts multiple USARTS, A DSI
-hardware peripheral and most importantly three CAN buses. Historically, the team
+hardware peripheral and most importantly, three CAN buses. Historically, the team
 had made use of the [CAN Bus
 Shield](https://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/) from Seeed Studio.
-The circuit on the shield needed to be copied onto the team's custom PCBs adding
+The circuit on the shield had to be copied onto the team's custom PCBs, adding
 complexity to each design. The CAN peripherals on the STM32 MCU remove the need
 for this circuit while also opening the opportunity to run multiple CAN buses
 for higher data throughput without copying the bulky SPI circuit several times
 over. Moreover, the CAN peripherals on the STM32 support interrupts on message
-receive allowing the team to abandon the clunky polling based approach used on
+receive, thus allowing the team to abandon the clunky polling based approach used on
 Arduino. With an MCU selected and tested, I set out to layout the MCU on a
 custom PCB. It was essential to be able to use STM32 on custom PCBs since most
 team projects involved boards with highly constrained form factors where placing
@@ -65,8 +65,8 @@ a standard development board sold by ST on the car would be infeasible.
 The first iteration of this STM32 development platform is affectionately named
 the Peterson Development Platform (hereby referred to as the PDP). This simple
 test PCB has the objective of properly powering up the MCU and running basic
-programs on it such as blinking an LED. The schematic design of the PDP can be
-broken into the following three steps.
+programs on it, such as blinking an LED. The schematic design of the PDP can be
+broken into the following three steps:
 
 1. Powering the MCU
 2. Clocking the MCU
@@ -76,7 +76,7 @@ broken into the following three steps.
 
 Information on powering the MCU can be found in the
 [datasheet](https://www.st.com/resource/en/datasheet/stm32f769bi.pdf). The power
-up circuit is shown in Figure 25 of the datasheet, which is given below.
+up circuit is shown in Figure 25 of the datasheet, which is provided below.
 
 ![power-circuit](../assets/img/PDP/power-scheme.png)
 
@@ -95,14 +95,14 @@ circuit and assortment of filter capacitors can be viewed in the
 
 ## Clocking the MCU
 
-In order to fully utilize this MCU an external clock is needed. By default, the
+In order to fully utilize this MCU, an external clock is needed. By default, the
 MCU starts up using the internal RC oscillator which is limited to a 16 Mhz
 system clock. This speed is too slow to use some peripherals and does not take
 advantage of the maximum system clock of 216 Mhz. In this case, a crystal
 oscillator is used with a frequency of 25 Mhz which can yield the full 216 Mhz
 system clock with the correct register configuration loaded onto the MCU. The
-correct pins to connect the crystal to are found in the datasheet. In this case,
-PH0 and PH1 are the pair used. In order to obtain stable and accurate
+correct pins for connection to the crystal are found in the datasheet. In this case,
+PH0 and PH1 are the pair which were used. In order to obtain stable and accurate
 oscillation, the correct shoulder capacitor values must be selected to match the
 crystal. The load capacitors used on this specific crystal are 18 pF. This value
 was calculated using formulas provided in an [application
@@ -120,14 +120,14 @@ the same manner as the system clock oscillator.
 
 The final step in the schematic design of the PDP was setting up debug access to
 the MCU in order to flash and test code. The vast majority of STM32 MCU product
-lines support ST-Link which is an Serial Wire Debug (SWD) based debug and flash
+lines support ST-Link, which is an Serial Wire Debug (SWD) based debug and flash
 protocol. SWD is a two wire interface with a clock (SWCLK) and data line
 (SWDIO). Each STM32 that supports ST-Link has default pins mapped to these
 functions. In the case of this MCU, those pins are PA15 and PA14. The two pins
 were then broken out on a 4 pin header which added a power input and ground
 connection in the top left of the schematic. The ground connection is needed for
 signal integrity so that the debugger and PDP have the same ground reference.
-The power input allows the PDP to also be powered off a 3.3 V output of the
+The power input also allows the PDP to be powered off a 3.3 V output of the
 debugger. With the debug header in place, any ST-Link compatible debugger can be
 used.
 
@@ -148,20 +148,20 @@ The PDP was ordered via JLC-PCB and hand soldered. After soldering the debug
 header, the board was ready for testing. Using this [ST-Link
 Debugger](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/2548/6827110)
 from Adafruit, the power LED on the PDP lit up indicating that there are no
-shorts. Next was to test the debugger connection using the ST-Link utility.
+shorts. The next step was to test the debugger connection using the ST-Link utility.
 Links to an ST-Link utility for each operating system are listed below.
 
 1. [Open Source ST-Link CLI Tool for Linux/Mac/Windows](https://github.com/stlink-org/stlink)
 2. [ST-Link GUI Utility for Windows (Built by ST)](https://www.st.com/en/development-tools/stsw-link004.html)
 
 Using the ST-Link CLI tool, I ran `st-info --probe` to test the connection,
-which showed that both the programmer and MCU target were found. With the
+which indicated that both the programmer and MCU target were found. With the
 debugger properly configured, the final step was to write a simple test program
 that blinks an LED on the PDP. In order to complete this task in a timely
 manner, I utilized the STM32 hardware abstraction layer (HAL) and project / code
 generation tool
 [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html).
-STM32CubeMX allows user to select any STM32 MCU and configure the clocks and
+STM32CubeMX allows the user to select any STM32 MCU and configure the clocks and
 peripherals in a graphical manner. After configuring your MCU, STM32CubeMX will
 generate a project with all the initialization code corresponding to your
 configuration. Moreover, STM32CubeMX can output multiple project formats from
@@ -192,6 +192,6 @@ development platform. However, the PDP is still far from equivalent to the
 Arduino with respect to ease of use. Specifically, the project creation project
 is more complex and there is no USART or `print()` capability over USB as there
 is with Arduino. The Nucleo development boards manufactured by ST bundle both
-debugging and serial over one USB connection. In future parts we will examine
+debugging and serial over one USB connection. In future posts, we will examine
 how to get these features up and running as well as setting up a more easy to
 use workflow for writing software.
