@@ -27,10 +27,17 @@ analytics: # Google Analytics
 # Build Settings
 markdown: kramdown
 plugins:
+  - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
 
+# Feed settings
+title: BCBlog
+description: A data science blog?
+url: www.benjamincorcoran.com
+
+# Paginate settings
 paginate: 8
 paginate_path: "/page/:num"
 
