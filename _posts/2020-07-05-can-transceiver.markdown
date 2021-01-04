@@ -14,10 +14,10 @@ tags: [CAN Bus, PCB Assembly, Altium Designer, JLCPCB SMT Assembly]
 After soldering the [PDP project](../peterson-dev-platform), it became clear to
 me that some of the devices used on that PCB were becoming impractical to solder
 by hand. Specifically, the 208 pin QFP package of the MCU required a digital
-microscope to properly align on the pads of the PCB. Knowing that I will
+microscope to properly align on the pads of the PCB. Knowing that I will be
 spending more time with these less friendly packages such as QFPs, QFNs and
 BGAs, I started to look into having my bare boards assembled. In the PDP
-project, The bare boards were ordered from JLCPCB, which also an assembly
+project, the bare boards were ordered from JLCPCB, which is also an assembly
 service. The assembly service has a few key limitations which keeps its cost
 low. The most important of these limitations is that JLCPCB only assembles parts
 that they have in stock in a library that is searchable on their
@@ -27,10 +27,10 @@ listed below.
 - All surface mount components must be on one side of the board
 - Through hole parts will not be soldered
 - Board must be at least 20 x 20 mm
-- The components must be from the JLCPCB parts that they keep in stock at their
+- The components must be from the JLCPCB parts that are kept in stock at their
   manufacturing facility.
 - The part being populated on the board must be within the size and clearance
-  constraints given by JLC PCB (Any part in their library will meet
+  constraints given by JLC PCB (any part in their library will meet
   requirements).
 
 In addition to the assembly requirements above, JLCPCB has some manufacturing
@@ -40,7 +40,7 @@ manufacturing limitations and capabilities can be found
 
 # Design
 
-From a design perspective, the CAN Transceiver board (hereby referred to as CT)
+From a design perspective, the CAN Transceiver board (hereby referred to as "CT")
 is trivial. The PCB simply breaks out power and data connections (a total of 4
 wires) of the SN65HVD230DR SMD Transceiver IC. The CT also has the transceiver
 pre-configured with a CAN bus termination resistor, which can be de-soldered if
@@ -50,7 +50,7 @@ to broadcast or receive messages from the bus. If you are unfamiliar with CAN
 bus and its network topology, check out the CAN bus introduction guide I wrote
 for the Queen's Formula team
 [here](https://github.com/qfsae/Q20/blob/master/CAN/docs/can.pdf). Section 1
-covers the basic of CAN from both software and hardware implementation
+covers the basics of CAN from both software and hardware implementation
 perspectives. If you are interested in the the use of differential amplification
 to produce the differential signal and the benefits of differential signalling
 in general, check out a brief <a href="../assets/img/CT/report.pdf"
@@ -82,13 +82,13 @@ specific features and libraries in Altium. Since JLC PCB will only solder a
 specific set of parts, it is very helpful to have a library  with those parts
 instead of finding or manually creating schematic symbols and footprints. The
 Altium library I use can be found [here](https://github.com/actiBMS/JLCSMT_LIB).
-The library does not have all the parts in JLC library but saves much of the
+The library does not have all the parts in the JLC library but saves much of the
 work of finding the appropriate footprints. To accommodate the manufacturing
 constraints of different PCB fabricators, Altium has the Design Rule Check (DRC)
 feature. The design rules define when the check returns errors such as un-routed
 nets or clearance problems. Setting up design rules that match the capabilities
 of JLCPCB ensures that JLC PCB will be able to produce the board you design.
-Luckily, these rules do not need to be entered manually. There is a [repository
+Fortunately, these rules do not need to be entered manually. There is a [repository
 on GitHub](https://github.com/ayberkozgur/jlcpcb-design-rules-stackups), which
 has design rule files tailored to JLC PCB. I imported the design rules for a two
 layer board (since the CT is two layer) by following the tutorial in the [Altium
