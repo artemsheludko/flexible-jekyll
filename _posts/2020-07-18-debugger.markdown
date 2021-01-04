@@ -10,13 +10,20 @@ tags: [black magic probe, ST-Link, debugger, Custom PCB]
 
 # Introduction
 
+In [part 1](../peterson-dev-platform) of the "A Better Arduino" series, I
+designed the simplest possible STM32F7 breakout board. This first iteration PDP
+board is no where near as easy to use as an Arduino. The primary problem that
+the user must first properly wire a debugger to the PDP to flash their code. The
+secondary problem is the lack of serial / USART functionality to do IO with the
+host machine. The goal of the debugger project is to address these issues by
+implementing a debugger on custom circuit board that implements serial
+communication. Such a circuit could later be embedded into an all in one
+development solution with the plug and play functionality of Arduino in
+conjunction with a fully featured debugging suite. I completed the debugger
+project in order for it to be used with the Queen's Formula team. The ultimate
+goal is to lower the barrier to entry of STM32 for new team members so that they
+can leverage all of its extra capability without any added complexity.
 
-
-- Discuss pain points with PDP
-    - Manually connecting the debugger
-    - No USART pass through
-- Want to top arduino functionality by having full debugging in future dev boards
-- Need to test debugger design before embedding it in future designs.
 
 # Design
 
