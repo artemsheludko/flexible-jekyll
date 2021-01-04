@@ -11,3 +11,34 @@ tags: [black magic probe, ST-Link, debugger, Custom PCB]
 # Introduction
 
 POST GOES HERE!!!
+
+- Discuss pain points with PDP
+    - Manually connecting the debugger
+    - No USART pass through
+- Want to top arduino functionality by having full debugging in future dev boards
+- Need to test debugger design before embedding it in future designs.
+
+# Design
+
+- Several Reference designs available online
+    - Link to blog posts on ST-Link debuggers
+    - Discuss Nucleo Board Reference design as main influence
+    - Explain USART pass through and getting UART output from target back to computer over USB
+    - Explain how we can program the MCU on the debugger with the ST-link firmware using the debugger we bought from STM
+    - Broke out the ST-Link to the MCU on the debugger as well as ST-Link lines that go to the target.
+
+## Schematic
+
+- Mention hierarchal schematic design and embed files. Link to Altium documentation about ports and multi-sheet design
+- Altium ports are like net-labels between schematic sheets.
+
+## Layout
+
+- Embed layout here
+
+# Software and Board Bring Up
+
+- Refer to blog posts with downloads to normal ST-Link firmware
+- Discuss issues pulling ST-Link firmware with USART pass through support.
+- Discovery of black magic probe firmware, link to tutorial used to flash BMP firmware.
+- Demo Video and example connection through gdb
