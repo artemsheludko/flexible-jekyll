@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a Custom ST-Link Debugger PCB
+title: "A Better Arduino: Building a Custom Debugger PCB (Part 2)"
 date: 2020-07-18 13:32:20 +0300
 description: An ST-Link and BMP compatible debugger with USART passthrough.
 img: debugger/thumb.jpg # Add image post (optional)
@@ -10,7 +10,7 @@ tags: [black magic probe, ST-Link, debugger, Custom PCB]
 
 # Introduction
 
-POST GOES HERE!!!
+
 
 - Discuss pain points with PDP
     - Manually connecting the debugger
@@ -41,4 +41,5 @@ POST GOES HERE!!!
 - Refer to blog posts with downloads to normal ST-Link firmware
 - Discuss issues pulling ST-Link firmware with USART pass through support.
 - Discovery of black magic probe firmware, link to tutorial used to flash BMP firmware.
-- Demo Video and example connection through gdb
+    - https://microcontrollerelectronics.com/how-to-convert-an-stm32f103c8t6-into-a-black-magic-probe/
+- Demo Video and example connection through gdb, blink an LED on the Mock ECU
