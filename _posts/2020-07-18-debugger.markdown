@@ -61,7 +61,18 @@ two-pin header. On the schematic above, the USART nets are marked by `STLINK_TX`
 and `STLINK_RX` which are connected to PA2 and PA3 corresponding to USART2 on
 the debugger's MCU. With this connection established, the debugger firmware will
 "forward" whatever it receives from the USART on the target MCU to the host
-machine.
+machine. The debug connection to the target is an SWD connection which consists
+of a clock (SWCLK) and data (SWDIO) line. The reference schematic names the pins
+in terms of JTAG and includes some extra connections for full JTAG connectivity.
+It should also be noted that there are two SWD connections on the debugger's
+MCU. The second connection will be used for programming the debugger's MCU with
+the ST-Link firmware. The target connection is differentiated from the debugger
+MCU by leading the target net names with `T_` and the debugger ones with `STM_`.
+Since the pins are named using JTAG convention, we need to find what JTAG pins
+are equivalent to the two SWD connections. As expected, the SWD and JTAG clock
+lines are the same so `TCK = SWCLK`. Moreover, JTAG data and SWD data are
+equivalent, thus, `TMS = SWDIO`. As a result... T_JTMS is the SWDIO connection to the target, T_JTCK is the SWCLK connection etc.
+
 
 - Explain SWD connection to target and net naming scheme
 - Explain SWD connection to debug MCU and how an existing debugger used on the PDP will do the initial flash of ST-Link firmware.
