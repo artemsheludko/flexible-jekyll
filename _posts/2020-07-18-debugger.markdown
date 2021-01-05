@@ -71,10 +71,13 @@ MCU by leading the target net names with `T_` and the debugger ones with `STM_`.
 Since the pins are named using JTAG convention, we need to find what JTAG pins
 are equivalent to the two SWD connections. As expected, the SWD and JTAG clock
 lines are the same so `TCK = SWCLK`. Moreover, JTAG data and SWD data are
-equivalent, thus, `TMS = SWDIO`. As a result... T_JTMS is the SWDIO connection to the target, T_JTCK is the SWCLK connection etc.
+equivalent, thus, `TMS = SWDIO`. As a result, `T_JTMS` is the `SWDIO` connection
+to the target and `T_JTCK` is the target `SWCLK`. Similarly, `STM_JTMS` on the
+reference schematic is the `SWDIO` to the debugger's MCU and `STM_JTCK` is the
+debugger's `SWCLK` connection. Both these SWD connections were copied to the
+debugger schematic.
 
 
-- Explain SWD connection to target and net naming scheme
 - Explain SWD connection to debug MCU and how an existing debugger used on the PDP will do the initial flash of ST-Link firmware.
 - Link to medium article which shows how it can be done over USB (firmware flash that is)
 
