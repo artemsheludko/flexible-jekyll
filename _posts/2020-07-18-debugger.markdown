@@ -120,6 +120,7 @@ including a full pinout for each connector on the bottom of the board and
 Queen's Formula logo. In addition to aesthetic changes in the silkscreen there
 are also some small layout tweaks, the main change being the regulator enable
 jumper, which was removed after the LDO circuit was verified to be correct.
+Another small layout change was moving from a reset jumper to a button.
 
 ![boardFront](../assets/img/debugger/board-front.jpg)
 
