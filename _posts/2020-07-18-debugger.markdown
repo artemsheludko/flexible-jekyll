@@ -76,7 +76,8 @@ to the target and `T_JTCK` is the target `SWCLK`. Similarly, `STM_JTMS` on the
 reference schematic is the `SWDIO` to the debugger's MCU and `STM_JTCK` is the
 debugger's `SWCLK` connection. Both these SWD connections were copied to the
 debugger schematic. Both the target and debugger SWD connections are broken out
-on headers labelled with silkscreen.
+on headers labelled with silkscreen. For the net naming, I used an identical
+convention to the reference design.
 
 With the debugger functionality implemented in the schematic, the final step was
 to power the MCU. 100 nF decoupling capacitors are placed on each VDD pin of the
@@ -108,10 +109,61 @@ internal nets of the sheet symbol.
 
 <div class="altium-ecad-viewer" data-project-src="635e033c-5e88-466e-bfc2-b4e6128dc9e9" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;"></div>
 
-- Add figure of the PCB
-- Explain small design descripencies as prototype version vs final version I gave to the formula team for use.
+The debugger was ordered with the JLCPCB SMT Assembly service, a photo of the
+first prototype is given below. You may notice a few small differences between
+the layout presented in the embedded project compared to the physical board.
+This is because the board is actually an earlier iteration of the debugger for
+personal use and testing. The layout presented above includes a few small
+revisions that I made for the debugger's wider use on the Queen's Formula Team.
+The primary difference lies in the silk screen, which is more descriptive by
+including a full pinout for each connector on the bottom of the board and
+Queen's Formula logo. In addition to aesthetic changes in the silkscreen there
+are also some small layout tweaks, the main change being the regulator enable
+jumper, which was removed after the LDO circuit was verified to be correct.
+
+![boardFront](../assets/img/debugger/board-front.jpg)
+
+All of the surface mount components in the figure above were soldered by JLCPCB
+with the exception of the USB connector, which was not available from JLCPCB and
+done by hand.
 
 # Software and Board Bring Up
+
+The board testing and bring up can be summarized in the steps listed below.
+
+1. Power on Test
+2. ST-Link Firmware Upload
+3. Test Connection to Target
+4. Test USART Passthrough
+
+## Power on Test
+
+The power on test went smoothly on the newly delivered debuggers. A USB
+connector was soldered to each of the 5 units from JLCPCB and then connected to
+a USB port. The 5 and 3.3 V power LEDs lit up properly indicating the
+correctness of the regulator/power circuit. An example of a powered up debugger
+can be found in the thumbnail for this post.
+
+## ST-Link Firmware Upload
+
+The ST-Link firmware is not open sourced by ST. Thus, it can only be obtained by
+pulling the binary off an existing debugger or from another source that has
+already completed this process. This [blog
+post](https://luyao-han.online/diy-stlinkv2-debugger/) has instructions on where
+to find the firmware. The closed source nature of the software prevents me from
+linking to the binary directly. The upload of the debugger firmware worked as
+expected by connecting [this ST-Link
+debugger](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/2548/6827110?s=N4IgTCBcDaIIwFYwA4C0cCcyyoHIBEQBdAXyA)
+to the debug header of the debugger's MCU. After uploading the debugger board
+was connected directly to the computer via USB and detected properly by the
+ST-Link Windows utility provided by ST.
+
+## Testing Connection to a Debug Target
+
+I tested the debugger by connecting it to the [PDP
+Board](../peterson-dev-platform) as a test target. The embedded video below
+shows the debugger successfully connected to the PDP in through ST-Link Utility
+program while also supplying power to the PDP through its 3.3 V output.
 
 - Refer to blog posts with downloads to normal ST-Link firmware
 - Discuss issues pulling ST-Link firmware with USART pass through support.
