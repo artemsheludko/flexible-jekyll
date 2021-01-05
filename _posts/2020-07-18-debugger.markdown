@@ -7,6 +7,7 @@ img: debugger/thumb.jpg # Add image post (optional)
 fig-caption: Running Debugger PCB
 tags: [black magic probe, ST-Link, debugger, Custom PCB]
 ---
+<script src="https://viewer.altium.com/client/static/js/embed.js"></script>
 
 # Introduction
 
@@ -24,15 +25,51 @@ project in order for it to be used with the Queen's Formula team. The ultimate
 goal is to lower the barrier to entry of STM32 for new team members so that they
 can leverage all of its extra capability without any added complexity.
 
-
 # Design
 
-- Several Reference designs available online
-    - Link to blog posts on ST-Link debuggers
-    - Discuss Nucleo Board Reference design as main influence
-    - Explain USART pass through and getting UART output from target back to computer over USB
-    - Explain how we can program the MCU on the debugger with the ST-link firmware using the debugger we bought from STM
-    - Broke out the ST-Link to the MCU on the debugger as well as ST-Link lines that go to the target.
+The design of the debugger was quite straight forward as the ST-Link debugger
+circuit used by STM32 is standardized. The resources I referred to in order to
+produce the schematic are listed below.
+
+- [Nucleo F446RE Development Board Reference Design (built in debugger)](https://www.arrow.com/en/reference-designs/nucleo-f446re-stm32-nucleo-development-board-with-stm32f446ret6-mcu-supports-arduino-and-st-morpho-connectivity/b480d6e4390793108d4bf54c6c0abfae)
+- [Design your own ST-Link/V2
+  Debugger](https://luyao-han.online/diy-stlinkv2-debugger/)
+- [Build a mini ST-LINK/V2 programmer/debugger for the
+  STM32](http://www.micromouseonline.com/2014/01/05/mini-st-linkv2-programmer/)
+
+I mainly used the Nucleo reference design as the other two posts listed above
+did not make use of a UART pass through. All the ST-Link reference designs use
+an STM32F103C8T6, which is a cortex M3 MCU. This MCU is the standard on both
+STM32 development boards and standalone debuggers. A screenshot of the ST-Link
+reference schematic from ST is given below.
+
+<div class="altium-ecad-viewer" data-project-src="28781aba-67df-4157-9060-fc9fb9643811" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;"></div>
+
+The parts of the schematic that require the most attention is the USB
+connection, USART passthrough, Serial Wire Debug (SWD) connection to the target
+MCU and SWD connection to the debugger's MCU, which is used to flash ST-Link
+firmware. The USB connection is not fully shown in the above schematic, but only
+consists of the D+ and D- differential pair needed for USB 2.0. In the final
+debugger design, I added series 22 Ohm resistors and passed the power through a
+ferrite bead to reduce noise. However, I have seen working designs that do not
+include the resistors or ferrite, but it is best practice to include them in
+your USB circuitry. The USB nets are marked as `USB_DP` and `USB_DM`, which are
+connected to PA12 and PA11 respectively on the MCU. The USART passthrough is
+implemented by connecting USART2 on the debugger MCU to a USART on the target
+MCU. In the case of the custom debugger board, USART2 is just broken out to a
+two-pin header. On the schematic above, the USART nets are marked by `STLINK_TX`
+and `STLINK_RX` which are connected to PA2 and PA3 corresponding to USART2 on
+the debugger's MCU. With this connection established, the debugger firmware will
+"forward" whatever it receives from the USART on the target MCU to the host
+machine.
+
+- Explain SWD connection to target and net naming scheme
+- Explain SWD connection to debug MCU and how an existing debugger used on the PDP will do the initial flash of ST-Link firmware.
+- Link to medium article which shows how it can be done over USB (firmware flash that is)
+
+- Explain USART pass through and getting UART output from target back to computer over USB
+- Explain how we can program the MCU on the debugger with the ST-link firmware using the debugger we bought from STM
+- Broke out the ST-Link to the MCU on the debugger as well as ST-Link lines that go to the target.
 
 ## Schematic
 
