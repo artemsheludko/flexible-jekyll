@@ -75,24 +75,41 @@ equivalent, thus, `TMS = SWDIO`. As a result, `T_JTMS` is the `SWDIO` connection
 to the target and `T_JTCK` is the target `SWCLK`. Similarly, `STM_JTMS` on the
 reference schematic is the `SWDIO` to the debugger's MCU and `STM_JTCK` is the
 debugger's `SWCLK` connection. Both these SWD connections were copied to the
-debugger schematic.
+debugger schematic. Both the target and debugger SWD connections are broken out
+on headers labelled with silkscreen.
 
+With the debugger functionality implemented in the schematic, the final step was
+to power the MCU. 100 nF decoupling capacitors are placed on each VDD pin of the
+debugger's MCU. The input voltage from the USB connection is 5 V and the MCU
+logic level is 3.3 V. Thus, I selected an LDO for voltage regulation that JLCPCB
+stocks in their library so I could send the final board out for assembly. To
+learn more about JLCPCB's SMT assembly service, check out my post on using the
+service [here](../can-transceiver).
 
-- Explain SWD connection to debug MCU and how an existing debugger used on the PDP will do the initial flash of ST-Link firmware.
-- Link to medium article which shows how it can be done over USB (firmware flash that is)
+## Project Viewer
 
-- Explain USART pass through and getting UART output from target back to computer over USB
-- Explain how we can program the MCU on the debugger with the ST-link firmware using the debugger we bought from STM
-- Broke out the ST-Link to the MCU on the debugger as well as ST-Link lines that go to the target.
+Below is embedded view of the debugger project which includes the schematic
+documents, PCB layout and bill of materials. The raw Altium Designer files can
+be found [here](https://github.com/ethanmpeterson/boards/tree/main/Debugger).
+The structure of the debugger Altium project differs from my previous posts as
+it uses multiple schematic sheets. This is known as a hierarchal schematic
+design. Each sheet contains a sub-circuit which is tied to other sub-circuits in
+the parent schematic sheet, which allows for functionality to be divided and
+organized in smaller schematic documents for larger designs. The sub-circuits
+are tied together using
+[ports](https://www.altium.com/documentation/altium-designer/sch-obj-portport-ad)
+and [sheet
+symbols](https://www.altium.com/documentation/altium-designer/sch-obj-sheetsymbolsheet-symbol-ad#:~:text=A%20sheet%20symbol%20is%20an,a%20multi%2Dsheet%20hierarchical%20design.).
+A port is similar to a net label, but is used for making connections between
+schematic sheets instead of normal net labels whose scope is limited to the
+given sheet. Sheet symbols are used to to take a circuit in another sheet and
+place it in the current schematic. Ports are then used to connect to the
+internal nets of the sheet symbol.
 
-## Schematic
+<div class="altium-ecad-viewer" data-project-src="635e033c-5e88-466e-bfc2-b4e6128dc9e9" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;"></div>
 
-- Mention hierarchal schematic design and embed files. Link to Altium documentation about ports and multi-sheet design
-- Altium ports are like net-labels between schematic sheets.
-
-## Layout
-
-- Embed layout here
+- Add figure of the PCB
+- Explain small design descripencies as prototype version vs final version I gave to the formula team for use.
 
 # Software and Board Bring Up
 
