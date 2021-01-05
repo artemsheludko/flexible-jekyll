@@ -165,8 +165,37 @@ Board](../peterson-dev-platform) as a test target. The embedded video below
 shows the debugger successfully connected to the PDP in through ST-Link Utility
 program while also supplying power to the PDP through its 3.3 V output.
 
-- Refer to blog posts with downloads to normal ST-Link firmware
-- Discuss issues pulling ST-Link firmware with USART pass through support.
-- Discovery of black magic probe firmware, link to tutorial used to flash BMP firmware.
-    - https://microcontrollerelectronics.com/how-to-convert-an-stm32f103c8t6-into-a-black-magic-probe/
-- Demo Video and example connection through gdb, blink an LED on the Mock ECU
+<iframe src="https://drive.google.com/file/d/1P6W0583n7_XC3CLpGL4zYS5mryCeblrh/preview" width="640" height="480"></iframe>
+
+## Testing the USART Passthrough
+
+Unfortunately, the initial USART passthrough test with ST-Link firmware did not
+work. I subsequently discovered that there is a different ST-Link firmware
+binary needed to support the USART passthrough. Due to the firmware being closed
+source, my only option was to pull it off a development board that already had
+the firmware since I was unable to fnd it online. A comprehensive series of blog
+posts on capturing the ST-Link with COM port support can be found
+[here](https://hackaday.com/2016/12/10/reverse-engineering-an-st-link-programmer/).
+The post mentions a way of getting equivalent functionality without ST-Link at
+all through the [Black Magic
+Probe](https://hackaday.com/2016/12/02/black-magic-probe-the-best-arm-jtag-debugger/)
+project (Hereby referred to as BMP). The BMP project is open source and supports
+USART passthrough. Conveniently, the project already had a build profile for
+turning ST-Link debuggers into BMPs. I followed a
+[tutorial](https://microcontrollerelectronics.com/how-to-convert-an-stm32f103c8t6-into-a-black-magic-probe/)
+and uploaded the BMP firmware to my debugger board. Unfortunately, only the
+USART passthrough worked but not debugging and upload. After probing my board, I
+found that the BMP firmware uses different pin assignments for the SWD pins.
+Specifically, they use a different pin for clock. Since the project is open
+source, I modified the pin definitions and recompiled the firmware. The final
+result is a fully working board with serial and debug support. For those curious
+about the small change I made to the code, you can see the commit diff on my
+fork of the BMP repository
+[here](https://github.com/qfsae/blackmagic/commit/8106693f8d476278377214010e37133a6bbbda41).
+
+# Conclusion
+
+Overall, the debugger project is a great step towards an easy to use development
+platform built on top of STM32. Future posts will involve integrating the
+debugger into STM32 development boards and setting up a software workflow with
+the black magic probe debugger.
