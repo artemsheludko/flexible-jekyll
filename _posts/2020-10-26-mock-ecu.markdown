@@ -11,4 +11,93 @@ tags: [CAN Bus, PCB Assembly, Altium Designer, Current Sensing, Power Monitoring
 
 # Introduction
 
-POST GOES HERE
+- Formula Use Case
+    - Most embedded software on the team interacts with our Engine Control Unit
+      (ECU) and Power Distribution Module (PDM).
+    - Both devices emit CAN messages with important information. For example the
+      ECU will tell you things about fuel, RPM and engine related info while the
+      PDM will allow for reading battery voltage and the voltage at other
+      outputs.
+    - The goal of the Mock ECU is to have a device that team members can use off
+      site which emulates the CAN output of the ECU and PDM. Since access to
+      traditional team facilities is unavailable due to the COVID-19 pandemic.
+    - The Mock ECU solves these issues by providing a fully featured CAN bus
+      development board with two CAN bus outputs and power monitoring
+      capabilities.
+    - The Mock ECU project (hereby referred to as the ME) can be connected to a
+      team members project for both CAN bus testing and power monitoring.
+    - The power monitoring is implemented through a current sensor at the 12V
+      output of the ME, this 12 V output emulates a 12 V power input that would
+      be available when hooking up a device on the car. The current sensor along
+      with a voltage probe allows for a power calculation by `P=VI`.
+    - This power data can be stored on the MCU so that the project developer can
+      get an idea of their project's efficiency and what impact it will have on
+      the vehicle's battery life.
+    - Monitoring power consumption is part of broader goal on formula team to
+      improve data acquisition capability with more sensors on the car and new
+      data for other sub teams to make use of as well.
+    - Implications on elec team are big given that we are running out of
+      bandwidth to drive more data over our single CAN bus, which is part of the
+      reasoning behind moving to STM32 and potentially two full CAN buses.
+
+# Design
+
+- Break down each sub circuit in the mock ECU
+    - Buck Regulator from 12 - 5 V
+        - Explain difference between linear and switch regulators
+        - Wanted to remove heat produced by 12 -> 5 V LDO.
+        - Provides reference design for rest of team to use.
+        - Made use of TI webench for simulation and design
+        - Selected a DC / DC converter that was carried by JLC PCB
+    - LDO circuit
+        - Needed 3.3 for the MCU / CAN transceivers but 5 V for the current sensor
+    - MCU Circuit
+        - Followed Datasheet for power up info and bypass caps
+        - Selected boot mode explaination
+        - Added SWD header and USART header to properly connect to my debugger design (link to debugger post).
+        - Added Clock source such that we use full 180 Mhz
+        - Explain voltage dividers for reading 12 V input voltage 12 -> 3.3 mapping
+    - Current Monitor
+        - Set up as a hall effect sensor
+        - force 12 V through the sensor then to the output
+        - Explain voltage divider for reading output 5->3.3 V mapping
+    - CAN Circuitry
+        - Identical circuit to the CAN transceiver duplicated twice
+        - Connected to CAN controller outputs on the MCU
+        - Link to CAN transceiver post for more detail
+
+## Project Viewer
+
+- Embed the Altium project here
+- Explain discripencies between photo of the board and CAD layout
+    - Made some silk screen tweaks and swapped inductor
+
+## Manufacturing
+- Used PCBWAY for fab
+- Board was initially designed to use JLC PCB for fab but they were out of stock on the MCU I picked.
+- Similar Process to ordering with JLC PCB but PCBWAY will let you pick any part you like (overall more expensive than JLC)
+
+# Software and Board Bring Up
+- The Mock ECU has various components that need to be tested
+
+- Buck Converter Circuit
+    - Is the output 5 V?
+    - Is the voltage ripple reasonable?
+- LDO Circuit
+    - 3.3 V output working?
+- MCU Circuit
+    - Flash the MCU using the debugger?
+    - Crystal Working?
+    - USART working through the debugger for print statements?
+    - CAN message transmission to another device like Arduino
+    - ADC and current read test.
+        - Use fixed value resistors and compare current reading to hand calculated.
+
+- For software, discuss usage of arduino HAL through PlatformIO
+    - Nucleo board with same MCU has arduino support and so does the ME project
+    - Mention how full software stack will be covered in a future post in the "Better Arduino Series"
+
+# Conclusion
+- Mention how this is the primary dev platform I have been using
+- Will serve as a basis for a culminating dev board in the better arduino series
+- Important step in making a board that actually serves a purpose on top of STM32 hardware
