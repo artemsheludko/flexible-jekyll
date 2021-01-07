@@ -11,34 +11,29 @@ tags: [CAN Bus, PCB Assembly, Altium Designer, Current Sensing, Power Monitoring
 
 # Introduction
 
-- Formula Use Case
-    - Most embedded software on the team interacts with our Engine Control Unit
-      (ECU) and Power Distribution Module (PDM).
-    - Both devices emit CAN messages with important information. For example the
-      ECU will tell you things about fuel, RPM and engine related info while the
-      PDM will allow for reading battery voltage and the voltage at other
-      outputs.
-    - The goal of the Mock ECU is to have a device that team members can use off
-      site which emulates the CAN output of the ECU and PDM. Since access to
-      traditional team facilities is unavailable due to the COVID-19 pandemic.
-    - The Mock ECU solves these issues by providing a fully featured CAN bus
-      development board with two CAN bus outputs and power monitoring
-      capabilities.
-    - The Mock ECU project (hereby referred to as the ME) can be connected to a
-      team members project for both CAN bus testing and power monitoring.
-    - The power monitoring is implemented through a current sensor at the 12V
-      output of the ME, this 12 V output emulates a 12 V power input that would
-      be available when hooking up a device on the car. The current sensor along
-      with a voltage probe allows for a power calculation by `P=VI`.
-    - This power data can be stored on the MCU so that the project developer can
-      get an idea of their project's efficiency and what impact it will have on
-      the vehicle's battery life.
-    - Monitoring power consumption is part of broader goal on formula team to
-      improve data acquisition capability with more sensors on the car and new
-      data for other sub teams to make use of as well.
-    - Implications on elec team are big given that we are running out of
-      bandwidth to drive more data over our single CAN bus, which is part of the
-      reasoning behind moving to STM32 and potentially two full CAN buses.
+The purpose of the Mock ECU (hereby referred to as the ME project) is to assist
+with remote software and hardware work on the Queen's Formula team. Most
+embedded software for the racecar interacts with the Engine Control Unit (ECU)
+and the Power Distribution Module (PDM). Both devices employ CAN bus as their
+primary communication interface with other electronics on the car, which include
+the dashboard, sensors and steering wheel. The ECU broadcasts engine information
+onto the CAN bus such as RPM, temperatures etc. The PDM provides information on
+the car's power consumption with metrics such as battery voltage and current
+draw on the PDM's various outputs. The objective in constructing a Mock ECU is
+to build a device with fully featured CAN bus outputs and power monitoring
+capabilities to emulate the same environment a team member's project would be
+connected to on the car. The ME has an on board MCU which can be programmed to
+emit CAN messages with the same format and identifiers as the ECU and PDM. Power
+consumption can be measured from the 12 V output of the ME which matches a the
+12 V outputs available from the real PDM. Characterizing power consumption is
+important on custom electronics as the car's battery can be drained on the car
+very quickly. Moreover, the team has transitioned to a small single cylinder
+motorcycle engine whose alternator does not support the same power consumption.
+Reducing and fully characterizing the power consumption of the car is part of a
+broader goal of the electrical team to improve data acquisition. Currently the
+car runs a single CAN bus but the ME accommodates two CAN buses since it will
+likely be required as more sensors and more data needs be moved between device
+during operation.
 
 # Design
 
