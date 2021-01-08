@@ -138,42 +138,119 @@ found in Power.SchDoc.
 
 ## MCU Circuit
 
-The MCU used on the ME is an STM32F446RE. I selected this MCU as it has two
-built in CAN controllers and is use on the Nucleo F446RE development board from
-STM. Selecting the same MCU as on the development is useful as it makes code
-completely portable between the Nucleo and ME. Additionally, software support
-for Arduino libraries that STM has provided on the Nucleo board can also be
-taken advantage of on the ME.
+The MCU used on the ME is an
+[STM32F446RE](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html).
+I selected this MCU as it has two built in CAN controllers and is use on the
+Nucleo F446RE development board from STM. Selecting the same MCU as on the
+development is useful as it makes code completely portable between the Nucleo
+and ME. Additionally, software support for Arduino libraries that STM has
+provided on the Nucleo board can also be taken advantage of on the ME. The MCU
+is powered by the 3.3 V output of the LDO circuit. Each voltage input is
+decoupled with a 100 nF capacitor. Additional bulk capacitors are also employed
+as specified in the MCU's
+[datasheet](https://www.st.com/resource/en/datasheet/stm32f446re.pdf). The
+`BOOT0` pin is also pulled down to ground to configure the MCU to boot up from
+flash memory. In order to obtain smooth firmware development experience with the
+ME, compatibility with the [debugger](../debugger) I designed was implemented.
+Thus, I broke out a USART connection and SWD debug lines to go to the debugger.
+The SWD and USART pin numbers were collected from the datasheet. In the case of
+the USART, I selected USART2 since the nucleo board also connected USART2 to its
+integrated debugger. As expected, when using the `Serial` Arduino library with
+the Nucleo board, it automatically maps to USART2. Thus, by using USART2 on the
+ME, we ensure better ease of use and compatibility with the Arduino hardware
+abstraction layer for which team members are most familiar. Moreover, the Nucleo
+development board uses an 8 Mhz crystal to produce a maximum 180 Mhz system
+clock via various PLLs inside the MCU. The Mock ECU also uses a 8 Mhz clock
+input so that the same startup code used for the Nucleo yields the same system
+clock on the Mock ECU. In addition to the debug circuitry, the MCU is also
+fitted with two status LEDs connected to GPIO pins. The remaining connections to
+the MCU are Altium ports which link to the CAN, current sensing and power
+schematics.
 
-    - MCU Circuit
-        - Followed Datasheet for power up info and bypass caps
-        - Selected boot mode explaination
-        - Added SWD header and USART header to properly connect to my debugger design (link to debugger post).
-        - Added Clock source such that we use full 180 Mhz
-        - Explain voltage dividers for reading 12 V input voltage 12 -> 3.3 mapping
-    - Current Monitor
-        - Set up as a hall effect sensor
-        - force 12 V through the sensor then to the output
-        - Explain voltage divider for reading output 5->3.3 V mapping
-    - CAN Circuitry
-        - Identical circuit to the CAN transceiver duplicated twice
-        - Connected to CAN controller outputs on the MCU
-        - Link to CAN transceiver post for more detail
+## Current Monitor
+
+The current sensing capability of the ME is implemented using a hall effect
+sensor. The sensor output is a voltage which varies with current through the
+input terminals of the device. The sensor used is the
+[ACS712ELCTR-20A-T](https://www.digikey.ca/en/products/detail/allegro-microsystems/ACS712ELCTR-20A-T/1284594).
+Hall effect sensors work by sensing the magnetic field produced by a current
+carying wire and deriving the current from the magnitude of the magnetic field.
+As a result, the hall effect sensor has the advantage of not needing the current
+sense resistors required in amplifier based solutions. For additional
+information on how hall effect and other types of current sensors function,
+check out this
+[resource](https://www.digikey.ca/en/articles/the-basics-of-current-sensors).
+
+The current sensor is configured to monitor the 12 V rail of the ME. Thus, the
+input voltage is directed through the current sensor and to the board's 12 V
+output connector. In order to perform an accurate power calculation with a
+varying input voltage, the 12 V input is connected to an ADC input of the MCU.
+However, we cannot sample a 12 V value directly without frying our MCU which can
+only handle up to 3.6 V inputs. The problem is resolved using a voltage divider,
+which maps the 12 V input voltage to a 0 - 3.3 V range. The voltage divider is
+found in the Power.SchDoc file within the Project Viewer section of this post.
+Using the ADC of the MCU, we can sample the voltage from the voltage divider and
+back substitute accordingly to obtain the source voltage that would've yielded
+divider output sampled. Voltage divider formulas without loading can be used as
+the ADC input of the MCU should provide such a large input resistance that any
+resulting deviation in the divider output voltage would be negligible. Obtaining
+the current reading from the sensor is a similar process. Since the sensor
+operates at the 5 V logic level, a voltage is employed in the same manner to map
+to a value between 0 and 3.3 V for the ADC of the MCU. The output voltage of the
+sensor increases linearly with current. However, 0 current does not mean 0
+voltage. The
+[datasheet](https://www.allegromicro.com/~/media/Files/Datasheets/ACS712-Datasheet.ashx)
+defines the zero current output voltage as `VCC x 0.5`, which is approximately
+2.5 V for the 5 V chip supply voltage. The characteristic performance plots
+indicate that the linear relation between current and output voltage is such
+that for every 1 A increase in current, the voltage goes up by a 1/6 V. This
+math can be implemented in software to derive the current from the ADC's voltage
+reading. It should be noted that the voltage read must first be adjusted based
+off the voltage divider. The final power calculation can be performed by simply
+computing `P=VI` using the input voltage reading and calculated current value.
+
+## CAN Circuitry
+
+CAN bus is implemented on the ME using two CAN transceivers corresponding the
+two CAN controllers available on the MCU. The CAN circuit is located in
+CAN.SchDoc within the Project Viewer section. The transceiver circuit is
+identical to the circuit that was tested and working in the [CT
+Project](../can-transceiver) with the added benefit of using parts in the JLCPCB
+library. The transceivers are connected to the broader circuit using Altium's
+harness feature which groups multiple nets and allows you to connect them to a
+single port.
 
 ## Project Viewer
 
-- Embed the Altium project here
-- Explain discripencies between photo of the board and CAD layout
-    - Made some silk screen tweaks and swapped inductor
+Embedded below is the Altium project view of the ME project. the embedded viewer
+contains all the schematics that constitute the multi-sheet design as well as
+the PCB layout, BOM and 3D renders.
 
 <div class="altium-ecad-viewer" data-project-src="febd9c29-b45b-4281-9250-91afe21ee7f6" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;"></div>
 
+Given below is a photo is the PCB powered up and running. As in past posts,
+there are some small tweaks I have made to the layout in Altium since receiving
+the first batch of prototypes. I swapped the inductor for one that is physically
+smaller and easier to find suppliers for. I also added some additional silk
+screen for the USART and voltage output headers.
+
+![boardTop](../assets/img/ME/boardTop.jpg)
+
 ## Manufacturing
-- Used PCBWAY for fab
-- Board was initially designed to use JLC PCB for fab but they were out of stock on the MCU I picked.
-- Similar Process to ordering with JLC PCB but PCBWAY will let you pick any part you like (overall more expensive than JLC)
+
+The original intention for the ME was to manufacture through JLCPCB's SMT
+assembly service. However, the STM32F446RE MCU I selected was not in stock at
+the time I was looking to order. Being impatient, I opted to use
+[PCBWAY](https://www.pcbway.com/) for both fabrication and assembly. Unlike
+JLCPCB, PCBWAY will order any part of the user's choice so long as it is within
+their assembly capability. Overall, the ordering process was similar to JLCPCB
+involving the submission of the BOM, pick and place, and gerber files to
+PCBWAY's web UI. The pricing was higher than that of JLCPCB likely due to the
+open ended parts selection. However, PCBWAY is still far cheaper than the
+alternatives I have seen thus far.
 
 # Software and Board Bring Up
+
 - The Mock ECU has various components that need to be tested
 
 - Buck Converter Circuit
