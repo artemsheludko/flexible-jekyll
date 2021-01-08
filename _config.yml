@@ -1,22 +1,22 @@
 title: Anamii's Blog
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Anamii posts insightful and inspiring articles on different personal
+  and spiritual development related topics, such as transformation
+  journies, yoga, meditation, vedic teachings, etc.
 permalink: ':title/'
 baseurl: "" # the subpath 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author:  # add your name
+author: Anamii  # add your name
 author-img: anamii-logo.png # add your photo
-about-author: Here we post inspiring and motivating content on spiritual topics. # add description
-social-twitter: AnamiiOfficial# add your Twitter handle
-social-facebook: anamiiofficial# add your Facebook handle
-social-github:  # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: contact@anamii.com# add your Email address
+about-author: Here we post inspiring and insightful  content on different personal development and spiritual topics. # add description
+social-twitter: AnamiiOfficial
+social-facebook: anamiiofficial
+social-linkedin: anamii
+social-instagram: anamiiofficial
+social-email: contact@anamii.com
 
 # Disqus
 discus-identifier: anamii # add your discus identifier
