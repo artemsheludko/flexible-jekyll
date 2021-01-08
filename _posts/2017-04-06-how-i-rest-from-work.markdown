@@ -3,7 +3,7 @@ layout: post
 title: I am Ansuya, the woman behind Anamii and this is my story...
 date: 2021-01-05 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: blog1-imag1.png # Add image post (optional)
+img: blog1-image1.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Transformation, Yoga, Meditation]
 ---
