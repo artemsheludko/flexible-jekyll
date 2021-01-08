@@ -231,7 +231,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: 'Futura', sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -773,7 +773,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Futura', sans-serif;
   color: #515151;
   background-color: #fbfbfb;
   margin: 0;
@@ -969,7 +969,7 @@ table tfoot td {
 }
 
 .about .author-name {
-  font-family: 'PT Serif', serif;
+  font-family: 'Futura', serif;
   margin: 0 0 10px;
   position: relative;
   padding-bottom: 15px;
@@ -1158,11 +1158,11 @@ footer .copyright {
 .post .post-content .post-title {
   margin: 0 0 10px;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .post .post-content .post-title a {
-  font-family: 'PT Serif', serif;
+  font-family: 'Futura', serif;
   text-decoration: none;
   color: #263959;
 }
