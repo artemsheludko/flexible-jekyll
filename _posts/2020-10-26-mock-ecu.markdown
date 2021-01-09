@@ -44,47 +44,48 @@ of the ME schematic design.
 ## Buck Regulator
 
 In order to obtain a 5 V power supply from the 12 V input, a buck regulator is
-employed. In past designs, I have employed so called "LDO" regulators. LDO regulators are
-"low drop out" regulators. This drop out voltage describes the input
-voltage threshold that when receeded, the regulator can no longer output the correct voltage. For example, a
-regulator with 6.5 V drop out voltage will not have the correct output if less
-then 6.5 V is given as input. LDOs are synonymous with linear regulators, which
-make use of semiconductor based circuitry to output a fixed voltage emitting
-unused power as heat, making them very inefficient. Regulating from a large
-voltage like 12 V down to 5 V will produce a significant amount of heat and
-possibly destroy the regulator if the current draw limits are exceeded. In order
-to make the 5 V and 3.3 V rails of the ME available to team members with
-reasonable current draw limits, a switching regulator is used. Switching
-regulators take a different approach from their linear counterparts by producing
-the desired output voltage by turning the output on and off at high frequency, thus
-leading to an average voltage output that matches the target. Feedback resistors
-are connected to the regulator IC to adjust the switching frequency in real time
-to maintain the correct output voltage depending on the load. In order to obtain
-a (mostly) smooth DC output from the switching output of the regulator, an LC
-circuit is employed to clean up the output signal with series inductor and
-several bypass capacitors. The operation of a switching regulator is very much
-the same as its software counterpart which is using pulse width modulation to
-emulate a lower voltage. An example is the `analogWrite()` function available on
-the Arduino.
+employed. In past designs, I have employed so called "LDO" regulators. LDO
+regulators are "low drop out" regulators. This drop out voltage describes the
+input voltage threshold that when receded, the regulator can no longer output
+the correct voltage. For example, a regulator with 6.5 V drop out voltage will
+not have the correct output if less then 6.5 V is given as input. LDOs are
+synonymous with linear regulators, which make use of semiconductor based
+circuitry to output a fixed voltage emitting unused power as heat, making them
+very inefficient. Regulating from a large voltage like 12 V down to 5 V will
+produce a significant amount of heat and possibly destroy the regulator if the
+current draw limits are exceeded. In order to make the 5 V and 3.3 V rails of
+the ME available to team members with reasonable current draw limits, a
+switching regulator is used. Switching regulators take a different approach from
+their linear counterparts by producing the desired output voltage by turning the
+output on and off at high frequency, thus leading to an average voltage output
+that matches the target. Feedback resistors are connected to the regulator IC to
+adjust the switching frequency in real time to maintain the correct output
+voltage depending on the load. In order to obtain a (mostly) smooth DC output
+from the switching output of the regulator, an LC circuit is employed to clean
+up the output signal with series inductor and several bypass capacitors. The
+operation of a switching regulator is very much the same as its software
+counterpart which is using pulse width modulation to emulate a lower voltage. An
+example is the `analogWrite()` function available on the Arduino.
 
 The final buck converter design placed on the ME had two main requirements. The
-first requirement was that the switching controller IC used needed to be
-within the JLC part library. The second requirement was that the voltage ripple be small enough
-for the 5 V output to be a viable power supply to the hall effect current
-sensor. The voltage ripple can be thought of as the small AC component of the
-regulator output. For example, the output voltage of a 5 V regulator with 200 mV
-ripple can be thought of as 5 V +- 200 mV. The hall effect current sensor is
-operational between 4.5 and 5.5 V, meaning the converter could do a poor job and
-the sensor could still function. Voltage ripple is not a concern for the 3.3 V
-rail since it is obtained from a linear LDO, which have smaller ripple voltages.
-However, buck converters can have near perfect DC outputs as well, depending on
-the load. If the current draw from the output is steady-state (constant), the
-switching regulator can quickly lock onto the correct voltage output via the
-feedback from the output. The circuit used on the ME was tested through
-simulation to only have 3 mV of ripple at steady state with an average voltage
-output of 4.96 V, making it more than suitable to power the hall effect sensor
-and LDO to provide a 3.3 V rail to the MCU. The design and simulation process
-for the buck converter circuit was carried out using the [TI WEBENCH Power
+first requirement was that the switching controller IC used needed to be within
+the JLC part library. The second requirement was that the voltage ripple be
+small enough for the 5 V output to be a viable power supply to the hall effect
+current sensor. The voltage ripple can be thought of as the small AC component
+of the regulator output. For example, the output voltage of a 5 V regulator with
+200 mV ripple can be thought of as 5 V +- 200 mV. The hall effect current sensor
+is operational between 4.5 and 5.5 V, meaning the converter could do a poor job
+and the sensor could still function. Voltage ripple is not a concern for the 3.3
+V rail since it is obtained from a linear LDO, which have smaller ripple
+voltages. However, buck converters can have near perfect DC outputs as well,
+depending on the load. If the current draw from the output is steady-state
+(constant), the switching regulator can quickly lock onto the correct voltage
+output via the feedback from the output. The circuit used on the ME was tested
+through simulation to only have 3 mV of ripple at steady state with an average
+voltage output of 4.96 V, making it more than suitable to power the hall effect
+sensor and LDO to provide a 3.3 V rail to the MCU. The design and simulation
+process for the buck converter circuit was carried out using the [TI WEBENCH
+Power
 Designer](https://www.ti.com/design-resources/design-tools-simulation/webench-power-designer.html).
 Webench is a web based tool that can generate buck and boost converter designs
 based off of user specifications. In the case of the ME, I specified that the
@@ -99,27 +100,29 @@ Webench and the steady state simulation plot of voltage output over time.
 ![WBCircuit](../assets/img/ME/WBCircuit.jpg)
 ![simChart](../assets/img/ME/simChart.png)
 
-The TI Webench software provides a great starting point for power circuit design,
-but it is not perfect. I have seen the software provide strange outputs for
-certain regulator specifications such as capacitors that are multiple farads in
-size and cannot physically be implemented on a PCB. Thus, it is of utmost
+The TI Webench software provides a great starting point for power circuit
+design, but it is not perfect. I have seen the software provide strange outputs
+for certain regulator specifications such as capacitors that are multiple farads
+in size and cannot physically be implemented on a PCB. Thus, it is of utmost
 importance to consult the datasheet in these cases and tweak the output to a
 more practical configuration. It should also be noted that the generated designs
 do not handle the wiring of the regulator enable pins if they exist. In the case
 of the [TPS54331](https://www.ti.com/product/TPS54331) used on the ME, the
 regulator will be enabled automatically with the pin left floating, but can also
-be connected to a voltage divider to program an undervoltage lockout. Undervoltage
-is a case where the input voltage to the regulator is too low to properly
-produce the correct output, which in our case is 11 V. The voltage divider
-connected to the enable pin can ensure that when there is an undervoltage,
-the regulator will be disabled. The resistors for the voltage divider are selected such that the regulator is disabled when input voltage goes below the 11 V minimum. The final schematic for the buck converter in Altium can
+be connected to a voltage divider to program an undervoltage lockout.
+Undervoltage is a case where the input voltage to the regulator is too low to
+properly produce the correct output, which in our case is 11 V. The voltage
+divider connected to the enable pin can ensure that when there is an
+undervoltage, the regulator will be disabled. The resistors for the voltage
+divider are selected such that the regulator is disabled when input voltage goes
+below the 11 V minimum. The final schematic for the buck converter in Altium can
 be seen in the Project Viewer section of the post in the Buck.SchDoc file. When
 specifying the voltage divider, I made use of [TI's
 datasheet](https://www.ti.com/lit/ds/symlink/tps54331.pdf?ts=1610127347457&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS54331)
 which provided formulas to calculate the resistor values found on page 11. These
-formulas differed slightly from normal voltage divider calculations due to
-some specific current requirements and pull resistors already present and
-internal to the device.
+formulas differed slightly from normal voltage divider calculations due to some
+specific current requirements and pull resistors already present and internal to
+the device.
 
 ## LDO Circuit
 
@@ -172,7 +175,7 @@ sensor. The sensor output is a voltage which varies with current through the
 input terminals of the device. The sensor used is the
 [ACS712ELCTR-20A-T](https://www.digikey.ca/en/products/detail/allegro-microsystems/ACS712ELCTR-20A-T/1284594).
 Hall effect sensors work by sensing the magnetic field produced by a current
-carying wire and deriving the current from the magnitude of the magnetic field.
+carrying wire and deriving the current from the magnitude of the magnetic field.
 As a result, the hall effect sensor has the advantage of not needing the current
 sense resistors required in amplifier based solutions. For additional
 information on how hall effect and other types of current sensors function,
@@ -188,15 +191,15 @@ only handle up to 3.6 V inputs. The problem is resolved using a voltage divider,
 which maps the 12 V input voltage to a 0 - 3.3 V range. The voltage divider is
 found in the Power.SchDoc file within the Project Viewer section of this post.
 Using the ADC of the MCU, we can sample the voltage from the voltage divider and
-back substitute accordingly to obtain the source voltage that would've yielded the
-divider output sampled. Voltage divider formulas without loading can be used as
-the ADC input of the MCU should provide such a large input resistance that any
-resulting deviation in the divider output voltage would be negligible. Obtaining
-the current reading from the sensor is a similar process. Since the sensor
-operates at the 5 V logic level, a voltage is employed in the same manner to map
-to a value between 0 and 3.3 V for the ADC of the MCU. The output voltage of the
-sensor increases linearly with current. However, 0 current does not mean 0
-voltage. The
+back substitute accordingly to obtain the source voltage that would've yielded
+the divider output sampled. Voltage divider formulas without loading can be used
+as the ADC input of the MCU should provide such a large input resistance that
+any resulting deviation in the divider output voltage would be negligible.
+Obtaining the current reading from the sensor is a similar process. Since the
+sensor operates at the 5 V logic level, a voltage is employed in the same manner
+to map to a value between 0 and 3.3 V for the ADC of the MCU. The output voltage
+of the sensor increases linearly with current. However, 0 current does not mean
+0 voltage. The
 [datasheet](https://www.allegromicro.com/~/media/Files/Datasheets/ACS712-Datasheet.ashx)
 defines the zero current output voltage as `VCC x 0.5`, which is approximately
 2.5 V for the 5 V chip supply voltage. The characteristic performance plots
