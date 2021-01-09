@@ -5,7 +5,7 @@ date: 2021-01-05 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: blog1-image1.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [Transformation, Yoga, Meditation]
+tags: [Transformation, Yoga, Meditation, Workflow]
 ---
 I am Indian, was born in the USA, shortly after which my family moved back to India, where I spent most of my life so far. Introverted and reclusive by nature, I spent most of my childhood by myself, writing poems, making art and learning Science. I had a happy childhood, but like many of you, witnessed problems in my family, primarily of which being my mother’s declining health. I left for the USA where I pursued a Masters in Computer Science, and then went on to work for the biggest tech company in Silicon Valley. During those years, I would travel to India and spent every visit making rounds of the hospital for my mother. Witnessing her declining health and eventual demise, along with other close members of her family, I did not realize that it had negatively impacted my mental health considerably. 
 
