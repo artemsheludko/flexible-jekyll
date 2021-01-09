@@ -932,12 +932,12 @@ table tfoot td {
   bottom: 0;
   width: 240px;
   height: 100%;
-  padding: 20px 10px;
+  padding: 10px 10px;
   background-color: #ffffff;
 }
 
 .about {
-  margin: 0 0 40px;
+  margin: 0 0 20px;
   text-align: center;
 }
 

@@ -3,12 +3,19 @@ layout: default
 ---
 
 <aside class="sidebar">
+  
   <header>
+    <nav class="navbar">
+      <ul class="tags">
+          <li><a href="https://anamii.com"><img src="{{site.baseurl}}/assets/img/anamii-typeface-1.png" alt="anamii.com" style="max-height: 30px;"></a></li>
+      </ul>
+    </nav>
+    <br/>
     <div class="about">
       <div class="cover-author-image">
-        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
+        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="Back to Blog"></a>
       </div>
-      </br>
+      <br/>
       <p>{{site.about-author}}</p>
     </div>
   </header> <!-- End Header -->
