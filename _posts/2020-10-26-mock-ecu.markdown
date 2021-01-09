@@ -232,7 +232,9 @@ Given below is a photo is the PCB powered up and running. As in past posts,
 there are some small tweaks I have made to the layout in Altium since receiving
 the first batch of prototypes. I swapped the inductor for one that is physically
 smaller and easier to find suppliers for. I also added some additional silk
-screen for the USART and voltage output headers.
+screen for the USART and voltage output headers. The only schematic change is
+the addition of CAN termination resistors as convenience for so that they are
+not needed externally.
 
 ![boardTop](../assets/img/ME/boardTop.jpg)
 
@@ -251,26 +253,63 @@ alternatives I have seen thus far.
 
 # Software and Board Bring Up
 
-- The Mock ECU has various components that need to be tested
+The process of testing the prototypes went smoothly. The assembly quality from
+PCBWAY was consistently strong with no issues on any of the 5 boards I received.
+The testing I completed for each board can be broken up into 4 categories; power
+up, debugging, current sensing and CAN. The sub headings below describe how each
+test was carried out.
 
-- Buck Converter Circuit
-    - Is the output 5 V?
-    - Is the voltage ripple reasonable?
-- LDO Circuit
-    - 3.3 V output working?
-- MCU Circuit
-    - Flash the MCU using the debugger?
-    - Crystal Working?
-    - USART working through the debugger for print statements?
-    - CAN message transmission to another device like Arduino
-    - ADC and current read test.
-        - Use fixed value resistors and compare current reading to hand calculated.
+## Power Up
 
-- For software, discuss usage of arduino HAL through PlatformIO
-    - Nucleo board with same MCU has arduino support and so does the ME project
-    - Mention how full software stack will be covered in a future post in the "Better Arduino Series"
+Power up testing was carried in two separate tests. The first was testing the
+buck converter by connecting a 12 V DC power supply. As expected the buck
+converter output was 5 V, which was successfully converted to 3.3 V by the LDO
+allowing the MCU to power up properly. The second test was powering the MCU
+directly through the debugger using the VCC input pin on the debug header, which
+also powered up the MCU correctly. It was also verified that the ripple voltage
+matched simulation data for the buck converter's output under an artificial
+steady state load (ie. a resistor).
+
+## Debugging
+
+Fully testing the compatibility of the ME with my debugger involved testing that
+USART passthrough, gdb debugging and program flashing were all functional. The
+USART and flash tests were carried out by uploading a hello world program to the
+board which succeeded. The debug test was carried out using the `gdb-multiarch`
+command line tool and attaching to the target, which allowed me to walk through
+the same hello world program step by step. In this stage I also verified that
+the appropriate registers for external oscillator use had been configured and
+the expected 8 Mhz clock was present from the oscillator using an oscilloscope.
+
+## Current Sensor
+
+Current sensor testing was carried out by verifying that the sensor is behaving
+as expecte using voltage probes without writing any software. As discussed in
+the earlier current sensor section, the zero current voltage output is 2.5 V.
+Probing, the sensor output with any load connected read as 2.5 V on the DMM and
+increased with resistive loads connected indicating that the circuit is correct.
+
+## CAN
+
+CAN testing was carried out by connecting the ME to a standard Arduino CAN bus
+shield mounted on an Uno. The CAN code that ran on the ME can be found
+[here](https://github.com/qfsae/reference/blob/master/PlatformIO/nucleo/can/src/main.cpp)
+on the Queen's formula GitHub repository. I checked for message send and receive
+to the ME over both CAN controller which were working. Further work will be done
+here on making a better software abstraction for CAN.
+
+# Demo
+
+Embedded below is demo of the ME connected to a debugger running a simple blink / hello world program.
+
+<iframe src="https://drive.google.com/file/d/1mkhivDQe7bffAgRlwQNTEc9VAt3l_ivX/preview" width="640" height="480"></iframe>
 
 # Conclusion
-- Mention how this is the primary dev platform I have been using
-- Will serve as a basis for a culminating dev board in the better arduino series
-- Important step in making a board that actually serves a purpose on top of STM32 hardware
+
+Overall, the ME project has been a great success in tying together the STM32
+knowledge I have obtained into a practical development board. The ME board will
+serve as a basis for the a future project which will integrate the debugger for
+a single fully featured development platform. Since bringing up the ME board, I
+have been using it for all my software development. I will be covering the my
+full exploration into various software development workflows and environments on
+the ME in a future "A Better Arduino" series post.
