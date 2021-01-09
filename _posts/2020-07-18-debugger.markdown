@@ -13,15 +13,15 @@ tags: [black magic probe, ST-Link, debugger, Custom PCB]
 
 In [part 1](../peterson-dev-platform) of the "A Better Arduino" series, I
 designed the simplest possible STM32F7 breakout board. This first iteration PDP
-board is no where near as easy to use as an Arduino. The primary problem that
-the user must first properly wire a debugger to the PDP to flash their code. The
+board is not nearly as easy to use as an Arduino. The primary problem that
+users must first properly wire a debugger to the PDP to flash their code. The
 secondary problem is the lack of serial / USART functionality to do IO with the
 host machine. The goal of the debugger project is to address these issues by
-implementing a debugger on custom circuit board that implements serial
+implementing a debugger on a custom circuit board that implements serial
 communication. Such a circuit could later be embedded into an all in one
 development solution with the plug and play functionality of Arduino in
 conjunction with a fully featured debugging suite. I completed the debugger
-project in order for it to be used with the Queen's Formula team. The ultimate
+project in order for it to be used by the Queen's Formula team. The ultimate
 goal is to lower the barrier to entry of STM32 for new team members so that they
 can leverage all of its extra capability without any added complexity.
 
@@ -58,10 +58,10 @@ connected to PA12 and PA11 respectively on the MCU. The USART passthrough is
 implemented by connecting USART2 on the debugger MCU to a USART on the target
 MCU. In the case of the custom debugger board, USART2 is just broken out to a
 two-pin header. On the schematic above, the USART nets are marked by `STLINK_TX`
-and `STLINK_RX` which are connected to PA2 and PA3 corresponding to USART2 on
+and `STLINK_RX`, which are connected to PA2 and PA3 corresponding to USART2 on
 the debugger's MCU. With this connection established, the debugger firmware will
 "forward" whatever it receives from the USART on the target MCU to the host
-machine. The debug connection to the target is an SWD connection which consists
+machine. The debug connection to the target is an SWD connection, which consists
 of a clock (SWCLK) and data (SWDIO) line. The reference schematic names the pins
 in terms of JTAG and includes some extra connections for full JTAG connectivity.
 It should also be noted that there are two SWD connections on the debugger's
@@ -70,7 +70,7 @@ the ST-Link firmware. The target connection is differentiated from the debugger
 MCU by leading the target net names with `T_` and the debugger ones with `STM_`.
 Since the pins are named using JTAG convention, we need to find what JTAG pins
 are equivalent to the two SWD connections. As expected, the SWD and JTAG clock
-lines are the same so `TCK = SWCLK`. Moreover, JTAG data and SWD data are
+lines are the same, therefore `TCK = SWCLK`. Moreover, JTAG data and SWD data are
 equivalent, thus, `TMS = SWDIO`. As a result, `T_JTMS` is the `SWDIO` connection
 to the target and `T_JTCK` is the target `SWCLK`. Similarly, `STM_JTMS` on the
 reference schematic is the `SWDIO` to the debugger's MCU and `STM_JTCK` is the
@@ -89,7 +89,7 @@ service [here](../can-transceiver).
 
 ## Project Viewer
 
-Below is embedded view of the debugger project which includes the schematic
+Below is an embedded view of the debugger project which includes the schematic
 documents, PCB layout and bill of materials. The raw Altium Designer files can
 be found [here](https://github.com/ethanmpeterson/boards/tree/main/Debugger).
 The structure of the debugger Altium project differs from my previous posts as
@@ -114,17 +114,17 @@ first prototype is given below. You may notice a few small differences between
 the layout presented in the embedded project compared to the physical board.
 This is because the board is actually an earlier iteration of the debugger for
 personal use and testing. The layout presented above includes a few small
-revisions that I made for the debugger's wider use on the Queen's Formula Team.
+revisions that I made for the debugger's wider use by the Queen's Formula Team.
 The primary difference lies in the silk screen, which is more descriptive by
 including a full pinout for each connector on the bottom of the board and
-Queen's Formula logo. In addition to aesthetic changes in the silkscreen there
-are also some small layout tweaks, the main change being the regulator enable
+Queen's Formula logo. In addition to aesthetic changes in the silkscreen, there
+are also some small layout tweaks, with the main change being the regulator enable
 jumper, which was removed after the LDO circuit was verified to be correct.
 Another small layout change was switching out the reset jumper for a button.
 
 ![boardFront](../assets/img/debugger/board-front.jpg)
 
-All of the surface mount components in the figure above were soldered by JLCPCB
+All of the surface mount components in the figure above were soldered by JLCPCB,
 with the exception of the USB connector, which was not available from JLCPCB and
 done by hand.
 
@@ -141,7 +141,7 @@ The board testing and bring up can be summarized in the steps listed below.
 
 The power on test went smoothly on the newly delivered debuggers. A USB
 connector was soldered to each of the 5 units from JLCPCB and then connected to
-a USB port. The 5 and 3.3 V power LEDs lit up properly indicating the
+a USB port. The 5 and 3.3 V power LEDs lit up, thereby properly indicating the
 correctness of the regulator/power circuit. An example of a powered up debugger
 can be found in the thumbnail for this post.
 
@@ -155,7 +155,7 @@ to find the firmware. The closed source nature of the software prevents me from
 linking to the binary directly. The upload of the debugger firmware worked as
 expected by connecting [this ST-Link
 debugger](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/2548/6827110?s=N4IgTCBcDaIIwFYwA4C0cCcyyoHIBEQBdAXyA)
-to the debug header of the debugger's MCU. After uploading the debugger board
+to the debug header of the debugger's MCU. After uploading, the debugger board
 was connected directly to the computer via USB and detected properly by the
 ST-Link Windows utility provided by ST.
 
@@ -174,11 +174,10 @@ Unfortunately, the initial USART passthrough test with ST-Link firmware did not
 work. I subsequently discovered that there is a different ST-Link firmware
 binary needed to support the USART passthrough. Due to the firmware being closed
 source, my only option was to pull it off a development board that already had
-the firmware since I was unable to fnd it online. A comprehensive series of blog
+the firmware, as I was unable to fnd it online. A comprehensive series of blog
 posts on capturing the ST-Link with COM port support can be found
 [here](https://hackaday.com/2016/12/10/reverse-engineering-an-st-link-programmer/).
-The post mentions a way of getting equivalent functionality without ST-Link at
-all through the [Black Magic
+The post mentions a way of getting equivalent functionality without ST-Link through the [Black Magic
 Probe](https://hackaday.com/2016/12/02/black-magic-probe-the-best-arm-jtag-debugger/)
 project (Hereby referred to as BMP). The BMP project is open source and supports
 USART passthrough. Conveniently, the project already had a build profile for
