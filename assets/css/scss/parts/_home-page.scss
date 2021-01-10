@@ -11,6 +11,11 @@
   padding: 10px 10px;
   background-color: $white;
 }
+.navbar {
+  position: relative;
+  margin: 20px 0 20px 0;
+  text-align: center;
+  }
 .about {
   margin: 0 0 40px;
   text-align: center;
@@ -127,6 +132,11 @@
 }
 
 footer {
+  .subscribe {
+    position: relative;
+    margin: 20px 0 30px 0;
+    text-align: center;
+  }
   .copyright {
     font-size: 14px;
     text-align: center;
