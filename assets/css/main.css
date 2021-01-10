@@ -1021,6 +1021,18 @@ table tfoot td {
           align-items: stretch;
 }
 
+.navbar {
+  position: relative;
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+.subscribe {
+  position: relative;
+  margin: 20px 0 30px 0;
+  text-align: center;
+}
+
 .contact .contact-title {
   position: relative;
   color: #333030;
