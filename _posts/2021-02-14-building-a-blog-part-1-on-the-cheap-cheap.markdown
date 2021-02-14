@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build-a-blog Part 1: On the cheap cheap."
-date: 2021-02-08 -00:00:00 +1000
+date: 2021-02-14 -00:00:00 +1000
 description: Build your own blog for free. No coding experience required.
 img: 2021-02-14/build-a-blog-1.jpg
 ---
@@ -48,14 +48,14 @@ Does this really matter? well If you intend to host multiple sites, perhaps a bl
 
 With that out of the way, to rename your repository simply head over to settings, update the repository name and click *Rename*.
 
-[![Rename repository](/assets/img/2021-02-14/screen-3.png){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-3.png)
+[![Rename repository](/assets/img/2021-02-14/screen-3.PNG){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-3.PNG)
 
 ## A branch to call your own.
 The next step is technically optional but one that I feel makes your life just little bit easier and helps to keep your options open later when it comes to keeping up to date with your chosen themes feature improvements. First you'll want to rename the current main branch of the forked repository, likely named master or main, to "*fork*". This will help keep your blog separated from the themes code. 
 
 To rename the main branch simply select the "Branches" sub menu on the Settings page and click the little pencil icon next to the main branch. This will open a little pop-up that will let you rename the branch.
 
-[![Rename fork](/assets/img/2021-02-14/screen-4.png){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-4.png)
+[![Rename fork](/assets/img/2021-02-14/screen-4.PNG){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-4.PNG)
 
 The next part of the optional step is to create a new main branch, the Github [documentation](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch) can show you how to do this better than I could. You can call this branch whatever you want, I usually go with "*main*" for simplicity but it's not essential, just be sure to remember what you called it for later on.
 
@@ -64,7 +64,7 @@ Right now all we have is well named repository, a couple of branches and a lot o
 
 In the section "Github Pages" you'll see a sub section called "Source". All you need to do is set the branch to your newly created main branch, click save and your blog site will be live.
 
-[![Github Pages](/assets/img/2021-02-14/screen-5.png){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-5.png)
+[![Github Pages](/assets/img/2021-02-14/screen-5.PNG){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-5.PNG)
 
 If everything worked correctly you should be able to click the link Github shows you and be taken directly to your fledgling blog site.
 
@@ -102,11 +102,11 @@ These are also self-explanatory, they will dictate where the usual social media 
 ### Editing your config.
 Now that you have a basic understanding of what's in the config file, you'll now need to edit this information. You can do this from the Github UI, all you need to do is click the **_config.yml** file, making sure on your *main* branch, then click the little pencil icon at the top.
 
-[![File editing](/assets/img/2021-02-14/screen-6.png){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-6.png)
+[![File editing](/assets/img/2021-02-14/screen-6.PNG){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-6.PNG)
 
 Once you've made all the necessary changes simply head down to the bottom of the page and '*commit*' your changes. This will save the changes to your main branch.
 
-[![Commit the changes](/assets/img/2021-02-14/screen-7.png){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-7.png)
+[![Commit the changes](/assets/img/2021-02-14/screen-7.PNG){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-7.PNG)
 
 Check back on your live url and within a few minutes you should see your styling fixed, your descriptive changes applied and your social media buttons linked for all the world to see. We're nearly there.
 
@@ -115,13 +115,13 @@ Now that your site is all configured up and looking like a true blog it's time t
 
 The first thing you'll want to do is delete the existing demonstration files. To delete a file all you need to do is open the file in the same way as the config, making sure your on the *main* branch, clicking the trash bin icon at the top and committing the change like before. *I recommend keeping one file around initially as a reference for the file structure*.
 
-[![Delete the old posts](/assets/img/2021-02-14/screen-8.png){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-8.png)
+[![Delete the old posts](/assets/img/2021-02-14/screen-8.PNG){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-8.PNG)
 
 With the demo posts removed you can now create your own file. Don't worry if the *_posts* folder has disappeared, Github won't show empty folders. 
 
 To create a new file, from the root directory simply click *Add file* then *Create new file*.
 
-[![Create new post](/assets/img/2021-02-14/screen-9.png){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-9.png)
+[![Create new post](/assets/img/2021-02-14/screen-9.PNG){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-9.PNG)
 
 For the name of the file you'll want to include *_posts/* in front to ensure it's saved in the right location, followed by the *yyyy-mm-dd-title.markdown* where *yyyy-mm-dd* is the date you intend to publish and *title* is the title of your blog e.g. **_posts/2021-02-16-my-first-post.markdown**. If the theme you're using originally had html files instead you'll likely need to use *.html* instead of *.markdown*. 
 
@@ -143,7 +143,7 @@ This is where the body of your post lives, and where I cannot guide you on this 
 ## Publish it.
 Once you have your content written up it should look something like this
 
-[![Commit your first post](/assets/img/2021-02-14/screen-10.png){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-10.png)
+[![Commit your first post](/assets/img/2021-02-14/screen-10.PNG){:class="page-embedded-image"}](/assets/img/2021-02-14/screen-10.PNG)
 
 Now all you need to do is commit the file, sit back, wait a few minutes for Github to build and publish your site and enjoy having published your very first post on your new, awesome looking blog site.  
 
