@@ -1,0 +1,114 @@
+I"�0<p>Hello again and welcome to the first post of the multi-part series… Building a blog site.</p>
+
+<p>In this series we’ll be looking at how one can build their own blog site through varying degrees of effort, cost, and technical experience. We’ll cover building a quick and simple site hosted on Github pages, right the way through to a self hosted cloud based blog site complete with custom domain, deployment pipeline and automatic package updates for added security.</p>
+
+<blockquote>
+  <p><strong><em>Editors Note:</em></strong>  Throughout this series we will be using the phrase “Blog site” but the learnings in this series can apply to any Jekyll based site.</p>
+</blockquote>
+
+<p>In Part 1: On the cheap cheap, we’ll cover how you can build a simple Jekyll based blog site, hosted for free on Github pages, without needing to know anything about coding or software development. All you’ll need is a computer, a <a href="https://github.com/join?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F&amp;source=header-home">Github account</a> and a little bit of knowledge about <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a>.</p>
+
+<h2 id="before-we-begin">Before we begin.</h2>
+<p>Before we delve too far into building the site, you first need to ask yourselves <em>“What sort of blog site do I want?”</em>. Do you even want to build a blog? Perhaps you want a portfolio of your photography, an online CV with demos of your work, or maybe you just want a small single page site with a little bit of text. In the end, what you decide upon will determine how much work and time is required to get your site up and running, so it’s best to answer sooner rather than later.</p>
+
+<p><em>Don’t rush, take your time. Think about it over a cup of tea or coffee, I’ll still be here when you’ve decided</em>.</p>
+
+<p>If after much contemplation you have decided you only want/need a single page that’s awesome. This will be much quicker and easier for you. I’d recommend checking out Github’s very own <a href="https://guides.github.com/features/pages/">step-by-step guide</a>. It contains everything you need to know to get your site up and running using one of their curated single page jekyll themes. Follow this and you’ll have your content hosted in no time.</p>
+
+<p>For my Blog, Portfolio and CV peeps, <em>or those who don’t like the Github default themes</em>, let’s keep going.</p>
+
+<h2 id="finding-your-dream-theme">Finding your dream theme.</h2>
+<p>If you’re anything like me you feel that aesthetics are important, <em>perhaps overly so</em>. That is why I find the best way to start your blog site is to do a little theme shopping. If you want you can just Google <a href="https://www.google.com/search?q=jekyll+themes">jekyll themes</a> but if you don’t want to browse through a bunch of random sites, here’s a few I searched earlier…</p>
+<ul>
+  <li><a href="http://jekyllthemes.org/">jekyllthemes.org/</a></li>
+  <li><a href="https://jekyllthemes.io/free">jekyllthemes.io/free</a></li>
+  <li><a href="https://jekyll-themes.com/free/">jekyll-themes.com/free/</a></li>
+</ul>
+
+<p>When you find your dream theme hold onto the page, you’ll need it to navigate to the Github repository. Look for a button or link that mentions Github, Repository or Homepage, you should be taken to a page like this.</p>
+
+<p><a href="/assets/img/2021-02-14/screen-1.png"><img src="/assets/img/2021-02-14/screen-1.png" alt="Theme's Github repository" class="page-embedded-image" /></a></p>
+
+<p>For the rest of this post I’ll be using the <strong><a href="https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll">Clean Blog</a></strong> Jekyll theme but don’t worry, everything shown here <em>should</em> be compatible with most other themes.</p>
+
+<h2 id="forkward-unto-github"><em>Fork</em>ward unto Github.</h2>
+<p>Now that your theme is all sorted you can begin actually building your blog site. At the top right of your chosen themes Github repository you should see a little <strong>“fork”</strong> button.</p>
+
+<p><a href="/assets/img/2021-02-14/screen-2.png"><img src="/assets/img/2021-02-14/screen-2.png" alt="The fork button" class="page-embedded-image" /></a></p>
+
+<p>Click it and you’ll either be taken to a sign-up/sign-in page <em>or</em> you’ll have successfully forked the repository. If you have to create an account that’s ok, it won’t take long, just bare in mind that the username of your account will dictate the default url of your blog site e.g. <strong>yourUsername.github.io</strong></p>
+
+<h2 id="its-all-in-the-name">It’s all in the name.</h2>
+<p>Now that you have your fork you’ll need to modify some settings to turn it into a hosted Github pages site. The first thing you’ll want to do is rename the fork. Just a heads up, <em>what</em> you rename your repository to will dictate the final URL of your blog site. For example if you were to rename your repository “<em>Blog</em>” your final URl would be <strong>yourUsername.github.io/blog</strong>, however, if you were to rename your repository to ‘<em>yourUsername.github.io</em>” your blog site will be hosted directly under that domain so your final URL would simply be <strong>yourUsername.github.io</strong>.</p>
+
+<p>Does this really matter?, well If you intend to host multiple sites, perhaps a blog and a portfolio then naming your repository to “<em>Blog</em>” or “<em>Portfolio</em>” now is probably the best option, but if you only plan on having one site keeping the content directly under the root domain just makes it a little easier for those visiting your site. It’s also worth noting this isn’t something that needs to be decided right away, you can rename your repository at any point in time if you change your mind at a later date.</p>
+
+<p>With that out of the way, to rename your repository simply head over to settings, update the repository name and click <em>Rename</em>.</p>
+
+<p><a href="/assets/img/2021-02-14/screen-3.png"><img src="/assets/img/2021-02-14/screen-3.png" alt="Rename repostiory" class="page-embedded-image" /></a></p>
+
+<h2 id="a-branch-to-call-your-own">A branch to call your own.</h2>
+<p>The next step is technically optional but one that I feel makes your life just little bit easier for little effort and helps to keep your options open later when it comes to keeping up to date with your chosen themes feature improvements. First you’ll want to rename the current main branch of the forked repository, likely named master or main, to “<em>fork</em>”. This well help keep your blog separated from the themes code.</p>
+
+<p>To rename the main branch simply select the “Branches” sub menu on the settings page and click the little pencil icon next to the main branch. This will open a little pop-up that will let you rename the main branch.</p>
+
+<p><a href="/assets/img/2021-02-14/screen-4.png"><img src="/assets/img/2021-02-14/screen-4.png" alt="Rename fork" class="page-embedded-image" /></a></p>
+
+<p>The next part of the optional step is to create a new main branch, the Github <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch">documentation</a> can show you how to do this, you can call this branch whatever you want, I usually go with “<em>main</em>” for simplicity but it’s not essential, just be sure to remember what you called it for later on.</p>
+
+<h2 id="its-alive-or-it-soon-will-be">It’s Alive… or it soon will be.</h2>
+<p>Right now all we have is well named repository, a couple of branches and a lot of code we’re not likely to ever read, but it’s not a live blog site yet. You’ll want to head back over to the main sub menu of the settings page and scroll <em>allllllllll</em> the way to the bottom, just above the <a href="https://www.youtube.com/watch?v=siwpn14IE7E">‘<em>Danger Zone</em>’</a>, and here is where you’ll turn all of this into a blog site.</p>
+
+<p>In the section “Github Pages” you’ll see a sub section called “Source”. All you need to do is set the branch to your newly created main branch, click save and your blog site will be live.</p>
+
+<p><a href="/assets/img/2021-02-14/screen-5.png"><img src="/assets/img/2021-02-14/screen-5.png" alt="Github Pages" class="page-embedded-image" /></a></p>
+
+<p>If everything worked correctly you should be able to click the link Github show’s you and be taken directly to your fledgling blog site.</p>
+
+<p><em>But don’t grab your pitchforks just yet… I know, it probably doesn’t look anything like the theme you chose, “Where’s all the styles” I hear you scream with pure outrage. Don’t worry we’ll get to that</em>.</p>
+
+<h2 id="this-is-where-the-fun-begins">This is where the fun begins.</h2>
+<p>So you’ve now deployed your blog site but there are a couple of lingering issues, it likely looks awful with no styles and it’s just the themes demo, not really your blog site. Don’t fret, this is where you’ll learn how to turn this theme into your site, and it will pretty much come down to simply two files.</p>
+
+<h3 id="its-all-in-the-config">It’s all in the config.</h3>
+<p>The first file you’ll want to update is the <strong>_config.yml</strong> <em>sometimes with the extension .yaml</em> and it is located in the main directory, also known as root, of the repository. Any half-decent Jekyll theme will have any configurable detail in this file so that you don’t need to worry about any HTML or CSS.</p>
+
+<p>Unfortunately the specific details in a themes configuration file are going to be somewhat unique to that theme, so I won’t be able to give a step-by-step on what to change, you’re going to be on your own for some fields but don’t worry it’s pretty straight forward and the Readme file of your theme should explain things pretty well.</p>
+
+<p>That being said there are some common fields that will likely show up in most themes and I’ll give a quick rundown of those.</p>
+
+<h4 id="descriptive-fields">Descriptive fields.</h4>
+<p>These are pretty self explanatory, they usually just determine some default display information or metadata. You can fill them in however you like. Some examples of descriptive config fields are:</p>
+<ul>
+  <li><em>Title</em></li>
+  <li><em>Description</em></li>
+  <li><em>Author</em></li>
+</ul>
+
+<h4 id="routing-fields">Routing fields.</h4>
+<p>These fields are quite important as they’re used by Jekyll and Github to locate and connect all of the styling assets of your site. If these aren’t setup correctly your site won’t look right. These fields are:</p>
+<ul>
+  <li><em>url</em>: This will be the fully qualified domain name of your blog site e.g. <strong>https://yourUsername.github.io</strong></li>
+  <li><em>baseurl</em>:  This will be the sub-path of your blog site. If you chose to name your repository ‘<em>Blog</em>’ this should be set to ‘/blog’. If you named your repository ‘<em>yourUsername.github.io</em>’ you can leave this empty.</li>
+</ul>
+
+<h4 id="social-media-fields">Social Media fields.</h4>
+<p>These are also self-explanatory, they will dictate where the usual social media icons or links will take you. If the theme is written well leaving any of these blanks <em>should</em> hide the icon. Some examples of social media config fields are:</p>
+<ul>
+  <li><em>twitter_username</em></li>
+  <li><em>github_username</em></li>
+  <li><em>facebook_username</em></li>
+  <li><em>instagram_username</em></li>
+  <li><em>linkedin_username</em></li>
+</ul>
+
+<h3 id="editing-your-config">Editing your config.</h3>
+<p>Now that you have a basic understanding of what’s in the config file, you’ll now need to edit this information. You can do this from the Github UI, all you need to do is click the <strong>_config.yml</strong> file, making sure own your <em>main</em> branch, then click the little pencil icon at the top.</p>
+
+<p><a href="/assets/img/2021-02-14/screen-6.png"><img src="/assets/img/2021-02-14/screen-6.png" alt="File editing" class="page-embedded-image" /></a></p>
+
+<p>Once you’ve made all the necessary changes simply head down to the bottom of the page and ‘<em>commit</em>’ your changes. This will save the changes to your main branch.</p>
+
+<p><a href="/assets/img/2021-02-14/screen-7.png"><img src="/assets/img/2021-02-14/screen-7.png" alt="Commit the changes" class="page-embedded-image" /></a></p>
+
+:ET

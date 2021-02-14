@@ -46,6 +46,12 @@
   }
 }
 
+.page-embedded-image {
+  max-width: 20%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
 .page-footer {
   display: flex;
   justify-content: space-between;

@@ -3,7 +3,7 @@ layout: post
 title: "Yet another blog site!"
 date: 2021-01-24 20:00:00 +1000
 description: Welcome to the inaugural post of yet another blog site. # Add post description (optional)
-img: how-to-start.jpg # Add image post (optional)
+img: 2021-01-24/how-to-start.jpg # Add image post (optional)
 ---
 Welcome to the inaugural post of yet another blog site.
 
