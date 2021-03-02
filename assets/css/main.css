@@ -426,6 +426,11 @@ canvas {
 template {
   display: none;
 }
+/** 가운데 정렬 **/
+.center {
+  display: block;
+  margin: auto;
+}
 
 /* Hidden
    ========================================================================== */
