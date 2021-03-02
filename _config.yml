@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Sharp Swan # add your name
-author-img:  # add your photo
+author-img: /assets/img/sharpswan.jpg # add your photo
 about-author: 블로그입니다. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
