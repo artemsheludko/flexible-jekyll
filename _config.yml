@@ -1,8 +1,9 @@
 title: 개발 공부하는 블로그
-description: 파이썬, AI 중심으로 개발 관련에 대한 내가 보고 싶은 정보를 올리는 곳입니다 # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: # this means to ignore newlines until "baseurl:"
+  파이썬, AI 관련 중심으로 내가 보고 싶은 정보를 올리는 개인 블로그 입니다.
+  # Write an awesome description for your new site here. You can edit this
+  # line in _config.yml. It will appear in your document head meta (for
+  # Google search results) and in your feed.xml site description.
 permalink: ':title/'
 baseurl: # "/flexible-jekyll" # the subpath of your site, e.g. /blog
 url: "https://sharpswan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
