@@ -1421,6 +1421,8 @@ a.newer-posts:hover {
   font-size: 14px;
   text-align: center;
   margin: 0;
+  padding-bottom: 20px;
+  padding-top: 5px;
 
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
