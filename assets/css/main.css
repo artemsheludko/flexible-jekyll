@@ -1417,7 +1417,7 @@ a.newer-posts:hover {
   background-color: #515151;
 }
 
-footer .tag-link {
+.tag .tag-link {
   font-size: 14px;
   text-align: center;
   margin: 0;
