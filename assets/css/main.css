@@ -1367,7 +1367,7 @@ a.newer-posts:hover {
   opacity: .8;
 }
 
-.tag .blog-tags {
+.tag .blog-tags-title {
   position: relative;
   color: #333030;
   font-weight: 400;
@@ -1377,7 +1377,17 @@ a.newer-posts:hover {
   text-align: center;
 }
 
-.tag .blog-tags::before {
+.tag .blog-tags-title {
+  position: relative;
+  color: #333030;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tag .blog-tags-title::before {
   content: "";
   display: block;
   height: 2px;
@@ -1392,7 +1402,7 @@ a.newer-posts:hover {
   background-color: #515151;
 }
 
-.tag .blog-tags::after {
+.tag .blog-tags-title::after {
   content: "";
   display: block;
   height: 2px;
