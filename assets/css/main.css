@@ -1511,6 +1511,9 @@ a.newer-posts:hover {
   .contact-title, .copyright {
     display: none;
   }
+  .blog-tags-title, .tag-link{
+    display: none;
+  }
 }
 
 /* Extra Small Devices, Phones */
