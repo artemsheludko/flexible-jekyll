@@ -1377,16 +1377,6 @@ a.newer-posts:hover {
   text-align: center;
 }
 
-.tag .blog-tags-title {
-  position: relative;
-  color: #333030;
-  font-weight: 400;
-  font-size: 12px;
-  margin: 0 0 5px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .tag .blog-tags-title::before {
   content: "";
   display: block;
@@ -1511,7 +1501,7 @@ a.newer-posts:hover {
   .contact-title, .copyright {
     display: none;
   }
-  .blog-tags-title, .tag-link{
+  .blog-tags-title, .tag-link {
     display: none;
   }
 }
