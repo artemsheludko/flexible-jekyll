@@ -16,10 +16,10 @@ about-author: |파이썬 및 인공지능 개발을 공부하고 있습니다
 |위에 사진을 누르면 홈으로 돌아갑니다 
 |아래 Tags & Search에서 검색 가능합니다 
 |Contact me에서 연락 가능합니다  # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
+#social-twitter: # add your Twitter handle
+#social-facebook: # add your Facebook handle
 social-github: sharpswan # add your Github handle
-social-linkedin: # add your Linkedin handle
+#social-linkedin: # add your Linkedin handle
 social-Instagram: miraresuriran # add your Instagram handle
 social-email: leesangwoo2121@gmail.com # add your Email address
 
