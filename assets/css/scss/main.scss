@@ -23,6 +23,7 @@ h1 {
   font-weight: 400;
 }
 
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -42,8 +43,9 @@ blockquote {
   border-left: 5px solid #000;
   padding-left: 1.1rem;
   margin-left: 1rem;
-  font-style: italic;
-  color: #ada8a8;
+  font-style: normal;
+  color: #424242; 
+  // #ada8a8; 흰색
 }
 
 pre {
