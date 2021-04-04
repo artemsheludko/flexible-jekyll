@@ -37,3 +37,25 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Excute files
+*.dll
+*.exe
+*.o
+*.so
+*.com
+*.class
+
+# Compress files
+*.dmg
+*.iso
+*.tar
+*.zip
+*.gz
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
