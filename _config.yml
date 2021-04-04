@@ -12,7 +12,11 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Sharp Swan # add your name
 author-img: SharpSwan.jpg # add your photo
-about-author: 파이썬 및 인공지능 개발을 공부하고 있습니다 \n 위에 사진을 누르면 홈 화면으로 돌아갑니다\n 아래 Tags & Search에서 검색 가능합니다\n Contact me에서 연락 가능합니다\n  # add description
+about-author: | 
+파이썬 및 인공지능 개발을 공부하고 있습니다 
+위에 사진을 누르면 홈 화면으로 돌아갑니다 
+아래 Tags & Search에서 검색 가능합니다 
+Contact me에서 연락 가능합니다  # add description
 #social-twitter: # add your Twitter handle
 #social-facebook: # add your Facebook handle
 social-github: sharpswan # add your Github handle
