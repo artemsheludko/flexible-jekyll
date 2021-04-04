@@ -1,0 +1,85 @@
+---
+layout: post
+title: 프로그래머스 LV1 문자열 내 p와 y의 개수(연습문제) # title에 [괄호] 사용 금지
+date: 2021-04-04 17:04:00 +0900 # 한국 시간 포맷 +0900
+description: 프로그래머스 코딩테스트 LV1 문자열 내 p와 y의 개수(연습문제) 파이썬 # Add post description (optional)
+img: /python/python-wallpaper.png # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [프로그래머스 파이썬 코딩테스트 LV1]
+---
+
+# 프로그래머스 lv1 문자열 내 p와 y의 개수(연습문제)
+
+*문제 설명*<br>
+
+대문자와 소문자가 섞여있는 문자열 s가 주어집니다. <br>
+s에 'p'의 개수와 'y'의 개수를 비교해 같으면 True, 다르면 False를 return 하는 solution를 완성하세요. <br>
+'p', 'y' 모두 하나도 없는 경우는 항상 True를 리턴합니다. <br>
+단, 개수를 비교할 때 대문자와 소문자는 구별하지 않습니다.<br>
+
+예를 들어 s가 "pPoooyY"면 true를 return하고 "Pyy"라면 false를 return합니다.<br>
+
+*제한사항*<br>
+
+문자열 s의 길이 : 50 이하의 자연수<br>
+문자열 s는 알파벳으로만 이루어져 있습니다.<br>
+
+
+입출력 예
+
+|s|answer|
+|:---:|:---:|
+|"pPoooyY"|true|
+|"Pyy"|false|
+
+*입출력 예 설명*<br>
+
+*입출력 예 #1*<br>
+'p'의 개수 2개, 'y'의 개수 2개로 같으므로 true를 return 합니다.<br>
+
+*입출력 예 #2*<br>
+'p'의 개수 1개, 'y'의 개수 2개로 다르므로 false를 return 합니다.<br>
+
+---
+
+## 풀이
+
+대소문자가 섞여있는 문자열의 P와 Y가 섞여있고<br>
+P와 Y의 개수가 같으면 True, 다르면 False를 리턴하면 된다.<br>
+P와 Y가 하나도 없으면 True를 리턴해야하고<br>
+**대소문자 구별은 하지 않는다.**<br>
+전체를 대문자 혹은 소문자로 바꾸고 개수를 비교하면 될 것 같다.<br>
+
+
+```python
+def solution(s):
+
+    s = s.lower()
+
+    if s.count('p') == s.count('y'): return True
+        
+    else: return False
+
+
+if __name__ == "__main__":
+#     s = "pPoooyY" #answer = true
+    s = "Pyy" #answer = false
+    print(solution(s))
+```
+>위 코드는 문자열 s를 전부 소문자로 바꾸고, p와 y 개수를 세어서 같으면 True, 다르면 False를 return 하게 했다.
+
+```python
+# 다른 사람 풀이 1
+
+def numPY(s):
+    # 함수를 완성하세요
+    return s.lower().count('p') == s.lower().count('y')
+
+# 아래는 테스트로 출력해 보기 위한 코드입니다.
+print( numPY("pPoooyY") )
+print( numPY("Pyy") )
+```
+>다음과 같이 한 줄로도 표현이 가능하다.
+
+
+---
