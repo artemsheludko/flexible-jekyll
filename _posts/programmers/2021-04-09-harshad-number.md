@@ -90,6 +90,7 @@ for num in str(nums):
 print(num_list)
 
 >>>[1, 2, 3, 4, 5]
+
 ```
 
 >str으로 바꾼 후 for loop를 쓰면 한 자리수 씩 분리할 수 있다. int 타입이 필요하면 int() 함수로 다시 변환해주면 된다.
@@ -110,6 +111,7 @@ while(nums!=0):
 print(sorted((num_list))) # 1의 자릿수부터 들어가므로 순서가 중요하면 정렬
 
 >>>[1, 2, 3, 4, 5]
+
 ```
 
 <br>
@@ -122,6 +124,7 @@ nums = 12345
 list(map(int, str(nums)))
 
 >>>[1, 2, 3, 4, 5]
+
 ```
 
 ---
