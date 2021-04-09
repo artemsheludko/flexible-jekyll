@@ -6,6 +6,7 @@ description: 프로그래머스 코딩테스트 LV1 콜라츠 추측(연습문�
 img: /python/python-wallpaper.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [프로그래머스 파이썬 코딩테스트 LV1]
+use_math: true
 ---
 
 # 프로그래머스 lv1 콜라츠 추측(연습문제)
