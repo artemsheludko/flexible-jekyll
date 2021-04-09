@@ -97,6 +97,7 @@ print(num_list)
 <br>
 
 2. 10으로 나누기
+
 ```python
 nums = 12345
 
