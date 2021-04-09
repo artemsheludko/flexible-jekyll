@@ -116,6 +116,6 @@ def collatz(num):
 
 * 콜라츠 그래프(1부터 200까지 핸들링)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Collatz_graph001.svg/800px-Collatz_graph001.svg.png" alt = "collatz" height = "500" width = "500">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Collatz_graph001.svg/800px-Collatz_graph001.svg.png" alt = "collatz">
 
 ---
