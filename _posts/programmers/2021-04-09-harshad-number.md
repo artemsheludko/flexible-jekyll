@@ -80,7 +80,7 @@ def Harshad(n):
 
 `number = 12345` 를 `1,2,3,4,5` 로 자릿수별로 분리하는 예시이다.
 
-1. str() 함수를 이용해서 나누기
+* str() 함수를 이용해서 나누기
 
 ```python
 nums = 12345
@@ -97,7 +97,7 @@ print(num_list)
 
 <br>
 
-2. 10으로 나누기
+* 10으로 나누기
 
 ```python
 nums = 12345
@@ -116,7 +116,7 @@ print(sorted((num_list))) # 1의 자릿수부터 들어가므로 순서가 중�
 
 <br>
 
-3. map 함수를 활용하여 원소값 더하기<br>
+* map 함수를 활용하여 원소값 더하기<br>
 
 ```python
 nums = 12345
