@@ -40,7 +40,7 @@ use_math: true
 ## 풀이
 
 ```python
-#내풀이. 아주 좋았음
+#풀이
 def solution(x, n):
     return [x * i for i in range(1, n+1)]
 solution(-4,2)
