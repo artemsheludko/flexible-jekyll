@@ -17,8 +17,6 @@ use_math: true
 
 >[해설링크 바로가기](https://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/)
 
-<img src= "https://t1.kakaocdn.net/welcome2018/secret8.png" height = 300; width = 300;>
-
 ---
 
 ## 풀이
