@@ -13,14 +13,12 @@ use_math: true
 
 >문제 링크: <https://programmers.co.kr/learn/courses/30/lessons/17681>
 
-
-<img src= "https://t1.kakaocdn.net/welcome2018/secret8.png" height = 300; width = 300;>
-
-<br>
-
 >출처: 프로그래머스 코딩 테스트 연습 <https://programmers.co.kr/learn/challenges><br>
 
 >[해설링크 바로가기](https://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/)
+
+<img src= "https://t1.kakaocdn.net/welcome2018/secret8.png" height = 300; width = 300;>
+
 ---
 
 ## 풀이
