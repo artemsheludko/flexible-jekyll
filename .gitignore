@@ -54,6 +54,7 @@ Temporary Items
 *.gz
 
 # VSCode
+/.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
