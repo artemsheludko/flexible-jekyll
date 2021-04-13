@@ -225,22 +225,22 @@ Explicit is better than implicit.<br>
     ```
 
 11. **Find Whether Two Strings are Anagrams (두 문자열이 아나그램인지 아닌지 찾기)**<br>
-  \*아나그램: 문자의 순서를 바꿔 다른 단어나 문장을 만든 것.<br>
-  `Counter` 클래스의 흥미로운 응용은, 아나그램을 찾는 것이다.<br>
-  만약 `Counter` 두 문자열의 객체가 같으면 아나그램이다.<br>
+    \*아나그램: 문자의 순서를 바꿔 다른 단어나 문장을 만든 것.<br>
+    `Counter` 클래스의 흥미로운 응용은, 아나그램을 찾는 것이다.<br>
+    만약 `Counter` 두 문자열의 객체가 같으면 아나그램이다.<br>
 
-  `anagram.py`
-  ```python
-  from collections import Counter
+    `anagram.py`
+    ```python
+    from collections import Counter
 
-  str_1, str_2, str_3 = "acbde", "abced", "abcda"
-  cnt_1, cnt_2, cnt_3  = Counter(str_1), Counter(str_2), Counter(str_3)
+    str_1, str_2, str_3 = "acbde", "abced", "abcda"
+    cnt_1, cnt_2, cnt_3  = Counter(str_1), Counter(str_2), Counter(str_3)
 
-  if cnt_1 == cnt_2:
-      print('1 and 2 anagram')
-  if cnt_1 == cnt_3:
-      print('1 and 3 anagram')
-  ```
+    if cnt_1 == cnt_2:
+        print('1 and 2 anagram')
+    if cnt_1 == cnt_3:
+        print('1 and 3 anagram')
+    ```
 
 12. **Using the try-except-else Block (try-except-else 블록 사용)**<br>
     python에서 오류 처리는 try/except 블록을 사용하여 쉽게 수행할 수 있다. 이 블록에 else 문을 추가하면 유용하다. try 블록에서 예외가 발생하지 않을 때 실행된다.
