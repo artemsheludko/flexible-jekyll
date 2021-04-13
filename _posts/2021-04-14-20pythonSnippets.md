@@ -3,7 +3,7 @@ layout: post
 title: 코딩테스트 치기 전 필요한 준비물, 스니펫 snippets! # title에 [괄호] 사용 금지
 date: 2021-04-14 01:30:20 +0900 # 한국 시간 포맷 +0900
 description: 코딩테스트 치기 전 필요한 준비물, 스니펫 snippets! # Add post description (optional)
-img: /python/pythonSnippets.png # Add image post (optional)
+img: /python/pythonSnippets.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [20개 파이썬 snippets]
 ---
