@@ -494,7 +494,8 @@ template {
 
 /* Comment.Preproc */
 .highlight .c1 {
-  color: #999;
+  color: rgba(46, 160, 12, 0.568);
+  /* #999; */
 }
 
 /* Comment.Single */
