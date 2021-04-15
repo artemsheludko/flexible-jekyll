@@ -154,8 +154,8 @@ use_math: true
 
 9.  리스트에서 특정 요소 빼기<br>
     
-   `list.remove(factor)`
-   문제링크: [체육복(탐욕법 greedy)](https://sharpswan.github.io/%EC%B2%B4%EC%9C%A1%EB%B3%B5(%ED%83%90%EC%9A%95%EB%B2%95-greedy)/)
+    `list.remove(factor)`
+    문제링크: [체육복(탐욕법 greedy)](https://sharpswan.github.io/%EC%B2%B4%EC%9C%A1%EB%B3%B5(%ED%83%90%EC%9A%95%EB%B2%95-greedy)/)
    
    <br>
 
@@ -380,3 +380,5 @@ use_math: true
 
     >>>[1, 3, 5, 7, 9]
     ```
+
+---
