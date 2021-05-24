@@ -8,8 +8,8 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Klish Group # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+author-img: KlishLogo-small.jpg # add your photo
+about-author: We are a team of seasoned front and back-end developers with a passion for the web# add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: artemsheludko # add your Github handle
