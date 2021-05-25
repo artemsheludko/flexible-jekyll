@@ -15,6 +15,12 @@ layout: default
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact Us</h3>
+	  	<div class="about">
+      <div class="author-name">
+        <a href="https://www.klishgroup.com" style="color:black">KlishGroup.com</a>
+      </div>
+    </div>
+	
       <ul>
         {% if site.social-twitter %}
           <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -44,7 +50,8 @@ layout: default
         {% endif %}
       </ul>
     </section> <!-- End Section Contact -->
-    <div class="copyright">
+
+	<div class="copyright">
       <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
     </div>
   </footer> <!-- End Footer -->
