@@ -5,8 +5,6 @@ date: 2021-05-20 13:32:20 +0300
 img: pexels-andrew-neel-4134784.jpg
 ---
 
-# Site Accessibility Best Practices
-
 ## Summary
 
 As the websites, and the digital services they provide, reach more
@@ -109,16 +107,16 @@ guidelines are adhered to.
 
 <!-- -->
 
-1.  ALT tags can be used for keyword identification related to the
-    > image, which can be leveraged by search engines.
+*  ALT tags can be used for keyword identification related to the
+    image, which can be leveraged by search engines.
 
-2.  If an image cannot be displayed for some reason the ALT text will
-    > replace the image, giving the user an idea of what should be
-    > shown. These tags can also contain links to other pages/image to
-    > provide additional information
+*  If an image cannot be displayed for some reason the ALT text will
+    replace the image, giving the user an idea of what should be
+    shown. These tags can also contain links to other pages/image to
+    provide additional information
 
-3.  ALT tags provide a text alternative of the image for users on screen
-    > readers.
+*  ALT tags provide a text alternative of the image for users on screen
+    readers.
 
 > Example:
 >

@@ -5,8 +5,6 @@ date: 2021-05-20 13:32:20 +0300
 img: pexels-tranmautritam-326508.jpg
 ---	
 
-# Responsive Optimization Best Practices
-
 ## Summary
 
 As the growing trend of websites being viewed on handheld devices
@@ -46,18 +44,18 @@ build process we’ve put together this set of best practices:
 
 1.  **Compress all possible assets.**
 
-    1.  In general, runtime servers should be configured to return all
+    *  In general, runtime servers should be configured to return all
         content compressed with [Brotli](https://brotli.org/) or
         [GZIP](https://www.gnu.org/software/gzip/). This provides
         savings across the board as less content is transferred and all
         modern browsers can support these algorithms.
 
-    2.  Minify styles and scripts. Every style or script served should
+    *  Minify styles and scripts. Every style or script served should
         be minified if possible. This will significantly reduce the file
         size. Klish Group has built minification into publish workflows
         for past builds in order to automate the procedure.
 
-    3.  Use the best image format, when possible. Most of the time this
+    *  Use the best image format, when possible. Most of the time this
         is PNG, but WebP is quickly becoming the new standard as it’s
         adopted by more browers ([Image Format
         Comparison](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types))

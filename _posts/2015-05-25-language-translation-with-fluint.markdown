@@ -6,9 +6,6 @@ description: The importants of Translation, how localization works in TeamSite a
 img: pexels-pixabay-270360.jpg 	
 ---
 
-
-# Using Translation in TeamSite to Reach a Wider Audience
-
 ## Importance of Translation?
 
 In an increasingly globalized world, fast and accurate content

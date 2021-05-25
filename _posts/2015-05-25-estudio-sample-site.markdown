@@ -6,8 +6,6 @@ description: Details on an Klish Group's Out Of the Box sample site native to Ex
 img: mac.jpg
 ---
 
-# Sample Responsive Sites for TeamSite’s Experience Studio
-
 ## Experience TeamSite’s New Interface, Experience Studio
 
 [OpenText’s
