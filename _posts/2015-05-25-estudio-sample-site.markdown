@@ -2,6 +2,7 @@
 layout: post
 title: Sample Responsive Sites for TeamSite’s Experience Studio
 date: 2021-05-20 13:32:20 +0300
+description: Details on an Klish Group's Out Of the Box sample site native to Experience Studio
 img: mac.jpg
 ---
 

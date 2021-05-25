@@ -2,6 +2,7 @@
 layout: post
 title: Using Translation in TeamSite to Reach a Wider Audience
 date: 2021-05-20 13:32:20 +0300
+description: The importants of Translation, how localization works in TeamSite and tips on working with translated content. 
 img: pexels-pixabay-270360.jpg 	
 ---
 
