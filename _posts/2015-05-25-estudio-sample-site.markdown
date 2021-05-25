@@ -2,6 +2,7 @@
 layout: post
 title: Sample Responsive Sites for TeamSite’s Experience Studio
 date: 2021-05-20 13:32:20 +0300
+img: mac.jpg
 ---
 
 # Sample Responsive Sites for TeamSite’s Experience Studio
@@ -32,7 +33,7 @@ modernized content authoring experience. Each site includes:
 -   Content Templates (to be used with individual components)
 -   Components (boxes of content that make up a page)
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image1.png" style="width:2.3865in;height:5.98135in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image1.png" style="width:2.3865in;height:5.98135in" />
 
 ## Getting Hands On
 
@@ -42,9 +43,9 @@ in OpenText knowledge base. The project is named “TeamSite Add-Ons from
 Partners”, from there the SPAR can be downloaded. Follow the
 instructions in the README.txt file for installation details.
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image2.png" style="width:6.95652in;height:4.59088in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image2.png" style="width:6.95652in;height:4.59088in" />
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image3.png" style="width:6.9105in;height:1.61395in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image3.png" style="width:6.9105in;height:1.61395in" />
 
 Additional details can be found in the authoring guide.
 
@@ -130,28 +131,28 @@ been developed in XSL 2.0:
 
 ## Template – Blog Listing
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image4.png" style="width:6.32734in;height:5.58324in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image4.png" style="width:6.32734in;height:5.58324in" />
 
 ## Template – Blog Post
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image5.png" style="width:6.5in;height:5.34722in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image5.png" style="width:6.5in;height:5.34722in" />
 
 ## Template – Modern Business
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image6.png" style="width:4.28945in;height:6.11583in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image6.png" style="width:4.28945in;height:6.11583in" />
 
 ## Template – News Magazine
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image7.png" style="width:3.5805in;height:6.16661in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image7.png" style="width:3.5805in;height:6.16661in" />
 
 ## Template – Dark Theme
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image8.png" style="width:3.06745in;height:6.13489in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image8.png" style="width:3.06745in;height:6.13489in" />
 
 ## Template – Agency
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image9.png" style="width:3.86255in;height:6.03496in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image9.png" style="width:3.86255in;height:6.03496in" />
 
 ## Template – Shop Homepage
 
-<img src="\just-the-docs\assets\images\docs\public\estudio-sample-site\image9.png" style="width:3.86255in;height:6.03496in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\estudio-sample-site\image9.png" style="width:3.86255in;height:6.03496in" />

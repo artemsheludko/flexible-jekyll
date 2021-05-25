@@ -2,6 +2,7 @@
 layout: post
 title: Using Translation in TeamSite to Reach a Wider Audience
 date: 2021-05-20 13:32:20 +0300
+img: pexels-pixabay-270360.jpg 	
 ---
 
 
@@ -51,7 +52,7 @@ there are more Russian sites than Spanish ones, the Spanish sites have a
 much higher traffic since they’re being used more frequently by the
 large Spanish-speaking user base.
 
-<img src="\just-the-docs\assets\images\docs\public\language-translation-with-fluint\image1.png" style="width:3.78252in;height:3.78252in" alt="Market Position Report" />
+<img src="{{site.baseurl}}\assets\img\docs\public\language-translation-with-fluint\image1.png" style="width:3.78252in;height:3.78252in" alt="Market Position Report" />
 
 > Further Reading/Sources:
 >
@@ -144,7 +145,7 @@ content to each page individually based on. In this case, the language
 is determined by the localization defined in the URL, then LSCS returns
 content tagged with that locale.
 
-<img src="\just-the-docs\assets\images\docs\public\language-translation-with-fluint\image2.png" style="width:6.5in;height:2.71875in" alt="Diagram Description automatically generated" />
+<img src="{{site.baseurl}}\assets\img\docs\public\language-translation-with-fluint\image2.png" style="width:6.5in;height:2.71875in" alt="Diagram Description automatically generated" />
 
 Example 2: Independent Localized Sites
 
@@ -155,7 +156,7 @@ want to appeal to an international audience without requiring a full
 site buildout or redesign. In this case the amount of translated content
 per locale can be easily controlled.
 
-<img src="\just-the-docs\assets\images\docs\public\language-translation-with-fluint\image3.png" style="width:6.5in;height:1.80278in" alt="Diagram Description automatically generated" />
+<img src="{{site.baseurl}}\assets\img\docs\public\language-translation-with-fluint\image3.png" style="width:6.5in;height:1.80278in" alt="Diagram Description automatically generated" />
 
 Example 3: Single Site with Google Translate
 
@@ -203,15 +204,15 @@ to:
 
 -   Automatic or Manual Configuration of Projects​
 
- <img src="\just-the-docs\assets\images\docs\public\language-translation-with-fluint\image4.jpeg" style="width:3.12153in;height:3.33056in" />
+ <img src="{{site.baseurl}}\assets\img\docs\public\language-translation-with-fluint\image4.jpeg" style="width:3.12153in;height:3.33056in" />
 
 Forms are created in the native TeamSite Data Capture Template (DCT)
 
-<img src="\just-the-docs\assets\images\docs\public\language-translation-with-fluint\image5.jpeg" style="width:6.5in;height:1.23056in" />
+<img src="{{site.baseurl}}\assets\img\docs\public\language-translation-with-fluint\image5.jpeg" style="width:6.5in;height:1.23056in" />
 
 Fluint’s Translation Workflow tab integrates with the existing UI
 
- <img src="\just-the-docs\assets\images\docs\public\language-translation-with-fluint\image6.jpeg" style="width:6.5in;height:1.70556in" />
+ <img src="{{site.baseurl}}\assets\img\docs\public\language-translation-with-fluint\image6.jpeg" style="width:6.5in;height:1.70556in" />
 
 Compatible with TeamSite Globalized Content Management Module and its
 Monitor Localizations dashboard functionality

@@ -2,7 +2,8 @@
 layout: post
 title: Responsive Optimization Best Practices
 date: 2021-05-20 13:32:20 +0300
----
+img: pexels-tranmautritam-326508.jpg
+---	
 
 # Responsive Optimization Best Practices
 
@@ -154,7 +155,7 @@ interest in the image to focus on. Instead of automatically determining
 the focal point we can also force Cloudinary to use the image center.
 For example:
 
-<img src="\just-the-docs\assets\images\docs\public\automatic-image-optimization\image1.png" style="width:6.5in;height:3.5375in" alt="Graphical user interface, website Description automatically generated" />
+<img src="{{site.baseurl}}\assets\img\docs\public\automatic-image-optimization\image1.png" style="width:6.5in;height:3.5375in" alt="Graphical user interface, website Description automatically generated" />
 
 While these transforms are exist independently of the content aware
 transform mentioned above, the utility can be combined in order to
