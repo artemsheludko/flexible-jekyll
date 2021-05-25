@@ -10,14 +10,14 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Klish Group # add your name
 author-img: kg-blog-logo.jpg # add your photo
 about-author: We are a team of seasoned front and back-end developers with a passion for the web # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-twitter: klishgroup # add your Twitter handle
+#social-facebook: # add your Facebook handle
+#social-github:  # add your Github handle
+social-linkedin: klish-group # add your Linkedin handle
+social-email: info@klishgroup.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+#discus-identifier: mr-brown # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
