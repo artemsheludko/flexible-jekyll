@@ -2,18 +2,30 @@
 layout: default
 ---
 
-<aside class="sidebar">
-  <header>
-    <div class="about">
-      <div class="cover-author-image">
+<header class="main">
+    <div class="logo">
+      <div class="logo-image">
         <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
       </div>
-      <div class="author-name">{{site.author}}</div>
+    </div>
+	<nav>
+		<a class="nav__link" href="https://www.klishgroup.com">KlishGroup.com</a>
+	</nav>
+ </header> <!-- End Header -->
+  
+<aside class="sidebar">
+	<div class="about">
+    <!--  <div class="author-name">{{site.author}}</div>-->
       <p>{{site.about-author}}</p>
     </div>
-  </header> <!-- End Header -->
-  <footer>
-    <section class="contact">
+	
+	<h3>Previous Clients</h3>
+		<div class="clients">
+			<img src="https://res.cloudinary.com/klish-group/image/upload/v1534174672/web/logo/rci_transparent.png" alt="RCI"/>
+			<img src="https://res.cloudinary.com/klish-group/image/upload/v1533923895/web/logo/hilton_transparent.png" alt="Hilton Worldwide"/>
+			<img src="https://res.cloudinary.com/klish-group/image/upload/v1533865778/web/logo/tu_svg_transparent.svg" alt="TransUnion"/>
+		</div>
+   <!-- <section class="contact">
       <h3 class="contact-title">Contact Us</h3>
 	  	<div class="about" style="margin-bottom:0px">
 		  <div class="author-name" style="margin-bottom:0px">
@@ -27,7 +39,7 @@ layout: default
         {% else %}
           <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         {% endif %}
-        <!--{% if site.social-facebook %}
+        {% if site.social-facebook %}
           <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         {% else %}
           <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -37,7 +49,6 @@ layout: default
         {% else %}
           <li class="github"><a href="http://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
         {% endif %}
-		-->
         {% if site.social-linkedin %}
           <li class="linkedin"><a href="https://in.linkedin.com/{{site.social-linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
         {% else %}
@@ -51,11 +62,43 @@ layout: default
       </ul>
     </section> <!-- End Section Contact -->
 
-	<div class="copyright">
-      <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
-    </div>
-  </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
 <div class="content-box clearfix">
   {{ content }}
 </div>
+<footer class="main">
+	<div class="email">
+		<a href="mailto:info@klishgroup.com" style="color:black">info@KlishGroup.com</a>
+	</div>
+	<div class="copyright">
+      <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
+    </div>
+	<div class="icons">
+        {% if site.social-twitter %}
+          <a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+        {% else %}
+		
+        {% endif %}
+        <!--{% if site.social-facebook %}
+          <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        {% else %}
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        {% endif %}
+        {% if site.social-github %}
+          <li class="github"><a href="http://github.com/{{site.social-github}}" target="_blank"><i class="fa fa-github"></i></a></li>
+        {% else %}
+          <li class="github"><a href="http://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        {% endif %}
+		-->
+        {% if site.social-linkedin %}
+          <a href="https://in.linkedin.com/{{site.social-linkedin}}" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+        {% else %}
+		
+        {% endif %}
+        {% if site.social-email %}
+          <a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o fa-2x"></i></a>
+		{% else %}
+		
+        {% endif %}
+	</div>
+</footer>

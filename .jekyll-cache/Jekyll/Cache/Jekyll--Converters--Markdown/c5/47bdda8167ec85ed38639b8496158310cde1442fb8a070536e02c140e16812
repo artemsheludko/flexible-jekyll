@@ -1,0 +1,245 @@
+I"o$<h2 id="summary">Summary</h2>
+
+<p>As the growing trend of websites being viewed on handheld devices
+continues, it’s imperative that the content being served is providing
+the best experience for the user regardless of their chosen device.
+Responsive sites can make content look sleek and provide better layouts
+for the user’s chosen device, but having unoptimized images slows the
+whole system down.</p>
+
+<p>When it comes to delivering optimized images, there’s a sliding scale
+between resolution and image size. Obviously, we want the highest
+resolution possible with the lowest image size. In most current
+responsive frameworks this scale is balanced by creating an image tag
+with multiple sources, and leaving it up to the browser to pick the
+right source at runtime.</p>
+
+<blockquote>
+  <p>&lt;img srcset=”example-480w.jpg 480w,</p>
+
+  <p>example-800w.jpg 800w”</p>
+
+  <p>sizes=”(max-width: 600px) 480px,</p>
+
+  <p>800px”</p>
+
+  <p>src=”example-800w.jpg”&gt;</p>
+</blockquote>
+
+<p>The above bootstrap example will return a 480px or 800px version of the
+image depending on the viewport size. In order to make this happen,
+there must exist images cut to these particular proportions available in
+advance. A task which falls in the laps of most content authors when it
+comes to adding images to their articles.</p>
+
+<h2 id="providing-the-best-experience">Providing the Best Experience</h2>
+
+<p>In order ensure that optimization is always respected during the site
+build process we’ve put together this set of best practices:</p>
+
+<ol>
+  <li>
+    <p><strong>Compress all possible assets.</strong></p>
+
+    <ul>
+      <li>
+        <p>In general, runtime servers should be configured to return all
+ content compressed with <a href="https://brotli.org/">Brotli</a> or
+ <a href="https://www.gnu.org/software/gzip/">GZIP</a>. This provides
+ savings across the board as less content is transferred and all
+ modern browsers can support these algorithms.</p>
+      </li>
+      <li>
+        <p>Minify styles and scripts. Every style or script served should
+ be minified if possible. This will significantly reduce the file
+ size. Klish Group has built minification into publish workflows
+ for past builds in order to automate the procedure.</p>
+      </li>
+      <li>
+        <p>Use the best image format, when possible. Most of the time this
+ is PNG, but WebP is quickly becoming the new standard as it’s
+ adopted by more browers (<a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types">Image Format
+ Comparison</a>)</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Start with high resolution images.</strong> There’s nothing more
+frustrating than having a pixelated image taking up the full
+viewport. We request that all images being used are at least 1600
+x 500. A smaller height can be used if skinny banners are a part of
+the design, but keeping the width to 1600 ensures that even on the
+largest screens the image will not pixelate.</p>
+  </li>
+  <li>
+    <p><strong>Target high value images in layout.</strong> Sometimes it’s not possible
+to provide responsive images with multiple breakpoints for every
+image on a site. In those cases we identify the greatest return for
+optimizations by gauging the size of the image in the layout (the
+bigger the image the bigger the optimization gains) and how often a
+page is expected to be viewed (target images on home page versus
+contact page). As such ,the lowest hanging fruit is generally large
+heroes, banners, carousels, profile pictures, etc.</p>
+  </li>
+  <li>
+    <p><strong>Know your breakpoints.</strong> Setting your layout’s breakpoints early
+can help determine image dimensions and can help predict the level
+of additional work that will be needed to resize images. Breakpoints
+exist on a floating scale between optimization and image resize
+work, ideally we want to optimize to as many viewports as possible
+but there are diminishing returns producing images in many
+dimensions. We follow the default bootstrap breakpoints as a
+starting point for our designs:</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>Larger mobile phones (devices with resolutions ≥ 576px);</p>
+
+  <p>Tablets (≥768px);</p>
+
+  <p>Laptops (≥992px);</p>
+
+  <p>Desktops (≥1200px)</p>
+</blockquote>
+
+<p>Working with Cloudinary, we’ve embraced an automated alternative to
+manually cutting images to match breakpoint sizes. Instead of providing
+an srcset of images at different sizes, authors include a single URL to
+their image and then Cloudinary takes over the job of determining the
+correct (custom-defined) viewport and providing an image with the
+correct dimensions in an optimized file format.</p>
+
+<h2 id="using-the-power-of-cloudinary-transforms">Using the Power of Cloudinary Transforms</h2>
+
+<p>By utilizing Cloudinary’s on-the-fly transformations along with some
+conditional logic we’re able to produce a single URL that will
+automatically return an image that is:</p>
+
+<ul>
+  <li>
+    <p>Aware of both the size of the device viewport and the image’s own
+container</p>
+  </li>
+  <li>
+    <p>Optimized for the give pre-defined breakpoint</p>
+  </li>
+  <li>
+    <p>Automatically cropped to fit given dimensions (optional)</p>
+  </li>
+  <li>
+    <p>Using the best-available file format</p>
+  </li>
+</ul>
+
+<p>Using custom transforms we’re able to inject
+“t_viewport_and_container_aware” into a Cloudinary image URL. When
+the image is loaded on a device, JavaScript injects the viewport and
+container sizes into the URL as well. Then the transform takes those
+variables and compares them to pre-determined breakpoints to determine
+what size image to return.</p>
+
+<p>Here’s an example URL as it would be in the CMS:</p>
+
+<blockquote>
+  <p>https://res.cloudinary.com/example/image/upload/<strong>t_viewport_and_container_aware</strong>/Test/planet-earth-banner.jpg</p>
+</blockquote>
+
+<p>At runtime the viewport width (vw) and container width (cw) are added:</p>
+
+<blockquote>
+  <p>Note: The container size is compared against the breakpoints first, as
+there is no reason to return a 1200px wide image on a page that is
+1200px wide if the image’s parent container only takes up 25% of the
+page. Instead a 300px wide image is more optimized.</p>
+
+  <p>Note: The container width cannot be obtained in elements where the
+container is hidden on page load (carousels, tabbed content, etc). In
+which case the viewport width is used.</p>
+
+  <p>https://res.cloudinary.com/example/image/upload/$vw_999/$cw_995/t_viewport_and_container_aware/Test/planet-earth-banner.jpg</p>
+</blockquote>
+
+<p>Using the case above the container width is 995px and comparing that to
+the default best practice breakpoints requires that cloudinary returns
+an image with a width greater than 992px. In that case, cloudinary would
+return a 1000px wide image.</p>
+
+<p>In addition to determining the width of the return image we can set
+specific aspect ratios and let Cloudinary auto-crop content to fit. To
+facilitate this, Klish Group has developed a set of default transforms
+for popular aspect ratios. The default transforms make use of
+Cloudinary’s auto-gravity algorithm with searches for faces or points of
+interest in the image to focus on. Instead of automatically determining
+the focal point we can also force Cloudinary to use the image center.
+For example:</p>
+
+<p><img src="/kg-public-blog-flexible-jekyll/assets/img/docs/public/automatic-image-optimization/image1.png" style="width:6.5in;height:3.5375in" alt="Graphical user interface, website Description automatically generated" /></p>
+
+<p>While these transforms are exist independently of the content aware
+transform mentioned above, the utility can be combined in order to
+provide specific aspect ratios, or any other image manipulation, based
+on breakpoints.</p>
+
+<h2 id="default-image-transforms">Default Image Transforms</h2>
+
+<p>Klish Group has created a handful of default transforms that can be used
+automatically by adding them to a Cloudinary URL. These can be used to
+ensure images are device aware and can also be honed in to automatically
+crop and return a particular aspect ratio.</p>
+
+<p><strong><u>Content Aware</u></strong></p>
+
+<ul>
+  <li>t_viewport_and_container_aware – Picks breakpoint based on
+viewport or container size</li>
+</ul>
+
+<p><strong><u>Breakpoints</u></strong></p>
+
+<ul>
+  <li>
+    <p>t_sm_viewport_img – Returns 800px image</p>
+  </li>
+  <li>
+    <p>t_md_viewport_img – Returns 1000px image</p>
+  </li>
+  <li>
+    <p>t_lg_viewport_img – Returns 1200px image</p>
+  </li>
+  <li>
+    <p>t_xl_viewport_img – Returns 1500px image</p>
+  </li>
+</ul>
+
+<p><strong><u>Aspect Ratios</u></strong></p>
+
+<ul>
+  <li>
+    <p>t_1_1_aspect_ratio – Crops image to 1:1</p>
+  </li>
+  <li>
+    <p>t_16_9_aspect_ratio – Crops image to 16:9</p>
+  </li>
+  <li>
+    <p>t_4_3_aspect_ratio – Crops image to 4:3</p>
+  </li>
+  <li>
+    <p>t_3_2_aspect_ratio – Crops image to 3:2</p>
+  </li>
+  <li>
+    <p>t_8_5_aspect_ratio – Crops image to 8 :5</p>
+  </li>
+  <li>
+    <p>t_7_4_aspect_ratio – Crops image to 7:4</p>
+  </li>
+  <li>
+    <p>t_8_3_aspect_ratio – Crops image to 8:3</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Note : add “_center” at the end to set gravity to “center”, default
+is “auto”. Example: “t_8_3_aspect_ratio_center”</p>
+</blockquote>
+:ET

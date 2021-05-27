@@ -1,0 +1,170 @@
+I"{<h2 id="summary">Summary</h2>
+
+<p>As the websites, and the digital services they provide, reach more
+devices and users each year it’s imperative to focus on making the web
+as accessible to all users. The <a href="https://www.cdc.gov/media/releases/2018/p0816-disability.html">Center for Disease
+Control</a>
+places disabilities among Americans at 1 in 4, with an estimated 1.3
+billion people internationally that suffer from visual impairments. For
+most of these users, digital content is only consumable via a screen
+reader such as JAWS (Job Access with Speech) or Windows Narrator. For
+other users, physical limitations may require the use of a keyboard
+without a mouse, in which case using “tab” to navigate a page is
+necessity.</p>
+
+<h2 id="official-guidelines">Official Guidelines</h2>
+
+<p>As support for accessibility in the digital landscape grows, as do the
+guidelines provided by agencies that track the needs of these users. The
+main reference for this movement is a global standard known as the Web
+Content Accessibility Guidelines 2.1 (WCAG). Per WCAG’s mission
+statement, WCAG “covers a wide range of recommendations for making Web
+content more accessible”. <a href="https://www.w3.org/TR/WCAG21/">These
+guidelines</a> exhaustively cover all major
+and minor accessibility improvements and grade them in conformance from
+<strong>A (lowest)</strong> to <strong>AAA (highest)</strong>. Some simple examples include:</p>
+
+<blockquote>
+  <p><strong>A</strong>: Color is not used as the only means of conveying information</p>
+
+  <p><strong>AAA</strong>: Sign Language Interpretation provided for audio-only media</p>
+</blockquote>
+
+<p>A site can be graded using these guidelines based on how much
+accessibility is built in. In some cases, this can be a sliding scale
+for how much functionality is available. For example for keyboard
+navigation:</p>
+
+<blockquote>
+  <p><strong>A</strong>: If keyboard focus can be moved to a component of the page using a
+keyboard interface, then focus can be moved away from that component
+using only a keyboard interface</p>
+
+  <p><strong>AA</strong>: Any keyboard operable user interface has a mode of operation where
+the keyboard focus indicator is visible.</p>
+
+  <p><strong>AAA</strong>: All Functionality for content is operable through the keyboard</p>
+</blockquote>
+
+<h2 id="klish-best-practices">Klish Best Practices</h2>
+
+<p>At Klish Group we’ve had the opportunity to work on sites that strive to
+reach AAA accessibility ratings. Planning for accessibility needs to be
+done early in the design phase and can effect everything from the color
+palette to how site navigation is handled. So when it comes to component
+design, we’ve developed a set of best practices to help ensure the
+guidelines are adhered to.</p>
+
+<ol>
+  <li>Adding in hidden “Accessibility Labels” alongside Call To Action
+buttons for screen readers (can also use “aria-label” to accomplish
+the same task, more below)</li>
+</ol>
+
+<blockquote>
+  <p>Example:</p>
+
+  <p>&lt;a href=”#” &gt;Donate Now &lt;span class=”visually-hidden”&gt;to
+the American Red Cross Relief Fund.&lt;/span&gt;&lt;/a&gt;</p>
+</blockquote>
+
+<ol>
+  <li>Human-readable custom ID fields for tables and complex web elements.</li>
+</ol>
+
+<blockquote>
+  <p>&lt;table class=<strong>“location-comparison-chart__table
+data-table”</strong>&gt;</p>
+
+  <p><strong>   </strong> &lt;caption&gt;</p>
+
+  <p><strong>       </strong> &lt;span class=<strong>“visually-hidden”</strong>&gt;<strong>This is the
+summary for this data table! This is typically visually
+hidden.</strong>&lt;/span&gt;</p>
+
+  <p><strong>   </strong> &lt;/caption&gt;</p>
+
+  <p><strong>   </strong> &lt;tr&gt;</p>
+
+  <p><strong>       </strong> &lt;td&gt;<em> </em>&lt;/td&gt;</p>
+
+  <p><strong>       </strong> &lt;th scope=<strong>“col”</strong> id=<strong>“hospital-location-table”</strong>
+class=<strong>” locations-table”</strong>&gt;</p>
+
+  <p><strong>           </strong> &lt;span class=<strong>“visually-hidden”</strong>&gt;<strong>Current
+Location:</strong>&lt;/span&gt; <strong>North Hospital Location</strong>&lt;/th&gt;</p>
+
+  <p><strong>       </strong> &lt;th scope=<strong>“col”</strong> id=<strong>“south-hospital”</strong>&gt; <strong>South
+Hospital Location</strong>&lt;/th&gt;</p>
+
+  <p><strong>       </strong> &lt;th scope=<strong>“col”</strong> id=<strong>“east-hospital”</strong>&gt;<strong>East
+Hospital Location</strong>&lt;/th&gt;</p>
+
+  <p><strong>   </strong> &lt;/tr&gt;</p>
+
+  <p><strong>   …</strong></p>
+
+  <p>&lt;/table&gt;</p>
+</blockquote>
+
+<ol>
+  <li>Providing “alt” text for all image tags. Adding the alt attribute
+addresses a handful of cases:</li>
+</ol>
+
+<!-- -->
+
+<ul>
+  <li>
+    <p>ALT tags can be used for keyword identification related to the
+ image, which can be leveraged by search engines.</p>
+  </li>
+  <li>
+    <p>If an image cannot be displayed for some reason the ALT text will
+ replace the image, giving the user an idea of what should be
+ shown. These tags can also contain links to other pages/image to
+ provide additional information</p>
+  </li>
+  <li>
+    <p>ALT tags provide a text alternative of the image for users on screen
+ readers.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Example:</p>
+
+  <p>&lt;img src=”img_girl.jpg” alt=”Girl in a jacket”&gt;</p>
+</blockquote>
+
+<ol>
+  <li>Using the Accessible Rich Internet Applications (ARIA) for providing
+extra context</li>
+</ol>
+
+<p>&lt;nav aria-describedby=<strong>“utility-nav-title”</strong> role=<strong>“navigation”</strong>
+class=<strong>“utility-nav”</strong>&gt;</p>
+
+<p>In this case “role” is defining that this is a navigation-specific
+element and “aria-describedby” contains a descriptive name to identify
+this as a navigation bar for Utility links.</p>
+
+<ol>
+  <li>Using “Skip Navigation” links to allow screen reader users to bypass
+large blocks of navigation content</li>
+</ol>
+
+<p>Example:</p>
+
+<blockquote>
+  <p>&lt;div href=<strong>”#skipContent”</strong> class=<strong>“visually-hidden”</strong>
+id=<strong>“sidebar-navigation-title”</strong>&gt;<strong>Skip navigation</strong>&lt;/div&gt;</p>
+</blockquote>
+
+<ol>
+  <li>Placing Navigation elements as close to the top of the DOM structure
+as possible aids with skipping sections of navigation. Otherwise by
+providing the above “skip navigation” button you risk skipping vital
+page content, like article titles.</li>
+</ol>
+:ET
