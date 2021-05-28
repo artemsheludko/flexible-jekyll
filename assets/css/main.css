@@ -969,7 +969,7 @@ table tfoot td {
 }
 
 .about .author-name {
-  font-family: 'PT Serif', serif;
+  font-family: 'Nunito Sans', sans-serif;
   margin: 0 0 10px;
   position: relative;
   padding-bottom: 15px;
@@ -1162,7 +1162,7 @@ footer .copyright {
 }
 
 .post .post-content .post-title a {
-  font-family: 'PT Serif', serif;
+  font-family: 'Nunito Sans', sans-serif;
   text-decoration: none;
   color: #042B69;
 }
@@ -1501,7 +1501,7 @@ header.sticky {
     
 a.nav__link {
     margin-right: 10px;
-    font-family: 'PT Serif', serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 22px;
     text-transform: uppercase;
     color: #D5DEE8;
@@ -1590,8 +1590,8 @@ footer.sticky {
 }
 
 .email a{
-	font-family: 'PT Serif', serif;
-    font-size: 20px;
+	font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
     text-transform: uppercase;
     color: #D5DEE8;
 	font-weight: 700;
