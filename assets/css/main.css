@@ -774,8 +774,8 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #515151;
-  background-color: #d4d5d9;
+  color: #042B69;
+  background-color: #2565A0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -889,7 +889,7 @@ table tfoot td {
 }
 
 .post, .article-page {
-  background-color: #edeef2;
+  background-color: #D5DEE8;
 }
 
 ::-moz-selection {
@@ -933,7 +933,7 @@ table tfoot td {
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: #d4d5d9;
+  background-color: #2565A0;
 }
 
 .about {
@@ -975,7 +975,7 @@ table tfoot td {
   padding-bottom: 15px;
   font-size: 16px;
   text-transform: uppercase;
-  color: #333030;
+  color: #D5DEE8;
   font-weight: 700;
 }
 
@@ -1023,7 +1023,7 @@ table tfoot td {
 
 .contact .contact-title {
   position: relative;
-  color: #333030;
+  color: #D5DEE8;
   font-weight: 400;
   font-size: 12px;
   margin: 0 0 5px;
@@ -1164,7 +1164,7 @@ footer .copyright {
 .post .post-content .post-title a {
   font-family: 'PT Serif', serif;
   text-decoration: none;
-  color: #263959;
+  color: #042B69;
 }
 
 .post .post-content p {
@@ -1174,7 +1174,7 @@ footer .copyright {
 a.older-posts, a.newer-posts {
   font-size: 18px;
   display: inline-block;
-  color: #515151;
+  color: #042B69;
   -webkit-transition: -webkit-transform .2s;
   transition: -webkit-transform .2s;
   -o-transition: transform .2s;
@@ -1489,9 +1489,9 @@ header.main {
     justify-content: space-between;
     width: 100%;
     padding: 7px;
-    background-color: #d4d5d9;
+    background-color: #1B74B3;
     transition: padding 300ms ease;
-	border-bottom: solid 1px rgba(41, 41, 41, 1);
+	border-bottom: solid 1px #D5DEE8;
 	z-index:9
 }
 
@@ -1504,7 +1504,7 @@ a.nav__link {
     font-family: 'PT Serif', serif;
     font-size: 22px;
     text-transform: uppercase;
-    color: #333030;
+    color: #D5DEE8;
 	font-weight: 700;
 	text-decoration: none;
     padding-right: 20px;
@@ -1522,6 +1522,7 @@ a.nav__link:last-child {
     margin-top: 180px;
 	bottom:initial;
 	height:auto;
+	color: #D5DEE8;
 }
 .sidebar h3 {
 	align-self: center;
@@ -1564,10 +1565,11 @@ footer.main {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
-    background-color: #d4d5d9;
+    padding: 5px;
+	color: #D5DEE8;
+    background-color: #1B74B3;
     transition: padding 300ms ease;
-	border-top: solid 1px rgba(41, 41, 41, 1);
+	border-top: solid 1px #D5DEE8;
 	z-index:9
 }
 
@@ -1584,16 +1586,17 @@ footer.sticky {
 
 .icons a {
 	flex: auto;
-	color: #515151;
+	color: #D5DEE8;
 }
 
 .email a{
 	font-family: 'PT Serif', serif;
     font-size: 20px;
     text-transform: uppercase;
-    color: #333030;
+    color: #D5DEE8;
 	font-weight: 700;
 	text-decoration:none;
+	margin-left: 20px;
 }
 
 .sidebar .copyright {
