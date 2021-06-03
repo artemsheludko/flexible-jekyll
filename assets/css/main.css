@@ -969,14 +969,14 @@ table tfoot td {
 }
 
 .about .author-name {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Lalezar', sans-serif;
   margin: 0 0 10px;
   position: relative;
   padding-bottom: 15px;
   font-size: 16px;
   text-transform: uppercase;
   color: #D5DEE8;
-  font-weight: 700;
+  font-weight: initial;
 }
 
 .about .author-name::after {
@@ -1162,7 +1162,7 @@ footer .copyright {
 }
 
 .post .post-content .post-title a {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Lalezar', sans-serif;
   text-decoration: none;
   color: #042B69;
 }
@@ -1501,11 +1501,11 @@ header.sticky {
     
 a.nav__link {
     margin-right: 10px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Lalezar', sans-serif;
     font-size: 22px;
     text-transform: uppercase;
     color: #D5DEE8;
-	font-weight: 700;
+	font-weight: initial;
 	text-decoration: none;
     padding-right: 20px;
 }
@@ -1590,11 +1590,11 @@ footer.sticky {
 }
 
 .email a{
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Lalezar', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     color: #D5DEE8;
-	font-weight: 700;
+	font-weight: initial;
 	text-decoration:none;
 	margin-left: 20px;
 }
@@ -1614,6 +1614,24 @@ footer.sticky {
 	 align-self: center;
 	 padding:10px;
 }
+.body-content {
+	max-width:1250px;
+	margin: 0 auto;
+}
+.body-content .sidebar{
+	left:initial;
+}
+body {
+	background-color:#8ebbe8;
+}
+.sidebar, .wrap-content, .page-date{
+	background-color:#8ebbe8;
+	color: #042B69;
+}
+.header-page .page-date {
+	color: #042B69;
+}
+	
 
 @media screen and (max-width: 800px) {
 	.clients {
