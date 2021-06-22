@@ -3,7 +3,7 @@ layout: post
 title: From the ground up - The importance of your feet
 date: 2021-06-21 13:32:20 +0300
 description: # Add post description (optional)
-img: blog3-image1.jpg # Add image post (optional)
+img: blog3-image1.jpeg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Yoga]
 ---
@@ -11,7 +11,7 @@ In the part of the world where I grew up, Tamil Nadu, Southern part of India, th
 
 The earth is the beginning of the journey; it is the birthplace, the primal source, the womb from which all living things emerge and to which, in time, they return. Like a plant seedling breaking ground, like the bones of the body growing upward to stand or the rising cobra, the human spirit evolves through vertical ascent. 
 
-<img style="float:right; padding:20px" src="{{site.baseurl}}/assets/img/blog3-image4.jpg" width="360">
+<img style="float:right; padding:20px" src="{{site.baseurl}}/assets/img/blog3-image4.jpeg" width="360">
 
 Understanding the mechanics of your feet in yoga and the patterns in your foot health is the first step to establishing a solid foundation in your practice. Structurally, the feet support the body and are the source for numerous nāḍīs and meridian channels. The soles of the feet underpin all bodily systems, so that posturally, all weight- bearing forces are borne by the feet. The feet must be balanced and sturdy to support the legs, spine, arms, and head. If our base is tilted or collapsed, it will be reflected up through the body as distortion or misalignment.
 
