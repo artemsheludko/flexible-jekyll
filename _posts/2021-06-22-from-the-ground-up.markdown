@@ -23,4 +23,4 @@ The practice of yoga postures can transform our relationship with our feet. Prac
 
 As we free up our feet, we tap into a reservoir of potential energy. It is as if we are standing on wellsprings of life force that have been blocked by years of constrictive footwear, lack of use, and inhibition. We may be required to do a fair amount of “mining, But this mining pays off eventually by uncovering sources of energy that can keep us vital and fluid through years of practice.
 
-<P align=right>By Eric Angus, Yoga Guide at Anamii</P>
+<P align=right><strong>By Eric Angus, <br/>Yoga Guide at Anamii</strong></P>
