@@ -5,6 +5,9 @@ yarn.lock
 Gemfile.lock
 package-lock.json
 node_modules/
+.bundle
+vendor/
+.jekyll-cache
 
 ### macOS ###
 *.DS_Store
