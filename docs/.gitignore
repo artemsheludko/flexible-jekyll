@@ -1,34 +1,29 @@
-_site
-.sass-cache
-.jekyll-metadata
-yarn.lock
+# Vim
+*~
+*.sw[p_]
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Ruby Gem
+*.gem
+.bundle
 Gemfile.lock
+**/vendor/bundle
+
+# Node.js and NPM
+node_modules
+npm-debug.log*
 package-lock.json
-node_modules/
+codekit-config.json
 
-### macOS ###
-*.DS_Store
-.AppleDouble
-.LSOverride
+# macOS
+.DS_Store
 
-# Icon must end with two \r
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Jekyll generated files
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+_asset_bundler_cache
+_site
