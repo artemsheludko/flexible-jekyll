@@ -7,7 +7,7 @@ layout: main
   {% else %}
   {% endif %}
   <div class="post-content">
-    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+    <h2 class="post-title"><a href="https://mblogthumb-phinf.pstatic.net/MjAxOTAzMDZfMTM3/MDAxNTUxODE0NTI0NDkz.RvXlYv6p5xPwXrOIPfABgFuiknuTn0iFZNuUguVYc_og.ii04J6D96C6FKQSXQzy9DABBNk7vNuU343nmAquhmZgg.JPEG.mong728/%EC%B4%88%EA%B3%A0%ED%99%94%EC%A7%88_%EC%BB%B4%ED%93%A8%ED%84%B0_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_(7).jpg?type=w800">{{post.title}}</a></h2>
     <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
     <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
     <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
