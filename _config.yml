@@ -11,7 +11,9 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Charles Jones # add your name
 author-img: david-freeman.jpg # add your photo
-about-author: PhD student in Computer Science (Microsoft Research Scholarship in Machine Learning for Medical Imaging at Imperial College London). # add description
+about-author: Computer Science PhD student
+scholarship: Microsoft Research Scholarship in Machine Learning for Medical Imaging # add description
+institution: Imperial College London
 #social-twitter: # add your Twitter handle
 #social-facebook: # add your Facebook handle
 social-github: Charl-AI # add your Github handle
