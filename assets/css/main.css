@@ -995,6 +995,29 @@ table tfoot td {
   background-color: #515151;
 }
 
+.about .author-info {
+  margin: 0 0 10px;
+  position: relative;
+  padding-bottom: 15px;
+  font-size: 16px;
+}
+
+.about .author-info::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  display: block;
+  width: 7px;
+  height: 7px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  background-color: #515151;
+}
+
 .about p {
   font-size: 16px;
   margin: 0 0 10px;

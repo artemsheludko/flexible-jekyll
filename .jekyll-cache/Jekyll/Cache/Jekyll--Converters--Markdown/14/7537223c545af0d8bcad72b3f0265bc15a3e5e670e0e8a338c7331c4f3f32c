@@ -1,0 +1,17 @@
+I"D<p>Or how I learned to stop worrying and love the bomb disposal robot.</p>
+
+<p>This is my first blog post on my website, so I’ll kick things off by going over one of my previous projects from my undergrad (MEng Mechanical Engineering at Imperial College London), where I developed the software for a miniature bomb disposal robot. This robot was developed on a two-week timeframe and can locate a bomb by scanning for suspicious IR activity, scan the suspicious device for an RFID disarm code, and return home. Here, I will distill 5 lessons which I hope will be useful to anyone starting to learn embedded C programming.</p>
+
+<p>The project source code can be found [here][repo=link] .</p>
+
+<h2 id="1-dont-be-afraid-of-hardware">1. Don’t be afraid of hardware</h2>
+
+<h2 id="2-be-careful-with-data-types">2. Be careful with data types</h2>
+
+<h2 id="3-maths-is-your-friend">3. Maths is your friend!</h2>
+
+<h2 id="4-proper-pointers-prevent-poor-performance">4. Proper Pointers Prevent Poor Performance</h2>
+
+<h2 id="5-think-like-a-systems-architect">5. Think like a systems architect</h2>
+
+:ET
