@@ -6,6 +6,8 @@ Gemfile.lock
 package-lock.json
 node_modules/
 
+.jekyll-cache/
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
