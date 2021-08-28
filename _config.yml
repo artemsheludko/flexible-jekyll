@@ -12,14 +12,14 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Charles Jones # add your name
 author-img: david-freeman.jpg # add your photo
 about-author: PhD student in Computer Science (Microsoft Research Scholarship in Machine Learning for Medical Imaging at Imperial College London). # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
+#social-twitter: # add your Twitter handle
+#social-facebook: # add your Facebook handle
 social-github: Charl-AI # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email: # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+#discus-identifier: mr-brown # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
