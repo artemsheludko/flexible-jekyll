@@ -3,7 +3,7 @@ layout: post
 title: "5 Things I Learned from Programming a Bomb Disposal Robot"
 date: 2021-08-28 16:57:00 +0100
 description: Or how I learned to stop worrying and love the bomb disposal robot. # Add post description (optional)
-img:  bomb_disposal_robot.jpg
+img:  Optimized-bomb_disposal_robot.jpg
 tags: [Embedded C, University Project]
 ---
 Or how I learned to stop worrying and love the bomb disposal robot.
