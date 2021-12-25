@@ -1,12 +1,11 @@
 ---
 layout: post
-title: 산타파이브 프로젝트 이슈...	
+title: 산타파이브 프로젝트 이슈
 tags: [SSAFY,사이드프로젝트,산타파이브] 
 ---
 
 
-
-요새 SNS에 산타파이브(https://colormytree.me)라는 사이드 프로젝트가 화제다.
+요새 SNS에 산타파이브(https://colormytree.me) 라는 사이드 프로젝트가 화제다.
 
 주니어 개발자 5명이 사이드 프로젝트로 시작한 프로젝트처럼 보이는데 크리스마스를 목전에 두고 인기를 얻은 모양이다. 그러다 보니 여러 파리들이 꼬이기 마련. 누군가가 API의 헛점을 발견했는데 이를 가지고 엄청난 공격을 하고, 이 공격 방법을 또 깃헙 및 디스코드에 전파를 한 모양이다. 관련 사과문 및 디스코드 로그는 [여기](https://despenser08.notion.site/despenser08/colormytree-me-API-0bcb19c3c1524dd5931e149471a9d4cc)를 참조하기 바란다.
 
