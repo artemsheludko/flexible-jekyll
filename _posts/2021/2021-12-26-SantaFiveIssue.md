@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 산타파이브 프로젝트
-tags: [SSAFY,SideProject,SantaFive] 
+title: 산타파이브프로젝트
+tags: [SSAFY]
 ---
 
 
