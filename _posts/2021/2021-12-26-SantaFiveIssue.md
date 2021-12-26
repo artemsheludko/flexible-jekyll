@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 산타파이브 프로젝트
-tags: [SSAFY]
 ---
 
 
