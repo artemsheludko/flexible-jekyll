@@ -2,7 +2,7 @@
 title:  "Supernova Cosmology at Argonne National Lab"
 author: "Eda Gjergo"
 img: c.jpg
-date: 
+date: <p>&#8667;</p>
 ---
 
 ## Undergraduate work (Chicago, IL)

@@ -2,7 +2,7 @@
 title:  "GalCEM: An open-source Galactic Chemical Evolution Model"
 author: "Eda Gjergo"
 img: a.jpg
-date: 
+date: <p>&#8667;</p>
 ---
 
 ## Postdoc work (Wuhan, China)
