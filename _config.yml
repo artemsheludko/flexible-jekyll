@@ -1,28 +1,35 @@
-title: Hello, world! I'm David Freeman
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Eda Gjergo
+description: > # this means to ignore newlines until "baseurl:" #Astrophysics postdoc working on galactic chemical evolution.
+  Astrophysics postdoc working on galactic chemical evolution
 permalink: ':title/'
-baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "https://www.edagjergo.com" # the subpath of your site, e.g. /blog
+url: "https://www.edagjergo.com" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
+author: Eda Gjergo # add your name
+author-img: eda-gjergo.jpg # add your photo
+about-author: I'm an astrophysics postdoc at Wuhan University (<a>China</a>).
+  Prior to this, I earned a Physics Ph.D. in Trieste (Italy), 
+  two B.S. in Applied Mathematics and Physics at IIT (Chicago, IL, USA).
+  
+  My research interests include galactic chemical evolution, dust modeling, 
+  cosmological simulations, interstellar and intracluster medium, 
+  supernova cosmology, and dark energy models. 
+# add description
+social-adsabs: Eda Gjergo
+social-twitter: eda_gjergo # add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-github: egjergo # add your Github handle
+social-linkedin: eda-gjergo # add your Linkedin handle
+social-email: galacticcem@gmail.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier:  # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: G-KFM7WF17YV # Google Analytics
+google_analytics: 2784312434
 
 # Build Settings
 markdown: kramdown

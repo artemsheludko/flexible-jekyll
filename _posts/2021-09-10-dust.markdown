@@ -1,0 +1,13 @@
+---
+title:  "Dust in the intergalactic medium"
+author: "Eda Gjergo"
+img: "assets/img/b.jpg"
+date:   2021-09-10 12:12:12
+---
+
+## Graduate work (Trieste, Italy)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+ <font size="1">  Image credit:  The Carina Nebula NGC 3372 -- NASA, ESA, Hubble Heritage Team (STScI/AURA)</font>
+
+### Thesis title: Dust Evolution in Galaxy Cluster Simulations

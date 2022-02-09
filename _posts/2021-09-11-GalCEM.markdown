@@ -1,0 +1,13 @@
+---
+title:  "GalCEM: An open-source Galactic Chemical Evolution Model"
+author: "Eda Gjergo"
+img: "/assets/img/a.jpg"
+date:   2021-09-11 12:12:12
+---
+
+## Postdoc work (Wuhan, China)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<font size="1">  Image credit: Abell 370. X-ray: NASA/CXC/Penn State Univ./G. Garmire; Optical: NASA/STScI</font>
+
+### GalCEM

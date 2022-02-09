@@ -1,0 +1,44 @@
+---
+title:  "Supernova Cosmology at Argonne National Lab"
+author: "Eda Gjergo"
+img: "assets/img/e.jpg"
+date:   2021-09-09
+---
+
+## Undergraduate work (Chicago, IL)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<font size="1"> Image credit: NGC 602 in Small Magellanic Cloud -- (c) Rob Gendler</font>
+
+###  <a rel="nofollow" target="_blank" href="https://www.hep.anl.gov/egjergo/"> <i class="fa fa-link" aria-hidden="true"></i>You can access my ANL page at the following link <i class="fa fa-link" aria-hidden="true"></i></a> 
+
+From Fall 2011 to Summer 2015 I conducted research with <a rel='nofollow' target='_blank' href='mailto:stk@anl.gov'>Steve Kuhlmann</a> in the Supernova Cosmology Group within the HEP division at Argonne National Laboratory (Chicago, IL). 
+
+The use of Type Ia supernovae has lead two teams -- the Supernova Cosmology Project and the High-z Supernova Search Team -- to the independent discovery of the accelerated expansion of the Universe. The discovery was later acknowledged with the 2011 Nobel Prize in Physics, awarded to Saul Perlmutter, Brian P. Schmidt, and Adam G. Riess.
+
+The attached milestone plot from the Supernova Cosmology Project (a spectroscopically-identified sample of Type Ia SNe, collected and analyzed between the 1990s and the early 2000s) 
+
+![SNIa stretch factor]({{site.baseurl}}/assets/img/stretch_hamuy.gif)
+
+Not all Type Ia SNe are standard candles in the sense that they all have the same absolute magnitude (y-axis).There is dispersion (top plot).
+But fortunately, supernovae with lower absolute magnitude grow dimmer faster than the ones with a higher one.
+Type Ia SNe are standardizable in the sense that, when “stretched" to an absolute magnitude of -19.5, their light curves tend to align to the same shape (bottom plot). This corrected magnitude is the “cosmic light bulb”.
+
+A clear explanation of the computation of the stretch factor can be found in section 5.4 (page 10) of the Supernova Legacy Survey
+[ADS link](https://ui.adsabs.harvard.edu/abs/2006A%26A...447...31A/abstract)
+
+---
+
+I worked on the following projects:
+
+* <a target='_blank' rel='nofollow' href="https://ui.adsabs.harvard.edu/abs/2013APh....42...52G/abstract">Tested a possible time-dependence of Dark Energy when described by the CPL parametrization. Within the framework of Supernova Cosmology, we investigated photometric selection criteria that would distinguish Type Ia Supernovae from Core Collapse Supernovae in Dark Energy Survey Camera data. We developed a Figure of Merit to forecast the constraints of interest</a>.
+
+* <a target='_blank' rel='nofollow' href='https://www.hep.anl.gov/egjergo/Presentations/Gjergo_Eda_AAS_Jun13_poster.pdf'>Investigated alternatives to Vacuum Energy as possible causes for the observed accelerated expansion of the Universe in recent epochs. At the 222nd AAS Meeting, I was awarded with the Chambliss Medal for this project</a>. 
+
+![Chambliss Medal]({{site.baseurl}}/assets/img/ChamblissMedal.JPG)
+
+* <a target='_blank' rel='nofollow' href="https://ui.adsabs.harvard.edu/abs/2014AAS...22325439G/abstract">Initiated a preliminary study of the six optical ugrizy4 filters for the Large Synoptic Survey Telescope (LSST, now renamed Vera Rubin Observatory's Legacy Survey of Space and Time), and their impact on supernova science. I was awarded with an Honorable Mention for the Chambliss Award at AAS the following year</a>.
+
+* <a target='_blank' rel='nofollow' href='https://ui.adsabs.harvard.edu/abs/2015MNRAS.451.1955W/abstract'>Collaborated in the improvement of an analytic photometric redshift estimator for Type Ia supernovae from the Large Synoptic Survey Telescope</a>.
+
+* Participated in a series of outreach activities for high school students in the Chicago-area, and on YouTube.

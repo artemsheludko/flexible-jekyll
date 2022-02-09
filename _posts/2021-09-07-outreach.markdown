@@ -1,0 +1,13 @@
+---
+title:  "Outreach"
+author: "Eda Gjergo"
+img: "{{site.baseurl}}/assets/img/c.jpg"
+date:   2021-09-07 12:12:12
+---
+
+## Non-fiction best-selling author, YouTube, Chicago-area and Italian High Schools
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<font size="1"> Image credit: The Antenna Galaxy NGC 4038 -- NASA, ESA, Hubble Heritage Team (STScI/AURA)<font>
+
+### Semper Ad Meliora

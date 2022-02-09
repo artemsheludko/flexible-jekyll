@@ -1,0 +1,23 @@
+---
+title:  "Teaching"
+author: "Eda Gjergo"
+img: "/assets/img/f.jpg"
+date:   2021-09-05 12:12:12
+---
+
+## Lectures at Wuhan University and Università degli Studi di Trieste
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ 
+
+<font size="1"> Image credit:  The Crab Nebula M1 -- NASA, ESA, J. Hester and A. Loll</font>
+
+### Classical Mechanics at Wuhan University: 
+#### Hydrostatic Equilibrium & Astrophysics (2 classes, Fall 2020)
+
+[PDF slides](docs/Print_CM-Astro_Fall2020_pt1_small.pdf)
+
+
+### Introduction to Astrophysics at Università degli Studi di Trieste:
+#### General Relativity and Cosmology (2 hours, Fall 2017 and Fall 2018)
+
+[PDF slides](docs/MatteucciClassPres.pdf)
