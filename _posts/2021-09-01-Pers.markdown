@@ -2,7 +2,7 @@
 title:  "Bio"
 author: "Eda Gjergo"
 img: f.jpg
-date: <p>&#8667;</p>
+date: .
 ---
 
 ## A bit of my background
