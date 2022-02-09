@@ -2,6 +2,7 @@
 title:  "Dust in the intergalactic medium"
 author: "Eda Gjergo"
 img: b.jpg
+date: 
 ---
 
 ## Graduate work (Trieste, Italy)
