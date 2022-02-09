@@ -2,7 +2,6 @@
 title:  "Teaching"
 author: "Eda Gjergo"
 img: "/assets/img/f.jpg"
-date:   2021-09-02
 ---
 
 ## Lectures at Wuhan University and Università degli Studi di Trieste

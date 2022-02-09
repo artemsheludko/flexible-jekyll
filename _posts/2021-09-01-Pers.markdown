@@ -2,7 +2,6 @@
 title:  "Bio"
 author: "Eda Gjergo"
 img: "/assets/img/d.jpg"
-date:   2021-09-01
 ---
 
 ## A bit of my background
