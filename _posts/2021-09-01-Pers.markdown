@@ -1,7 +1,7 @@
 ---
 title:  "Bio"
 author: "Eda Gjergo"
-img: d.jpg
+img: f.jpg
 ---
 
 ## A bit of my background
