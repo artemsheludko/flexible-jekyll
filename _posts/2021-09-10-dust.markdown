@@ -2,7 +2,7 @@
 title:  "Dust in the intergalactic medium"
 author: "Eda Gjergo"
 img: "assets/img/b.jpg"
-date:   2021-09-10 12:12:12
+date:   2021-09-05
 ---
 
 ## Graduate work (Trieste, Italy)

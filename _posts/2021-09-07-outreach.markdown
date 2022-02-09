@@ -1,8 +1,8 @@
 ---
 title:  "Outreach"
 author: "Eda Gjergo"
-img: "{{site.baseurl}}/assets/img/c.jpg"
-date:   2021-09-07 12:12:12
+img: "/assets/img/c.jpg"
+date:   2021-09-03
 ---
 
 ## Non-fiction best-selling author, YouTube, Chicago-area and Italian High Schools
