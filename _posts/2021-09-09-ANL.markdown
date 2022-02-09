@@ -35,9 +35,8 @@ I worked on the following projects:
 
 * <a target='_blank' rel='nofollow' href='https://www.hep.anl.gov/egjergo/Presentations/Gjergo_Eda_AAS_Jun13_poster.pdf'>Investigated alternatives to Vacuum Energy as possible causes for the observed accelerated expansion of the Universe in recent epochs. At the 222nd AAS Meeting, I was awarded with the Chambliss Medal for this project</a>. 
 
-![Chambliss Medal]({{site.baseurl}}/assets/img/ChamblissMedal.JPG)
 <img src="/assets/img/ChamblissMedal.JPG" alt="Chambliss Medal"
-	title="Chambliss Medal" width="275" />
+	title="Chambliss Medal" width="275" align="center" />
 
 * <a target='_blank' rel='nofollow' href="https://ui.adsabs.harvard.edu/abs/2014AAS...22325439G/abstract">Initiated a preliminary study of the six optical ugrizy4 filters for the Large Synoptic Survey Telescope (LSST, now renamed Vera Rubin Observatory's Legacy Survey of Space and Time), and their impact on supernova science. I was awarded with an Honorable Mention for the Chambliss Award at AAS the following year</a>.
 
