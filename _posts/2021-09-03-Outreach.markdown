@@ -2,7 +2,7 @@
 title:  "Outreach"
 author: "Eda Gjergo"
 img: d.jpg
-date: .
+date: 2021-09-03
 ---
 
 ## Non-fiction best-selling author, YouTube, Chicago-area and Italian High Schools
