@@ -1,7 +1,7 @@
 ---
 title:  "GalCEM: An open-source Galactic Chemical Evolution Model"
 author: "Eda Gjergo"
-img: GalCEM/GalCEMdiagram.jpg
+img: a.jpg
 date: .
 ---
 
