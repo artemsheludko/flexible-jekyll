@@ -1,7 +1,7 @@
 ---
 title:  "Supernova Cosmology at Argonne National Lab"
 author: "Eda Gjergo"
-img: c.jpg
+img: ANL/ChamblissMedal.JPG
 date: .
 ---
 
@@ -18,7 +18,7 @@ The use of Type Ia supernovae has lead two teams -- the Supernova Cosmology Proj
 
 The attached milestone plot from the Supernova Cosmology Project (a spectroscopically-identified sample of Type Ia SNe, collected and analyzed between the 1990s and the early 2000s) 
 
-![SNIa stretch factor]({{site.baseurl}}/assets/img/stretch_hamuy.gif)
+![SNIa stretch factor]({{site.baseurl}}/assets/img/ANL/stretch_hamuy.gif)
 
 Not all Type Ia SNe are standard candles in the sense that they all have the same absolute magnitude (y-axis).There is dispersion (top plot).
 But fortunately, supernovae with lower absolute magnitude grow dimmer faster than the ones with a higher one.
@@ -34,9 +34,6 @@ I worked on the following projects:
 * <a target='_blank' rel='nofollow' href="https://ui.adsabs.harvard.edu/abs/2013APh....42...52G/abstract">Tested a possible time-dependence of Dark Energy when described by the CPL parametrization. Within the framework of Supernova Cosmology, we investigated photometric selection criteria that would distinguish Type Ia Supernovae from Core Collapse Supernovae in Dark Energy Survey Camera data. We developed a Figure of Merit to forecast the constraints of interest</a>.
 
 * <a target='_blank' rel='nofollow' href='https://www.hep.anl.gov/egjergo/Presentations/Gjergo_Eda_AAS_Jun13_poster.pdf'>Investigated alternatives to Vacuum Energy as possible causes for the observed accelerated expansion of the Universe in recent epochs. At the 222nd AAS Meeting, I was awarded with the Chambliss Medal for this project</a>. 
-
-<img src="/assets/img/ChamblissMedal.JPG" alt="Chambliss Medal"
-	title="Chambliss Medal" width="275" align="center" />
 
 * <a target='_blank' rel='nofollow' href="https://ui.adsabs.harvard.edu/abs/2014AAS...22325439G/abstract">Initiated a preliminary study of the six optical ugrizy4 filters for the Large Synoptic Survey Telescope (LSST, now renamed Vera Rubin Observatory's Legacy Survey of Space and Time), and their impact on supernova science. I was awarded with an Honorable Mention for the Chambliss Award at AAS the following year</a>.
 
