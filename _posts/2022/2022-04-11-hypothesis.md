@@ -221,7 +221,7 @@ FAILED 6test.py::test_course_meal_substitutions - AssertionError: assert False =
 
 
 
-#### Hypothesis의 의미
+### Hypothesis의 의미
 
 속성 기반 테스트라고 하지만 어떻게 보면 속성에 맞게 랜덤하게 데이터를 생성해 적용하는 랜덤 테스트 도구이다. 다시 말하면 이 도구에서 생성하는 케이스를 메인 테스트 케이스로 삼으면 상당히 위험하며, 정상적인 경우를 체크못할 경우도 발생할 수 있다. 
 
