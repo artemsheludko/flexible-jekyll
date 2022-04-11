@@ -83,19 +83,7 @@ test_step()
 
 실행 결과는 아래와 같다.
 
-```bash
-{'3@l.ms': 1665}
-{'&|S@tmlp3.mVC-I.JPmOrGan': 336}
-{'+0~ZRnO@L.lB': 317, 'wsMFPt6%@v.l.Xn--8y0A063a': 1837, 'A-8@q.iCU': 1797}
-{'9op@z.w.KwUaLujeCGiU6ChzFF.E.SeCuRe': 1382, 'Jnn@X.lv': 709, 'Ag1kX5T~SCk@N.o5L1MmMc.BOaTs': 1105}
-{'N1y@g.cfd': 1659, 'uR@I.shiA': 688, '1_-|iD&8o5*lw4#&9y~@r.O.cLP.Yn.EXpERT': 1821, '^m@FeW8OyjCoR20.HLQ.HOMes': 408}
-{'68=d@Yn6EruU.XN--otU796d': 582, 'aGrWMv@t.q.VPgZi5DcRAvnfSIPZlXs.Kc.ALSACE': 1083, 'Gpo^&0WrJnmPhS%15@y.CiTAdEL': 1433}
-{}
-{'NemhW{@fY9TOWWn0TJ22jQjWOJ.XN--q7cE6A': 1578, 'Tw/4/=`T+@nya.bEAuty': 447, '5E#f@y.sf.a.W.schooL': 781, 'bS^#X4&Y3{6kCm7T}p@A.Lt': 571, 'W_YA@Q-p.TW.basEBAll': 756, '#|@T1VFcqu9YTJ0rWX63z.EIS4gsb9cMoe2.SO': 223, '`!ZXC4YmM$@I.QUEst': 1367, 'Jrwguc9q_EH@ubvELiubR-uVNZ.E.P8Nj2Cj.pREsS': 1768, 'Quq&M@i.RMZfO.N.o.D58z.I.kLrnXR7.D.XN--mGBbH1A': 1885, '*784I@B1Yn.k.GA.p.c-eI.Bzh': 1244, '1@SQK.v.XBOx': 1875, 'i@BFrD0m5U-AzbU563.d.h.HelP': 1123}
-{'H$T7^DhCpW@RE.JZ.thEaTer': 145, '#lI{{uKtUuNKb*-@v.Lcf.qUVYZ73.aRpA': 178, 'mw@K.COmpAny': 1220, '}yN@x.lTda': 1386}
-{'ht@G.j5.w.A.pHiLIpS': 1830, 'fo@K.coFFEE': 1324, 'KX@g.X.j.w.DISCOvER': 1382}
-...
-```
+![](https://raw.githubusercontent.com/cheuora/cheuora.github.io/master/_posts/2022/image-2022-04-12.png)
 
 딕셔너리의 키 값은 무작위이지만 이메일 형식을 따른 데이터를, 키에 매칭되는 정수값은 100이상 2000 미만 중에서 무작위로 선택되었다.
 
