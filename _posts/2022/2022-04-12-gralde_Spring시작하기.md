@@ -86,7 +86,7 @@ Gradle 7.4.2
 이제 `gradle init` 명령으로 프로젝트를 하나 생성한다. 
 
 ```
-ubuntu@ip-172-26-11-85:~/gradletest$ gradle init
+~/gradletest$ gradle init
 Starting a Gradle Daemon (subsequent builds will be faster)
 
 Select type of project to generate:
