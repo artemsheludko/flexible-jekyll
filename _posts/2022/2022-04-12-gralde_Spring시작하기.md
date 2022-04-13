@@ -4,8 +4,6 @@ title: gradle로 Springboot 시작하기
 tags: [gradle, SpringBoot]
 ---
 
-## gradle로 SpringBoot 시작하기
-
 이 글은 이클립스에서의 설정이 아닌 터미널에서 gradle로 스프링부트를 설치하는 방법을 적어놓은 것이다.
 
 실행 환경은 아래와 같다. 

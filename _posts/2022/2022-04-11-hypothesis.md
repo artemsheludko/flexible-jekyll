@@ -4,10 +4,6 @@ title: hypothesis와 속성 기반 테스팅
 tags: [python, hypothesis, 속성기반테스트]
 ---
 
-## hypothesis와 속성 기반 테스팅
-
-
-
 ### hypothesis
 
 파이썬에서 hypothesis라는 재미 있는 라이브러리가 있다. 
