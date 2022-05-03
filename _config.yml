@@ -6,15 +6,15 @@ description: > # this means to ignore newlines until "baseurl:"
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://kids.army" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: https://twitter.com/mykidsarmy #if your site has a twitter account, enter it here
+site-twitter: "https://twitter.com/mykidsarmy" #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Kids Army # add your name
 author-img: KA.png # add your photo
 about-author: Kida Army. Always hungry to keep learning. # add description
 social-twitter: https://twitter.com/mykidsarmy # add your Twitter handle
-social-facebook:https://www.facebook.com/profile.php?id=100080933412158 # add your Facebook handle
-social-github: artemsheludko # add your Github handle
+social-facebook: https://www.facebook.com/profile.php?id=100080933412158 # add your Facebook handle
+social-github: kidsarmy # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email:	info@kids.army # add your Email address
 
