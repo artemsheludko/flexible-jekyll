@@ -12,14 +12,14 @@ site-twitter: "https://twitter.com/mykidsarmy" #if your site has a twitter accou
 author: Kids Army # add your name
 author-img: KA.png # add your photo
 about-author: Kids Army. Always hungry to keep learning. # add description
-social-twitter: https://twitter.com/mykidsarmy # add your Twitter handle
-social-facebook: https://www.facebook.com/profile.php?id=100080933412158 # add your Facebook handle
+social-twitter: mykidsarmy # add your Twitter handle
+social-facebook: profile.php?id=100080933412158 # add your Facebook handle
 social-github: kidsarmy # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email:	info@kids.army # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: kids-army # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
