@@ -10,8 +10,8 @@ site-twitter: "https://twitter.com/mykidsarmy" #if your site has a twitter accou
 
 # Author Settings
 author: Kids Army # add your name
-author-img: KA.png # add your photo
-about-author: Kids Army. Always hungry to keep learning. # add description
+author-img: KA-Logo.png # add your photo
+about-author: Kids Army. \n Always hungry to keep learning. # add description
 social-twitter: mykidsarmy # add your Twitter handle
 social-facebook: profile.php?id=100080933412158 # add your Facebook handle
 social-github: kidsarmy # add your Github handle
