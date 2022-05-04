@@ -7,7 +7,7 @@ img: KDS.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Kids, Army]
 ---
-This is the first sample page for Kids Army
+This is the first sample page for Kids Army.
 
 ## What is Kids Army
 Learn ! Enjoy
@@ -17,6 +17,6 @@ Learn ! Enjoy
 * Learn
 * Enjoy
 
-## Worksheets
+### Worksheets
 >Yes, We publish worksheets too !
 
