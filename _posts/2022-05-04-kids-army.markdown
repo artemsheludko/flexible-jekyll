@@ -3,7 +3,7 @@ layout: post
 title: Kids Army Blog
 date: 2022-05-04 12:50:20 +0400
 description: Kids Army. # Add post description (optional)
-img: i-rest.jpg # Add image post (optional)
+img: KDS.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Kids, Army]
 ---
@@ -12,7 +12,7 @@ This is the first sample page for Kids Army
 ## Who we are
 Kids Army
 
-![I and My friends]({{site.baseurl}}/assets/img/KDS.png)
+![I and My friends]({{site.baseurl}}/assets/img/KA.png)
 
 ## Worksheets
 
