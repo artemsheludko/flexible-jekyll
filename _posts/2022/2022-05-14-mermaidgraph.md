@@ -80,7 +80,7 @@ postCache --> postDB[("포스팅<br>DB")]
 
 이를 수정하려면 webServer의 순서를 사용자보다 위로 스크립팅 해야 한다. 
 
-스크립트는 아래와 같다. 
+스크립트는 아래와 같다. (subgraph webServer[웹서버]를 subgraph 사용자 앞으로 이동시켰다)
 
 ```
 flowchart
