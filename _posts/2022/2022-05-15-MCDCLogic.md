@@ -8,7 +8,7 @@ tags: [MCDC]
 
 A and B, A or C를 기본 단위로 하여 확장을 해 나가는 방식임.
 
-https://cheuora.github.io/allpairs/MCDC.html
+[파일보기](https://cheuora.github.io/allpairs/MCDC.html)
 
 
 
