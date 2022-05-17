@@ -30,7 +30,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
-
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-gist
+  - jekyll-seo-tag
+  - webrick
+  - jekyll-github-metadata
+  
 paginate: 8
 paginate_path: "/page/:num"
 
