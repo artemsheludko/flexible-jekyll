@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@200;300;500&family=Roboto:wght@100;300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  border: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  font: 13px/1;
+  color: #333;
+  background: #fefefe;
+}
+/* 스크롤바 설정 */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+/* 스크롤바 막대설정 */
+body::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+  border-radius: 10px;
+}
+/* 스크롤바 뒷 배경 설정 */
+body::-webkit-scrollbar-track {
+  background: rgb(204, 204, 204);
+}
+body {
+  font-family: "Nanum Gothic";
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+body > #wrap {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+p {
+  word-break: break-all;
+}
+select,
+input {
+  vertical-align: middle;
+}
+i,
+em,
+address {
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 14px;
+}
+.floatClear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.hidden {
+  display: none;
+}
+.blindTxt {
+  display: block;
+  overflow: hidden;
+}
+.blind {
+  display: block;
+  text-indent: -2000px;
+  overflow: hidden;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ul,
+ol,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

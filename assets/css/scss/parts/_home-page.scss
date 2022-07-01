@@ -28,11 +28,11 @@
     border-radius: 50%;
     transition: transform 0.35s;
     &:hover {
-      transform: scale3d(0.90,0.90,1);
+      transform: scale3d(0.9, 0.9, 1);
     }
   }
   .author-name {
-    font-family: 'PT Serif', serif;
+    font-family: "Gowun Dodum", serif;
     margin: 0 0 10px;
     position: relative;
     padding-bottom: 15px;
@@ -144,11 +144,11 @@ footer {
   min-height: 11rem;
   border-radius: 10px;
   overflow: hidden;
-  transition: all .3s ease;
-  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
   &:hover {
     transform: translate(0px, -2px);
-    box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2);
+    box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.2);
   }
 
   .post-thumbnail {
@@ -171,7 +171,7 @@ footer {
       font-size: 30px;
       font-weight: 400;
       a {
-        font-family: 'PT Serif', serif;
+        font-family: "Gowun Dodum", serif;
         text-decoration: none;
         color: $dark-blue;
       }
@@ -182,11 +182,12 @@ footer {
   }
 }
 
-a.older-posts, a.newer-posts {
+a.older-posts,
+a.newer-posts {
   font-size: 18px;
   display: inline-block;
   color: $body-color;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 a.older-posts:hover {
