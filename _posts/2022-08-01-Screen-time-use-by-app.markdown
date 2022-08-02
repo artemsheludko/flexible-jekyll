@@ -3,9 +3,9 @@ layout: post
 title: Screentime Use By App
 date: 2022-08-01 22:32:20
 description: How do I use my screentime on my phone?  # Add post description (optional)
-img: screentime-comp-step-bar.svg # Add image post (optional)
+img: screentime-comp-step-bar.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: 
+tags: [screentime, phoneuse]
 ---
 This is paragraph 1
 
