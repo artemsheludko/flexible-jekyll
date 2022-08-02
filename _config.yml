@@ -13,9 +13,9 @@ author: Jeffrey Wigington # add your name
 author-img: Jeffrey-Wigington.jpg # add your photo
 about-author: I am a data analyst focusing on solving technical problems through data! I believe learning is a journey, not a destination and I love the journey. # add description
 #social-twitter: # add your Twitter handle
-#social-facebook: # add your Facebook handle
+#social-facebook: jwig22 # add your Facebook handle
 social-github: jwig22 # add your Github handle
-social-linkedin: /jeffreywigington/ # add your Linkedin handle
+social-linkedin: jeffreywigington/ # add your Linkedin handle
 social-email: jwigington22@gmail.com # add your Email address
 
 # Disqus
