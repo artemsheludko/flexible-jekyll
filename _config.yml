@@ -19,10 +19,10 @@ social-linkedin: jeffreywigington/ # add your Linkedin handle
 social-email: jwigington22@gmail.com # add your Email address
 
 # Disqus
-discus-identifier: jwigs22 # add your discus identifier
+discus-identifier: # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: G-PVJ29CD7PQ # Google Analytics
 
 # Build Settings
 markdown: kramdown
