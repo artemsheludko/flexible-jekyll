@@ -4,8 +4,6 @@ title: pyautogui의 검토
 tags: [pyautogui,automation]
 ---
 
-
-
 얼마전에 트위터 타임라인에서 우연히 pyautogui 라는 것을 발견하여 이를 한번 테스트해 보았다. 
 
 공식 문서에서 Roadmap을 읽어보니...
