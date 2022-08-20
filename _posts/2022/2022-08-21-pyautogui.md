@@ -1,10 +1,8 @@
-```
 ---
 layout: post
 title: pyautogui의 검토
 tags: [pyautogui]
 ---
-```
 
 
 
