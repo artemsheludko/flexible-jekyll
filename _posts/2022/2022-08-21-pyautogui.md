@@ -22,13 +22,7 @@ pyautogui.write('테스트')
 ```
 spotlight를 띄워 테스트라고 입력을 하려 했는데... 
 
-
-
-```bash
-(pyauto) ➜  pyautotest python test.py
-^[OS%
-(pyauto) ➜  pyautotest
-```
+![](https://raw.githubusercontent.com/cheuora/cheuora.github.io/master/_posts/2022/2022-08-21.png)
 
 동작을 전혀 하지 않았다. 
 
