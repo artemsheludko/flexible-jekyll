@@ -1,0 +1,98 @@
+--- 
+# Only the main Sass file needs front matter (the dashes are enough) 
+---
+
+// We import the light theme first.
+@import "minima/skins/classic";
+
+// We define css variables based on theme color
+:root {
+  --brand-color :           #{$brand-color};
+  --brand-color-light :     #{$brand-color-light};
+  --brand-color-dark :      #{$brand-color-dark};
+
+  --site-title-color :      #{$site-title-color};
+
+  --text-color :            #{$text-color};
+  --background-color :      #{$background-color};
+  --code-background-color : #{$code-background-color};
+
+  --link-base-color:        #{$link-base-color};
+  --link-visited-color:     #{$link-visited-color};
+  --link-hover-color:       #{$link-hover-color};
+
+  --border-color-01:        #{$border-color-01};
+  --border-color-02:        #{$border-color-02};
+  --border-color-03:        #{$border-color-03};
+
+  --table-text-color:       #{$table-text-color};
+  --table-zebra-color:      #{$table-zebra-color};
+  --table-header-bg-color:  #{$table-header-bg-color};
+  --table-header-border:    #{$table-header-border};
+  --table-border-color:     #{$table-border-color};
+}
+
+// now we redefine those variables to use css variables with a fallback
+$brand-color:           var(--brand-color,$brand-color); 
+$brand-color-light:     var(--brand-color-light,$brand-color-light); 
+$brand-color-dark:      var(--brand-color-dark,$brand-color-dark); 
+
+$site-title-color:      var(--site-title-color,$site-title-color);
+
+$text-color:            var(--text-color,$text-color);
+$background-color:      var(--background-color,$background-color);
+$code-background-color: var(--background-color,$code-background-color);
+
+$link-base-color:       var(--link-base-color,$link-base-color);
+$link-visited-color:    var(--link-visited-color,$link-visited-color);
+$link-hover-color:      var(--link-hover-color,$link-hover-color);
+
+$border-color-01:       var(--border-color-01,$border-color-01);
+$border-color-02:       var(--border-color-02,$border-color-02);
+$border-color-03:       var(--border-color-03,$border-color-03);
+
+$table-text-color:      var(--table-text-color,$table-text-color);
+$table-zebra-color:     var(--table-zebra-color,$table-zebra-color);
+$table-header-bg-color: var(--table-header-bg-color,$table-header-bg-color);
+$table-header-border:   var(--table-header-border,$table-header-border);
+$table-border-color:    var(--table-border-color,$table-border-color);
+
+// Now we proceed with minima.
+@import "minima/initialize";
+
+
+// Define media query for dark theme users.
+@media (prefers-color-scheme: dark) {
+
+// Import dark skin.
+// We will have to alter it as well.
+// It gives our variables new meaning yet again.
+// But you have to remove  "!default" a the end of variable declarations in dark skin.
+  @import "minima/skins/dark";
+
+  :root {
+    --brand-color :           #{$brand-color};
+    --brand-color-light :     #{$brand-color-light};
+    --brand-color-dark :      #{$brand-color-dark};
+  
+    --site-title-color :      #{$site-title-color};
+  
+    --text-color :            #{$text-color};
+    --background-color :      #{$background-color};
+    --code-background-color : #{$code-background-color};
+  
+    --link-base-color:        #{$link-base-color};
+    --link-visited-color:     #{$link-visited-color};
+    --link-hover-color:       #{$link-hover-color};
+  
+    --border-color-01:        #{$border-color-01};
+    --border-color-02:        #{$border-color-02};
+    --border-color-03:        #{$border-color-03};
+  
+    --table-text-color:       #{$table-text-color};
+    --table-zebra-color:      #{$table-zebra-color};
+    --table-header-bg-color:  #{$table-header-bg-color};
+    --table-header-border:    #{$table-header-border};
+    --table-border-color:     #{$table-border-color};
+  }
+}
