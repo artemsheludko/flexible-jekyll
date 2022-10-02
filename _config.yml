@@ -27,6 +27,8 @@ plugins:
   - jekyll-paginate
   - jemoji
 
+theme: jekyll-theme-dracula 
+
 paginate: 8
 paginate_path: "/page/:num"
 
