@@ -1,10 +1,8 @@
-```
 ---
 layout: post
 title: Ubuntu서버에서 excel파일을 pdf로 바꾸기
 tags: [pdf,adobe]
 ---
-```
 
 
 
