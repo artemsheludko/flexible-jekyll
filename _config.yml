@@ -1,6 +1,6 @@
 title: Jeffrey Wigington Portfolio Site
 description: > # this means to ignore newlines until "baseurl:"
-  This is Jeffrey Wigington's Porfolio site via Github pages. Here you'll find posts about my data projects and perhaps some DIY projects.
+  This is Jeffrey Wigington's Porfolio site via Github pages. Here you'll find posts about my data projects and some DIY projects.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://jwig22.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -9,7 +9,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Jeffrey Wigington # add your name
 author-img: Jeffrey-Wigington.jpg # add your photo
-about-author: I am a data professional focusing on solving technical problems through data! What I lack in data depth, I make up for in breadth. I have a diverse background of experience from my Mechanical Engineering background, including Robotics. I also am an avid DIYer and have built my own CNC router, built a bathroom in my basedment, and a built a bunch of furniture around my house. I believe learning is a journey, not a destination and I love the journey. # add description
+about-author: I am a data professional focusing on solving technical problems through data! What I lack in data depth, I make up for in breadth. I have a diverse background of experience from my Mechanical Engineering background, including Robotics. I also am an avid DIYer and have built my own CNC router, built a basement bathroom, and a built a bunch of furniture around my house. I believe learning is a journey, not a destination and I love the journey. # add description
 social-github: jwig22 # add your Github handle
 social-linkedin: jeffreywigington/ # add your Linkedin handle
 social-email: jwigington22@gmail.com # add your Email address
