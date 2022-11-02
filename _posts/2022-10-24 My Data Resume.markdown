@@ -1,0 +1,13 @@
+---
+layout: post
+title: My Data Resume
+date: 2022-10-24
+description: View my current Resume  # Add post description (optional)
+img: # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [resume]
+---
+
+This is my resume. You've probably seen it already, but if not, here it is!
+
+![Jeff Wigington Data Resume]({{site.baseurl}}/assets/img/Jeff Wigington Data Resume.png)
