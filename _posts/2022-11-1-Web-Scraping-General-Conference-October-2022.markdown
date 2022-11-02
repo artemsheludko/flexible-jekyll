@@ -20,7 +20,7 @@ f.close()
 gf_apr_22 = re.sub('<[^<]+?>', '', text)
 {% endhighlight %}
 
-I then wrote {gf_apr_22} to a new text file and loaded it into a www.wordart.com to create this word cloud, using a picture of President and Prophet of the Church of Jesus Christ of Latter-Days speaking at the conference:
+I then wrote the HTML-stripped text string to a new text file and loaded it into a [www.wordart.com][www.wordart.com] to create this word cloud, using a picture of President and Prophet of the Church of Jesus Christ of Latter-Days speaking at the conference:
 
 ![Word Cloud General Conference Apr 22]({{site.baseurl}}/assets/img/gc_apr_22_word_art.png)
 
