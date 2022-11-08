@@ -40,7 +40,7 @@ I have made other Data Products for other aspects of my life, like tracking my R
 
 Creating spreadsheets and tracking data have been an ongoing habit in my life. It's brought up some really funny conversations in social gatherings, as I've learned it's a very nerdy thing to do but I don't mind it. I am a Data Nerd and love to make better choices by using Data to inform my decisions. 
 
-If you're interested to see how I can help your team make better data driven decions, reach out to my at [jwigington22@gmail.com][jwigington22@gmail.com].
+If you're interested to see how I can help your team make better data driven decions, reach out to me at [jwigington22@gmail.com][jwigington22@gmail.com].
 
 
 
