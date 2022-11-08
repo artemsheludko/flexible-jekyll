@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Monthly Utilities Tracker
-date: 2022-11-08 02:45:00 PM
+title: "Monthly Utilities Tracker"
+date: 2022-11-08 02:45:00
 description: Link to my Tableau Dashboard for my City Utilities  # Add post description (optional)
 img: utilities_yearly_costs.png # Add image post (optional)
 fig-caption: Yearly Utilities Cost Project in Tableau # Add figcaption (optional)

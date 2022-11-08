@@ -1,9 +1,9 @@
 ---
 layout: post
-title: My Data Resume
-date: 2022-10-24 06:45:00 PM
+title: "My Data Resume"
+date: 2022-10-24 06:45:00
 description: View my Current Resume  # Add post description (optional)
-img: Jeff Wigington Data Resume.png # Add image post (optional)
+img: Jeff-Wigington-Data-resume.png # Add image post (optional)
 fig-caption: My Data Resume # Add figcaption (optional)
 tags: [resume]
 ---
