@@ -8,7 +8,7 @@ fig-caption: Screenshot of my Receipt Division Tool # Add figcaption (optional)
 tags: [data product][google sheets]
 ---
 
-## Sales Receipt Division Tool for Budgeting
+Sales Receipt Division Tool for Budgeting
 [Google Sheets Link to the Tool]{https://docs.google.com/spreadsheets/d/1VzE18kDRAdGSfbYWrbDYI5kJ14osA1ErBR32XLgZt98/edit?usp=sharing}
 
 Embedded Sheet

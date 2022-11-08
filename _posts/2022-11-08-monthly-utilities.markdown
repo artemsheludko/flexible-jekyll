@@ -9,7 +9,7 @@ tags: [data product][tableau][google sheets]
 ---
 
 
-## Monthly Utilities Cost Tracker
+Monthly Utilities Cost Tracker
 
 [Tableau Dashboad for Monthly Utilities]{https://public.tableau.com/views/SyracuseUtilities/UtilitiesChartandTable?:language=en-US&:display_count=n&:origin=viz_share_link}
 

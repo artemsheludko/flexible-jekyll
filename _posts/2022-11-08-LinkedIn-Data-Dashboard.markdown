@@ -8,5 +8,5 @@ fig-caption: Snapshot of LinkedIn Data Dashboard in Tableau # Add figcaption (op
 tags: [data product][tableau]
 ---
 
-## LinkedIn Profile Analysis Dashboard
+LinkedIn Profile Analysis Dashboard
 [LinkedIn Profile Analysis Dashboard]{https://public.tableau.com/views/LinkedInDataDashboard/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link}
