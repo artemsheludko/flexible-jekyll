@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Test"
-date: 2022-11-08 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img:  utilities_yearly_costs.png # Add image post (optional)
+title: "Monthly Utilities Tracker"
+date: 2022-11-08 02:45:00
+description: Link to my Tableau Dashboard for my City Utilities  # Add post description (optional)
+img: utilities_yearly_costs.png # Add image post (optional)
 fig-caption: Yearly Utilities Cost Project in Tableau # Add figcaption (optional)
-tags: [data]
+tags: [dataproduct]
 ---
+
 
 ## Monthly Utilities Cost Tracker
 

@@ -5,7 +5,7 @@ date: 2022-11-08 01:46:00
 description: Embedded version of my receipt division tool  # Add post description (optional)
 img: receipt_breakdown_image.png # Add image post (optional)
 fig-caption: Screenshot of my Receipt Division Tool # Add figcaption (optional)
-tags: [data product][google sheets]
+tags: [dataproduct]
 ---
 
 Sales Receipt Division Tool for Budgeting
