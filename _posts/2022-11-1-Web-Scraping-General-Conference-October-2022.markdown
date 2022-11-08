@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Web Scraping General Conference October 2022"
+title: "What Do They Talk About In General Conference?"
 date: 2022-11-01 13:32:20 +0300
 description: Web Scraping and some text analysis of the talks given in General Conference from October 2022 # Add post description (optional)
 img: gen_conf_oct_22_wordcloud.png # Add image post (optional)
@@ -8,7 +8,9 @@ img: gen_conf_oct_22_wordcloud.png # Add image post (optional)
 
 Every first weekend of April and October, The Church of Jesus Christ of Latter-Day Saints gathers (virtually, now more than ever) to listen to the leadership of the Church speak. Topics are generally about the core doctrines and principles of the Gospel of Jesus Christ. It also includes specific guidance and direction for the Church and its members in regards to current world events or changes in Church administration.
 
-I am a member of this Church and while listening to the speakers on October 2nd, I wondered if I could do a text analysis to see how often different words were said throughout the conference. First, I looked up the talks from the April 2022 Conference on the Church's website ([https://www.churchofjesuschrist.org/][Church-Site]) and began to copy and paste the text from each talk in to a text a file. After a few talks, I realized this method was prone to lots of user error and would be very time consuming. I ended up inspecting the HTML code of the website and found that I could select a single line of HTML code that contained the body of the text and copy to my text file. This made the copy-and-pasting go much faster. There was just one problem: this method copied all of the HTML code surrounding the text too.
+I am a member of this Church and while listening to the speakers on October 2nd, I wondered, "What is talked about the most in General Confrence? I decdied to do a project to find out.
+
+First, I looked up the talks from the April 2022 Conference on the Church's website ([https://www.churchofjesuschrist.org/][Church-Site]) and began to copy and paste the text from each talk in to a text a file. After a few talks, I realized this method was prone to lots of user error and would be very time consuming. I ended up inspecting the HTML code of the website and found that I could select a single line of HTML code that contained the body of the text and copy to my text file. This made the copy-and-pasting go much faster. There was just one problem: this method copied all of the HTML code surrounding the text too.
 
 After spending some time on StackOverflow, I found a bit of Python Code that would help me strip away all of the HTML formating around my desired text, using the "re" library.
 
@@ -43,9 +45,7 @@ For some other text analysis, I used the "nltk" library. One of the interesting 
 |:--:|
 |*Lexical Dispersion Plot General Conference October 2022*|
 
- Answering the question: What is talked about in our General Conference every Spring and Fall? Well, "...we talk of Christ, we rejoice in Christ, we preach of Christ..."(2 Nephi 25:26, The Book of Mormon) and about the love of God. Likewise we teach our members to "...love [their] neighbour as [themselves]." (Mark 12:31, The New Testament). In the future, I hope to expand on this analysis to break it down by Session and Speaker. Perhaps I can even make a Dashboard that will let you drill down or up on the fly.
- 
-To learn more about General Conference and our key doctrines, visit [https://www.churchofjesuschrist.org/][Church-Site].
+ Answering the question: What is talked about in our General Conference every Spring and Fall? They talk about Jesus Christ, love, God, faith, and many other things. In the future, I hope to expand on this analysis to break it down by Session and Speaker. Perhaps I can even make a Dashboard that will let you drill down or up on the fly.
 
 [Church-Site]: https://www.churchofjesuschrist.org/
 [WordArt]: https://www.wordart.com/
