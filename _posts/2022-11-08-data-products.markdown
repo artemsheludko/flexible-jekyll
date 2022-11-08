@@ -10,6 +10,7 @@ tags: [dataproducts]
 I've created various data products that have been relevant to my personal life for budgeting, tracking utilities, and visualizing my LinkedIn profile changes.
 
 ## Sales Receipt Division Tool for Budgeting
+
 |![Screenshot of Sales Receipt Division Tool for Budgeting]({{site.baseurl}}/assets/img/receipt_breakdown_image.png)|
 |:--:|
 |*Sales Receipt Division Tool for Budgeting Screenshot*|
