@@ -762,6 +762,6 @@ a.newer-posts:hover {
 /* local hack */
 ul li {
   list-style-type: none !important;
-  margin-bottom: 1en; }
+  margin-bottom: 0.5em; }
 
 /*# sourceMappingURL=main.css.map */
