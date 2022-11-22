@@ -7,6 +7,6 @@ serve:
 clean:
 	bundler exec jekyll clean
 scss:
-	scss assets/css/scss/main.scss assets/css/main.css
+	scss --style compressed assets/css/scss/main.scss assets/css/main.css
 
 # EOF
