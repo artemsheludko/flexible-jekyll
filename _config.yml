@@ -22,7 +22,15 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
-
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  ignore:
+    envs: []
+  blanklines: true
+  profile: false
+  startings: []
 paginate: 8
 paginate_path: "/page/:num"
 
