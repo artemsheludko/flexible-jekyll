@@ -1,20 +1,17 @@
 title: MORIMOTO Jun
 description: 森本 淳
 permalink: ':title/'
-# baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
-url: "https://mrmt.net" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mrmt.net"
 
-# site-twitter:
 author: MORIMOTO Jun
 author-ja: 森本 淳
-author-img: square128.jpg # add your photo
-about-author: War is not the answer, for only love can conquer hate (Marvin Gaye)<br>There are two things no man will admit he can't do well; drive and make love (Stirling Moss)
+author-img: square128.jpg
+about-author: War is not the answer, for only love can conquer hate (Marvin Gaye)<br />There are two things no man will admit he can't do well; drive and make love (Sir Stirling Moss OBE)
 social-twitter: shakuji
 social-facebook: jun.morimoto
 social-github: mrmt
 social-linkedin: shakuji
 social-email: morimoto@gmail.com
-analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
