@@ -106,6 +106,10 @@ pre {
 @import 'media';
 
 /* local hack */
+table, ul {
+  margin-block-start: 0px;
+  padding-inline-start: 2em;
+}
 ul li {
   list-style-type: none!important;
   margin-bottom: 0.5em;
