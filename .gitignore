@@ -7,7 +7,6 @@ package-lock.json
 node_modules/
 *.map
 .DS_Store
-assets/css/main.css
 
 # Icon must end with two \r
 Icon
