@@ -7,7 +7,7 @@ tags: [nginx,express,proxy]
 예전에 간단한 pdf변환 + 메일링 시스템을 만들었던 적이 있는데 그 구조는 다음과 같습니다.
 
 
-![](https://raw.githubusercontent.com/cheuora/cheuora.github.io/cheuora-patch-2/_posts/2022/2022-12-23-1.drawio.png)
+![](https://raw.githubusercontent.com/cheuora/cheuora.github.io/master/_posts/2022/2022-12-23-1.drawio.png)
 
 80포트와 3000포트를 사용하는 시스템이었고 이는 AWS ubuntu에서 돌아가고 있었습니다. 
 
