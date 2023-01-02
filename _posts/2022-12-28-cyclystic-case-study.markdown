@@ -3,7 +3,7 @@ layout: post
 title: "Who's Riding That Bike?"
 date: 2022-12-28 19:32:20
 description: Membership analysis for Cyclistic bikes in Chicago, IL for Google Data Analytics Certificate.
-img: cyclistic cover photo 3.png # Add image post (optional)
+img: cyclistic-cover-photo3.png # Add image post (optional)
 ---
 
 # What Are We Looking For Anyway?
@@ -44,7 +44,7 @@ To answer this question, I wanted to address a sub-set of questions that will dr
 6. Your top three recommendations based on your analysis
 
 
+Hello
 
-
-<iframe seamless frameborder="0" src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/TopTenStartEndStations_1?" width = '650' height = '450' scrolling='yes' ></iframe>
+<iframe seamless frameborder="0" src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/PopularStartTimesHeatMaps?:language=en-US&:display_count=n&:origin=viz_share_link" width = '650' height = '450' scrolling='yes' ></iframe>
 
