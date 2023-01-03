@@ -46,5 +46,5 @@ To answer this question, I wanted to address a sub-set of questions that will dr
 
 Hello
 
-<iframe seamless frameborder="0" src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/PopularStartTimesHeatMaps?:language=en-US&:display_count=n&:embed=yes&:display_count=yes&:showVizHome=no" width = '450' height = '650' scrolling='yes' ></iframe>
+<iframe seamless frameborder="0" src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/PopularStartTimesHeatMaps?:language=en-US&:display_count=n&:embed=yes&:display_count=yes&:showVizHome=no" width = '550' height = '750' scrolling='yes' ></iframe>
 
