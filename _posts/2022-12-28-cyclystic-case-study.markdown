@@ -44,7 +44,7 @@ Let's take a look at what I found here.
 
 Overall, there were more rides by Members than Casual. That's a good start. This is the case for every month. 
 
-![Monthly Count By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Monthly Count-By-Rider-Type.png)
+![Monthly Count By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Monthly-Count-By-Rider-Type.png)
 
 From this Monthly Count By Rider Type bar chart, not only do you see that member rides beat out casual rides every month, but also that casual riders are more "fair weather" riders. They ride a lot more in the warmer months that in the colder months, especially compared to member riders. Take note of that, because that could mean an opportunity to offer short term memberships.
 
