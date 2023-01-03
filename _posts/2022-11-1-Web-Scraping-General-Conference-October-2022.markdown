@@ -1,10 +1,10 @@
-"""---
+<!---
 layout: post
 title: "What Do They Talk About In General Conference?"
 date: 2022-11-01 13:32:20 +0300
 description: Web Scraping and some text analysis of the talks given in General Conference from October 2022 # Add post description (optional)
 img: gen_conf_oct_22_wordcloud.png # Add image post (optional)
----"""
+--->
 
 Every first weekend of April and October, The Church of Jesus Christ of Latter-Day Saints gathers (virtually, now more than ever) to listen to the leadership of the Church speak. Topics are generally about the core doctrines and principles of the Gospel of Jesus Christ. It also includes specific guidance and direction for the Church and its members in regards to current world events or changes in Church administration.
 
