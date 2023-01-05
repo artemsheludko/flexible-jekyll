@@ -42,9 +42,6 @@ Let's take a look at what I found here.
 * Total number of rides between Nov 21-Oct 22: **5,755,694**
 * Total number of Casual Riders: **2,353,033 (40.8%)**
 * Total number of Member Riders: **3,402,661 (59.1%)**
-* Total number of rides between Nov 21-Oct 22: **5,755,694**
-* Total number of Casual Riders: **2,353,033 (40.8%)**
-* Total number of Member Riders: **3,402,661 (59.1%)**
 
 Overall, there were more rides by Members than Casual. That's a good start. This is the case for every month. 
 
@@ -70,11 +67,13 @@ On the left, casual riders more frequently ride on Sundays and Saturdays, but ar
 
 #### How Long Can I Borrow A Bike?
 
-To me, the trip duration became the most intriguing. I first started with the monthly average (below chart on the left) and thought the average trip durations seemed incredibly high, especially in the Winter Months. As a sanity check, I pulled the monthly median trip durations (below chart on the right) and found it to be closer to what I was expecting.
+To me, the trip duration became the most intriguing. I first started with the monthly average (below chart on the left) and thought the average trip durations seemed incredibly high, especially in the Winter Months. As a sanity check, I pulled the monthly median trip durations (below chart on the right) and found it to be closer to what I was expecting. 
 
 ![Monthly Average and Median Trip Durations]({{site.baseurl}}/assets/img/cyclistic-Avg-and-Med-Trip-Durations.png)
 
-But why are average and median trip durations so different? 
+The winter months still have very high averages and median trip durations. But why are average and median trip durations so different? 
+
+# UNDER CONSTRUCTION FROM HERE BELOW
 
 #### How Long Are These Rides Anyway?
 
@@ -88,7 +87,6 @@ But why are average and median trip durations so different?
 
 ![Top Ten Station Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Top-Ten-Start-End-Stations.png)
 
-# UNDER CONSTRUCTION FROM HERE BELOW
 
 # Act
 6. Your top three recommendations based on your analysis
