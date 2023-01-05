@@ -14,6 +14,7 @@ Cyclistic has over 5,800 bikes and 600 docking stations throughout Chicago with 
 There are two tiers of Rider Type: Member and Casual. Over the last 12 months (November 2021 through October 2022), Cyclistic has documented over 5.7 million rides. The question being asked is:
 
 >**How do annual members and casual riders use Cyclistic bikes differently?**
+>**How do annual members and casual riders use Cyclistic bikes differently?**
 
 To answer this question, I wanted to address a sub-set of questions that will drive Cyclistic's next marketing campaign to convert casual riders to members.
 * How many members are riding monthly compared to casual riders?
@@ -23,6 +24,7 @@ To answer this question, I wanted to address a sub-set of questions that will dr
 * Which Stations are the most commonly used by rider type?
 
 ## The Data Source
+The source of the data comes from [Divvy-Tripdata][Data-Source] (since Cyclistic is actually made up). The data consists of an Rider ID, Start Date & Time, End Date & Time, Start Station Name & ID, End Station Name & ID, Start & End Latitude & Longitude, Rideable Type, and Member Type. Since each month was its own *.csv file and I wanted to have a single source of the data, I loaded all 12 files into Tableau and performed a union to make the data extra tall. This ended up being 5.7M+ rows of data to explore.
 The source of the data comes from [Divvy-Tripdata][Data-Source] (since Cyclistic is actually made up). The data consists of an Rider ID, Start Date & Time, End Date & Time, Start Station Name & ID, End Station Name & ID, Start & End Latitude & Longitude, Rideable Type, and Member Type. Since each month was its own *.csv file and I wanted to have a single source of the data, I loaded all 12 files into Tableau and performed a union to make the data extra tall. This ended up being 5.7M+ rows of data to explore.
 
 ## Cleaning and Manipulation
@@ -39,6 +41,9 @@ There as also one data point where the latitude and longitude ended in Canada. E
 ## Down to the Nitty Gritty
 ### Analysis and Visuals
 Let's take a look at what I found here. 
+* Total number of rides between Nov 21-Oct 22: **5,755,694**
+* Total number of Casual Riders: **2,353,033 (40.8%)**
+* Total number of Member Riders: **3,402,661 (59.1%)**
 * Total number of rides between Nov 21-Oct 22: **5,755,694**
 * Total number of Casual Riders: **2,353,033 (40.8%)**
 * Total number of Member Riders: **3,402,661 (59.1%)**
