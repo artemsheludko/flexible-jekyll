@@ -52,7 +52,7 @@ Overall, there were more rides by Members than Casual. That's a good start. This
 
 #### How Many People Are Riding Our Bikes Each Month?
 
-<center><iframe src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/MonthCountofRiderTypeDash?:language=en-US&:display_count=n&:origin=viz_share_link" width="1996" height="1318" frameborder="0"></iframe></center>
+<center><iframe src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/MonthCountofRiderTypeDash?:language=en-US&:display_count=n&:embed=yes&:display_count=yes&:showVizHome=no" width="650" height="650" frameborder="0" scrolling='yes' ></iframe></center>
 
 ![Monthly Count By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Monthly-Count-By-Rider-Type.png)
 
@@ -62,7 +62,7 @@ From this Monthly Count By Rider Type bar chart, not only do you see that member
 
 Let's keep things simple here for the next piece. Below is a comparison of the three ride types and how member & casual riders use them. More casual riders seem to prefer electric bikes, arguably for joyrides around the city without the strain of a classic pedal bike. However, classic bikes are slightly preferred by member riders, but it's not a significant amount. Essentially, they're tied. The Docked bikes only have a small usage by casual members. This could be due to a number of reasons: docked bikes aren't included as a member benefit, there aren't very many docked bikes in the city and are more of a novelty for casual riders, or the docked bikes may be seen as inferior. The docked bikes may even be the "disability" friendly style of bike and therefore only has a small subset of riders to begin with. 
 
-<center><iframe src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/Rideables?:language=en-US&:display_count=n&:origin=viz_share_link" width="1996" height="1318" frameborder="0"></iframe></center>
+<center><iframe src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/Rideables?:language=en-US&:display_count=n&:embed=yes&:display_count=yes&:showVizHome=no" width="650" height="650" frameborder="0" scrolling='yes' ></iframe></center>
 
 ![Rideable Comparison By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Rideable-By-Rider-Type.png)
 
@@ -88,9 +88,9 @@ But why are average and median trip durations so different?
 6. Your top three recommendations based on your analysis
 
 
-<center><iframe src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/Rideables?:language=en-US&:display_count=n&:origin=viz_share_link" width="1996" height="1318" frameborder="0"></iframe></center>
+<center><iframe src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/Rideables?:language=en-US&:display_count=n&:embed=yes&:display_count=yes&:showVizHome=no" width="650" height="650" frameborder="0" scrolling='yes' ></iframe></center>
 
-
+Which one is better?
 
 
 <iframe seamless frameborder="0" src="https://public.tableau.com/views/CyclisticTripDataCaseStudy/PopularStartTimesHeatMaps?:language=en-US&:display_count=n&:embed=yes&:display_count=yes&:showVizHome=no" width = '650' height = '650' scrolling='yes' ></iframe>
