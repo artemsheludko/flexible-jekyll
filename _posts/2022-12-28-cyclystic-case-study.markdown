@@ -5,15 +5,16 @@ date: 2022-12-28 19:32:20
 description: Membership analysis for Cyclistic bikes in Chicago, IL for Google Data Analytics Certificate.
 img: cyclistic-cover-photo3.png # Add image post (optional)
 ---
-Note: At the bottom of this post is a link to the Tableau workbook I used to explore this data. You can use it to explore it deeper than this analysis.
+Note: Here is the link to the Tableau workbook I used to explore this data. [**TABLEAU WORKBOOK LINK**][tableau-link]
+ You can use it to explore any of the visuals in greater depth.
 
 # What Are We Looking For Anyway?
-Cyclistic has over 5,800 bikes and 600 docking stations throughout Chicago with various types of bikes, including assistive options for those with disabilities or who otherwise can't use traditional two-wheeled bikes. The focus right now is on the traditional types of bikes, which come in three styles: classic, docked, and electic.
+Cyclistic has over 5,800 bikes and 600 docking stations throughout Chicago with various types of bikes, including assistive options for those with disabilities or who otherwise can't use traditional two-wheeled bikes. The focus right now is on the traditional types of bikes, which come in three styles: classic, docked, and electic. 
 
 ## We Got A Lot of Bikes: Who's Using Them?
 There are two tiers of Rider Type: Member and Casual. Over the last 12 months (November 2021 through October 2022), Cyclistic has documented over 5.7 million rides. The question being asked is:
 
->**How do annual members and casual riders use Cyclistic bikes differently?**
+***How do annual members and casual riders use Cyclistic bikes differently?***
 
 To answer this question, I wanted to address a sub-set of questions that will drive Cyclistic's next marketing campaign to convert casual riders to members.
 * How many members are riding monthly compared to casual riders?
@@ -65,31 +66,50 @@ To better understand *when* casual rider and member riders, I created heat maps 
 
 On the left, casual riders more frequently ride on Sundays and Saturdays, but are also using them in the late afternoon between 4PM and 6PM, indicating either a commute home or after work joy ride. On the right, members are also most frequently riding in the late afternoon between 4PM and 6PM, presumably for a commute home. However, they have a higher number riding in the mornings around 8AM, suggesting a commute going to work. These results are fairly predictable as someone wanting to use a bike share for a commute to and from work would benefit from a membership to a bike-share company. 
 
-#### How Long Can I Borrow A Bike?
+#### How Long Can Someone Borrow A Bike?
 
-To me, the trip duration became the most intriguing. I first started with the monthly average (below chart on the left) and thought the average trip durations seemed incredibly high, especially in the Winter Months. As a sanity check, I pulled the monthly median trip durations (below chart on the right) and found it to be closer to what I was expecting. 
+To me, the trip duration became the most intriguing bit of data. I first started with the monthly average (below chart on the left) and thought the average trip durations seemed incredibly high, especially in the Winter Months. As a sanity check, I pulled the monthly median trip durations (below chart on the right) and found it to be closer to what I was expecting. 
 
 ![Monthly Average and Median Trip Durations]({{site.baseurl}}/assets/img/cyclistic-Avg-and-Med-Trip-Durations.png)
 
-The winter months still have very high averages and median trip durations. But why are average and median trip durations so different? 
-
-# UNDER CONSTRUCTION FROM HERE BELOW
+The winter months still have very high average and median trip durations. But why are average and median trip durations so different? 
 
 #### How Long Are These Rides Anyway?
 
 ![Trip Duration Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Trip-Duration-By-Rider-Type.png)
 
+The plot above shows what's happening to the average and median. The bigger the dot, the more rides had that trip duration. As the trip duration increases, the number of repeat trip durations drops to onesie-twosies after the first hundred or so minutes. Each month has its max trip duration labeled on the right side of the data. What's happening to the average and median is that they're pulled by the all of these inexplicably long trip durations. Since the winter months have fewer overall rides, they are more heavily influenced by the long trip durations. Statistically, they are outliers and likely indicate that someone neglected to "end" their ride. 
+
+All of the member riders have a monthly max trip duration of 1500 minutes, which corresponds to 25 hours. Without confirming with Cyclistic, I am guessing that a membership perk or limitation (depending on how they're billed) is a ride limit of 25 hours in duration. 
+
+Casual riders appear to have no cap with the longest being October 2022 with a trip duration of 41,387 minutes, about 690 hours, or about 28.75 days! If they're charged by the minute, that's a hefty bill reminiscent of the early cell phone days when you didn't get unlimited minutes. Even if billing is a flat rate to start the ride, this is not a good situation to have a bike locked into an excessively long ride.
+
 #### How Many Rides Are Over/Under 60 Min?
+
+So let's zoom in on those big dots and see just how many rides a month are 60 minutes or less and how many exceed that.
 
 ![Monthly Over/Under 60 Min Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Rides-Over-Under-60-Min.png)
 
-#### Station Counts
+Clearly only as small subset exceed 60 minutes and most of them are casual riders. This of course makes sense as very few members using bikes for commuting are going to need the bike for more than an hour. Joyriders and aspiring cyclists would be more apt to exceed an hour for fun or a city tour perhaps. 
+
+It would be interesting to check customer information to see how many casual riders fit into more of a tourist category. One way of checking this would be to check zip codes on the billing credit card. Something to think about.
+
+#### Where Are People Starting and Stopping Their Ride?
+
+Lastly, just out of curiosity, the vast majority of rider just pick up a bike off the street and get going. That's clearly the most convenient option for most. The most popular station for casual riders is the Streeter Dr & Grand Ave station, while member's seem to like Kingsbury St & Kinzie St for their start and stop. This is informative to see which stations are frequented the most, but more important to ensure thats bikes are everywhere around the city for anyone to start a ride.
 
 ![Top Ten Station Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Top-Ten-Start-End-Stations.png)
 
+In a follow-up analysis, it would be informative to see popular routes looking at popular start/stop combinations or even to just check the most common latitudes and longitudes. Then Cyclistic can make efforts to make efforts to relocate bike from less popular sites to more common areas of the city.
 
-# Act
-6. Your top three recommendations based on your analysis
+## So what now? 
+
+My actionable recommendations based on this analysis:
+1. If annual memberships are the only offering, consider offering a 6 month membership, or even a summer membership, to encourage fair-weather riders to join as members.
+2. Determine the most popular locations for members to start their rides, especially in the afternoon, and find ways to get bikes there. Kingsbury St & Kinzie St station would be a good place to start.
+3. Put a cap on casual rides to limit the trip duration length and start tracking trip duration rather than just start and end time for trips to avoid issues around daylight savings times.
+
+
 
 
 [**TABLEAU WORKBOOK LINK**][tableau-link]
