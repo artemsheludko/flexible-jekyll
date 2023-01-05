@@ -24,7 +24,6 @@ To answer this question, I wanted to address a sub-set of questions that will dr
 
 ## The Data Source
 The source of the data comes from [Divvy-Tripdata][Data-Source] (since Cyclistic is actually made up). The data consists of an Rider ID, Start Date & Time, End Date & Time, Start Station Name & ID, End Station Name & ID, Start & End Latitude & Longitude, Rideable Type, and Member Type. Since each month was its own *.csv file and I wanted to have a single source of the data, I loaded all 12 files into Tableau and performed a union to make the data extra tall. This ended up being 5.7M+ rows of data to explore.
-The source of the data comes from [Divvy-Tripdata][Data-Source] (since Cyclistic is actually made up). The data consists of an Rider ID, Start Date & Time, End Date & Time, Start Station Name & ID, End Station Name & ID, Start & End Latitude & Longitude, Rideable Type, and Member Type. Since each month was its own *.csv file and I wanted to have a single source of the data, I loaded all 12 files into Tableau and performed a union to make the data extra tall. This ended up being 5.7M+ rows of data to explore.
 
 ## Cleaning and Manipulation
 After looking at the data available, I added a column for trip duration, or ride length by doing End Time minus Start Time. When I started looking at the descriptive analytics (min, max, average, median), I noticed there were negative ride times. Further exploration revealed that Daylight Savings Time was one of the culprits of the time travel. 
@@ -76,6 +75,18 @@ To me, the trip duration became the most intriguing. I first started with the mo
 ![Monthly Average and Median Trip Durations]({{site.baseurl}}/assets/img/cyclistic-Avg-and-Med-Trip-Durations.png)
 
 But why are average and median trip durations so different? 
+
+#### How Long Are These Rides Anyway?
+
+![Trip Duration Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Trip-Duration-By-Rider-Type.png)
+
+#### How Many Rides Are Over/Under 60 Min?
+
+![Monthly Over/Under 60 Min Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Rides-Over-Under-60-Min.png)
+
+#### Station Counts
+
+![Top Ten Station Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Top-Ten-Start-End-Stations.png)
 
 # UNDER CONSTRUCTION FROM HERE BELOW
 
