@@ -14,7 +14,6 @@ Cyclistic has over 5,800 bikes and 600 docking stations throughout Chicago with 
 There are two tiers of Rider Type: Member and Casual. Over the last 12 months (November 2021 through October 2022), Cyclistic has documented over 5.7 million rides. The question being asked is:
 
 >**How do annual members and casual riders use Cyclistic bikes differently?**
->**How do annual members and casual riders use Cyclistic bikes differently?**
 
 To answer this question, I wanted to address a sub-set of questions that will drive Cyclistic's next marketing campaign to convert casual riders to members.
 * How many members are riding monthly compared to casual riders?
