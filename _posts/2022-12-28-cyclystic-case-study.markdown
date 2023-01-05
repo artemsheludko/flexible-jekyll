@@ -8,6 +8,8 @@ img: cyclistic-cover-photo3.png # Add image post (optional)
 Note: Here is the link to the Tableau workbook I used to explore this data. [**TABLEAU WORKBOOK LINK**][tableau-link]
  You can use it to explore any of the visuals in greater depth.
 
+<center>![Cyclistic Logo]({{site.baseurl}}/assets/img/CYCLISTIC-LOGO.png)<center>
+
 # What Are We Looking For Anyway?
 Cyclistic has over 5,800 bikes and 600 docking stations throughout Chicago with various types of bikes, including assistive options for those with disabilities or who otherwise can't use traditional two-wheeled bikes. The focus right now is on the traditional types of bikes, which come in three styles: classic, docked, and electic. 
 
