@@ -24,7 +24,7 @@ To answer this question, I wanted to address a sub-set of questions that will dr
 * Which Stations are the most commonly used by rider type?
 
 ## The Data Source
-The source of the data comes from [Divvy-Tripdata][Data-Source] (since Cyclistic is actually made up). The data consists of an Rider ID, Start Date & Time, End Date & Time, Start Station Name & ID, End Station Name & ID, Start & End Latitude & Longitude, Rideable Type, and Member Type. Since each month was its own *.csv file and I wanted to have a single source of the data, I loaded all 12 files into Tableau and performed a union to make the data extra tall. This ended up being 5.7M+ rows of data to explore.
+The source of the data comes from [Divvy-Tripdata][Data-Source] (since Cyclistic is actually made up). The data consists of a Rider ID, Start Date & Time, End Date & Time, Start Station Name & ID, End Station Name & ID, Start & End Latitude & Longitude, Rideable Type, and Member Type. Since each month was its own *.csv file and I wanted to have a single source of the data, I loaded all 12 files into Tableau and performed a union to make the data extra tall. This ended up being 5.7M+ rows of data to explore.
 
 ## Cleaning and Manipulation
 After looking at the data available, I added a column for trip duration, or ride length by doing End Time minus Start Time. When I started looking at the descriptive analytics (min, max, average, median), I noticed there were negative ride times. Further exploration revealed that Daylight Savings Time was one of the culprits of the time travel. 
@@ -35,7 +35,7 @@ Going forward, Cyclistic could avoid this issue by including trip duration as a 
 
 The data set still contained a handful for time travelling durations (negative durations). Without knowing how the data is collected, I opted to omit these values from the trip duration calculations. It's possible that the start and stop times got switched, but without talking to the boss or data collection team, omission seems to be the safest choice since there are less the 20 data points out of 5.7 million. 
 
-There as also one data point where the latitude and longitude ended in Canada. Either someone stole a bike out of the city or the lat/long coordinates were recorded incorrectly. Since I didn't think there much benefit to look at the lat/long coordinates for membership analysis, I chose to ignore this bit.
+There was also one data point where the latitude and longitude ended in Canada. Either someone stole a bike out of the city or the lat/long coordinates were recorded incorrectly. Since I didn't think there was much benefit to look at the lat/long coordinates for membership analysis, I chose to ignore this bit.
 
 ## Down to the Nitty Gritty
 ### Analysis and Visuals
@@ -90,13 +90,13 @@ So let's zoom in on those big dots and see just how many rides a month are 60 mi
 
 ![Monthly Over/Under 60 Min Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Rides-Over-Under-60-Min.png)
 
-Clearly only as small subset exceed 60 minutes and most of them are casual riders. This of course makes sense as very few members using bikes for commuting are going to need the bike for more than an hour. Joyriders and aspiring cyclists would be more apt to exceed an hour for fun or a city tour perhaps. 
+Clearly only a small subset exceed 60 minutes and most of them are casual riders. This of course makes sense as very few members using bikes for commuting are going to need the bike for more than an hour. Joyriders and aspiring cyclists would be more apt to exceed an hour for fun or a city tour perhaps. 
 
 It would be interesting to check customer information to see how many casual riders fit into more of a tourist category. One way of checking this would be to check zip codes on the billing credit card. Something to think about.
 
 #### Where Are People Starting and Stopping Their Ride?
 
-Lastly, just out of curiosity, the vast majority of rider just pick up a bike off the street and get going. That's clearly the most convenient option for most. The most popular station for casual riders is the Streeter Dr & Grand Ave station, while member's seem to like Kingsbury St & Kinzie St for their start and stop. This is informative to see which stations are frequented the most, but more important to ensure thats bikes are everywhere around the city for anyone to start a ride.
+Lastly, just out of curiosity, the vast majority of riders just pick up a bike off the street and get going. That's clearly the most convenient option for most. The most popular station for casual riders is the Streeter Dr & Grand Ave station, while member's seem to like Kingsbury St & Kinzie St for their start and stop. This is informative to see which stations are frequented the most, but more important to ensure thats bikes are everywhere around the city for anyone to start a ride.
 
 ![Top Ten Station Counts By Rider Type]({{site.baseurl}}/assets/img/cyclistic-Top-Ten-Start-End-Stations.png)
 
@@ -107,7 +107,7 @@ In a follow-up analysis, it would be informative to see popular routes looking a
 My actionable recommendations based on this analysis:
 1. If annual memberships are the only offering, consider offering a 6 month membership, or even a summer membership, to encourage fair-weather riders to join as members.
 2. Determine the most popular locations for members to start their rides, especially in the afternoon, and find ways to get bikes there. Kingsbury St & Kinzie St station would be a good place to start.
-3. Put a cap on casual rides to limit the trip duration length and start tracking trip duration rather than just start and end time for trips to avoid issues around daylight savings times.
+3. Put a cap on casual rides to limit the trip duration length and consider premium pricing if a casual rider takes the bike for over a certain amount of time. With this, Cyclistic should start tracking trip duration rather than just start and end time for trips to avoid issues around daylight savings times.
 
 
 
