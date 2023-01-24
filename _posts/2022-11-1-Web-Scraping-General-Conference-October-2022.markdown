@@ -47,5 +47,8 @@ For some other text analysis, I used the "nltk" library. One of the interesting 
 
  Answering the question: What is talked about in our General Conference every Spring and Fall? They talk about Jesus Christ, love, God, faith, and many other things. In the future, I hope to expand on this analysis to break it down by Session and Speaker. Perhaps I can even make a Dashboard that will let you drill down or up on the fly.
 
+ For copies of the files, see my GitHub project: [Jeff's NLP Project][github_project], the code files are: "htmlparser.ipynb", "gen_conf_web_scrape.ipynb" in the "General-Conference-Scrape" folder, "nlp_gf_a_22.ipynb", and "nlp_gf_o_22.ipynb". 
+
 [Church-Site]: https://www.churchofjesuschrist.org/
 [WordArt]: https://www.wordart.com/
+[github_project]: https://github.com/jwig22/NLP_project
