@@ -10,7 +10,7 @@ tags: [resume]
 
 This is my resume. You've probably seen it already, but if not, here it is!
 
-<object data="../assets/docs/Jeff-Wigington-Data-Resume-ATS.pdf" width="1000" height="1000" type='application/pdf'></object>
+<object data="../assets/docs/Jeff-Wigington-Data-Resume-ATS.pdf" width="850" height="1150" type='application/pdf'></object>
 
 
 <!-- This is my Canva Resume
