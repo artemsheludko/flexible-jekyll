@@ -11,7 +11,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Deep Learning IGP TUBS 2023 # add your name
 author-img: course_logo.jpg # add your photo
-about-author: Final projects developed in the course Deep Learning 2023 from the <a style='color: black;' href='https://www.tu-braunschweig.de/en/igp'>Institute of Geodesy and Photogrammetry - IGP</a> at the <a style='color: black;' https://www.tu-braunschweig.de/en/'>Technical University of Braunschweig - TUBS</a>. # add description
+about-author: Final projects developed in the course Deep Learning 2023 from the Institute of Geodesy and Photogrammetry (IGP) at the Technical University of Braunschweig (TUBS). # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: # add your Github handle
