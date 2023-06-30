@@ -1,25 +1,25 @@
-title: Hello, world! I'm David Freeman
+title: DL IGP TUBS SoSe2023
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Final projects developed in the course Deep Learning 2023 from
+  the Institute of Geodesy and Photogrammetry at the Technical 
+  University of Braunschweig.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://deep-learning-igp-tubs-sose2023.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+author: Deep Learning IGP TUBS 2023 # add your name
+author-img: course_logo.jpg # add your photo
+about-author: Final projects developed in the course Deep Learning 2023 from the <a style='color: black;' href='https://www.tu-braunschweig.de/en/igp'>Institute of Geodesy and Photogrammetry - IGP</a> at the <a style='color: black;' https://www.tu-braunschweig.de/en/'>Technical University of Braunschweig - TUBS</a>. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
+social-github: # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email: # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
