@@ -2,7 +2,7 @@
 layout: post
 title: Detecting Coordinated Activities through OnlyFans Tweets using Machine learning
 date: 2023-07-20 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: This Thesis was conducted during my studies at HEC Montreal. Here I showcase my work in a PDF format that you can download.. # Add post description (optional)
 #url:
 img: thesis.png  # Add image post (optional)
 fig-caption: 

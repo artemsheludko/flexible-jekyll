@@ -2,7 +2,7 @@
 layout: post
 title: "VBA EXCEL macros - automation"
 date: 2023-07-20 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: Sample SQL exercises dones during my one of my Business Intelligence class. These are complex queries! # Add post description (optional)
 #url:
 img: sql.png # Add image post (optional)
 fig-caption: SQL exercise

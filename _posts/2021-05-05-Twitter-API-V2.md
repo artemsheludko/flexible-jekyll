@@ -2,7 +2,8 @@
 layout: post
 title: "Twitter API V2"
 date: 2023-07-20 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: Python code to retreive twitters with V2 API version. I modified this code so I could retreive exactly what I needed. I used this code was used to retreive the data I used for my Master's Thesis.
+   # Add post description (optional)
 #url:
 img: twitter-api.jpg  # Add image post (optional)
 fig-caption: 

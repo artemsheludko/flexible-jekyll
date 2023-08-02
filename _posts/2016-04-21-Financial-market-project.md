@@ -2,7 +2,8 @@
 layout: post
 title: Financial Market GMM analysis
 date: 2023-07-20 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: Project done during my Financial Econometric class - Here I showcase the STATA code and the PDF file ( can be downloaded). The project is written in French and will eventually be translated.
+   # highlight: WIP # Add post description (optional)
 #url:
 img: financial-stocks.jpg  # Add image post (optional)
 fig-caption: 

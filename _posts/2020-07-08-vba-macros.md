@@ -2,7 +2,7 @@
 layout: post
 title: "VBA EXCEL macros - automation"
 date: 2023-07-20 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: Some examples of Auotmation done with VBA. The Excel macros are showcased here and can also be downloaded.   # Add post description (optional)
 #url:
 img: vbaexcel.jpg # Add image post (optional)
 fig-caption: https://public.tableau.com/app/profile/maricarmen.al1037/viz/AmazonPrimeGraphicalanalysis/Dashboard2
