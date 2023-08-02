@@ -6,7 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 #url:
 img: retirement.png # Add image post (optional)
 fig-caption: https://public.tableau.com/app/profile/maricarmen.al1037/viz/AmazonPrimeGraphicalanalysis/Dashboard2
-tags: [Retirement, savings, studies, behavioural economics]
+tags: [Retirement, savings, studies]
 ---
 
 When completing my degree at UQAM university (2013-2016) I took a directed readings class on behavioural economics applied on retirement saving policies. This was an independant class, meaning that I took the initiative to reach a professor and I was the only student working on that project. The report is in French, but here below I leave the translated introduction. 

@@ -5,8 +5,8 @@ date: 2023-07-20 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 #url:
 img: crimeBaltimore.png # Add image post (optional)
-fig-caption: https://public.tableau.com/app/profile/maricarmen.al1037/viz/AmazonPrimeGraphicalanalysis/Dashboard2
-tags: [Retirement, savings, studies, behavioural economics]
+fig-caption:
+tags: [crime, data analysis, statistical analysis]
 ---
 
 In this Notebook I will analyse "Part1_Crime_Data.csv" dataset taken from <a href="https://data.baltimorecity.gov">Data Baltimore cityT</a>. This dataset represents the location and characteristics of major (Part 1) crime against persons such as homicide, shooting, robbery, aggravated assault etc. within the City of Baltimore. Data is updated weekly. This is an exploratory analysis.

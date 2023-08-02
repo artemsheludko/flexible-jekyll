@@ -6,7 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 #url:
 img: financial-stocks.jpg  # Add image post (optional)
 fig-caption: 
-tags: [finances, GMM, Econometrics]
+tags: [finances, GMM, Econometrics, stock market]
 ---
 
 This project is based on the Research paper written by Jeffrey S. Jones et Brian Kincaid named "Can the correlation among Dow 30 stocks predict market declines?". I did this research as part of my Economics bachelors, it's a master's degree class so I got special permission to take it. It was the hardest class I have taken so far!

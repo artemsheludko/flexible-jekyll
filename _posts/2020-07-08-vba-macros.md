@@ -6,7 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 #url:
 img: vbaexcel.jpg # Add image post (optional)
 fig-caption: https://public.tableau.com/app/profile/maricarmen.al1037/viz/AmazonPrimeGraphicalanalysis/Dashboard2
-tags: [Retirement, savings, studies, behavioural economics]
+tags: [EXCEL, VBA, automation, coding]
 ---
 <mark>Please wait a few seconds for the MACROS to load!<mark>
 
