@@ -10,10 +10,8 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Maricarmen Arenas Leiva # add your name
-author-img: me2.png # add your photo
-about-author: My name is Maricarmen and I'm passionate about any type of data analysis (Business, Economics, etc). I also love researcha and technology in general. I'm always learning new things!
-
- # add description
+author-img: me3.png # add your photo
+about-author: My name is Maricarmen and I'm passionate about data analysis and research (Business, Economics, Finances, etc). I'm always learning something new!
 #social-twitter: # add your Twitter handle
 #social-facebook: # add your Facebook handle
 social-github: butterfly008 # add your Github handle
