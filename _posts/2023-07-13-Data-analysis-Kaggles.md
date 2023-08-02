@@ -1,7 +1,13 @@
 ---
 layout: post
+title: "Baltimore Crime Data Analysis"
+date: 2023-07-20 13:32:20 +0300
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+#url:
+img:  # Add image post (optional)
+fig-caption: https://public.tableau.com/app/profile/maricarmen.al1037/viz/AmazonPrimeGraphicalanalysis/Dashboard2
+tags: [Retirement, savings, studies, behavioural economics]
 ---
-
 
 In this Notebook I will analyse "Part1_Crime_Data.csv" dataset taken from <a href="https://data.baltimorecity.gov">Data Baltimore cityT</a>. This dataset represents the location and characteristics of major (Part 1) crime against persons such as homicide, shooting, robbery, aggravated assault etc. within the City of Baltimore. Data is updated weekly. This is an exploratory analysis.
 The data was last updated May 17, 2023, the original csv file contains 565,726 records and 20 columns. Attributes (columns) : CCNO, CrimeDateTime, Location, Description, Inside_Outside, Weapon, Post, Gender, Age, Race, Ethnicity, District, Neighborhood, Latitude, Longitude, Geolocation, Premise, Total_incidents,

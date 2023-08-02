@@ -5,7 +5,7 @@ date: 2017-09-12 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: i-rest.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [Holidays, Hawaii]
+tags: [stats, healthcare, econometrics]
 ---
 
 This was my synthesis project done during my final year at UQAM (during my Bachelors in Economics). The goal of this project was to do synthesis of economics concepts. I decided do wprk micro economics project related to health. The dataset was provided by our professor. Here I use econometrics (statistical analysis) techniques. The report was in French, but here below I translated the conclusion-summary. In the report you can see Graphs and diagrams that can give you an idea of the whole analysis.
