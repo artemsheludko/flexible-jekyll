@@ -10,6 +10,8 @@ fig-caption:
 tags: [twitter, coding, python]
 ---
 
+This application was made with Twitter API version 2. It is built with Python.
+
 This is a python code I modified so I could get more twitter information (taken from beyond data science website). I added an algorithm so I could retrieve hourly tweets. I also added a piece of code to retrieve 3 more files containing Twitter information (user info,place info, retweet info) in addition to the main file. I retreived everything on CSV files.
 
 This produces 4 csv files containing  Twitter information.

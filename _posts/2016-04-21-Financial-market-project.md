@@ -10,6 +10,9 @@ fig-caption: Project done during my Financial Econometric class - Here I showcas
 tags: [finances, GMM, Econometrics, stock market]
 ---
 
+Project done during my Financial Econometric class - Here I showcase the STATA code and the PDF file ( can be downloaded). The project is written in French and will eventually be translated. 
+
+
 This project is based on the Research paper written by Jeffrey S. Jones et Brian Kincaid named "Can the correlation among Dow 30 stocks predict market declines?". I did this research as part of my Economics bachelors, it's a master's degree class so I got special permission to take it. It was the hardest class I have taken so far!
 
 

@@ -8,6 +8,8 @@ img: crimeBaltimore.png # Add image post (optional)
 fig-caption:
 tags: [crime, data analysis, statistical analysis]
 ---
+This is a statistical analysis of Crimes in Baltimore done on Kaggles. Here I show you a summary and a link to my kaggle account. I also included a Python/Jupyter notes PDF file.
+
 
 In this Notebook I will analyse "Part1_Crime_Data.csv" dataset taken from <a href="https://data.baltimorecity.gov">Data Baltimore cityT</a>. This dataset represents the location and characteristics of major (Part 1) crime against persons such as homicide, shooting, robbery, aggravated assault etc. within the City of Baltimore. Data is updated weekly. This is an exploratory analysis.
 The data was last updated May 17, 2023, the original csv file contains 565,726 records and 20 columns. Attributes (columns) : CCNO, CrimeDateTime, Location, Description, Inside_Outside, Weapon, Post, Gender, Age, Race, Ethnicity, District, Neighborhood, Latitude, Longitude, Geolocation, Premise, Total_incidents,

@@ -8,6 +8,7 @@ img: thesis.png  # Add image post (optional)
 fig-caption: 
 tags: [machine learning, ai, statistics]
 ---
+This Thesis was conducted during my studies at HEC Montreal. Here I showcase my work in a PDF format that you can download.
 
 I decided to pursue a masters degree with Thesis because I was very curious about machine learning research and social issues. I believed that the only way to satisfy my curiosity was to do a Thesis. I think I learned more technical skills doing my thesis than than taking classes and doing a short project. Here I worked with BIG data, python, Graphs, Mila servers and unsupervised learning techniques. I had the opportunity to work on a paper (you can look at the publication here <a href="https://dl.acm.org/doi/10.1145/3578503.3583609">paper</a>) alongside a Phd student who specializes in Graphs and we had the honor of presenting our work at WebSci 2023 <a href="https://websci23.webscience.org/">WebSci23</a>.
 
