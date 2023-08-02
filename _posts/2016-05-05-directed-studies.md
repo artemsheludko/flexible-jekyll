@@ -13,4 +13,4 @@ In this text, we are going to study the application of behavioral economics to t
 
 
 
-<embed src="/assets/img/lectures-dirigees-document-version-finale-Maricarmen-Arenas.pdf" width="100%" height="850px" />
+<embed src="{{site.baseurl}}/assets/img/lectures-dirigees-document-version-finale-Maricarmen-Arenas.pdf" width="100%" height="850px" />

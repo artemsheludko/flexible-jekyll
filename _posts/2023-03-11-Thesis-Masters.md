@@ -14,4 +14,4 @@ In this thesis by articles, we present a research paper that we submitted for th
 
 Here below is my full Thesis
 
-<embed src="/assets/img/Maricarmen_Thesis__Copy__with_articles-4-ENG.pdf" width="100%" height="850px" />
+<embed src="{{site.baseurl}}/assets/img/Maricarmen_Thesis__Copy__with_articles-4-ENG.pdf" width="100%" height="850px" />

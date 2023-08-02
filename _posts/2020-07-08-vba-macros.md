@@ -2,7 +2,7 @@
 layout: post
 title: "VBA EXCEL macros - automation"
 ---
-# Please wait a few seconds for the MACROS to load!
+<mark>Please wait a few seconds for the MACROS to load!<mark>
 
 I have worked with VBA since I joined Evalueserve in 2017 and here below are some of the macros I have built. I also built VBA macros while working at Jarislowsky (I wasn't allowed to take my work with me however). In fact, at Jarislowsky I fully automated many of my processes (using IT tools and SQL as well). 
 

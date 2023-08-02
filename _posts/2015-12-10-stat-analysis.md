@@ -25,5 +25,8 @@ Finally, we believe that the reform of co-payments could have a positive effect 
 
 <iframe src="https://onedrive.live.com/embed?resid=4A17E34121C315B6%211120&amp;authkey=!AONLGobH7az3mVg&amp;em=2&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 
-assets\img\Synthesis-Activity-healthcare.pdf
-<embed src="/assets/img/Synthesis-Activity-healthcare.pdf" width="100%" height="850px" />
+
+<embed src="{{site.baseurl}}/assets/img/Synthesis-Activity-healthcare.pdf" width="100%" height="850px" />
+
+![synthese healthcare]({{site.baseurl}}/assets/img/Synthesis-Activity-healthcare.pdf)
+![Macbookq]({{site.baseurl}}/assets/img/Synthesis-Activity-healthcare.pdf)

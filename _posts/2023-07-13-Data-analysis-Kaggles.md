@@ -22,4 +22,4 @@ I also checked if race, age or gender has an impact on the type of crime by perf
 
 Below is a PDF version of my kaggle project 
 
-<embed src="/assets/img/data-analysis-of-crimes-in-baltimore5.pdf" width="100%" height="850px" />
+<embed src="{{site.baseurl}}/assets/img/data-analysis-of-crimes-in-baltimore5.pdf" width="100%" height="850px" />
