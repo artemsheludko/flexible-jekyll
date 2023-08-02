@@ -21,8 +21,8 @@ Pplease take a look at the PDF for more detail!
 [^3]: Ziebarth, Nicolas R. “Assessing the effectiveness of health care cost containment measures: evidence from the market for rehabilitation care”. International Journal of Health Care Finances and Economics. 14:41-67(2014). PubMed.Web. 7 Novembre 2015.
 <http://www.ncbi.nlm.nih.gov/pubmed/24306855>
 [^10]: BALAN Marius,Traoré San Nouhoun ‘’La reforme des prix des medicaments géneriques et les economies de couts des regimes privés ”. (Novembre 2012 ). 4 Décembre 2015 < http://www.conseiller.ca/files/2012/10/8-generiques_1112.pdf>
-
-<embed src="/assets/img/MaricarmenArenasTravail-session-eco8620.pdf" width="100%" height="850px" />
+C:\Users\maria\Documents\website\flexible-jekyll\assets\img\automation.jpg
+<embed src="C:/Users/maria/Documents/website/flexible-jekyllassets/img/MaricarmenArenasTravail-session-eco8620.pdf" width="100%" height="850px" />
 
 ## Code Stata
 Here below is the code I programmed on STATA (The software  used for statistical analysis)
