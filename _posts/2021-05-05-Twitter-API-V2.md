@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "VBA EXCEL macros - automation"
+title: "Twitter API V2"
 date: 2023-07-20 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 #url:
-img: vbaexcel.jpg  # Add image post (optional)
+img: twitter-api.jpg  # Add image post (optional)
 fig-caption: 
 tags: [Retirement, savings, studies, behavioural economics]
 ---
