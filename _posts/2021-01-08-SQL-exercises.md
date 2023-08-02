@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "VBA EXCEL macros - automation"
+title: "SQL Exercises"
 date: 2023-07-20 13:32:20 +0300
 description: Sample SQL exercises dones during my one of my Business Intelligence class. These are complex queries! # Add post description (optional)
 #url:
 img: sql.png # Add image post (optional)
-fig-caption: SQL exercise
+fig-caption: Sample SQL exercises dones during my one of my Business Intelligence class. These are complex queries!
 tags: [sql]
 ---
 

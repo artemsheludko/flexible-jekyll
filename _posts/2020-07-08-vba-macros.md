@@ -5,7 +5,7 @@ date: 2023-07-20 13:32:20 +0300
 description: Some examples of Auotmation done with VBA. The Excel macros are showcased here and can also be downloaded.   # Add post description (optional)
 #url:
 img: vbaexcel.jpg # Add image post (optional)
-fig-caption: https://public.tableau.com/app/profile/maricarmen.al1037/viz/AmazonPrimeGraphicalanalysis/Dashboard2
+fig-caption: Some examples of Auotmation done with VBA. The Excel macros are showcased here and can also be downloaded.
 tags: [EXCEL, VBA, automation, coding]
 ---
 <mark>Please wait a few seconds for the MACROS to load!<mark>

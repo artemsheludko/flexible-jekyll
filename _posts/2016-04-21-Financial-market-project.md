@@ -6,7 +6,7 @@ description: Project done during my Financial Econometric class - Here I showcas
    # highlight: WIP # Add post description (optional)
 #url:
 img: financial-stocks.jpg  # Add image post (optional)
-fig-caption: 
+fig-caption: Project done during my Financial Econometric class - Here I showcase the STATA code and the PDF file ( can be downloaded). The project is written in French and will eventually be translated.
 tags: [finances, GMM, Econometrics, stock market]
 ---
 
