@@ -97,7 +97,7 @@ pre {
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
 a {
-  background-color: black;
+  background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
   /* 2 */
@@ -933,7 +933,7 @@ table tfoot td {
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: #ffffff;
+  background-color: #333030;
 }
 
 .about {
@@ -1222,7 +1222,7 @@ a.newer-posts:hover {
   padding: 0;
   margin: 0;
   max-height: 500px;
-  background-color: #fafafa;
+  background-color: #333030;
   overflow: hidden;
 }
 
@@ -1273,7 +1273,7 @@ a.newer-posts:hover {
 .page-footer .page-share a {
   display: inline-block;
   text-decoration: none;
-  background-color: #fafafa;
+  background-color: #333030;
   border: 1px solid #ecf0f1;
   padding: 5px 10px;
   margin-left: 5px;
@@ -1289,7 +1289,7 @@ a.newer-posts:hover {
 }
 
 .page-footer .page-share a:hover {
-  background-color: #ecf0f1;
+  background-color: #333030;
 }
 
 .page-footer .page-tag a {
@@ -1297,7 +1297,7 @@ a.newer-posts:hover {
   font-size: 10px;
   padding: 5px 10px;
   margin-left: 5px;
-  color: #263959;
+  color: #93b6f0;
   text-transform: uppercase;
   border: 1px solid #263959;
 }
