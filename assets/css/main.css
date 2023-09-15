@@ -1289,7 +1289,7 @@ a.newer-posts:hover {
 }
 
 .page-footer .page-share a:hover {
-  background-color: #333030;
+  background-color: #fafafa;
 }
 
 .page-footer .page-tag a {
@@ -1317,11 +1317,11 @@ a.newer-posts:hover {
   font-size: 30px;
   text-align: center;
   line-height: 1.3;
-  color: #263959;
+  color: #fafafa;
 }
 
 .blog-tags h2 {
-  color: #263959;
+  color: #fafafa;
   margin: 10px 0;
 }
 
@@ -1338,7 +1338,7 @@ a.newer-posts:hover {
 
 .tags li a {
   text-decoration: none;
-  color: #263959;
+  color: #fafafa;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #ecf0f1;
@@ -1354,7 +1354,7 @@ a.newer-posts:hover {
 
 .tag-list span a {
   text-decoration: none;
-  color: #263959;
+  color: #fafafa;
 }
 
 .tag-list span a:hover {
