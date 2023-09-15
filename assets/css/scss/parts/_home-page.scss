@@ -9,7 +9,7 @@
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: $white;
+  background-color: $dark;
 }
 .about {
   margin: 0 0 40px;
@@ -38,7 +38,7 @@
     padding-bottom: 15px;
     font-size: 16px;
     text-transform: uppercase;
-    color: $dark;
+    color: $light;
     font-weight: 700;
     &::after {
       content: "";
@@ -71,7 +71,7 @@
 .contact {
   .contact-title {
     position: relative;
-    color: $dark;
+    color: $light;
     font-weight: 400;
     font-size: 12px;
     margin: 0 0 5px;
@@ -173,7 +173,7 @@ footer {
       a {
         font-family: 'PT Serif', serif;
         text-decoration: none;
-        color: $dark-blue;
+        color: $light;
       }
     }
     p {
