@@ -774,8 +774,8 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #515151;
-  background-color: #fbfbfb;
+  color: #fafafa;
+  background-color: #333030;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -828,7 +828,7 @@ pre code {
 
 table {
   border: 1px solid #aaa;
-  background-color: #eee;
+  background-color: #333030;
   width: 100%;
   text-align: left;
   border-collapse: collapse;
@@ -889,7 +889,7 @@ table tfoot td {
 }
 
 .post, .article-page {
-  background-color: #fff;
+  background-color: #333030;
 }
 
 ::-moz-selection {
@@ -992,7 +992,7 @@ table tfoot td {
   height: 7px;
   -webkit-border-radius: 100%;
           border-radius: 100%;
-  background-color: #515151;
+  background-color: #fafafa;
 }
 
 .about p {
@@ -1043,7 +1043,7 @@ table tfoot td {
   position: absolute;
   top: 50%;
   left: 0;
-  background-color: #515151;
+  background-color: #fafafa;
 }
 
 .contact .contact-title::after {
@@ -1058,7 +1058,7 @@ table tfoot td {
   position: absolute;
   top: 50%;
   right: 0;
-  background-color: #515151;
+  background-color: #fafafa;
 }
 
 .contact ul {
@@ -1309,7 +1309,7 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
 .blog-tags {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #333030;
   padding: 0 20px 20px;
 }
 
@@ -1342,7 +1342,7 @@ a.newer-posts:hover {
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #ecf0f1;
-  background-color: #fafafa;
+  background-color: #333030;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
@@ -1408,7 +1408,7 @@ a.newer-posts:hover {
             justify-content: space-between;
     width: 100%;
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #333030;
     -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
             box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
   }

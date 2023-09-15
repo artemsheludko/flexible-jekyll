@@ -50,7 +50,7 @@
       width: 7px;
       height: 7px;
       border-radius: 100%;
-      background-color: #333030;
+      background-color: $dark;
     }
   }
   p {
@@ -86,7 +86,7 @@
       position: absolute;
       top: 50%;
       left: 0;
-      background-color: #333030;
+      background-color: $dark;
     }
     &::after {
       content: "";
