@@ -12,8 +12,8 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: $body-color;
-  background-color: #fbfbfb;
+  color: $light;
+  background-color: $dark;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -66,7 +66,7 @@ pre {
 
 table {
   border: 1px solid #aaa;
-  background-color: #eee;
+  background-color: $dark;
   width: 100%;
   text-align: left;
   border-collapse: collapse;
@@ -114,7 +114,7 @@ table tfoot td {
 }
 
 .post, .article-page {
-  background-color: #fff;
+  background-color: $dark;
 }
 
 ::-moz-selection {

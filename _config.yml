@@ -1,28 +1,24 @@
-title: Hello, world! I'm David Freeman
+title: Jeffrey Wigington Portfolio Site
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is Jeffrey Wigington's Porfolio site via Github pages. Here you'll find posts about my data projects and some DIY projects.
 permalink: ':title/'
-baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://jwig22.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+author: Jeffrey Wigington # add your name
+author-img: Jeffrey-Wigington.jpg # add your photo
+about-author: I am a data professional focusing on solving technical problems through data! What I lack in data depth, I make up for in breadth. I have a diverse background of experience from my Mechanical Engineering background, including Robotics. I also am an avid DIYer and have built my own CNC router, a basement bathroom, and other furniture around my house. I believe learning is a journey, not a destination and I love the journey. # add description
+social-github: jwig22 # add your Github handle
+social-linkedin: jeffreywigington/ # add your Linkedin handle
+social-email: jwigington22@gmail.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+#discus-identifier: # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: G-PVJ29CD7PQ # Google Analytics
 
 # Build Settings
 markdown: kramdown
@@ -35,3 +31,5 @@ paginate: 8
 paginate_path: "/page/:num"
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+# remote_theme: "dracula/gh-pages"
