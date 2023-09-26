@@ -1,31 +1,28 @@
-title: Hello, world! I'm David Freeman
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-permalink: ':title/'
-baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
+title: Hello! I'm Mitchel
+description: I am sharing with the world key insights in gene therapy and its potential for changing scientific research and medicine.
+permalink: ':geneperspectives/'
+baseurl: "/geneperspectives" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+author: Mitchel Tumuhimbise # add your name
+author-img: profile.jpg # add your photo
+about-author: I am a scientist passionate about communicating breakthroughs of gene therapy. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
+social-github: Mitchel-collab # add your Github handle
 social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-email: mitchelt@alumni.unav.es # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
 
 # Build Settings
-markdown: kramdown
+markdown: #
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
