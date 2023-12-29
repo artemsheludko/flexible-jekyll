@@ -1,0 +1,47 @@
+runtime: ruby32
+entrypoint: bundle exec jekyll serve -P $PORT --safe --skip-initial-build --no-watch --trace
+instance_class: B1
+basic_scaling:
+  max_instances: 1
+  idle_timeout: 1m
+handlers:
+  # Real file names
+  - url: /(.+)
+    static_files: _site/\1
+    upload: _site/.*
+    require_matching_file: true
+    secure: always
+    redirect_http_response_code: 301
+  # Directory indexes
+  - url: (/.+)?/
+    static_files: _site\1/index.html
+    upload: _site/.*
+    require_matching_file: true
+    secure: always
+    redirect_http_response_code: 301
+  # Directories as files
+  - url: /(.+)/
+    static_files: _site/\1.html
+    upload: _site/.*
+    require_matching_file: true
+    secure: always
+    redirect_http_response_code: 301
+  # Friendly extensionless file URLs
+  - url: /(.+)
+    static_files: _site/\1.html
+    upload: _site/.*
+    require_matching_file: true
+    secure: always
+    redirect_http_response_code: 301
+  # Friendly extensionless directory URLs
+  - url: /(.+)
+    static_files: _site/\1/index.html
+    upload: _site/.*
+    require_matching_file: true
+    secure: always
+    redirect_http_response_code: 301
+  # Catch-all
+  - url: .*
+    script: auto
+    secure: always
+    redirect_http_response_code: 301
