@@ -3,8 +3,8 @@ layout: post
 title: Enhanced API Calls with TypeScript
 date: 2023-12-30 00:00:00 +0300
 description: As web applications become more complex, managing code that interacts with APIs can become a challenge. TypeScript can help by providing type checking and other features that improve reliability and maintainability.
-thumbnail: enhanced-api-calls-with-typescript.jpg # Add image post (optional)
-tags: [Software, Web Development, TypeScript, Optimization] # add tag
+image: enhanced-api-calls-with-typescript.jpg
+tags: [Software, Web Development, TypeScript, Optimization]
 ---
 
 As web applications become more complex, managing code that interacts with APIs can become a challenge. TypeScript can help by providing type checking and other features that improve reliability and maintainability. In this article, we will explore how TypeScript can enhance API calls, with the main focus being type safety for HTTP clients, with examples to illustrate its benefits.

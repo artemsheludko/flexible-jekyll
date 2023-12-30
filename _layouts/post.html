@@ -4,12 +4,11 @@ layout: main
 
 <article class="article-page">
   <div class="page-content">
-    {% if page.thumbnail %}
+    {% if page.image %}
     <div class="page-cover-image">
       <figure>
         <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl |
-        append : page.thumbnail}} alt="{{page.title}}"> {% if page.fig-caption
-        %}
+        append : page.image}} alt="{{page.title}}"> {% if page.fig-caption %}
         <figcaption>{{page.fig-caption}}</figcaption>
         {% endif %}
       </figure>
