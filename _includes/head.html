@@ -1,4 +1,17 @@
 <head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "{{ site.analytics }}");
+  </script>
   <meta charset="utf-8" />
   <title>
     {% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{%
