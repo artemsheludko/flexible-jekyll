@@ -2,8 +2,8 @@
 layout: post
 title: Consolidate Your TypeScript Imports With index.ts Files
 date: 2023-12-28 00:00:00 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: consolidate-your-typescript-imports-with-index-files.jpg # Add image post (optional)
+description: I wanted to share a helpful technique I use in TypeScript projects to consolidate imports and make my code base much easier to read. It involves re-exporting modules in directories with index.ts files.
+thumbnail: consolidate-your-typescript-imports-with-index-files.jpg # Add image post (optional)
 tags: [Software, Web Development, TypeScript, Optimization] # add tag
 ---
 

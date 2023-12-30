@@ -5,6 +5,7 @@ yarn.lock
 Gemfile.lock
 package-lock.json
 node_modules/
+.vscode
 
 ### macOS ###
 *.DS_Store
