@@ -29,7 +29,7 @@ jobs:
         AWS_REGION: 'us-west-1'   # optional: defaults to us-east-1
         SOURCE_DIR: 'public'      # optional: defaults to the entire repository
     - uses: badsyntax/github-action-aws-cloudfront@master
-    name: Invalidate CloudFront Cache
+    - name: Invalidate CloudFront Cache
       with:
         distribution-id: ${{ secrets.AWS_CLOUDFRONT_ID }}
         aws-region: 'us-east-1'
