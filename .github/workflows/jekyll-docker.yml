@@ -18,8 +18,8 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-    - name: Sync S3
     - uses: jakejarvis/s3-sync-action@master
+    - name: Sync S3
       with:
         args: --acl public-read --follow-symlinks --delete
       env:
