@@ -3,7 +3,7 @@ layout: post
 title: Function Hoisting in JavaScript
 date: 2023-12-30 00:00:00 +0300
 description: As web applications become more complex, managing code that interacts with APIs can become a challenge. TypeScript can help by providing type checking and other features that improve reliability and maintainability.
-image: function-hoisting-in-javascript.png
+image: assets/img/function-hoisting-in-javascript.png
 tags: [Software, Web Development, JavaScript]
 ---
 

@@ -7,8 +7,8 @@ layout: main
     {% if page.image %}
     <div class="page-cover-image">
       <figure>
-        <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl |
-        append : page.image}} alt="{{page.title}}"> {% if page.fig-caption %}
+        <img class="page-image" src={{ "/" | prepend: site.baseurl | append :
+        page.image}} alt="{{page.title}}"> {% if page.fig-caption %}
         <figcaption>{{page.fig-caption}}</figcaption>
         {% endif %}
       </figure>
