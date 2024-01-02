@@ -43,12 +43,12 @@
   <meta content="{{ site.url }}/about/" property="article:author" />
   {% endif %} {% if page.image %}
   <meta
-    content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.image }}"
+    content="{{ site.url }}{{ site.baseurl }}{{ page.image }}"
     property="og:image"
   />
   {% else %}
   <meta
-    content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.author-img }}"
+    content="{{ site.url }}{{ site.baseurl }}{{ site.author-img }}"
     property="og:image"
   />
   {% endif %} {% if page.categories %} {% for category in page.categories
@@ -76,11 +76,11 @@
   {% endif %} {% if page.image %}
   <meta
     name="twitter:tile:image"
-    content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.image }}"
+    content="{{ site.url }}{{ site.baseurl }}{{ page.image }}"
   />
   <meta
     name="twitter:image:src"
-    content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.image }}"
+    content="{{ site.url }}{{ site.baseurl }}{{ page.image }}"
   />
   {% else %}
   <meta
