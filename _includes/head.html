@@ -58,7 +58,7 @@
   <meta content="{{ tag }}" property="article:tag" />
   {% endfor %} {% endif %}
 
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@{{ site.site-twitter }}" />
   <meta name="twitter:creator" content="@{{ site.social-twitter }}" />
   {% if page.title %}
@@ -73,7 +73,7 @@
   <meta name="twitter:description" content="{{ site.description }}" />
   {% endif %} {% if page.image %}
   <meta
-    name="twitter:image:src"
+    name="twitter:image"
     content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.image }}"
   />
   {% else %}
