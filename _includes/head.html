@@ -41,9 +41,9 @@
     property="article:published_time"
   />
   <meta content="{{ site.url }}/about/" property="article:author" />
-  {% endif %} {% if page.img %}
+  {% endif %} {% if page.image %}
   <meta
-    content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.img }}"
+    content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.image }}"
     property="og:image"
   />
   {% else %}
@@ -57,6 +57,8 @@
   {% endfor %} {% endif %} {% if page.tags %} {% for tag in page.tags %}
   <meta content="{{ tag }}" property="article:tag" />
   {% endfor %} {% endif %}
+
+  <!-- Twitter Card data -->
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@{{ site.site-twitter }}" />
@@ -73,7 +75,11 @@
   <meta name="twitter:description" content="{{ site.description }}" />
   {% endif %} {% if page.image %}
   <meta
-    name="twitter:image"
+    name="twitter:tile:image"
+    content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.image }}"
+  />
+  <meta
+    name="twitter:image:src"
     content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ page.image }}"
   />
   {% else %}
