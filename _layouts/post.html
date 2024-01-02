@@ -25,7 +25,7 @@ layout: main
       {{content | markdownify}}
       <div class="page-footer">
         <div class="page-share">
-          <a
+          <!-- <a
             href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}"
             title="Share on Twitter"
             rel="nofollow"
@@ -33,12 +33,26 @@ layout: main
             >Twitter</a
           >
           <a
-            href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}"
-            title="Share on Facebook"
+            href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}"
             rel="nofollow"
             target="_blank"
-            >Facebook</a
+            title="Share on Twitter"
+            >Twitter</a
+          > -->
+          <a
+            href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on X"
           >
+            twitter / X
+          </a>
+          <a
+            href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.title }}"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on LinkedIn"
+          >
+            linkedin
+          </a>
         </div>
         <div class="page-tag">
           {% for tag in page.tags %}
