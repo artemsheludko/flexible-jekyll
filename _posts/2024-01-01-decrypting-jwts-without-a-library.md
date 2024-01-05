@@ -3,7 +3,7 @@ layout: post
 title: Decrypting JWTs Without a Library
 date: 2024-01-01 00:00:00 +0800
 description: Working with JSON Web Tokens is a standard practice in web development. Until recently, whenever I needed to decrypt a JWT, I would import a library to do it and move on. I was curious what went into decryption so I I decided to learn how its done without the library and see if there are any ways I can improve the process for myself..
-image: assets/img/decrypting-jwts-without-a-library.jpg
+image: assets/img/decrypting-jwts-without-a-library.png
 tags: [Software, Web Development, JavaScript]
 published: true
 ---
