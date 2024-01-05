@@ -1,4 +1,5 @@
 <head>
+  {% if jekyll.environment == 'production' %}
   <script
     async
     src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"
@@ -12,6 +13,7 @@
 
     gtag("config", "{{ site.analytics }}");
   </script>
+  {% endif %}
   <meta charset="utf-8" />
   <title>
     {% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{%
