@@ -1,0 +1,97 @@
+
+[
+  {
+    "id": "about",
+    "title": "I'm Namojo.",
+    "excerpt": "Software Engineer & Open Source Enthusiast",
+    "content": "\nHello! I'm a software engineer with a passion for building scalable web applications. This blog serves as my digital garden where I cultivate ideas, document my learning process, and share tutorials on modern web development.\n\nI specialize in the React ecosystem, TypeScript, and cloud architecture. When I'm not coding, you can find me contributing to open-source projects or exploring the latest in tech.\n\n### My Tech Stack\n- **Frontend**: React, Next.js, Tailwind CSS\n- **Backend**: Node.js, Go\n- **Infrastructure**: Docker, Kubernetes, GitHub Actions\n    ",
+    "coverImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "date": "Updated Oct 2023",
+    "likes": 999,
+    "author": {
+      "name": "Namojo",
+      "avatar": "https://i.pravatar.cc/150?u=namojo"
+    },
+    "tags": [
+      "Profile",
+      "About"
+    ],
+    "category": "Story"
+  },
+  {
+    "id": "1",
+    "title": "The Future of Generative AI in Creative Work",
+    "excerpt": "Exploring how LLMs and diffusion models are changing the landscape of digital art and storytelling.",
+    "content": "\nGenerative AI is reshaping how we create. The speed at which we can now iterate on concepts is mind-blowing.\n\n## The Shift\n\nFrom text-to-image to video generation, the tools available today allow for unprecedented speed in prototyping ideas.\n\n![An AI generated concept art of a futuristic city](https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80)\n\n## Video Generation\n\nWe are seeing rapid advancements in video synthesis. This changes the game for indie creators.\n\n![What does the future hold for AI Video?](https://www.youtube.com/watch?v=aircAruvnKk)\n\n## Conclusion\n\nThe future is collaborative, not replacive.\n    ",
+    "coverImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "date": "Oct 26, 2023",
+    "likes": 124,
+    "author": {
+      "name": "Namojo",
+      "avatar": "https://i.pravatar.cc/150?u=namojo"
+    },
+    "tags": [
+      "AI",
+      "Creativity",
+      "Future"
+    ],
+    "category": "AI"
+  },
+  {
+    "id": "2",
+    "title": "Agile Methodologies for Solo Developers",
+    "excerpt": "How to apply Scrum and Kanban principles to your personal projects to maintain momentum and clarity.",
+    "content": "\nAgile isn't just for teams. It's a mindset for iterative improvement.\n\n### The Kanban Board\n\nVisualizing your work is half the battle.\n\n![A clean Kanban board setup for personal use](https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80)\n\n1. **Backlog**: Everything you *might* do.\n2. **Todo**: What you will do this week.\n3. **Doing**: Focus on one thing.\n4. **Done**: Celebrate the win.\n    ",
+    "coverImage": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "date": "Oct 24, 2023",
+    "likes": 85,
+    "author": {
+      "name": "Namojo",
+      "avatar": "https://i.pravatar.cc/150?u=namojo"
+    },
+    "tags": [
+      "Agile",
+      "Productivity",
+      "Workflow"
+    ],
+    "category": "Agile"
+  },
+  {
+    "id": "3",
+    "title": "Sketching Ideas: The Power of Visual Thinking",
+    "excerpt": "Why picking up a pencil might be the best way to solve complex coding problems.",
+    "content": "\nBefore I write code, I draw. Here is why visual thinking unlocks better architecture.\n\n### Mind Mapping\n\n![Mind maps help connect unrelated concepts](https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80)\n\nWhen you draw out the data flow, edge cases become visible immediately, long before you write a single line of logic.\n    ",
+    "coverImage": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "date": "Oct 22, 2023",
+    "likes": 210,
+    "author": {
+      "name": "Namojo",
+      "avatar": "https://i.pravatar.cc/150?u=namojo"
+    },
+    "tags": [
+      "Drawing",
+      "Design",
+      "Thinking"
+    ],
+    "category": "Drawing"
+  },
+  {
+    "id": "4",
+    "title": "The Art of Storytelling in Software",
+    "excerpt": "Code tells a story. How to write documentation and comments that guide the future reader.",
+    "content": "\nEvery function is a plot point. Every module is a chapter.\n\n> \"Programs must be written for people to read, and only incidentally for machines to execute.\" - Harold Abelson\n\nWhen we approach coding as storytelling, we prioritize clarity, flow, and context.\n    ",
+    "coverImage": "https://images.unsplash.com/photo-1478720568477-152d9b164e63?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "date": "Oct 18, 2023",
+    "likes": 92,
+    "author": {
+      "name": "Namojo",
+      "avatar": "https://i.pravatar.cc/150?u=namojo"
+    },
+    "tags": [
+      "Story",
+      "Documentation",
+      "Communication"
+    ],
+    "category": "Story"
+  }
+]
