@@ -3,10 +3,14 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import PostList from '../components/PostList.astro';
 import portrait from '../assets/portrait.png';
-import { person, profile, experience, skills, education, languages } from '../data/cv';
+import { person, profile, profileShort, experience, skills, education, languages } from '../data/cv';
 import { getPosts, isOutdated } from '../lib/posts';
 
 const posts = (await getPosts()).filter((post) => !isOutdated(post)).slice(0, 4);
+
+// Value for data-detail, which hides an element in the TL;DR view. Astro would render
+// `false` as data-detail="false", which still matches, so the attribute is left out instead.
+const detail = (hide: boolean) => (hide ? '' : undefined);
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -22,6 +26,21 @@ const jsonLd = {
 
 <Base>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
+  <!--
+    TL;DR or full CV, picked before first paint: ?view= in the URL wins, then the last choice.
+    Without JavaScript the attribute stays unset, the full CV shows and the switch stays hidden.
+  -->
+  <script is:inline slot="head">
+    (() => {
+      let view = new URLSearchParams(location.search).get('view');
+      if (view !== 'tldr' && view !== 'full') {
+        try {
+          view = localStorage.getItem('cv-view');
+        } catch {}
+      }
+      document.documentElement.dataset.cv = view === 'tldr' ? 'tldr' : 'full';
+    })();
+  </script>
 
   <header class="wrap cols intro">
     <div class="who">
@@ -36,6 +55,10 @@ const jsonLd = {
           <li class="print-only">pavels.im</li>
         </ul>
         <a class="btn btn--primary no-print" href={`mailto:${person.email}`}>Email me</a>
+        <div class="view-toggle no-print" role="group" aria-label="CV length">
+          <button type="button" data-view="tldr" aria-pressed="false">TL;DR</button>
+          <button type="button" data-view="full" aria-pressed="true">Full</button>
+        </div>
       </div>
     </div>
     <figure class="photo portrait">
@@ -46,7 +69,8 @@ const jsonLd = {
   <section class="wrap cols part summary" aria-labelledby="profile">
     <h2 id="profile" class="label-head">Profile</h2>
     <div class="body">
-      <p class="profile">{profile}</p>
+      <p class="profile" data-detail>{profile}</p>
+      <p class="profile" data-summary>{profileShort}</p>
     </div>
   </section>
 
@@ -54,29 +78,32 @@ const jsonLd = {
     <h2 id="experience" class="label-head">Experience</h2>
     <div class="body">
       {
-        experience.map((r) => (
-          <article class="job">
-            <div class="job-head">
-              <h3>{r.role}</h3>
-              <p class="company">{r.company}</p>
-              <p class="when">
-                {r.start} – {r.end}
-              </p>
-            </div>
-            <div class="job-body">
-              {r.scope && <p class="scope">{r.scope}</p>}
-              <ul>
-                {r.bullets.map((b) => (
-                  <li>{b}</li>
-                ))}
-              </ul>
-              <p class="tech">
-                <span class="sr-only">Technologies: </span>
-                {r.tech.join(', ')}
-              </p>
-            </div>
-          </article>
-        ))
+        experience.map((r) => {
+          const hasKeyBullets = r.bullets.some((b) => b.key);
+          return (
+            <article class="job">
+              <div class="job-head">
+                <h3>{r.role}</h3>
+                <p class="company">{r.company}</p>
+                <p class="when">
+                  {r.start} – {r.end}
+                </p>
+              </div>
+              <div class="job-body" data-detail={detail(!r.scope && !hasKeyBullets)}>
+                {r.scope && <p class="scope">{r.scope}</p>}
+                <ul data-detail={detail(!hasKeyBullets)}>
+                  {r.bullets.map((b) => (
+                    <li data-detail={detail(!b.key)}>{b.text}</li>
+                  ))}
+                </ul>
+                <p class="tech" data-detail>
+                  <span class="sr-only">Technologies: </span>
+                  {r.tech.join(', ')}
+                </p>
+              </div>
+            </article>
+          );
+        })
       }
     </div>
   </section>
@@ -86,7 +113,7 @@ const jsonLd = {
     <dl class="body skills">
       {
         skills.map((s) => (
-          <div>
+          <div data-detail={detail(!s.key)}>
             <dt>{s.area}</dt>
             <dd>{s.items}</dd>
           </div>
@@ -100,7 +127,7 @@ const jsonLd = {
     <ul class="body pairs pairs--wide">
       {
         education.map((e) => (
-          <li>
+          <li data-detail={detail(!e.key)}>
             <strong>{e.degree}</strong>
             <span>
               {e.school}, {e.years}
@@ -146,7 +173,54 @@ const jsonLd = {
   </section>
 </Base>
 
+<script>
+  const root = document.documentElement;
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.view-toggle [data-view]');
+
+  const sync = () => {
+    for (const button of buttons) {
+      button.setAttribute('aria-pressed', String(button.dataset.view === root.dataset.cv));
+    }
+  };
+
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      const view = button.dataset.view!;
+      root.dataset.cv = view;
+      try {
+        localStorage.setItem('cv-view', view);
+      } catch {}
+      // Keep a shared ?view= link in step with what is on screen
+      const url = new URL(location.href);
+      if (url.searchParams.has('view')) {
+        url.searchParams.set('view', view);
+        history.replaceState(history.state, '', url);
+      }
+      sync();
+    });
+  }
+
+  sync();
+</script>
+
 <style>
+  /*
+   * TL;DR view: data-detail hides, data-summary shows only here.
+   * !important because hiding must beat layout rules such as `.skills div { display: grid }`,
+   * which tie on specificity once Astro scopes them.
+   */
+  :global(html[data-cv='tldr']) [data-detail] {
+    display: none !important;
+  }
+
+  [data-summary] {
+    display: none;
+  }
+
+  :global(html[data-cv='tldr']) [data-summary] {
+    display: block;
+  }
+
   /* Intro: name, role and ways to reach me; a small portrait on the right */
   .intro {
     row-gap: var(--space-xl);
@@ -206,6 +280,45 @@ const jsonLd = {
 
   .print-only {
     display: none;
+  }
+
+  /* TL;DR / Full switch: hidden until the head script has set data-cv, so never without JavaScript */
+  .view-toggle {
+    display: none;
+    border: 1px solid var(--color-ink);
+  }
+
+  @media screen {
+    :global(html[data-cv]) .view-toggle {
+      display: inline-flex;
+    }
+  }
+
+  .view-toggle button {
+    min-height: 44px;
+    padding-inline: var(--space-md);
+    border: 0;
+    border-radius: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      background-color var(--dur-short) var(--ease-out),
+      color var(--dur-short) var(--ease-out);
+  }
+
+  .view-toggle button:hover {
+    color: var(--color-mark-text);
+  }
+
+  /* Styled from the root attribute, not aria-pressed, so the right half is filled on first paint */
+  :global(html[data-cv='tldr']) [data-view='tldr'],
+  :global(html[data-cv='full']) [data-view='full'] {
+    background: var(--color-ink);
+    color: var(--color-paper);
   }
 
   .portrait {
@@ -478,8 +591,9 @@ const jsonLd = {
       --color-mark: #c8261c;
     }
 
+    /* !important: `.part { display: block }` below ties on specificity and would print Writing and Contact */
     .no-print {
-      display: none;
+      display: none !important;
     }
 
     .wrap {

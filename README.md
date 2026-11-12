@@ -15,7 +15,7 @@ npm run preview  # serve the production build
 
 ## Structure
 
-- `src/data/cv.ts` — profile, experience, skills; the home page is the CV, rendered from this file
+- `src/data/cv.ts` — profile, experience, skills; the home page is the CV, rendered from this file. Items marked `key: true` (plus `profileShort`) make up the TL;DR view; `?view=tldr` links straight to it
 - `src/content/posts/` — blog posts in Markdown; the file name is the URL slug (`zio-test.md` → `/zio-test/`)
 - `src/pages/` — routes: home (the CV), `/blog/`, post pages, RSS feed, 404
 - `public/` — static files served as-is, including legacy `/assets/img/` paths
