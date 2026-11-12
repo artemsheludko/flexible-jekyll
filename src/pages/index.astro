@@ -108,7 +108,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="wrap cols part" aria-labelledby="skills">
+  <section class="wrap cols part brief" aria-labelledby="skills">
     <h2 id="skills" class="label-head">Skills</h2>
     <dl class="body skills">
       {
@@ -122,7 +122,7 @@ const jsonLd = {
     </dl>
   </section>
 
-  <section class="wrap cols part" aria-labelledby="education">
+  <section class="wrap cols part brief" aria-labelledby="education">
     <h2 id="education" class="label-head">Education</h2>
     <ul class="body pairs pairs--wide">
       {
@@ -138,7 +138,7 @@ const jsonLd = {
     </ul>
   </section>
 
-  <section class="wrap cols part" aria-labelledby="languages">
+  <section class="wrap cols part brief" aria-labelledby="languages">
     <h2 id="languages" class="label-head">Languages</h2>
     <ul class="body pairs">
       {
@@ -219,6 +219,21 @@ const jsonLd = {
 
   :global(html[data-cv='tldr']) [data-summary] {
     display: block;
+  }
+
+  /*
+   * Tighter rhythm on screen once sections are down to a line or two; print keeps its own spacing.
+   * Skills keeps the full section gap after Experience; Skills, Education and Languages then sit as one block.
+   */
+  @media screen {
+    :global(html[data-cv='tldr']) .brief + .brief {
+      margin-top: var(--space-xl);
+    }
+
+    :global(html[data-cv='tldr']) .job + .job {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-lg);
+    }
   }
 
   /* Intro: name, role and ways to reach me; a small portrait on the right */
