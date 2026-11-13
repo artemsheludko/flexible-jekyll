@@ -309,3 +309,33 @@ section.block h2 { margin-top: 0; }
 .site-footer a { color: var(--text-muted); }
 .site-footer a:hover { color: var(--accent); }
 .footer-links { display: flex; flex-wrap: wrap; gap: 4px 18px; list-style: none; margin: 0; padding: 0; }
+
+/* ---- Featured "doors" (Papers / Personal Projects) --------------------- */
+
+section.block.featured { padding-block: 28px; }
+.featured-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card-door { text-decoration: none; color: inherit; transition: border-color 0.15s ease; }
+.card-door:hover { border-color: var(--accent); }
+.card-door:hover h3 { color: var(--accent); }
+.card-door h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.card-cta { margin-top: auto; padding-top: 4px; font-weight: 600; font-size: 0.9rem; color: var(--accent); }
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  /* Keep the Papers / Personal Projects cards near the top on phones:
+     smaller headshot placed above the text instead of below it. */
+  .hero .container { padding-block: 28px; gap: 16px; }
+  .hero-photo { order: -1; }
+  .hero-photo img { width: 96px; height: 96px; }
+  .hero h1 { font-size: 1.9rem; }
+}

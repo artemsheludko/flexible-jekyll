@@ -1,6 +1,7 @@
 ---
 title: Biography
 permalink: /Bio/
+subtitle: Senior Research Scientist at ParaTools, Inc. and Professor Alumnus, Saint John's University.
 description: Biography for Michael A. Heroux
 img: MikeHerouxHeadshot.jpg
 ---
