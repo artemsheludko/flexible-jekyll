@@ -61,6 +61,16 @@ const nav = [
     <meta name="theme-color" content="#131210" media="(prefers-color-scheme: dark)" />
     <link rel="alternate" type="application/rss+xml" title="pavels.im" href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "830df4d64487434fbde2ad01cf8d029f"}'
+        />
+      )
+    }
     <slot name="head" />
   </head>
   <body>
