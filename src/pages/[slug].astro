@@ -238,6 +238,32 @@ const jsonLd = {
     margin: var(--space-xl) 0;
   }
 
+  .prose :global(details) {
+    margin: 0 0 var(--space-lg);
+  }
+
+  .prose :global(summary) {
+    width: fit-content;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-muted);
+    cursor: pointer;
+  }
+
+  .prose :global(summary:hover) {
+    color: var(--color-ink);
+  }
+
+  .prose :global(details > p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .prose :global(details img) {
+    width: auto;
+    max-height: 32rem;
+    margin: var(--space-md) 0 0;
+  }
+
   .prose :global(hr) {
     margin: var(--space-3xl) 0;
     border: 0;
